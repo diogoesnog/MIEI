@@ -1,0 +1,22 @@
+# Ignore Node Modules Folder
+node_modules/
+
+# Ignore WebStorm
+.idea
+
+# misc
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.DS_Store
+portfolio/.idea/vcs.xml
+portfolio/.idea/workspace.xml
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda SYSTEM "file:/C:/Users/diogo/Google%20Drive/Universidade/Engenharia%20Inform%C3%A1tica/4%C2%BA%20Ano/UC%201%20-%20Desenvolvimento%20Aplica%C3%A7%C3%B5es%20WEB/Aulas/PL01%20-%20Especifica%C3%A7%C3%A3o%20de%20DTDs.%20Queries%20em%20XPath/Especifica%C3%A7%C3%A3o%20de%20DTDs/Ex.%202%20-%20Agenda%20de%20Contactos/agenda.dtd">
+<agenda>
+    <entrada tipo="Pessoal" ident="e1">
+        <nome>Pedro Henriques</nome>
+        <email>prh@di.uminho.pt</email>
+        <telefone>253 605555</telefone>
+    </entrada>
+    <entrada tipo="Pessoal" ident="e2">
+        <nome>José Carlos Ramalho</nome>
+        <email>jcr@di.uminho.pt</email>
+        <telefone>253 604444</telefone>
+    </entrada>
+    <grupo ident="gepl">
+        <ref apontado="e1"/>
+        <ref apontado="e2"/>
+        <entrada tipo="Empresa" ident="e3">
+            <nome>Mário Martins</nome>
+            <email>fmm@di.uminho.pt</email>
+            <telefone>253 408878</telefone>
+        </entrada>
+    </grupo>
+</agenda>

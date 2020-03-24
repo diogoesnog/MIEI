@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": "A78957",
+            "nome": "Diogo Nogueira",
+            "email": "a78957@alunos.uminho.pt",
+            "password": "123"  
+        },
+        {
+            "id": "A78485",
+            "nome": "Diogo Araújo",
+            "email": "a78485@alunos.uminho.pt",
+            "password": "1234"  
+        }
+    ]
+}

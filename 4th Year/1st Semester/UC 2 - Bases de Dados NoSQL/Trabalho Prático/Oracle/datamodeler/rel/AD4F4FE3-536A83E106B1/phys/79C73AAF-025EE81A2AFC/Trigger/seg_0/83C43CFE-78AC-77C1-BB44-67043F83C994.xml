@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="customer_bi_trigger" directorySegmentName="seg_0" id="83C43CFE-78AC-77C1-BB44-67043F83C994">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF (:NEW.customer_id IS NULL) THEN
+        SELECT customer_sq.nextval INTO :NEW.customer_id
+        FROM DUAL;
+    END IF;
+    -- criaÃ§Ã£o dos timestamps.
+    :NEW.last_update:=current_date;
+    :NEW.create_date:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>DFE2061C-A78D-9854-BEFA-53CF5B748354</table>
+</TriggerOraclev10g>

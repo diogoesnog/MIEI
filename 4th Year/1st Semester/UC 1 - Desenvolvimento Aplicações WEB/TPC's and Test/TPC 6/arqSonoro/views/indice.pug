@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    .container-fluid
+        br
+        h1
+            center 
+                b Gestor do Arquivo Sonoro
+        hr
+        h3
+            center Lista de Músicas do <i>Arquivo Sonoro</i>
+        br 
+        .container
+            table.table.table-stripped.text-center#musicos
+                thead.thead
+                    tr
+                        th.bg-dark.text-light N.º
+                        th.bg-dark.text-light Título da Música
+                        th.bg-dark.text-light Duração da Música
+                        th.bg-danger.text-light Operações
+                    tr
+                thead
+                    - var id = 0;
+                    each musica in listaMusicas
+                        tr
+                            th= id++
+                            td= musica.tit
+                            td= musica.duracao + " minutos"
+                            td
+                                a(href="/adicionarMusica" style="color:gray")
+                                    i.fa.fa-plus &nbsp&nbsp&nbsp
+                                a(href="/ver/" + musica.tit style="color:gray")
+                                    i.fa.fa-search &nbsp&nbsp&nbsp
+                                a(href="/editar/" + musica.tit style="color:gray")
+                                    i.fa.fa-pencil.edit &nbsp&nbsp&nbsp
+                                a(href="/")
+                                    i.fa.fa-trash-o.delete(onclick="apagaMusica('" + musica.tit + "')" style="color:gray")
+                        tr
+                        
+
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar ao Topo</center>
+        hr

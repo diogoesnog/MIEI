@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Exame SYSTEM "file:/C:/Users/diogo/Google%20Drive/Universidade/Engenharia%20Inform%C3%A1tica/4%C2%BA%20Ano/UC%201%20-%20Desenvolvimento%20Aplica%C3%A7%C3%B5es%20WEB/Aulas/PL01%20-%20Especifica%C3%A7%C3%A3o%20de%20DTDs.%20Queries%20em%20XPath/Especifica%C3%A7%C3%A3o%20de%20DTDs/Ex.%203%20-%20Exames/exames.dtd">
+<Exame>
+    <MetaInformacao>
+        Exame de Desenvolvimento de Aplicações WEB.
+        Mestrado Integrado em Engenharia Informática.
+    </MetaInformacao>
+    <Corpo>
+        <Questao>
+            <Enunciado>
+                Desenvolva cada uma das seguintes alíneas.
+                <Codigo>
+                    Código referente ao XML.
+                </Codigo>
+            </Enunciado>
+            <Alinea IDAlinea="1">Especifique um DTD para este tipo de documento.</Alinea>
+            <Alinea IDAlinea="2">Valide a instância acima com o DTD que especificou.</Alinea>
+        </Questao>
+    </Corpo>
+</Exame>

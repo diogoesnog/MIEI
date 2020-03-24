@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="film" directorySegmentName="seg_0" id="130825E1-601D-C935-0ACD-3ACC49A1EFEF">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="rating" id="142242BA-F2C7-49DC-A70C-D8A3AF89D576">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>&apos;G&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="replacement_cost" id="182029A1-CF3F-FA0A-BD4B-E1B65CCF9ABC">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>&apos;19.99&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="description" id="281E0464-4D76-1F83-B318-F23CDEEE31AB">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="release_year" id="4854AFBF-323D-348C-6C86-01C82F81E85E">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="special_features" id="70A214D7-EA0D-6E9E-8CA6-ED436FEB9816">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="film_id" id="765EAD7F-8693-2F4B-2016-7A9B0F277F4C">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="title" id="85C62E4A-5303-4907-A793-818143713360">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="original_language_id" id="8A00AB03-F570-54C7-7D11-D5E4BADB8F8A">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="rental_rate" id="8E087232-FA0E-91B1-9194-F436080242CD">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>&apos;4.99&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="rental_duration" id="9041AF70-CB6A-E996-DDE6-4FC4556D11E4">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>3</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="last_update" id="98EDFF59-3AE2-74D5-5316-145101962734">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="language_id" id="BA4F22C5-8CF1-ED5B-147C-FC2A3FEB3DAD">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="length" id="C094EE0B-50F5-1324-6D88-B85356BD146B">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<defaultValue>NULL</defaultValue>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="title_I" id="B977C431-8B89-43CB-D145-D6AFC5F2CCC7">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<logging></logging>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="film_language_original_FK" id="6BAB4D14-E986-0B2E-86AA-08307E86490D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="film_language_FK" id="B26084E6-FB8E-99F2-ECF1-52A90F933C9E">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="film_PK" id="5349849D-CE90-42F5-DB4F-B30D38718E4C">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="special_features_CHK" id="12B4891A-A114-10D9-2E02-12CB4DE90C14">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="special_rating_CHK" id="854FFB3A-9B20-C97D-D856-E51AC3896567">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev12c>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<poema tipo="soneto">
+  <titulo>Soneto Já Antigo</titulo>
+  <autor>Álvaro de Campos</autor>
+  <data>1922</data>
+  <corpo>
+    <quadra>
+      <verso>Olha, <nome>Daisy</nome>: quando eu morrer tu hás-de</verso>
+      <verso>dizer aos meus amigos aí de <lugar>Londres</lugar>,</verso>
+      <verso>embora não o sintas, que tu escondes</verso>
+      <verso>a grande dor da minha morte. Irás de</verso>
+    </quadra>
+    <quadra>
+      <verso><lugar>Londres</lugar> p'ra <lugar>Iorque</lugar>, onde nasceste (dizes ...</verso>
+      <verso>que eu nada que tu digas acredito),</verso>
+      <verso>contar àquele pobre rapazito</verso>
+      <verso>que me deu tantas horas felizes,</verso>
+    </quadra>
+    <terno>
+      <verso>embora não o saibas, que morri ...</verso>
+      <verso>Mesmo ele, a quem eu tanto julguei amar,</verso>
+      <verso>nada se importará... Depois vai dar</verso>
+    </terno>
+    <terno>
+      <verso>a notícia a essa estranha <nome>Cecily</nome></verso>
+      <verso>que acreditava que eu seria grande...</verso>
+      <verso>Raios partam a vida e quem lá ande!</verso>
+    </terno>
+  </corpo>
+</poema>

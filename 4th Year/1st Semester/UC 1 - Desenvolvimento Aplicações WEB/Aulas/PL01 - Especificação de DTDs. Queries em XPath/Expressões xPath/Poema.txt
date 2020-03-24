@@ -1,0 +1,6 @@
+Resolução das Queries
+
+1. //quadra[last()]/verso[3]
+2.
+3. //terno[2]/verso
+4. //lugar[starts-with(.,"L")]

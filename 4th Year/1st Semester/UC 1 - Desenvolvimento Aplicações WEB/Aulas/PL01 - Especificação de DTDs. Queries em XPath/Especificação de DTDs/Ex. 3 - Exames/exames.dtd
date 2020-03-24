@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Exame (MetaInformacao, Corpo) >
+
+<!ELEMENT MetaInformacao (#PCDATA) >
+
+<!ELEMENT Corpo (Questao+) >
+<!ELEMENT Questao (Enunciado, Alinea+) >
+<!ELEMENT Alinea (#PCDATA) >
+<!ATTLIST Alinea IDAlinea CDATA #REQUIRED >
+<!ELEMENT Enunciado (#PCDATA | Imagem | Codigo | Tabela)* >
+<!ELEMENT Imagem (#PCDATA) >
+<!ELEMENT Codigo (#PCDATA) >
+<!ELEMENT Tabela (#PCDATA) >

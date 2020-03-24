@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="payment_bu_trigger" directorySegmentName="seg_0" id="AE62A3B5-64CF-A54A-C330-67B4B7B7249E">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[BEGIN
+  :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>81ED5DAE-BA25-37A5-3E58-D39F52CD3B17</table>
+</TriggerOraclev10g>

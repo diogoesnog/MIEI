@@ -1,0 +1,67 @@
+{
+    "tag": "61",
+    "length": "var",
+    "content": {
+        "demographic": {
+            "tag": "5F1F",
+            "length": "var",
+            "content": {
+                "family_name": {
+                    "length": "var",
+                    "constraints": "[$A$S]{1,36}"
+                },
+                "name": {
+                    "length": "var",
+                    "constraints": "[$A$S]{1,36}"
+                },
+                "date_of_birth": {
+                    "length": 4,
+                    "constraints": "[$N]{8}",
+                    "encode": "BCD"
+                },
+                "date_of_issue": {
+                    "length": 4,
+                    "constraints": "[$N]{8}",
+                    "encode": "BCD"
+                },
+                "date_of_expiry": {
+                    "length": 4,
+                    "constraints": "[$N]{8}",
+                    "encode": "BCD"
+                },
+                "issuing_country": {
+                    "length": 3,
+                    "constraints": "[$A]{3}"
+                },
+                "issuing_authority": {
+                    "length": "var",
+                    "constraints": "[$A$N$S]{1,65}"
+                },
+                "license_number": {
+                    "length": "var",
+                    "constraints": "[$A$N]{1,25}"
+                }
+            }
+        },
+        "categories_list": {
+            "tag": "7F63",
+            "length": "var",
+            "content": {
+                "number_of_entries": {
+                    "tag": "02",
+                    "length": "var",
+                    "constraints": "(\\d|\\d{2}|1\\d{2}|2[0-4]\\d|25[0-5])",
+                    "decode": "int"
+                },
+                "categories_of_vehicles": {
+                    "size_list": "number_of_entries",
+                    "tag": "87",
+                    "length": "var",
+                    "constraints_func": "verify_category($DATA)",
+                    "encode": "CATEGORIES_ENCODE"
+                }
+            }
+        }
+    }
+
+}

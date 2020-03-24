@@ -1,0 +1,23 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Registo de um Aluno
+            .w3-container
+                form.w3-container(action='/aluno' method='POST')
+                    laber.w3-teal
+                        b Nome
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='nome')
+                    label.w3-teal
+                        b Número/Identificador
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='numero')
+                    label.w3-teal
+                        b Curso
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='curso')
+                    label.w3-teal
+                        b Link para o repositório GIT
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='git')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+            footer.w3-container.w3-teal
+                adress Gerado por Gestão de Alunos App

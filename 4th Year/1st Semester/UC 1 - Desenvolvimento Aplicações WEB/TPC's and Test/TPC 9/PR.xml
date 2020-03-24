@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC9">
+    <Informacoes>
+        <Titulo>Utilitário em NodeJS (Comando mongoimport)</Titulo>
+        <Subtitulo>TPC 9 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>12 de Novembro de 2019</DataInicio>
+        <DataFim>19 de Novembro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>O TPC 9 é um mini projeto extra que consiste em criar um programa em NodeJS que permita um funcionamento a nível da linha de comandos. Através do nome da database, collection e ficheiro JSON a importar, a ideia é o comando ser executado por si só, fazendo assim o povoamento da Base de Dados que se especificou.</P>
+        <P>Uso dos módulos ReadLine e Child Process para conseguir fazer o parse do Input e a execução do comando mongoimport em si, respetivamente.</P>
+        <P><Negrito>Para isso, criaram-se duas funções:</Negrito></P>
+        <P>1. Função parseInput() - trata de extrair o nome da database, collection e ficheiro JSON, guardando-os numa variável própria, fazendo para isso uso de uma Interface criada através do módulo ReadLine.</P>
+        <P>2. Função executarComando() - cria todo o comando, completando-o com as informações pedidas para o efeito e após isso executa-o.</P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%209/mongoImport.js">Ficheiro correspondente ao programa em si</Trabalho>
+    </Entregas>
+</RegistoProjetos>

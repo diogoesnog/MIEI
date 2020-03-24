@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Lugar de Gaião </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-História</CRONO>
+		<LUGAR> Lugar de Gaião </LUGAR>
+		<FREGUE> Cabanelas </FREGUE>
+		<CONCEL> Vila Verde </CONCEL>
+		<CODADM> 021308 </CODADM>
+		<LATITU> 511,6 </LATITU>
+		<LONGIT> 170,0 </LONGIT>
+		<ALTITU> 60/70m </ALTITU>
+		<ACESSO>O acesso mais fácil é feito a partir de Parada de Gatim, atravessando o rio
+Cávado de barca.</ACESSO>
+		<QUADRO>Pequeno cabeço de baixa altitude, sobranceiro ao rio Cávado. A zona oeste do
+monte encontra-se alterada pela construção de casas e por caminhos.</QUADRO>
+		<TRAARQ>Não são conhecidos trabalhos arqueológicos no local.</TRAARQ>
+		<DESARQ>O povoado possui uma única plataforma, correspondente à zona mais alta do
+monte. Nos seus limites é possível perceber vestígios de um talude
+defensivo. A Oeste, na zona em que o cabeço se liga naturalmente a outros,
+formando um pequeno esporão paralelo ao rio, são perceptíveis vestígios de
+um fosso, que deveria reforçar a defesa desse lado do povoado. Apesar da sua
+baixa altitude o povoado possui boas defesas naturais, asseguradas pelas
+vertentes mais ou menos abruptas do cabeço. Na sua superfície vêem-se pedras
+toscamente aparelhadas e fragmentos de <LIGA TERMO="cerâmica micácea">cerâmica micácea</LIGA> e romana. </DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+proto-histórico.</INTERP>
+		<BIBLIO> MARTINS, M. (1990). O Povoamento Proto-Histórico e a Romanização da
+Bacia do Curso Médio do Cávado, Cadernos de Arqueologia - Monografias, 5,
+Universidade do Minho, Braga, pp. 96-97. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

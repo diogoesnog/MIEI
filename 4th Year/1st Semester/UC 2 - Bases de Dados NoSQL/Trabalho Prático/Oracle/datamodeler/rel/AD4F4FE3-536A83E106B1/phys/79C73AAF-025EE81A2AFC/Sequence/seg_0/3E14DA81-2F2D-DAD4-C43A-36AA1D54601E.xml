@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="customer_sq" directorySegmentName="seg_0" id="3E14DA81-2F2D-DAD4-C43A-36AA1D54601E">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<startWith>600</startWith>
+</SequenceOraclev10g>

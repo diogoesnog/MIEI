@@ -1,0 +1,23 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Lista de Alunos
+            .w3-container
+                table.w3-table-all
+                    tr
+                        th Nome
+                        th Número/Identificador
+                        th Curso
+                        th Link para o GitHub
+                    each al in lista
+                        tr
+                            td= al.nome
+                            td= al.numero
+                            td= al.curso
+                            td
+                                a(href=al.git) Link para o GIT
+            footer.w3-container.w3-teal
+                adress Gerado por Gestão de Alunos App
+                    a(href='/') Voltar à Página Inicial

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Igreja Velha de Salto </IDENTI>
+		<DESCRI> Igreja; <LIGA TERMO="necrópole"> Necrópole</LIGA> medieval</DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Salto </LUGAR>
+		<FREGUE> Montalegre </FREGUE>
+		<CONCEL> Montalegre </CONCEL>
+		<CODADM> 170626 </CODADM>
+		<LATITU> 518,9 </LATITU>
+		<LONGIT> 215,6 </LONGIT>
+		<ALTITU> 850m </ALTITU>
+		<ACESSO>Centro da aldeia de Salto. O acesso faz-se por rua que liga directamente à
+estrada EN 311, que atravessa a povoação. O monumento não está sinalizado.</ACESSO>
+		<DESARQ>Edifício de traça românica, muito alterado por remodelações e ampliações
+posteriores. Nas paredes Norte e Sul da <LIGA TERMO="nave"> nave</LIGA>
+conserva troços do primitivo <LIGA TERMO="aparelho isódono"> aparelho
+isódono</LIGA>, com muitos <LIGA TERMO="silhar"> silhares</LIGA> siglados.
+No coroamento das paredes conservam-se ainda alguns <LIGA TERMO="cachorro">cachorros</LIGA> lisos. Deslocados para a traseira da igreja, alinhados na
+bordadura do adro, observam-se quatro arcas tumulares cobertas com tampas em
+"duas águas", todas com decoração e inscrições. Trata-se de importantes
+vestígios da <LIGA TERMO="necrópole"> necrópole</LIGA> baixo-medieval,
+testemunhadores da antiga prática de enterrar os paroquianos no adro
+envolvente da igreja, neste caso possidentes locais. No conjunto trata-se de
+um monumento baixo-medieval razoavelmente conservado, apresentando um adro
+ajardinado agradavelmente arranjado.</DESARQ>
+		<INTERP>Igreja e necrópole tardo-medievais.</INTERP>
+		<INTERE>Embora o templo não possua um significativo valor patrimonial, as tumulações
+constituem peças de inegável valor artístico, reveladoras da penetração de
+padrões estéticos e socio-económicos que conheceram grande difusão nos
+séculos tardo-medievais, pelo que constituem um importante testemunho duma
+prática funerária complexa, enriquecida por tumulações cuidadas.</INTERE>
+		<BIBLIO>FONTES, L.(1992). Sítios e Achados Arqueológicos do Concelho de Montalegre.
+Braga, 1992 (edição policopiada da CCRN - Porto). </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

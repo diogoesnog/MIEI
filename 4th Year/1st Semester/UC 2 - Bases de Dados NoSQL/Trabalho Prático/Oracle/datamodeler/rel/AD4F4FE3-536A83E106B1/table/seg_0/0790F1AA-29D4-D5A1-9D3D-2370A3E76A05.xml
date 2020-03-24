@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0790F1AA-29D4-D5A1-9D3D-2370A3E76A05" name="city">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>2584E2C5-FB3A-6BBC-FD6F-B66B1E6FB776</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="city_id" id="FCB017DA-A808-8CAD-820C-4D19137861EC">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>102A7A5D-6FF1-5A8D-79E8-E6440329BF20</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="94D0ABE3-BE9F-E597-376E-8D9B66EBC7BD">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>621A2B2A-DA1B-0D94-0752-137D5BEF7F5D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C3D6AE6A-8183-5D04-E901-52182EF27713</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="country_id" id="88906A0A-3673-B966-937D-8877900CFBCC">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>E588E9CE-F287-62BF-4EEF-9B33E424AECF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<domain>9D4136D2-10F8-9397-1AA6-F49549FF123A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83C6303F-31EB-25EB-A358-CAA4A77DACDF" referredColumn="B86934DF-2469-928E-F179-18F98D8CF538"/>
+</associations>
+</Column>
+<Column name="last_update" id="348E4E10-FE06-8C65-9A5B-65620ECD4EC0">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>DCEF56B7-6259-1E4B-84C7-1CFF61F02E28</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="39457F88-9E9E-CBF0-304A-1377C8B6249E" name="city_PK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>73977ADA-5681-4F3C-106A-C343EE8C860C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCB017DA-A808-8CAD-820C-4D19137861EC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E67F111-B44C-1635-6E29-998B32A9373C" name="city_country_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88906A0A-3673-B966-937D-8877900CFBCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

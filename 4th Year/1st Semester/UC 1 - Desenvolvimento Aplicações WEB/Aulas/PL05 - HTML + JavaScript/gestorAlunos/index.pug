@@ -1,0 +1,34 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Novo Aluno
+            .w3-container
+                form.w3-container(action='/' method='POST')
+                    label
+                        b Identificador
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='identificador')
+                    label
+                        b Nome
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='nome')
+                    label
+                        b identificador
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='curso')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+            .w3-card-4
+                table.w3-table-all
+                    tr
+                        th Identificador
+                        th Nome
+                        th Curso
+                        th Operações
+                    each aluno in lista
+                        tr
+                            td= aluno.identificador
+                            td= aluno.nome
+                            td= aluno.curso
+
+                                button.w3-button.w3-circle.w3-blue-grey(onclick="apagaItem('" + aluno.identificador + "')") Apagar
+            footer.w3-container.w3-teal
+                adress Gerado por Diogo Nogueira

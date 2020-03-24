@@ -1,0 +1,72 @@
+extends layout
+
+block content
+    .container-fluid
+        br
+        h1
+            center 
+                b Gestor do Arquivo Sonoro
+        hr
+        h3 
+            center Informações da Música
+                b 
+                    =musica.tit
+        hr
+        br 
+        ol
+            li
+                if (musica.prov)
+                    h7 <b>Província: </b>
+                        =musica.prov
+                else
+                    h7 Não existem uma província associada a este registo.
+            p
+            li
+                if (musica.local)
+                    h7 <b>Local: </b> 
+                        =musica.local
+                else
+                    h7 Não existe um local associado a este registo.
+            p
+            li
+                if (musica.tit)
+                    h7 <b>Título: </b> 
+                        =musica.tit
+                else 
+                    h7 Não existe um título associado a este registo.
+            p
+            li
+                if (musica.inst)
+                    h7 <b>Instrumentos: </b> 
+                        =musica.inst
+                else 
+                    h7 Não existem instrumentos associados a este registo.
+            p
+            li
+                h7 <b> Informações Ficheiro Música: </b>
+                p
+                ul
+                    if (musica.file["@t"])
+                        li.h7 <b>Tipo Ficheiro: </b> 
+                            =musica.file["@t"]
+                    else
+                        li.h7 Não existe uma extensão atribuída a este ficheiro.
+                    if (musica.file["#text"])
+                        li.h7 <b>Nome Ficheiro: </b>
+                            =musica.file["#text"]
+                    else
+                        li.h7 Não existe um nome de ficheiro associado a este registo.
+            p
+            li
+                h7 <b>Duração: </b> 
+                    =musica.duracao + ' minutos'
+        br
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

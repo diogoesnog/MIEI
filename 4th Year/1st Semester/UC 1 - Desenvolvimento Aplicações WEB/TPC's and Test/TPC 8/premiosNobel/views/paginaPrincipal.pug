@@ -1,0 +1,51 @@
+extends layout
+
+block content
+
+    .container
+        br
+        h1(class="display-3")
+            center 
+                strong Prémios Nobel
+        br
+        hr
+
+        p O Prémio Nobel é um conjunto de seis prêmios internacionais anuais concedidos em várias categorias por instituições suecas e norueguesas, para reconhecer pessoas ou instituições que realizaram pesquisas, descobertas ou contribuições notáveis para a humanidade no ano imediatamente anterior ou no curso de suas atividades.
+        p Este <em> Website </em> disponbiliza uma <em>database</em> que aglomera um conjunto de Prémios Nobel, permitindo uma interação intuitiva consoante os seus pedidos.
+        
+        br
+        hr
+        p 
+            center
+                strong Consultas disponibilizadas:
+
+        div(class="text-center")
+            a(class="btn btn-danger mr-2" href="/premios" role="button") Lista Prémios
+            a(class="btn btn-danger mr-2" href="/laureados" role="button") Lista Laureados
+            a(class="btn btn-danger" href="/categorias" role="button") Lista Categorias
+        
+        br
+        hr
+
+        p
+            center 
+                strong Alternativamente, pode ainda consultar a lista dos Prémios através dos seguintes parâmetros:
+            center É necessário introduzir pelo menos a categoria. Caso contrário, será redirecionado para a <i>Home Page</i> de novo.
+
+        div(class="input-group")
+            input(type="text" class="form-control input-sm" name="categoriaPremio" id="categoriaPremio" placeholder="Insira a categoria do Prémio que pretende visualizar")
+            input(type="text" class="form-control input-sm" name="dataPremio" id="dataPremio" placeholder="Insira a data do Prémio que pretende visualizar")
+            div(class="input-group-append")
+                button.btn.btn-danger(onclick="mostraPremio(document.getElementById('categoriaPremio').value, document.getElementById('dataPremio').value)") Pesquisar Prémios
+
+        br
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar ao Topo</center>
+        hr

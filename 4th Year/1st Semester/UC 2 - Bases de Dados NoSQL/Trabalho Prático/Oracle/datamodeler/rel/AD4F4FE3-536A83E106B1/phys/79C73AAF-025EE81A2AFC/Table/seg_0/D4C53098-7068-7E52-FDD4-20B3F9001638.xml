@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="country" directorySegmentName="seg_0" id="D4C53098-7068-7E52-FDD4-20B3F9001638">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="last_update" id="61D2F955-C0BA-625E-D421-8C1A7681B134">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="country_id" id="B86934DF-2469-928E-F179-18F98D8CF538">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="country" id="B89C8C3B-7634-7520-95FE-A2DB2E80C50E">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="country_PK" id="9B30BB51-A58F-3E07-A961-C567117D60B7">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

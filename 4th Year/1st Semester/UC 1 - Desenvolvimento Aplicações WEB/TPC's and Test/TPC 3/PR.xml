@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC3">
+    <Informacoes>
+        <Titulo>XLST Stylesheets</Titulo>
+        <Subtitulo>TPC 3 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>1 de Outubro de 2019</DataInicio>
+        <DataFim>8 de Outubro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>O processamento de documentos XML por meio de um processador XSLT permite que se transformem os dados e a estrutura do documento em si num novo documento em formato HTML (e não só), através de um conjunto de instruções especificadas num Stylesheet.</P>
+        <P><Negrito>A ideia deste TPC 3 é então:</Negrito></P> 
+        <P> 1. Construir uma Stylesheet XSLT que possibilite a transformação do XML do Registo de Projetos do TPC 2 para uma página HTML funcional e preparada para os futuros TPCs.</P>
+        <P> 2. Desenvolver outra Stylesheet XSLT para o dataset dos Arqueossítios, criando-se um website constituído por várias páginas identificadas numa espécie de índice.</P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%203/PR.xml">XML do Registo de Projetos</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%203/PR.xsl">Stylesheet do Registo de Projetos</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%203/PR.html">HTML Registo de Projetos</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%203/Arqueoss%C3%ADtios/arq.xsl">Stylesheet dos Arqueossítios</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TPC%203/Arqueoss%C3%ADtios/website">Pasta website com todo os ficheiros HTML dos Arqueossítios</Trabalho>
+    </Entregas>
+</RegistoProjetos>

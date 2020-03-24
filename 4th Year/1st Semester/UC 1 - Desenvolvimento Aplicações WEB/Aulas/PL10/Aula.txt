@@ -1,0 +1,76 @@
+# Mini Manual JSON Server
+
+### Coisas essenciais para uma API de Dados (importante para o trabalho)
+
+```javascript
+npm i json-server -g
+```
+
+- compositores.json
+
+- prepará-lo
+- 
+  ```java
+  json-server --watch compositores.json --port 5026 
+  ```
+
+  (por predefinição se não colocarmos nada, ficaria na porta 3000)
+
+**Ao fazermos isto, automaticamente teremos:**
+
+- **GET**
+  - /compositores
+  - /compositores/:id
+- **POST**
+  - /compositores
+- **PUT**
+  - /compositores/id
+- **DELETE**
+
+---
+
+**Filtros (na *query string* em si**):
+
+- **GET**
+
+  - /compositores?nome=...
+
+- **Paginação**
+
+  - _page _limit
+
+  Por exemplo: **GET** /compositores?_page=7&_limit=20
+
+- **Ordenação**
+
+  - _sort _order (ascendente ou descendente)
+
+  Por exemplo: **GET** /compositores?_sort=dataNasc&order=desc
+
+- **Slice**
+
+  - _start _end OU _limit
+
+  Por exemplo: Pegar apenas numa determinada fatia de registos
+
+----
+
+**Importante**:
+
+- Ficheiro JSON deve estar sempre no seguinte formato:
+
+```json
+{
+    "compositores": [...],
+    ....
+}
+```
+
+---
+
+**Usar Postman:**
+
+- **POST**: importante para se testar sempre em qualquer API de Dados
+
+<img src="C:\Users\diogo\AppData\Roaming\Typora\typora-user-images\image-20191126093032915.png" alt="image-20191126093032915" style="zoom:50%;" />
+

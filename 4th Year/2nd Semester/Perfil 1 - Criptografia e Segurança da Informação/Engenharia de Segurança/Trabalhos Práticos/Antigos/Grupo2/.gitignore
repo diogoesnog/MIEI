@@ -1,0 +1,10 @@
+# macOS Metadata
+**/.DS_Store
+**/._*
+
+# Python artifacts
+**/__pycache__/**
+
+
+# JS/NPM
+**/node_modules

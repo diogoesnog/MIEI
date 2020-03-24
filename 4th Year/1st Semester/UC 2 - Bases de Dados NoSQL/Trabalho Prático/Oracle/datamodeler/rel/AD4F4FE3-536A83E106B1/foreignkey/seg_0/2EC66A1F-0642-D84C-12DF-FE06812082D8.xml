@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2EC66A1F-0642-D84C-12DF-FE06812082D8" containerWithKeyObject="130825E1-601D-C935-0ACD-3ACC49A1EFEF" localFKIndex="6BAB4D14-E986-0B2E-86AA-08307E86490D" name="film_language_original_FK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>C43C8A35-1229-B48B-A4E5-11634A2C12D3</importedID>
+<referredTableLongName>language</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0D8F7958-93B9-3790-3C5A-7A91B4780EE2</referredTableID>
+<keyObject>49C99197-6878-4DF2-932E-EFE5933A2713</keyObject>
+<referredKeyID>49C99197-6878-4DF2-932E-EFE5933A2713</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>language_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

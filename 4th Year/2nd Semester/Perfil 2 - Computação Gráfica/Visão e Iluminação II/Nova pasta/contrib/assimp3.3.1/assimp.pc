@@ -1,0 +1,11 @@
+prefix=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/
+exec_prefix=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II//bin
+libdir=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II//lib
+includedir=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II//include/assimp
+
+Name: NauDemo
+Description: Import various well-known 3D model formats in an uniform manner.
+Version: 3.3.1
+Libs: -L${libdir} -lassimp
+Libs.private:  
+Cflags: -I${includedir}

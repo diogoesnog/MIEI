@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\composerImGui\composerImGui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\ImGuiFileDialog.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_impl_glfw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_impl_opengl3.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\ImGuiFileDialog.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\dirent.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_impl_glfw.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_impl_opengl3.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\logIMGUI.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\composerImGui\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EC238798-5F65-3556-80D2-4A814929A55C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{34F12AC3-9B74-370B-8DCB-1E9DE5330440}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

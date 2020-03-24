@@ -1,0 +1,16 @@
+<form action="<%= action %>" method="POST" enctype="multipart/form-data" id="<%= id %>" multiple="multiple">
+
+    <div class="custom-file">
+        <input type="file" name="files" class="custom-file-input" id="customFile" multiple>
+        <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+    <br/>
+    <br/>
+
+    <div class="quill-composer p-1" id="quill-newpost"></div>
+    <input type="text" name="text" id="user-post-text" value="" hidden>
+    <button id="post-button" class="btn btn-muted2 btn-sm btn-block shadow-sm p-1 mt-2 text-muted2 border" type="submit">
+        Submit Post
+    </button>        
+    <br>
+</form>

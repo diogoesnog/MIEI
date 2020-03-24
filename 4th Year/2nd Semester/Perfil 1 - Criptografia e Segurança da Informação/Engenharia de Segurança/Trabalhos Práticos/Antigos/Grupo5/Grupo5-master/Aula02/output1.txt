@@ -1,0 +1,100 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1204168849 (0x47c62891)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IT, O = Banca d'Italia/00950501007, OU = Servizi di certificazione, CN = Banca d'Italia
+        Validity
+            Not Before: Nov 24 08:43:33 2014 GMT
+            Not After : Nov 24 09:13:33 2034 GMT
+        Subject: C = IT, O = Banca d'Italia/00950501007, OU = Servizi di certificazione, CN = Banca d'Italia
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (4096 bit)
+                Modulus:
+                    00:ec:b5:44:63:77:63:83:9d:6a:44:54:0d:29:5e:
+                    36:4f:b4:6b:8f:74:9a:45:2b:ef:f4:7a:ec:6f:67:
+                    91:06:d9:2f:5d:5d:41:c8:73:73:94:6f:29:77:89:
+                    54:4b:72:e6:40:ea:c3:7b:67:b2:dd:fd:37:63:67:
+                    b0:04:98:4e:54:9c:0e:13:68:0d:a7:93:59:84:2d:
+                    bc:35:c8:df:fb:ab:e8:a0:f2:63:0b:98:38:98:7d:
+                    88:dd:f3:30:f2:d4:35:bc:bd:42:7e:61:86:01:40:
+                    3b:57:b6:b7:8a:54:53:50:12:dc:10:a7:a8:7e:44:
+                    73:9e:01:36:f1:7d:95:fb:20:4b:39:b0:de:31:59:
+                    c4:cf:51:17:f9:13:10:ac:f3:81:bb:fd:38:cf:3b:
+                    b1:aa:3c:f9:1c:46:f2:b0:bf:7a:e8:48:01:d3:3b:
+                    72:1b:b6:ac:59:85:55:89:01:40:a9:74:00:4d:6b:
+                    2d:a2:86:18:77:ca:24:dc:f2:19:22:27:20:ed:23:
+                    2a:64:b5:3d:12:40:b7:18:22:74:b9:1d:78:be:9e:
+                    82:b4:0a:da:a4:3e:3f:22:0c:5d:cf:87:2d:51:ea:
+                    3a:9c:ac:fd:d5:e6:0d:c4:72:2e:49:d3:c8:1d:67:
+                    0e:28:98:84:fc:99:02:66:1f:73:23:04:2b:0d:d8:
+                    64:43:20:60:e2:f9:b4:a4:ba:57:7e:8b:71:cf:1c:
+                    7b:af:21:36:7c:35:ec:40:65:a5:62:23:d6:bb:a0:
+                    8d:d5:77:77:8e:5d:e2:45:0c:17:89:bc:c9:2b:37:
+                    27:ae:64:e1:9f:23:96:82:d7:49:14:dd:59:5a:cb:
+                    cb:83:a2:49:d6:12:a0:5e:5b:db:be:c9:7e:0a:9d:
+                    da:20:40:2f:75:54:0e:af:cc:c6:ec:ad:40:92:21:
+                    3b:2b:74:97:a7:46:37:d1:f9:8e:57:ed:28:55:f4:
+                    7a:db:5c:75:2f:a4:f0:7a:64:3d:82:af:8f:35:6c:
+                    de:72:8a:ac:0b:ce:d7:26:60:e7:41:75:74:c4:de:
+                    79:9b:eb:ee:58:e7:63:b6:8e:c0:7d:25:5a:18:ac:
+                    71:76:50:7e:88:3d:18:a0:49:ff:bc:34:f4:bd:49:
+                    fa:89:aa:19:4f:7d:87:ae:31:1f:90:d4:40:fe:ac:
+                    e2:b6:a4:0d:e7:c9:a7:6d:70:b2:6d:88:26:50:1a:
+                    df:07:07:a1:2c:f5:d1:bf:cc:fb:6a:84:24:a2:2f:
+                    d5:87:04:ff:8e:81:15:dd:9c:52:16:0d:7c:4b:13:
+                    ad:96:94:4a:db:ec:d5:a3:64:f1:8c:ee:f8:6c:03:
+                    93:14:1d:7f:9c:f0:46:fd:80:f0:a0:4e:ab:74:47:
+                    bc:db:39
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:1
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Certificate Policies: 
+                Policy: 1.3.76.38.1.1.1
+                  CPS: http://www.bancaditalia.it/firmadigitale
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:ldap://ldap.firmadigitale.bancaditalia.it/cn=WinCombined1,cn=Banca%20d'Italia,ou=Servizi%20di%20certificazione,o=Banca%20d'Italia/00950501007,c=IT?certificateRevocationList
+                  URI:http://www.firmadigitale.bancaditalia.it/crl/crl1.crl
+
+                Full Name:
+                  DirName:C = IT, O = Banca d'Italia/00950501007, OU = Servizi di certificazione, CN = Banca d'Italia, CN = CRL1
+
+            X509v3 Subject Key Identifier: 
+                BE:09:DE:0F:DA:AE:81:7F:D9:83:69:2B:48:14:50:B4:87:72:F6:81
+    Signature Algorithm: sha256WithRSAEncryption
+         4b:d2:6c:a2:19:1b:83:a2:9c:53:bc:76:e1:cb:81:d0:d5:a4:
+         e2:0a:06:c7:77:cb:6d:38:44:72:eb:70:34:f3:f1:eb:e8:a1:
+         1c:68:0e:e7:79:8b:1f:f9:00:82:4c:17:8f:d9:a5:e3:c3:90:
+         7a:9c:c3:a1:26:eb:82:f7:15:b0:4c:2a:07:d4:17:11:fd:20:
+         8b:0c:ae:f9:7b:86:a6:10:1a:41:6c:ff:c1:61:f3:8e:e0:13:
+         c6:12:ed:50:d3:23:18:cf:5f:be:63:f9:48:02:7d:dc:96:a9:
+         6b:fe:37:7e:08:41:45:b0:8d:01:5a:82:e9:db:ea:eb:4d:9b:
+         a9:c3:e1:aa:6c:a5:e4:e3:4a:65:eb:0c:7a:af:86:11:ba:44:
+         31:c6:82:58:31:00:53:a9:68:51:4b:4c:ae:07:98:e0:67:3e:
+         9c:9e:03:f0:6d:65:4f:d3:04:fe:88:79:6e:c4:99:70:0f:3e:
+         78:10:dd:11:f3:66:99:64:40:37:13:32:01:7b:25:ab:14:e1:
+         82:af:10:05:18:4a:4a:81:9d:36:aa:ca:cf:6a:f6:d1:ac:96:
+         b0:28:78:8e:00:a6:96:62:7c:1b:f7:7b:cd:e4:d7:d7:24:d0:
+         4c:bc:73:60:22:78:a2:3e:f3:6f:0d:f4:6d:c9:b2:ab:40:81:
+         29:fe:cb:cb:b7:a0:d3:56:fb:00:9d:3e:3d:9a:fc:3f:4c:96:
+         bb:4a:8e:7d:9c:f8:2d:00:67:fb:06:5a:21:64:7a:b4:77:39:
+         c4:45:c2:16:7c:4e:94:28:bd:9d:21:82:a9:b7:79:5e:e2:e3:
+         6f:b9:ee:b9:0d:37:8a:e7:4f:ca:74:14:87:f3:cf:0d:23:d7:
+         67:dc:fb:15:8f:a3:c7:fa:e1:c2:7c:0b:58:ee:a2:9a:24:25:
+         e6:4e:5f:e2:1a:3f:ba:1d:cf:75:9f:2e:78:a9:4c:ea:f2:51:
+         6a:12:85:c7:ee:b6:94:6f:d7:6c:e7:84:71:6d:fe:c5:da:98:
+         8e:f1:b1:d3:2d:82:9b:76:35:38:9b:5a:46:ab:4a:b2:b7:6d:
+         2a:4d:c1:41:cf:f0:bb:41:c9:6f:f6:10:57:15:36:31:97:9f:
+         9c:e6:4c:6a:33:ac:34:18:0b:3a:6f:6f:31:99:cd:f1:75:5f:
+         66:09:67:61:a1:44:ae:86:d2:d8:0d:b2:7f:09:5b:13:3c:fa:
+         67:b6:57:bf:42:d7:9f:5d:3f:c9:fe:00:9c:bc:9d:c6:dd:88:
+         4c:8f:4f:5e:74:90:0e:44:49:e0:6a:32:7d:2f:d0:bf:a6:d4:
+         16:6d:9f:27:c6:06:f1:99:ca:fd:ef:c2:88:54:b6:1d:02:91:
+         f4:60:93:08:6d:1e:e1:15

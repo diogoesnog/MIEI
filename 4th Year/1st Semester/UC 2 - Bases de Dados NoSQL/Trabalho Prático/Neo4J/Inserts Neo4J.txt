@@ -1,0 +1,169 @@
+// 1.Inserir Informações Gerais.
+
+// Informações dos Atores
+LOAD CSV WITH HEADERS FROM 'file:///actors.csv' AS row
+CREATE (actor:Actor {idActor: row.idActor}) 
+SET actor.FirstName= row.FirstName, 
+	actor.LastName = row.LastName,
+    actor.LastUpdate = row.LastUpdate
+RETURN actor;
+
+// Informações das Moradas 
+LOAD CSV WITH HEADERS FROM 'file:///addresses.csv' AS row
+CREATE (address:Address {idAddress: row.idAddress}) 
+SET address.Address = row.Address, 
+	address.Address2 = row.Address2, 
+    address.District = row.District, 
+    address.PostalCode = row.PostalCode, 
+    address.Phone = row.Phone,
+    address.City = row.City,
+    address.Country = row.Country
+RETURN address;
+
+// Informações dos Clientes
+LOAD CSV WITH HEADERS FROM 'file:///customers.csv' AS row
+CREATE (customer:Customer {idCustomer: row.idCustomer}) 
+SET customer.FirstName = row.FirstName, 
+	customer.LastName = row.LastName, 
+    customer.Email = row.Email, 
+    customer.Active = row.Active,
+    customer.LastUpdate = row.LastUpdate 
+RETURN customer;
+
+// Informações dos Filmes
+LOAD CSV WITH HEADERS FROM 'file:///films.csv' AS row
+CREATE (film:Film {idFilm: row.idFilm})
+SET film.Title = row.Title,
+	film.Description = row.Description,
+    film.ReleaseYear = row.ReleaseYear, 
+    film.RentalDuration = row.RentalDuration,
+    film.RentalRate = row.RentalRate, 
+    film.Rating = row.Rating, 
+    film.Length = row.Length,
+    film.ReplacementCost = row.ReplacementCost,
+    film.SpecialFeatures = row.SpecialFeatures, 
+    film.LastUpdate = row.LastUpdate,
+    film.Category = row.Category,
+    film.Language = row.Language
+RETURN film;
+
+// Informações do Inventário
+LOAD CSV WITH HEADERS FROM 'file:///inventory.csv' AS row
+CREATE (inventory:Inventory {idInventory: row.idInventory}) 
+SET inventory.LastUpdate = row.LastUpdate
+RETURN inventory;
+
+// Informações dos Pagamentos
+LOAD CSV WITH HEADERS FROM 'file:///payments.csv' AS row
+CREATE (payment:Payment {idPayment: row.idPayment}) 
+SET payment.Amount = row.Amount, 
+	payment.PaymentDate = row.PaymentDate,
+    payment.LastUpdate = row.LastUpdate
+RETURN payment;
+
+// Informações dos Rentals
+LOAD CSV WITH HEADERS FROM 'file:///rentals.csv' AS row
+CREATE (rental:Rental {idRental: row.idRental}) 
+SET rental.RentalDate = row.RentalDate, 
+	rental.ReturnDate = row.ReturnDate,
+    rental.LastUpdate = row.LastUpdate
+RETURN rental;
+
+// Informações do Staff Lojas
+LOAD CSV WITH HEADERS FROM 'file:///staff.csv' AS row
+CREATE (staff:Staff {idStaff: row.idStaff}) 
+SET staff.idStore = row.idStore, 
+    staff.FirstName = row.FirstName, 
+	staff.LastName = row.last_name, 
+    staff.Email = row.email, 
+    staff.Active = row.Active,
+    staff.LastUpdate = row.LastUpdate
+RETURN staff;
+
+// Informações das Lojas
+LOAD CSV WITH HEADERS FROM 'file:///stores.csv' AS row
+CREATE (store:Store {idStore: row.idStore})
+SET store.LastUpdate = row.LastUpdate
+RETURN store;
+
+// 2. Inserir Relações entre os Nodos.
+
+// Relação Staff-Morada
+// Relação Staff-Loja
+LOAD CSV WITH HEADERS FROM 'file:///staff.csv' AS row
+MATCH (staff:Staff {idStaff: row.idStaff})
+MATCH (store:Store {idStore: row.idStore})
+MATCH (address:Address {idAddress: row.idAddress})
+
+CREATE (staff)-[:VIVE_EM]->(address)
+CREATE (staff)-[:TRABALHA_EM]->(store)
+RETURN staff,address,store;
+
+// Relação Loja-Morada
+// Relação Loja-Manager
+LOAD CSV WITH HEADERS FROM 'file:///stores.csv' AS row
+MATCH (store:Store {idStore: row.idStore})
+MATCH (address:Address {idAddress: row.idAddress})
+MATCH (manager:Staff {idStaff: row.idManagerStaff})
+
+CREATE (store)-[:SEDIADA_EM]->(address)
+CREATE (store)-[:GERIDA_POR]->(manager)
+RETURN store,address,manager;
+
+// Relação Cliente-Morada
+// Relação Cliente-Loja
+LOAD CSV WITH HEADERS FROM 'file:///customers.csv' AS row
+MATCH (customer:Customer {idCustomer: row.idCustomer}) 
+MATCH (store:Store {idStore: row.idStore}) 
+MATCH (address:Address {idAddress: row.idAddress}) 
+    
+CREATE (customer)-[:VIVE_EM]->(address) 
+CREATE (customer)-[:FREQUENTA]->(store) 
+RETURN customer,address,store;
+
+// Relação Pagamento-Cliente
+// Relação Pagamento-Staff
+// Relação Pagamento-Aluger
+LOAD CSV WITH HEADERS FROM 'file:///payments.csv' AS row
+MATCH (payment:Payment {idPayment: row.idPayment}) 
+MATCH (customer:Customer {idCustomer: row.idCustomer}) 
+MATCH (staff:Staff {idStaff: row.idStaff}) 
+MATCH (rental:Rental {idRental: row.idRental})  
+
+CREATE (payment)-[:FEITO_POR]->(customer) 
+CREATE (payment)-[:PROCESSADO_POR]->(staff) 
+CREATE (payment)-[:ALUGADO]->(rental) 
+RETURN payment,customer,staff,rental;
+
+// Relação Aluger-Cliente
+// Relação Aluger-Loja
+// Relação Aluger-Inventário
+LOAD CSV WITH HEADERS FROM 'file:///rentals.csv' AS row
+MATCH (rental:Rental {idRental: row.idRental}) 
+MATCH (inventory:Inventory {idInventory: row.idInventory}) 
+MATCH (customer:Customer {idCustomer: row.idCustomer}) 
+MATCH (staff:Staff {idStaff: row.idStaff}) 
+
+CREATE (rental)-[:FEITO_POR]->(customer) 
+CREATE (rental)-[:PROCESSADO_POR]->(staff) 
+CREATE (rental)-[:PERTENCE_AO]->(inventory) 
+RETURN rental,customer,staff,inventory;
+
+// Relação Ator-Filme
+LOAD CSV WITH HEADERS FROM 'file:///filmsActors.csv' AS row
+MATCH (film:Film {idFilm: row.idFilm})
+MATCH (actor:Actor {idActor: row.idActor})
+
+CREATE (actor)-[:ATUA_EM]->(film)
+RETURN actor,film;
+
+// Relação Inventário-Filme
+// Relação Inventário-Loja
+LOAD CSV WITH HEADERS FROM 'file:///inventory.csv' AS row
+MATCH (inventory:Inventory {idInventory: row.idInventory}) 
+MATCH (film:Film {idFilm: row.idFilm}) 
+MATCH (store:Store {idStore: row.idStore}) 
+
+CREATE (inventory)-[:CONTEM]->(film) 
+CREATE (inventory)-[:PERTENCENTE]->(store)
+RETURN inventory,film,store;

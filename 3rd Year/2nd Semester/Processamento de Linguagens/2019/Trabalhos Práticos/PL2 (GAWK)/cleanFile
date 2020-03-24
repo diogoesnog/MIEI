@@ -1,0 +1,73 @@
+BEGIN {
+    RS="\n;" # Definir o que separa os vários registos.
+    FS=";" # Definir o que separa os vários campos.
+}
+
+# Ignorar primeira linha ficheiro .csv, já que apenas contém os nomes dos vários fields.
+# O primeiro registo passar a ser tratado como se fosse o segundo.
+NR==1 {next} 
+
+# Contar até 30, uma vez que apenas existem estes registos.
+NR<=30 {
+   
+    i=1;
+
+    # Sempre que o primeiro campo está vazio, colocamos como NIL.
+    if($1~"") print("NILL");
+
+    # Eliminar ocorrência do caractér " (aspas). 
+    # Conveniente para o trabalho em si.
+    gsub("\"","")
+
+    #Eliminar ocorrência de todas as linhas em branco extras.
+    # Substituimos por um espaço em branco.
+    gsub("\r\n"," ")
+
+    #Só contamos 26 fields uma vez que o field Estado não está a ser tratado como field.
+    while(i<=26){
+
+        # Sempre que estamos no penúltimo field e esse registo não seja o número 17.
+        # Registo número 17 contém o último field preenchido (Notas).
+        if(i==25 && NR!=17){
+
+            if($25=="" && $26==""){
+                print("NOVOCAMPO - VAZIO");
+            }
+            else{
+                flag=0;
+
+                printf("NOVOCAMPO - ");
+
+                while(flag==0){
+                    if($i!="") printf($i);
+                    else {flag=1; print("\nNOVOCAMPO - VAZIO");}
+                    i++;
+                }
+            }
+
+            i++;
+        }
+        # Sempre que estamos no último field e esse registo seja o número 17.
+        # Sabemos que este registo contém o último field (n.27) preenchido.
+        if(i==26 && NR==17){
+            
+            flag=0;
+            printf("NOVOCAMPO - ");
+
+            while(flag==0){
+                if($i!="") printf($i);
+                else {flag=1; printf("\n"); break;}
+                i++;
+            }
+        }
+        # Caso não seja nenhum destes fields/registos.
+        else{
+            # Sempre que o campo é vazio, colocamos como VAZIO.
+            if($i=="") print("NOVOCAMPO - VAZIO");
+            # Caso contrário, imprimimos o campo em si.
+            else printf("NOVOCAMPO - %s\n", $i);
+        }
+        
+        i++;
+    }
+}

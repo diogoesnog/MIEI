@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte de Cabanas </IDENTI>
+		<DESCRI> Povoado fortificado </DESCRI>
+		<LUGAR/>
+		<FREGUE> Dume </FREGUE>
+		<CONCEL> Braga </CONCEL>
+		<CODADM> 030310 </CODADM>
+		<LATITU> 510,9 </LATITU>
+		<LONGIT> 175,9 </LONGIT>
+		<ALTITU> 190m </ALTITU>
+		<QUADRO>Pequeno outeiro, profundamente destruído na zona superior e na encosta
+nordeste devido à extracção de pedra.Totalmente destruído na encosta sul por
+desaterros. </QUADRO>
+		<TRAARQ>Pequena escavação realizada em 1996 por Ana M. S. Bettencourt (U.A.U.M.)e
+Armandino Cunha (Gabinete de Arqueologia da Câmara Municipal de Braga).</TRAARQ>
+		<DESARQ>Antes da destruição, para terraplanagem da vertente oeste, foi possível
+verificar a existência de taludes artificiais, de um fosso e outras
+estruturas pétreas, assim como fragmentos de cerâmica manual e micácea,
+integráveis, tecnicamente, na Idade do Bronze e do Ferro. As escavações de
+emergência, efectuadas na plataforma superior e no início da encosta este,
+permitiram visualizar dois níveis de ocupação; um atribuível à Idade do
+Bronze e o outro à Idade do Ferro recente. </DESARQ>
+		<INTERP>Povoado proto-histórico da Idade do Bronze e do Ferro.</INTERP>
+		<DEPOSI>Gabinete de Arqueologia da Câmara Municipal de Braga.</DEPOSI>
+		<BIBLIO>FONTES, J. (1993) Inventário de sítios e achados arqueológicos do concelho
+de Braga, Mínia, 3ª série, 1, Braga, pp. 43. </BIBLIO>
+		<AUTOR> Ana M. S. Bettencourt </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

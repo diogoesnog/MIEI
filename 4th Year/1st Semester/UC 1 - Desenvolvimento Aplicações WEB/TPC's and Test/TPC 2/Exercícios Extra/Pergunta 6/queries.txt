@@ -1,0 +1,5 @@
+Resolução das Queries
+
+1. //ARQELEM[CONCEL=" Amares "]/IDENTI
+2. //ARQELEM[TIPO[@ASSUNTO="arqueossitio"]]/CONCEL
+3. //ARQELEM[CONCEL=" Montalegre "]/DESCRI

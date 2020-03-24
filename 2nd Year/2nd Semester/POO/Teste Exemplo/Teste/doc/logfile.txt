@@ -1,0 +1,67 @@
+Class documentation
+<---- javadoc command: ---->
+/usr/lib/jvm/java-8-openjdk-amd64/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/usr/share/bluej/bluejcore.jar:/usr/share/bluej/junit-4.11.jar:/usr/share/bluej/hamcrest-core-1.3.jar:/usr/share/bluej/lang-stride.jar:/usr/share/bluej/userlib/pi4j-device.jar:/usr/share/bluej/userlib/pi4j-core.jar:/usr/share/bluej/userlib/pi4j-gpio-extension.jar:/usr/share/bluej/userlib/pi4j-service.jar:/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste
+-d
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+/usr/share/bluej/bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java
+<---- end of javadoc command ---->
+Loading source file /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java...
+Constructing Javadoc information...
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java:20: error: cannot find symbol
+    private Set<Candidato> eleitos;
+                ^
+  symbol:   class Candidato
+  location: class ListaEleitoral
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java:21: error: cannot find symbol
+    private List<Candidato> porEleger;
+                 ^
+  symbol:   class Candidato
+  location: class ListaEleitoral
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java:26: error: cannot find symbol
+    public ListaEleitoral(String partido, Collection<Candidato> candidatos) {
+                                                     ^
+  symbol:   class Candidato
+  location: class ListaEleitoral
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java:34: error: cannot find symbol
+    public Candidato aEleger() throws Excecao1 {
+           ^
+  symbol:   class Candidato
+  location: class ListaEleitoral
+/media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/ListaEleitoral.java:60: error: cannot find symbol
+    public Collection<Candidatos> candidatos() {
+                      ^
+  symbol:   class Candidatos
+  location: class ListaEleitoral
+Standard Doclet version 1.8.0_131
+Building tree for all the packages and classes...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/ListaEleitoral.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/package-frame.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/package-summary.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/allclasses-frame.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/allclasses-noframe.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/index.html...
+Generating /media/diogoesnog/3831-6132/Engenharia Informática/POO/Teste Exemplo/Teste/doc/stylesheet.css...
+5 warnings

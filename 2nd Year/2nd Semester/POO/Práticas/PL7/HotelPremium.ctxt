@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=HotelPremium
+comment0.text=\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ HotelPremium\ aqui.\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=
+comment1.target=HotelPremium()
+comment10.params=
+comment10.target=java.lang.String\ toString()
+comment11.params=
+comment11.target=HotelPremium\ clone()
+comment2.params=codigo\ nome\ localidade\ precoBaseQuarto\ numQuartos\ estrelas\ taxaLuxo\ pontos
+comment2.target=HotelPremium(java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ int,\ int,\ double,\ int)
+comment3.params=hp
+comment3.target=HotelPremium(HotelPremium)
+comment4.params=
+comment4.target=double\ getTaxaLuxo()
+comment5.params=tl
+comment5.target=void\ setTaxaLuxo(double)
+comment6.params=
+comment6.target=int\ getPontos()
+comment7.params=p
+comment7.target=void\ setPontos(int)
+comment8.params=
+comment8.target=double\ precoQuarto()
+comment9.params=obj
+comment9.target=boolean\ equals(java.lang.Object)
+numComments=12

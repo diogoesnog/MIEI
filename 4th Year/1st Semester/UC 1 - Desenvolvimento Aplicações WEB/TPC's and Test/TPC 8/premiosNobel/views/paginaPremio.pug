@@ -1,0 +1,71 @@
+extends layout
+
+block content
+    .container
+        br
+        h1(class="display-3")
+            center 
+                strong Prémios Nobel
+        h3
+            center Informações do Prémio de 
+                b
+                    = premio.year
+        hr
+        br
+        ol
+            li
+                h7 
+                    b Identificador do Prémio 
+                    = premio._id
+            p
+            li
+                h7
+                    b Ano do Prémio 
+                    = premio.year        
+
+            p
+            li
+                h7
+                    b Categoria do Prémio 
+                    = premio.category
+            p
+            li
+                h7
+                    b  Motivação Geral do Prémio 
+                
+                if(premio.overallMotivation)
+                    = premio.overallMotivation
+                else
+                    p Não existem motivações associadas ao Prémio
+
+            p
+            li
+                h7
+                    b Laureado(s) do Prémio
+                - var numeroLaureado = 0;
+                ul 
+                    each laureado in premio.laureates
+                        p
+                        lu
+                            b Laureado Número 
+                                = numeroLaureado++
+                            p
+                        li.h7
+                            b Indentificador do Laureado 
+                            = laureado.id
+                        li.h7 
+                            b Nome Laureado 
+                            = laureado.firstname + " " + laureado.surname
+                        li.h7
+                            b Motivação Laureado 
+                            = laureado.motivation
+        br
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

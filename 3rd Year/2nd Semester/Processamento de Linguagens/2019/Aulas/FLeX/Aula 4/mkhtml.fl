@@ -1,0 +1,103 @@
+%option noyywrap  
+
+%{
+ FILE * out, *abc;
+ char *title;
+%}
+
+%x ABC META POEMA 
+
+%%
+
+<*>title:.*     { 
+                  BEGIN META; 
+                  fprintf(out, "<h1>%s</h1>\n", yytext+6); 
+                  title = strdup(yytext+6); 
+                }
+
+<*>\<abc\>      {
+                  BEGIN ABC; 
+                }
+
+<ABC>\<\/abc\>  {
+                  BEGIN POEMA; 
+                }
+
+<META>{
+        \n\n         { 
+                        BEGIN POEMA; 
+                        fprintf(out, "<br><hr></br>");
+                     }
+
+        ([^:\n]+)/:  {
+                        fprintf(out,"</br><b>%s</b>",yytext);
+                     }
+} 
+
+<ABC>{
+        .|\n         { 
+                        fprintf(abc, "%s",yytext); 
+                     }
+}
+
+<POEMA>{
+        \n            { 
+                        fprintf(out,"</br>");
+                      }
+}
+
+<*>.|\n         { 
+                  fprintf(out,"%s",yytext);
+                }
+
+%%
+
+void iniciarHTML(FILE *f){
+  fprintf(f, "<html><head><meta charset='UTF-8'/> </head><body><ul>");
+}
+
+void fecharHTML(FILE *f){
+  fprintf(f, "</ul></body></html>");
+}
+
+int main(int argc, char* argv[]){
+
+  char filename[200];
+
+  FILE* ind = fopen ("index.html","w");
+  abc = fopen ("cancioneiro.abc","w");
+
+  if(argc>1){
+
+    iniciarHTML(ind);
+
+        for(int i=1; i<argc; i++){
+        
+            sprintf(filename,"%s.html",argv[i]);
+            out = fopen (filename,"w");
+            yyin = fopen (argv[i],"r");
+            
+            iniciarHTML(out);
+            
+            yylex(); // Inicia o FLEX em si.
+     
+            fprintf(ind,"<li><a href='%s'>%s</a></li>\n",
+                    filename, 
+                    title);
+     
+            fecharHTML(out);
+
+            fclose(out);
+            fclose(yyin); 
+        } 
+  } 
+  else return 1;
+
+  fecharHTML(ind);
+  fclose(ind);
+  fclose(abc);
+
+  //system("abcp -q cancioneiro.abc");
+
+  return 0;
+}

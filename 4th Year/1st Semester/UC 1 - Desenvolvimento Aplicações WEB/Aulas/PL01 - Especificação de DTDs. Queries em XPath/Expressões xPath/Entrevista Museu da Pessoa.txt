@@ -1,0 +1,6 @@
+Resolução das Queries
+
+1. //h/@tit
+2. //pergunta[contains(text(),"vinho")]
+3. //h/@tipo
+4. //h

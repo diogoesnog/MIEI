@@ -1,0 +1,31 @@
+extends layout
+block content
+  .w3-container
+    h1 Gestão de uma Lista de Compras
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3 Novo Item
+          .w3-container
+            form.w3-container(action='/' method='POST')
+              label
+                b Item
+              input.w3-input.w3-border(type='text' name='item')
+              label
+                b Quantidade 
+              input.w3-input.w3-border(type='text' name='quant')
+              input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+        .w3-card-4
+            table.w3-table-all
+                tr
+                    th Item
+                    th Quant
+                    th Operações
+                each a in lista
+                    tr
+                        td= a.item
+                        td= a.quant
+                        td 
+                            button.w3-button.w3-circle.w3-blue-grey(onclick="apagaItem('" + a.id + "')") Apagar
+        footer.w3-container.w3-teal
+            address Gerado por Lista de Compras App::
+                

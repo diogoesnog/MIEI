@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+    .container
+        br
+        h1(class="display-3")
+            center 
+                strong Prémios Nobel
+        h3
+            center Lista de Prémios
+        br 
+        
+        .container
+            table.table.table-stripped
+                thead.thead
+                    tr
+                        th.bg-dark.text-light Ano do Prémio
+                        th.bg-dark.text-light.text-center Categoria do Prémio
+                        th.bg-danger.text-light.text-center Operações
+                    tr
+                thead
+                    each premio in premios
+                        tr
+                            td= premio.year
+                            td.text-center= premio.category
+                            td.text-center
+                                a(href="premios/" + premio._id style="color:gray")
+                                    i.fa.fa-search &nbsp&nbsp&nbsp
+                                a(href="/")
+                                    i.fa.fa-trash-o.delete(onclick="eliminarPremio('" + premio._id + "')" style="color:gray")
+                        tr            
+
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

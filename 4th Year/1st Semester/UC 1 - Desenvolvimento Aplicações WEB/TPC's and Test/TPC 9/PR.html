@@ -1,0 +1,66 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <div class="container">
+         <hr>
+         <title>Registo de Projetos</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      </div>
+   </head>
+   <body>
+      <div class="container">
+         <h1 align="center"><b>Utilitário em NodeJS (Comando mongoimport)</b></h1>
+         <h3 align="center">TPC 9 (Desenvolvimento Aplicações WEB)</h3>
+         <hr>
+         <table align="center" width="50%">
+            <tr>
+               <td><b>Keyname: </b>MIEI-DAW-TPC9
+               </td>
+               <td><b>Título: </b>Utilitário em NodeJS (Comando mongoimport)
+               </td>
+            </tr>
+            <tr>
+               <td><b>Data Início: </b>12 de Novembro de 2019
+               </td>
+               <td><b>Data Fim: </b>19 de Novembro de 2019
+               </td>
+            </tr>
+            <tr>
+               <td><b>Supervisor: </b><a href="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</a></td>
+               <td><b>Email Supervisor: </b>jcr@di.uminho.pt
+               </td>
+            </tr>
+         </table>
+         <hr>
+         <h3>Equipa</h3>
+         <ul>
+            <li><b>A78957</b> - Diogo Emanuel Silva Nogueira - a78957@alunos.uminho.pt
+            </li>
+         </ul>
+         <hr>
+         <h3>Resumo</h3>
+         <p>O TPC 9 é um mini projeto extra que consiste em criar um programa em NodeJS que permita
+            um funcionamento a nível da linha de comandos. Através do nome da database, collection
+            e ficheiro JSON a importar, a ideia é o comando ser executado por si só, fazendo assim
+            o povoamento da Base de Dados que se especificou.
+         </p>
+         <p>Uso dos módulos ReadLine e Child Process para conseguir fazer o parse do Input e a
+            execução do comando mongoimport em si, respetivamente.
+         </p>
+         <p><b>Para isso, criaram-se duas funções:</b></p>
+         <p>1. Função parseInput() - trata de extrair o nome da database, collection e ficheiro
+            JSON, guardando-os numa variável própria, fazendo para isso uso de uma Interface criada
+            através do módulo ReadLine.
+         </p>
+         <p>2. Função executarComando() - cria todo o comando, completando-o com as informações
+            pedidas para o efeito e após isso executa-o.
+         </p>
+         <hr>
+         <h3>Entregas</h3>
+         <ul>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%209/mongoImport.js">Ficheiro correspondente ao programa em si</a></li>
+         </ul>
+      </div>
+   </body>
+</html>

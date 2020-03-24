@@ -1,0 +1,10 @@
+#!/usr/bin/gawk -f
+
+BEGIN {
+    FS="\t" # Field Separator - O que separa cada campo - \t
+    PAD = ARGV[1]
+    ARGV[1] = "inscritos.txt" 
+}
+
+$20~ PAD {print $20,$28}   # ~ -> Se faz matching com o PAD
+

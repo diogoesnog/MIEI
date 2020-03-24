@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Castro do Barbudo; Monte do Castelo; Monte de Brito </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-História / Romanização / Idade Média</CRONO>
+		<LUGAR>
+			   <LIGA TERMO="castro"> castro</LIGA> do Barbudo </LUGAR>
+		<FREGUE> Barbudo </FREGUE>
+		<CONCEL> Vila Verde </CONCEL>
+		<CODADM> 031306 </CODADM>
+		<LATITU> 520,5 </LATITU>
+		<LONGIT> 171,6 </LONGIT>
+		<ALTITU> 331m </ALTITU>
+		<ACESSO>O acesso a este povoado pode ser feito a partir da povoação do Barbudo, por
+caminho florestal.</ACESSO>
+		<QUADRO>O castro do Barbudo ocupa o extremo SO do monte do mesmo nome, que se
+desenvolve numa larga e comprida plataforma. O síto onde assenta o <LIGA TERMO="castro"> castro</LIGA> corresponde ao ponto mais elevado do monte,
+conhecido pelo topónimo "Castelo". </QUADRO>
+		<TRAARQ>As únicas escavações realizadas datam de 1983 e 1985,e já foram
+publicadas.</TRAARQ>
+		<DESARQ>O povoado possui uma situação topográfica notável: do seu ponto mais alto,
+domina-se, quer a bacia do Homem, quer boa parte da bacia do Cávado. Os
+vestígios de ocupação concentram-se nas vertentes norte e noroeste, viradas
+ao vale do Ribeiro de Rojão. No lado sul, virado ao vale do Cávado, a
+vertente do monte é escarpada; no lado este, a vertente é esbatida
+ligando-se ao esporão do monte, onde se encontram ainda inúmeros vestígios
+de ocupação. Esta área situa-se, contudo, já fora da zona fortificada do
+povoado. O <LIGA TERMO="castro"> castro</LIGA> desenvolve-se em três largos
+tabuleiros planos, delimitados por três linhas de muralhas. No lado este do
+povoado, o menos defendido naturalmente, existem vestígios de uma quarta
+fortificação. Os dados obtidos no decorrer das escavações realizadas no
+povoado, entre 1983 e 1985, deixam perceber uma ocupação do sítio, entre o
+Bronze Final e a Alta Idade Média. Na vertente do monte virada a Carreiras
+foi descoberto, nos inícios do século, um tesouro monetário, composto por
+moedas dos séculos IV e V.</DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+romanizado.</INTERP>
+		<DEPOSI> Museu D. Diogo de Sousa. </DEPOSI>
+		<BIBLIO> AZEVEDO, P. A. (1897). Extractos archeologicos das memorias
+parochiaes de 1758, Arqueólogo Português, 2, pp. 152. </BIBLIO>
+		<BIBLIO> HIPÓLITO, M. C. (1960-61). Dos tesouros de moedas romanas em
+Portugal, Conimbriga, 2-3, Coimbra, pp. 16-17. </BIBLIO>
+		<BIBLIO> CUNHA, A. R.(1975a). Trepando aos montes, O Distrito de Braga, 1
+(3-4), Braga, pp.197. </BIBLIO>
+		<BIBLIO> MARTINS, M. (1989). O castro do Barbudo, Vila Verde. Resultados das
+campanhas realizadas entre 1983-1985. Cadernos de Arqueologia Monografias,
+3, Braga. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

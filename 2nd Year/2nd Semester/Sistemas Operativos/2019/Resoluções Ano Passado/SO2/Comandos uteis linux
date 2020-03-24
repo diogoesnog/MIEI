@@ -1,0 +1,11 @@
+// Comandos uteis linux //
+clear : limpar linha de comandos
+cat : copiar palavras ou abrir ficheiros para leitura
+atoi : Esta função converte uma string em um inteiro . atoi(const char *nptr)
+mkdir : criar pasta
+echo $? : ver o resultado ?? 
+rm -r : para remover um diretoria
+ps    : ver os pids dos processos 
+lsof - lista a tabela de descritores do processo
+vi nome_fich - cria um ficheironl 
+nl - copia do stdin/fich e copia para o stdout acrescentado o numero da linha 

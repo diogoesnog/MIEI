@@ -1,0 +1,9 @@
+{
+    "content": {
+        "allowed_data_groups": {
+            "tag": "04",
+            "length": "var",
+            "encode": "DG_TAGS_ENCODE"
+        }
+    }
+}

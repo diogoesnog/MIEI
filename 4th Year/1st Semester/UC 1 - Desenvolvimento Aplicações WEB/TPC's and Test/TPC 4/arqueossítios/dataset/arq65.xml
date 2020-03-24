@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> S. Caetano (Santuário de) </IDENTI>
+		<DESCRI> Capela; <LIGA TERMO="necrópole"> necrópole</LIGA> medieval</DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> S. Caetano </LUGAR>
+		<FREGUE> Ervededo </FREGUE>
+		<CONCEL> Chaves </CONCEL>
+		<CODADM> 170312 </CODADM>
+		<LATITU> 540,1 </LATITU>
+		<LONGIT> 253,4 </LONGIT>
+		<ALTITU> 230m </ALTITU>
+		<ACESSO>A NO da cidade de Chaves, pela a estrada nacional Chaves/Montalegre, por
+Vilar de Perdizes. Cerca do Km 14, segue-se por desvio de terra batida .</ACESSO>
+		<QUADRO>O santuário situa-se numa área de transição entre o planalto do Barroso e a
+Veiga de Chaves, a meia encosta de um dos relevos suaves que descem o
+altiplano de Soutelinho da Raia para o amplo vale de Ervededo. </QUADRO>
+		<TRAARQ>Foram realizados trabalhos arqueológicos no local em 1981, dirigidos por
+Francisco Sande Lemos (U.A.U.M.). </TRAARQ>
+		<DESARQ>No local, existem ruínas de um edifício descrito e fotografado por Mário
+Cardoso (1942, 237-256), correspondentes a restos de um pequeno templo da
+época de Reconquista, presentemente soterradas.
+Estão igualmente referenciados no mesmo local vestígios de construções, em
+pedra granítica bem aparelhada, com sólidos alicerces, definindo, num dos
+casos, uma sala com pavimento de argila vermelha, bem batida.
+Os vestígios de uma <LIGA TERMO="necrópole"> necrópole</LIGA>, situada a
+noroeste e oeste das ruínas anteriores, foram parcialmente destruídos, já
+neste século, por desaterros destinados a implantar um cruzeiro. Outro
+sector mais periférico da <LIGA TERMO="necrópole"> necrópole</LIGA> foi
+igualmente afectado para abertura de uma estrada de terra e pela florestação
+moderna.
+Foram ainda identificados no local vestígios de um forno de cerâmica,
+atestado por restos de estruturas, por depósito de argilas e fragmentos de
+cerâmica.
+Os trabalhos arqueológicos realizados no local, em 1981, dirigidos por
+Francisco Sande Lemos (U.A.U.M.), incidiram numa área periférica da <LIGA TERMO="necrópole"> necrópole</LIGA> medieval e permitiram verificar que esta
+se encontra muito destruída, quer por trabalhos agrícolas, quer pela
+florestação.
+No entanto, foram identificadas 27 sepulturas, das quais foram escavadas 22.
+Orientadas E/O ou NE/SE, são na sua maioria rectangulares, sendo formadas
+por caixas de lages de granito ou xisto, assentes na rocha. Nalguns casos,
+as pedras foram substituídas por <LIGA TERMO="tégula"> tégulas</LIGA>. As
+coberturas eram, ou de pequenas lages dispostas transversalmente, ou <LIGA TERMO="tégula"> tégulas</LIGA>.
+As sepulturas encontravam-se todas violadas, tendo o seu enchimento
+fornecido pregos de ferro e, num caso, uma conta de colar e um colchete em
+bronze. Só numa delas foram encontrados restos de uma calote craniana.
+Tendo em conta as características das sepulturas escavadas, bem como a
+datação de necrópoles similares, datadas entre o séc. X-XII, podemos situar
+a necrópole medieval de S. Caetano, pelo menos na parte escavada, entre os
+sécs. X-XIII (Lemos; 1987, 164).</DESARQ>
+		<INTERP>O sítio onde se localiza S. Caetano parece ter conhecido uma sucessão de
+ocupações, talvez desde a época romana, com uma possível <LIGA TERMO="villa"> villa</LIGA>, posteriormente sacralizada, com a construção de
+um templo de época indeterminada, ao qual terá sido anexado uma <LIGA TERMO="necrópole"> necrópole</LIGA> medieval. </INTERP>
+		<INTERE>Trata-se de um local de grande interesse cultural e histórico, mau grado as
+destruições a que foi sujeito, em resultado dos sucessivos arranjos do
+local, que não souberam integrar o valioso património do sítio.</INTERE>
+		<BIBLIO>CARDOSO, M. (1992). Uma estação visigótica (?) do concelho de Chaves (S.
+Caetano - Freguesia de Couto de Ervededo), Revista de Guimarães, 52,
+Guimarães, pp.237-256. </BIBLIO>
+		<BIBLIO> LEMOS, F. S. (1987). A necrópole medieval de S. Caetano, Chaves,
+Cadernos de Arqueologia, Série II, 4, Braga, pp. 149-176. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

@@ -1,0 +1,23 @@
+BEGIN {
+    RS="NILL" # Definir o que separa os vários registos.
+    FS="NOVOCAMPO - " # Definir o que separa os vários campos.
+}
+
+NR==1 {next}
+
+NR<=30 {
+
+    i=1;
+    
+    # Cada registo tem agora 27 fields, uma vez que estamos agora a trabalhar com o ficheiro .csv limpo.
+    while(i<=27){
+
+        if(i==2 && $i!="") printf("Ação de formação de código número: %s", $i);
+        if(i==3 && $i!="") printf("Título: %s", $i);
+        if(i==4 && $i!="") printf("Descrição: %s", $i);
+        if(i==27 && $i~"VAZIO") printf("Não existem notas a exibir.\n\n");
+        if(i==27 && $i!~"VAZIO") printf("Notas: %s.\n\n", $i);
+        
+        i++;
+    }
+}

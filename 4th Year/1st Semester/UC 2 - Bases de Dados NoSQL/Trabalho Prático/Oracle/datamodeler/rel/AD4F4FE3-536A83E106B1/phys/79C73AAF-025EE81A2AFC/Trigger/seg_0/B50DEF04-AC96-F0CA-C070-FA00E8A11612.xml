@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="address_bi_trigger" directorySegmentName="seg_0" id="B50DEF04-AC96-F0CA-C070-FA00E8A11612">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF (:NEW.address_id IS NULL) THEN
+        SELECT address_sq.nextval INTO :NEW.address_id
+        FROM DUAL;
+    END IF;
+    -- criar o timestamp
+    :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>42477D26-9846-20A0-639A-7D8829AAED89</table>
+</TriggerOraclev10g>

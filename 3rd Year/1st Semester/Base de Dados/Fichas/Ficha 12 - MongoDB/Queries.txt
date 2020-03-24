@@ -1,0 +1,39 @@
+---- Queries ----
+
+--- Exercício 4 ---
+
+-- Alínea (a) --
+db.restaurants.find({}) 
+
+-- Alínea (b) --
+db.restaurants.find({},{restaurant_id: 1, name: 1, borough: 1, cuisine: 1}).pretty() As primeiras chavetas são o where e as segundas fazem a projeção.
+
+-- Alínea (c) --
+db.restaurants.find({borough: "Bronx"}).pretty()
+
+-- Alínea (d) --
+db.restaurants.find({ $and : [ { "grades.score": {$gt: 75}}, {"grades.score": {$lt: 100} } ] }).pretty()
+
+-- Alínea (e) --
+db.restaurants.find({borough: "Queens", name: {$regex: /er$/}}, {Id:1, nome:1, borough:1, cuisine:1}).pretty()
+
+-- Alínea (f) --
+db.restaurants.find({"grades.score": {$lte:5}}, {Id:1, nome:1, "grades.score": 1}).pretty() -- less than equal
+
+-- Alínea (g) --
+db.restaurants.find({cuisine: "Bakery"}).sort({"grades.score":-1})
+
+-- Alínea (h) --
+db.restaurants.find({"address.coord": []}).pretty()
+
+-- Alínea (i) --
+db.restaurants.find({cuisine: "America", borough: "Queens", borough: "Brooklyn", borough: "Staten Island", "grades.score": {$gt: 75}}).pretty()
+
+---- Questão 5 ----
+db.restaurants.updateMany({borough: "Queens", cuisine: "American"},{$set: {cuisine: "Primer American Food"}})
+
+---- Questão 6 ----
+db.restaurants.insert({name:})
+
+---- Questão 7 ----
+db.restaurants.remove()

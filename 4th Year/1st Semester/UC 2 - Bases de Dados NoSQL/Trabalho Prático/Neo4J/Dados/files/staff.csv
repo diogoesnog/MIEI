@@ -1,0 +1,3 @@
+"idStaff","idStore","FirstName","LastName","Email","Active","idAddress","LastUpdate"
+1,1,"Mike","Hillyer","Mike.Hillyer@sakilastaff.com",1,3,"2006-02-15T04:57:12.000Z"
+2,2,"Jon","Stephens","Jon.Stephens@sakilastaff.com",1,4,"2006-02-15T04:57:12.000Z"

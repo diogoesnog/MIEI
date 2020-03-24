@@ -1,0 +1,13 @@
+resoluçoes
+
+numeros de telefone e tags:
+
+\<[^>]*\> {;}
+("+351-")?[0-9]{9} {;}
+
+
+filtro inverso do anterior
+
+\<[^>]*\> {ECHO;}
+("+351-")?[0-9]{9} {ECHO;}
+.|\n

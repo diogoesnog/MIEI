@@ -1,0 +1,10 @@
+^C:\USERS\DIOGO\DESKTOP\MIEI\4TH YEAR\2ND SEMESTER\PERFIL 2 - COMPUTAÇÃO GRÁFICA\VISÃO E ILUMINAÇÃO II\CMAKEFILES\EFEE541BA0A0983E1C0E268EC1D4CA6F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau" "-BC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/NauDemo.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

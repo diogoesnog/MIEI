@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    .container
+        br
+        h1
+            center 
+                b Gestor do Arquivo Filmes
+        hr
+        h3 
+            center Adicionar Filme
+        hr
+        br 
+        .container-fluid
+            form(action="/filmes" method="POST" style="margin-left: 100px; margin-right: 100px")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Título" name="title" required)
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Ano" name="year" required)
+                br
+                div(class="form-group row justify-content-center align-items-center")
+                    button.btn.btn-danger(type='submit' name='enviar' value='Submeter') Submeter Filme
+
+        br                  
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/filmes/") <center>Voltar à <i>Homepage</i></center>
+        hr

@@ -1,0 +1,11 @@
+if(strcmp(args[i], "-i")==0){
+		fileInput = (char*) malloc(strlen(args[i++])*sizeof(char));
+		strcpy(fileInput, args[i++]);
+		inpflag = 1;
+	}else{
+		if(strcmp(args[i], "-o")==0){
+			fileOutput = (char*) malloc(strlen(args[i++])*sizeof(char));
+			strcpy(fileOutput, args[i++]);
+			outflag = 1;
+		}
+	}

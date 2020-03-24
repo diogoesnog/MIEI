@@ -1,0 +1,69 @@
+extends layout
+
+block content
+    .container
+        br
+        h1
+            center 
+                b Gestor do Arquivo Filmes
+        hr
+        h3 
+            center Informações do Filme
+                b 
+                    = filme.title
+        hr
+        br 
+        ol
+            li
+                h7
+                    b Identificador do Filme 
+                    = filme._id
+            p
+            li
+                h7
+                    b Título do Filme 
+                    = filme.title
+            p
+            li
+                h7
+                    b Ano do Filme 
+                    = filme.year
+            p
+            li
+                h7
+                    b Atore(s) do Filme 
+
+                if(filme.cast.length == 0)
+                    p Não existem Atores associados ao filme 
+                        = filme.title
+                else
+                ul
+                    each ator in filme.cast
+                        li.h7 
+                            =ator   
+            p
+            li
+                h7
+                    b Género(s) do Filme 
+
+                if(filme.genres.length == 0)
+                    p Não existem Géneros associados ao filme 
+                        = filme.title
+                else
+                ul
+                    each genero in filme.genres
+                        li.h7 
+                            =genero   
+            p
+
+
+        br
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/filmes/") <center>Voltar à <i>Homepage</i></center>
+        hr

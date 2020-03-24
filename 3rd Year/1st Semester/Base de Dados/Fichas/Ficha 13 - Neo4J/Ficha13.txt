@@ -1,0 +1,15 @@
+-- 3
+-- a
+MATCH (atores:Person)-[:ACTED_IN]->(mat:Movie {title:"The Matrix"}) RETURN atores.name
+
+-- b
+MATCH (pessoa:Person)-[:ACTED_IN]->(m:Movie) WITH pessoa, COUNT(m) as contagem WHERE contagem > 5 RETURN pessoa.name
+
+-- c
+MATCH (pessoa:Person)-[:DIRECTED]->(m:Movie) WITH pessoa, COUNT(m) as contagem WHERE contagem > 3 RETURN pessoa.name
+
+-- 4
+CREATE (in:Movie {title:"Inception", released:2010, summary: "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO."}), (beauty:Movie {title: "Beauty and the Beast", released:2017})
+
+-- 5
+MATCH (filmes:Movie) WHERE filmes.title = "Inception" OR filmes.title = "Beauty and the Beast" DETACH DELETE filmes

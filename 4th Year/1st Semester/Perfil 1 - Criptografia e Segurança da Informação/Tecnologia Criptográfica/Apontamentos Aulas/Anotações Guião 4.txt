@@ -1,0 +1,57 @@
+# Anotações Guião 4
+
+**Objetivo do Guião:** Caracterizar formalmente a noção de segurança das técnicas criptográficas. A ideia é perceber até que ponto uma cifra é efetivamente segura, desenvolvendo "jogos" que servirão de base aos modelos de segurança adoptados na formalização das provas de segurança. 
+
+---
+
+- **O que faz a técnica em estudo? Qual a sintaxe da Cifra?**
+
+```
+1. Keygen: PARAM (1^K) -> KEY (Método Probabilístico)
+2. Encriptar: (KEY, PTXT) -> CTXT (Método Probabilístico)
+3. Desencriptar: (KEY, CTXT) -> PTXT (A mensagem em si só pode ser uma portanto não faz sentido usar uma função probabilística, daí ser um Método Determinísitico)
+```
+
+---
+
+- **O que é suposto acontecer quando uso a minha Cifra?**
+
+```
+CORR(parametros):
+    K <- keygen(parametros)
+    M <- Conjunto de Mensagens
+    C <- Encriptar(K,M)
+    M' <- Desencriptar(K,C)
+    return M'= M
+```
+
+​	A nossa cifra funciona como esperado se ao executarmos este jogo, o boleano retornado ser SEMPRE verdadeiro. Assim, a probabilidade de correr o jogo e o resultado ser TRUE deve então por isso ser 1 verdadeiro): `Pr[CORR(parametros) | res = tt]  = 1`
+
+---
+
+- **Modelo de Segurança**
+
+No Modelo de Segurança é **importante** caracterizar as capacidades do Adversário, tentando comprender como é que o Adversário ganha vantagem sobre o mesmo.
+
+1. Qual o tipo de interação como a técnica de defesa?
+
+2. O que é em si um ataque? O que ganha o Adversário com o mesmo?
+
+   
+
+O modelo de segurança descrito na aula corresponde à parte obrigatória deste Guião 4. Os outros podem ser desenvolvidos, sendo considerados como um extra.
+
+    IND_CPA(parametrosSeguranca):
+        K <- keygen(parametrosSeguranca)
+        mensagem0, mensagem1 <- adversárioEscolhe(parametrosSeguranca)
+        b <- {0,1}
+        C <- Encriptar(K, Mb)
+        b' <- adversárioAdivinha(C)
+        return b = b'
+
+---
+
+## Notas Extra
+
+- O ChaCha20 satisfaz a noção de segurança de IND_CCA? **Não.**
+- O MAC (HMAC) é um Método Determinísitico.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Sezelhe </IDENTI>
+		<DESCRI> Igreja; <LIGA TERMO="sarcófago"> Sarcófago</LIGA>
+		</DESCRI>
+		<LUGAR> Sezelhe </LUGAR>
+		<FREGUE> Sezelhe </FREGUE>
+		<CONCEL> Montalegre </CONCEL>
+		<CODADM> 170630 </CODADM>
+		<LATITU> 538,1 </LATITU>
+		<LONGIT> 221,3 </LONGIT>
+		<ALTITU> 912m </ALTITU>
+		<ACESSO>Centro da aldeia de Sezelhe. O acesso faz-se pela estrada municipal que liga
+a povoação directamente à estrada EN 308, na direcção
+Montalegre-Covelães-Pitões. O monumento não está sinalizado.</ACESSO>
+		<DESARQ>Incrustado no banco perimetral que remata interiormente o muro que delimita
+o adro da igreja paroquial, de arquitectura simples e austera, observa-se um
+<LIGA TERMO="sarcófago"> sarcófago</LIGA> antropomórfico, em granito,
+colocado com a cavidade sepulcral virada para o adro. Trata-se de vestígios
+da <LIGA TERMO="necrópole"> necrópole</LIGA> baixo-medieval, testemunhadores
+da antiga prática de enterrar os paroquianos no adro envolvente da igreja, à
+sombra protectora do edifício sagrado.</DESARQ>
+		<INTERP>Igreja e necrópole medievais</INTERP>
+		<INTERE>Embora razoavelmente conservado, o elemento descrito, por estar isolado, tem
+um reduzido valor patrimonial, não revestindo particular significado
+histórico. </INTERE>
+		<BIBLIO>FONTES, L.(1991). Roteiro Monumental. Notícias do Barroso, nº 105, Setembro
+de 1991, pp. 4. </BIBLIO>
+		<BIBLIO>FONTES, L.(1992). Sítios e Achados Arqueológicos do Concelho de Montalegre.
+Braga, 1992 (edição policopiada da CCRN - Porto). </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

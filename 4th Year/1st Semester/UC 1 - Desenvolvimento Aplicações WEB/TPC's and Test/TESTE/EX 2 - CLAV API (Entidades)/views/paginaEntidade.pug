@@ -1,0 +1,52 @@
+extends layout
+
+block content
+    .container
+        br
+        h1(class="display-3")
+            center 
+                strong CLAV API
+        h3
+            center Informações da Entidade  
+        br
+        hr
+
+        br
+        ol
+            li
+                h7 
+                    b Sigla da Entidade 
+                    = entidade.sigla
+            p
+            li
+                h7
+                    b Designação da Entidade 
+                    = entidade.designacao        
+            p
+            li
+                h7
+                    b Estado da Sigla 
+                    = entidade.estado
+        br
+        hr
+        .container-fluid
+            div(class="row justify-content-center")
+                div(class="col-sm-2 text-center")
+                    form(action=`/entidades/${idEntidade}/tipologias` method="GET")
+                        button.btn.btn-danger(type='submit') Tipologias
+                div(class="col-sm-2 text-center")
+                    form(action=`/entidades/${idEntidade}/intervencao/dono` method="GET")
+                        button.btn.btn-danger(type='submit') Proc. Donos
+                div(class="col-sm-2 text-center")
+                    form(action=`/entidades/${idEntidade}/intervencao/participante` method="GET")
+                        button.btn.btn-danger(type='submit') Proc. Participante
+        hr
+        br
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

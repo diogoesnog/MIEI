@@ -1,0 +1,50 @@
+{
+    "tag": "75",
+    "length": "var",
+    "content": {
+        "biometrics_list": {
+            "tag": "7F61",
+            "length": "var",
+            "content": {
+                "number_of_entries": {
+                    "tag": "02",
+                    "length": "var",
+                    "decode": "int"
+                },
+                "biometric_templates": {
+                    "size_list": "number_of_entries",
+                    "tag": "7F60",
+                    "length": "var", 
+                    "compost_content": {
+                        "header": {
+                            "tag": "A1",
+                            "length": "var",
+                            "content": {
+                                "version": {
+                                    "tag": "80",
+                                    "length": 2,
+                                    "decode": "int"
+                                },
+                                "bdb_owner": {
+                                    "tag": "87",
+                                    "length": 2,
+                                    "decode": "int"
+                                },
+                                "bdb_type": {
+                                    "tag": "88",
+                                    "length": 2,
+                                    "decode": "int"
+                                }
+                            }
+                        },
+                        "bdb": {
+                            "tag": "5F2E",
+                            "length": "var",
+                            "encode": "BDB_ENCODE"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="81ED5DAE-BA25-37A5-3E58-D39F52CD3B17" name="payment">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>BA7EB3D5-FAF9-EFC2-676F-934D723E5929</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="payment_id" id="A1E25B95-B7FD-AB26-5516-EACB5710A8DE">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>7ECAA1DC-AA07-601C-3DD1-1C77F73BACFA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="customer_id" id="681BD7CA-B520-EE62-A1FA-3361031F9A56">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>18589B20-8920-D687-3303-186BAD7A8DCD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1AE9480-F75C-4A76-8763-65BEE805347B" referredColumn="28F80989-12D2-219E-E5CC-9E6D36167ACC"/>
+</associations>
+</Column>
+<Column name="staff_id" id="D43FB1B4-8D09-1289-0604-6406F3493290">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>9B51ED74-A585-F2AE-F47D-771C5A7573E9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<domain>9D4136D2-10F8-9397-1AA6-F49549FF123A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2D9CE1C-772B-9F19-2FD2-A4420C7112B8" referredColumn="4FA79167-D30D-1592-BADB-0F6954888265"/>
+</associations>
+</Column>
+<Column name="rental_id" id="83D638EB-C9F0-9240-5EBA-129B8F27EC19">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>FE9E5B25-16F4-A2BA-EFD2-AB2E61BE9D6C</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A687F866-BE0B-FA74-F194-E924471917D3" referredColumn="47D38CE7-6DD5-441A-99B5-2A5371DB31B8"/>
+</associations>
+</Column>
+<Column name="amount" id="218F2082-EB32-575F-5267-24230312ED89">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>232D5C9C-4010-2C40-97B7-219404FD6BAC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<domain>C323047A-8A43-49B8-22DB-BB567EEFAB88</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_date" id="C73D62F5-98EE-6C0C-96EE-4C250E7598A9">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>7CB826FB-AD16-C95A-A05A-CC49FE5EF445</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_update" id="524D8358-FED0-964E-B301-6F302C21BB28">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>61C0ADFA-5416-441A-0ED8-D6DD674CF34A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D524AE3A-A9F1-880E-72E4-6A9E4B66B0B1" name="payment_PK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>675DD52A-612A-B8CE-DA10-3CE1589A7DDA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1E25B95-B7FD-AB26-5516-EACB5710A8DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EBCD368-E019-4612-E57A-B06E49041A2B" name="fk_payment_rental">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="83D638EB-C9F0-9240-5EBA-129B8F27EC19"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAEBABC2-57D4-4C71-9AB2-19835C4E3501" name="payment_customer_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="681BD7CA-B520-EE62-A1FA-3361031F9A56"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="473FD338-E0AC-EEA8-6786-24C09CC1D710" name="payment_staff_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D43FB1B4-8D09-1289-0604-6406F3493290"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

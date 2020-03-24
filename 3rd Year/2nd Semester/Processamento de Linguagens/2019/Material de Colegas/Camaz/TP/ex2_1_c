@@ -1,0 +1,3 @@
+BEGIN { IGNORECASE=1 }
+/<A.*?href=.*?>/ {conta++;print}
+END{print "Encontradas " conta " ocorrências de linha com tag html.";}

@@ -1,0 +1,176 @@
+// Criar a Database "Cinema".
+use cinema;
+
+// Criar todas as Collections.
+db.createCollection("bilhete");
+db.createCollection("cliente");
+db.createCollection("filme");
+
+// Fazer o insert dos vários Documents na Collection Bilhete.
+db.bilhete.insertMany( [
+	{
+    "Filme" : "The Avengers", 
+    "NIF" : NumberInt(123456789), 
+    "Sala" : NumberInt(7), 
+    "Sessao" : new Date("2017-11-23 00:40:00"), 
+    "Lugar" : "F15", 
+    "Preco" : 6.6, 
+    "DataCompra" : new Date("2017-11-23 17:15:00"),
+    "InfoCaixa" : {
+        "Num" : NumberInt(3), 
+        "Funcionario" : "Joana Sousa"}
+	},
+	{
+    "Filme" : "Beauty and the Beast", 
+    "NIF" : NumberInt(321654987), 
+    "Sala" : NumberInt(1), 
+    "Sessao" : new Date("2017-11-24 21:40:00"), 
+    "Lugar" : "G14", 
+    "Preco" : 10.6, 
+    "DataCompra" : new Date("2017-11-24 17:15:00"),   
+    "InfoCaixa" : {
+        "Num" : null, 
+        "Funcionario" : null}
+    },
+    {
+    "Filme" : "Beauty and the Beast", 
+    "NIF" : NumberInt(321654987), 
+    "Sala" : NumberInt(1), 
+    "Sessao" : new Date("2017-11-24 21:40:00"), 
+    "Lugar" : "G15", 
+    "Preco" : 10.6, 
+    "DataCompra" : new Date("2017-11-24 17:15:30"),   
+    "InfoCaixa" : {
+        "Num" : null, 
+        "Funcionario" : null}
+    },
+    {
+    "Filme" : "Inception", 
+    "NIF" : NumberInt(249929589), 
+    "Sala" : NumberInt(3), 
+    "Sessao" : new Date("2017-11-24 18:20:00"), 
+    "Lugar" : "F15", 
+    "Preco" : 5.75, 
+    "DataCompra" : new Date("2017-11-24 18:15:00"),   
+    "InfoCaixa" : {
+        "Num" : NumberInt(2), 
+        "Funcionario" : "Rui Almeida"}
+    },
+    {
+    "Filme" : "The Lord of the Rings", 
+    "NIF" : NumberInt(249929589), 
+    "Sala" : NumberInt(1), 
+    "Sessao" : new Date("2017-11-24 21:40:00"), 
+    "Lugar" : "F14", 
+    "Preco" : 10, 
+    "DataCompra" : new Date("2017-11-24 18:15:30"),   
+    "InfoCaixa" : {
+        "Num" : NumberInt(2), 
+        "Funcionario" : "Rui Almeida"}
+    },  
+    {
+    "Filme" : "Horns", 
+    "NIF" : NumberInt(123456789), 
+    "Sala" : NumberInt(3), 
+    "Sessao" : new Date("2017-11-20 19:20:00"), 
+    "Lugar" : "C15", 
+    "Preco" : 5, 
+    "DataCompra" : new Date("2017-11-20 18:15:30"),   
+    "InfoCaixa" : {
+        "Num" : null, 
+        "Funcionario" : null}
+    },   
+] );
+
+// Fazer o insert dos vários Documents na Collection Cliente.
+db.cliente.insertMany( [
+	{
+	"_id": 253356369,
+    "Nome" : "Diogo Nogueira",
+    "Contacto" : NumberInt(913392656),
+    "DataDeNascimento" : new Date("1997-12-13")
+    },
+    {
+	"_id": 249929589,
+    "Nome" : "Diogo Araújo",
+    "Contacto" : NumberInt(914215212),
+    "DataDeNascimento" : new Date("1997-10-08")
+    },
+    {
+    "_id": 123456789,
+    "Nome" : "Tifany Silva",
+    "Contacto" : NumberInt(910040099),
+    "DataDeNascimento" : new Date("1994-01-25")
+    },
+    {
+    "_id": 321654987,
+    "Nome" : "Mariana Lino",
+    "Contacto" : NumberInt(916024677),
+    "DataDeNascimento" : new Date("1997-05-08")
+    },
+    {
+    "_id": 462589750,
+    "Nome" : "Antonio Silva",
+    "Contacto" : NumberInt(934567789),
+    "DataDeNascimento" : new Date("1960-03-25")
+    }
+] );
+
+// Fazer o insert dos vários Documents na Collection Filme.
+db.filme.insertMany( [
+	{
+	"_id": 848228,
+    "Titulo" : "The Avengers",
+    "Duracao" : "02:23",
+    "DataEstreia" : new Date("2012-01-01"),
+    "Pais" : "Estados Unidos",
+    "Realizador" : "Joss Whedon",
+    "Elenco" : ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+    "Sinopse" : "Superheróis a lutar aliens",
+    "Generos" : ["Ação", "Familiar"]
+    },
+   {
+	"_id": 2771200,
+    "Titulo" : "Beauty and the Beast",
+    "Duracao" : "02:09",
+    "DataEstreia" : new Date("2017-01-01"),
+    "Pais" : "Estados Unidos",
+    "Realizador" : "Bill Condon",
+    "Elenco" : ["Emma Watson", "Dan Stevens","Luke Evans"],
+    "Sinopse" : "Uma adaptação do livro e filme Bela e o Monstro",
+    "Generos" : ["Familiar", "Musical", "Romance"]
+    },
+    {
+    "_id": 1528071,
+    "Titulo" : "Horns",
+    "Duracao" : "02:00",
+    "DataEstreia" : new Date("2013-01-01"),
+    "Pais" : "Estados Unidos",
+    "Realizador" : null,
+    "Elenco" : null,
+    "Sinopse" : null,
+    "Generos" : ["Terror", "Suspense"]
+    },
+    {
+    "_id": 1375666,
+    "Titulo" : "Inception",
+    "Duracao" : "02:28",
+    "DataEstreia" : new Date("2010-01-01"),
+    "Pais" : "Estados Unidos",
+    "Realizador" : "Christopher Nolan",
+    "Elenco" : ["Leonardo DiCaprio", "Joseph Gordon-Levitt","Ellen Page"],
+    "Sinopse" : "Um filme com uma trama tão intensa e misteriosa",
+    "Generos" : ["Mistério", "Familiar"]
+    },
+    {
+    "_id": 120737,
+    "Titulo" : "The Lord of the Rings",
+    "Duracao" : "02:58",
+    "DataEstreia" : new Date("2001-01-01"),
+    "Pais" : "Estados Unidos",
+    "Realizador" : "Peter Jackson",
+    "Elenco" : ["Elijah Wood", "Ian McKellen","Orlando Bloom"],
+    "Sinopse" : null,
+    "Generos" : ["Familiar", "Medieval", "Ação"]
+    }
+] );

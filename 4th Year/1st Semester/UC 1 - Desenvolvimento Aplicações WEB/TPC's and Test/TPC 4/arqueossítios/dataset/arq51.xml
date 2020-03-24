@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Ponte de Vizela </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="ponte">Ponte</LIGA>
+		</DESCRI>
+		<LUGAR> Ponte de Vizela </LUGAR>
+		<FREGUE> Vinhós </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030736 </CODADM>
+		<LATITU> 502,2 </LATITU>
+		<LONGIT> 195,6 </LONGIT>
+		<ALTITU/>
+		<ACESSO>Por C.M. 1649 que parte da E. N. 207, sobre o rio Vizela, entre Travassos e
+Vinhós. </ACESSO>
+		<DESARQ>Pontão ou poldra em granito. A base de apoio apresenta feição medieval, ou
+quanto muito dos inícios da Idade Moderna. A passadeira, sem guardas, é
+relativamente recente. Está em bom estado de conservação. </DESARQ>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

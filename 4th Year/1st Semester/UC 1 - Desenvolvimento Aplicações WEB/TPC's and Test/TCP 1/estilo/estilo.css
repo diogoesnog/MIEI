@@ -1,0 +1,121 @@
+/* Código para tentar colocar "Scroll Behavior" - Deslizar suave na página. */
+
+html{
+    scroll-behavior: smooth;
+ }
+
+/* Código CSS do tema em si.*/
+
+body {
+    background-image: url("fundo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Código CSS relativamente ao logótipo do website. */
+
+.logotipo{
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 251px;
+    width: 100%;
+}
+
+.logotipo img{
+    width: 50%;
+}
+
+/* Código CSS relativamente às cidades em si. */
+
+.seccaoDestinos{
+    overflow: hidden;
+    text-align: center;    
+}
+
+.seccaoDestinos h1{
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 30px;
+}
+
+/* Código CSS relativamente às imagens das cidades. */
+
+.imagem {
+    margin-top: 50px;
+    margin-left: 10px;
+    border-radius: 100%;
+    display: inline-block;
+    height: 150px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+}
+
+.imagem img {
+    height: 100%;
+}
+
+.imagemTexto {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.50s;
+    background: linear-gradient(65deg, rgba(46,204,113,0.4), rgba(243, 18, 18, 0.4));
+    color: white;
+    font-size: 24px;
+}
+
+.imagemTexto:hover {
+    opacity: 1;
+}
+
+/* Código CSS relativamente à descrição das cidades. */
+
+.seccaoCidades{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    text-justify: inter-word;
+}
+
+.seccaoCidades:target{
+    height: auto;
+    padding: 30px;
+}
+
+.nomeCidade{
+    margin-bottom: -30px;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+}
+
+/* Código CSS relativamente à descrição e subdescrição do website. */
+
+.descricao{
+    font-size: 15px;
+    color: white;
+    margin-bottom: 50px;
+    text-align: center;
+    text-justify: inter-word;
+}
+
+.subDescricao{
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin-top: -40px;
+    text-align: center;
+}

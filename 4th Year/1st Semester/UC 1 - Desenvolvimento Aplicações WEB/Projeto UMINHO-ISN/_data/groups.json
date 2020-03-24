@@ -1,0 +1,21 @@
+[{
+        "_id": "5d725cfec4ded7bcb480eaa6",
+        "name": "Desenvolvimento de Aplicações Web",
+        "sigla": "DAW"
+    },
+    {
+        "_id": "5d725cfec4ded7bcb480eaa7",
+        "name": "Algoritmos e Complexidade",
+        "sigla": "AeC"
+    },
+    {
+        "_id": "5d725cfec4ded7bcb480eaa5",
+        "name": "Sistemas Operativos",
+        "sigla": "SO"
+    },
+    {
+        "_id": "5d725cfec4ded7bcb480eaa4",
+        "name": "Laboratórios de Informática 3",
+        "sigla": "LI3"
+    }
+]

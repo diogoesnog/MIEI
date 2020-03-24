@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte do Padrão; Monte Córdova </IDENTI>
+		<DESCRI> Povoada fortificado </DESCRI>
+		<CRONO> Proto-História /
+Romanização</CRONO>
+		<LUGAR> Monte do Padrão </LUGAR>
+		<FREGUE> Monte Córdova </FREGUE>
+		<CONCEL> Santo Tirso </CONCEL>
+		<CODADM> 131413 </CODADM>
+		<LATITU> 482,7 </LATITU>
+		<LONGIT> 173,5 </LONGIT>
+		<ALTITU> 413m </ALTITU>
+		<ACESSO>Poucos quilómetros a SE de Santo Tirso. A partir do Monte Córdova pela E. M.
+558. </ACESSO>
+		<QUADRO>O Monte do Padrão insere-se no maciço montanhoso conhecido pelo nome de
+Monte Córdova, correspondendo a um dos relevos mais significativos da sua
+franja oeste, que desce sob o largo e fértil vale do Ave. Ocupa uma posição
+topográfica de destaque na região. O topo do monte é largo e razoavelmente
+extenso. Os lados oeste, norte e sul possuem vertentes com pendor acentuado
+que descem para o vale. A vertente este é mais suave ligando-se a uma zona
+interior do maciço montanhoso, com características semi-planálticas.</QUADRO>
+		<TRAARQ>O povoado foi escavado nos anos 50 por Carlos Faya Santarém (1951, 49-66;
+1955, 397-429) e, em 1984, por Manuela Martins, no âmbito de uma colaboração
+da U. A. U. M. com a Câmara Municipal de Santo Tirso e o ex-SRAZN, (Serviço
+Regional de Arqueologia da Zona Norte).</TRAARQ>
+		<DESARQ>Grande povoado, com uma ocupação prolongada no tempo, o <LIGA TERMO="castro"> castro</LIGA> do Monte Padrão constitui um dos ex-libris do
+concelho de Santo Tirso.
+Os vestígios arqueológicos mais monumentais localizam-se na parte mais alta
+do monte, caracterizada por uma larga e extensa plataforma, limitada pela
+curva de nível dos 400m. Tais vestígios, postos a descoberto nos anos 50,
+caracterizam-se por dois grandes edifícios de traça romana que ocupam a
+parte central da plataforma. Um deles, de planta quadrada, corresponde a uma
+habitação com vários compartimentos que se desenvolvem em torno de um átrio
+central lajeado. Anexo a este corpo principal do edifício encontra-se um
+pequeno conjunto, de planta irregular, eventualmente correspondente a uma
+área de serviços. O outro edifício principal tem planta rectangular,
+podendo, pela sua configuração, ter sido usado com uma função agro-pastoril,
+ou seja, como área de armazenamento e para guardar animais. O espólio
+procedente das escavações destas estruturas indicam uma ocupação prolongada
+dos dois edifícios entre os sécs. I e IV.
+De uma época anterior, correspondente à Idade do Ferro tardia, num momento
+já perto da <LIGA TERMO="romanização"> romanização</LIGA>, será a única casa
+circular existente no tabuleiro superior e a muralha que o limita.
+As quatro sondagens arqueológicas, realizadas em 1984, permitiram
+identificar um momento mais antigo da vida do povoado, correspondente ao
+Bronze Final, ou seja, aos inícios do Iº milénio a.C.. Os vestígios deste
+período, identificados entre o muro leste da casa e a muralha, resumem-se,
+para já, à cerâmica, que regista uma grande diversidade de influências
+culturais. </DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado romanizado"> Povoado fortificado
+romanizado</LIGA>.</INTERP>
+		<DEPOSI>Museu Abade Pedrosa, Santo Tirso. </DEPOSI>
+		<INTERE>Trata-se de um sítio de indiscutível interesse histórico e cultural</INTERE>
+		<BIBLIO> SANTARÉM, C. Faya (1951) O castro do Monte Padrão, O Concelho de
+Santo Tirso - Boletim Cultural, 1, nº 1, Porto, pp. 49-66. </BIBLIO>
+		<BIBLIO> SANTARÉM, C. Faya (1955) O castro do Monte Padrão. Campanhas de
+1952-53-54, O Concelho de Santo Tirso - Boletim Cultural, 3, nº4, Porto, pp.
+397-429. </BIBLIO>
+		<BIBLIO> MARTINS, M. (1985). Sondagens arqueológicas no castro do Monte
+Padrão em Santo Tirso, Cadernos de Arqueologia, Série II, 2, Braga, pp.
+217-230. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

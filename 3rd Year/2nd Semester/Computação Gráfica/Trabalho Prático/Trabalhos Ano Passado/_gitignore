@@ -1,0 +1,56 @@
+
+*.xml
+
+*.xml
+
+Motor3D/Motor3D/main.cpp
+
+Motor3D/Debug/test.xml
+
+Gerador/main.o
+
+*.o
+
+Gerador/esfera.o
+
+Gerador/GERADOR
+
+Gerador/cone.o
+
+Gerador/circulo.o
+
+Gerador/cilindro.o
+
+Motor3D/Debug/Motor3D
+
+Motor3D/Debug/sistema_solar.xml
+
+Motor3D/Debug/test.xml
+
+Motor3D/Debug/sistema_solar2
+
+Motor3D/Motor3D.xcodeproj/project.pbxproj
+
+Motor3D/Motor3D.xcodeproj/project.xcworkspace/xcuserdata/duarteduarte.xcuserdatad/UserInterfaceState.xcuserstate
+
+Motor3D/Motor3D.xcodeproj/xcuserdata/duarteduarte.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+Preview do GERADOR/CG-TESTES.xcodeproj/project.pbxproj
+
+Preview do GERADOR/CG-TESTES.xcodeproj/xcuserdata/duarteduarte.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+Preview do GERADOR/CG-TESTES.xcodeproj/project.xcworkspace/xcuserdata/duarteduarte.xcuserdatad/UserInterfaceState.xcuserstate
+
+Preview do GERADOR/CG-TESTES.xcodeproj/xcuserdata/duarteduarte.xcuserdatad/xcschemes/CG-TESTES.xcscheme
+
+Preview do GERADOR/CG-TESTES.xcodeproj/xcuserdata/duarteduarte.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Motor3D/Motor3D.xcodeproj/project.pbxproj
+
+Preview do GERADOR/CG-Aula01/main.cpp
+
+Motor3D/Debug/cilindro.vbo
+
+Motor3D/Debug/painel.jpg
+
+Motor3D/Debug/cone.vbo

@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau/composerImGui/CMakeLists.txt
+  composerImGui.cpp
+  ImGuiFileDialog.cpp
+  imgui.cpp
+  imgui_demo.cpp
+C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\ImGuiFileDialog.cpp(259,20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\ImGuiFileDialog.cpp(358,20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\imgui\ImGuiFileDialog.cpp(415,20): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\composerImGui\composerImGui.cpp(1416,9): warning C4312: 'type cast': conversion from 'unsigned int' to 'ImTextureID' of greater size
+C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\composerImGui\composerImGui.cpp(1541,6): warning C4312: 'type cast': conversion from 'unsigned int' to 'ImTextureID' of greater size
+  imgui_draw.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_widgets.cpp
+  composerImGui.vcxproj -> C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\bin\composerImGui.exe

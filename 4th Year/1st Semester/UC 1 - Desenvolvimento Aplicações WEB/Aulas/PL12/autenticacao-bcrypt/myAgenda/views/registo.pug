@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h3 Agenda de Eventos: Registo de utilizador
+  form(action="/reg" method="POST")
+    input(type="text" name="email" placeholder="email")
+    input(type="text" name="nome" placeholder="nome")
+    input(type="password" name="password" placeholder="password")
+    input(type="submit" value="Enviar")
+    

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Santar </IDENTI>
+		<DESCRI> Igreja </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Santar </LUGAR>
+		<FREGUE> Santar </FREGUE>
+		<CONCEL> Arcos de Valdevez </CONCEL>
+		<CODADM> 160138 </CODADM>
+		<LATITU> 539,1 </LATITU>
+		<LONGIT> 176,1 </LONGIT>
+		<ALTITU> 50m </ALTITU>
+		<ACESSO>Junto à aldeia de Santar. O acesso faz-se por estrada municipal a partir da
+estrada nacional EN.202-1 (um ramal que liga as EN.101 - Arcos a Ponte da
+Barca e EN.202 - Arcos a Ponte de Lima). O monumento não está sinalizado.</ACESSO>
+		<DESARQ>Nas paredes laterais da <LIGA TERMO="ábside"> ábside</LIGA>da igreja
+paroquial de Santa Maria de Santar, que foi vigararia de apresentação da
+Comenda de Távora, conservam-se, bastante mutilados, alguns <LIGA TERMO="modilhão"> modilhões</LIGA> que compunham o coroamento das paredes da
+edificação românica, profundamente alterada por sucessivas remodelações e
+ampliações posteriores.</DESARQ>
+		<INTERP>Igreja de fundação medieval.</INTERP>
+		<INTERE>Trata-se de um monumento sem relevância histórica local e de escasso valor
+científico e patrimonial, interessando apenas à compreensão da difusão do
+<LIGA TERMO="românico"> românico</LIGA> na região.</INTERE>
+		<BIBLIO>ALMEIDA, C.A.F.(1987) Alto Minho, (novos guias de Portugal, 5), Editorial
+Presença, Lisboa, 1987. </BIBLIO>
+		<BIBLIO> BARREIROS, M.A. (1926) Egrejas e Capelas Romanicas da Ribeira Lima,
+Edições Marques Abreu, Porto, 1926. </BIBLIO>
+		<AUTOR> Luís Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

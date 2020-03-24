@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="sakilanosql" directorySegmentName="seg_0" id="7278C877-1341-6FC0-B7B1-4B64D1E0DD93">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:47 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>3E4F81F5-0BEC-9624-B3EE-477711201F1B</importedID>
+</SchemaObject>

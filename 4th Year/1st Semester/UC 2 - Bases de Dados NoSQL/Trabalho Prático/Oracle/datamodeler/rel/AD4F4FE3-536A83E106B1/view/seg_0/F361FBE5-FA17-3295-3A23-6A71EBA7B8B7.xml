@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="F361FBE5-FA17-3295-3A23-6A71EBA7B8B7" name="sales_by_store">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>6271DE28-7BA2-B60D-F4BD-0DCA5E8480C8</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT s.store_id,
+       c.city||','||cy.country AS store,
+       m.first_name||' '||m.last_name AS manager,
+       SUM(p.amount) AS total_sales
+FROM payment p
+    INNER JOIN rental r ON p.rental_id = r.rental_id
+    INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+    INNER JOIN store s ON i.store_id = s.store_id
+    INNER JOIN address a ON s.address_id = a.address_id
+    INNER JOIN city c ON a.city_id = c.city_id
+    INNER JOIN country cy ON c.country_id = cy.country_id
+    INNER JOIN staff m ON s.manager_staff_id = m.staff_id
+GROUP BY
+    s.store_id,
+    c.city||','||cy.country,
+    m.first_name||' '||m.last_name]]></userDefinedSQL>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="store_id" id="9CC95E1C-817B-1BFB-787C-6B134F78B749">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>store_id</headerAlias>
+<reference>false</reference>
+<referencedColumn>3AFCB926-27D5-F14C-E32C-4BD9955B0DE6</referencedColumn>
+<table>C4142029-79AF-84D2-0CCC-A16BE135E6ED</table>
+<tableAlias>s</tableAlias>
+<viewID>F361FBE5-FA17-3295-3A23-6A71EBA7B8B7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="store" id="ADB56DDF-F7B5-2E2B-2566-EC8CC2A2DC6D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>store</alias>
+<dataType>VARCHAR2</dataType>
+<headerAlias>store</headerAlias>
+<expression>c.city||&apos;,&apos;||cy.country</expression>
+<reference>false</reference>
+<viewID>F361FBE5-FA17-3295-3A23-6A71EBA7B8B7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="manager" id="92D6714D-4D91-E51D-20A8-25DA5A70DF1B">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>manager</alias>
+<dataType>VARCHAR2</dataType>
+<headerAlias>manager</headerAlias>
+<expression>m.first_name||&apos; &apos;||m.last_name</expression>
+<reference>false</reference>
+<viewID>F361FBE5-FA17-3295-3A23-6A71EBA7B8B7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="total_sales" id="90475C5B-BC9E-32AB-893E-092BAFE0DE62">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>total_sales</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>total_sales</headerAlias>
+<expression>SUM(p.amount)</expression>
+<reference>false</reference>
+<viewID>F361FBE5-FA17-3295-3A23-6A71EBA7B8B7</viewID>
+</viewElement>
+</viewElements>
+</TableView>

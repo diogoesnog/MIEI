@@ -1,0 +1,7 @@
+Resolução das Queries
+
+1. //entrada[contains(telefone,"253")]
+2. //entrada[not(contains(telefone,"253"))]
+3. //entrada[contains(nome,"José") or contains(nome,"Maria")]
+4. //@gid
+5. //entrada[not(@tipo="pessoa")]/@id

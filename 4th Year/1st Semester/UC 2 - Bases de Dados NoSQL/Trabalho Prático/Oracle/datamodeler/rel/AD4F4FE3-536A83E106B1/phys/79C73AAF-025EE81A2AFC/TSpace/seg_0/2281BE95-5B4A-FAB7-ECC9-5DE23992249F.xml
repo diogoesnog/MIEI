@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="TABLESAKILA" directorySegmentName="seg_0" id="2281BE95-5B4A-FAB7-ECC9-5DE23992249F">
+<sourceDDLFile>sakilaCreateUser.ddl</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:15 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+<dataFiles>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="DataFile1" id="88FA32A7-CDFB-1214-E4CB-04DF1B06BA5F">
+<sourceDDLFile>sakilaCreateUser.ddl</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:47 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<autoextend>ON</autoextend>
+<fileName>DATAFILESAKILA1</fileName>
+<maxSize>250</maxSize>
+<maxSizeUnit>M</maxSizeUnit>
+<measureUnit>M</measureUnit>
+<nextBlockSize>5</nextBlockSize>
+<nextBlockSizeUnit>M</nextBlockSizeUnit>
+<reuse>NO</reuse>
+<size>5</size>
+</DataFile>
+</dataFiles>
+</TableSpaceOraclev10g>

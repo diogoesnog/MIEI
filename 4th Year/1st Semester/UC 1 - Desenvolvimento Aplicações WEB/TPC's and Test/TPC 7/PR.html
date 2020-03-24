@@ -1,0 +1,98 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <div class="container">
+         <hr>
+         <title>Registo de Projetos</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      </div>
+   </head>
+   <body>
+      <div class="container">
+         <h1 align="center"><b>Servidor de Ficheiros (Pug + Express + MongoDB)</b></h1>
+         <h3 align="center">TPC 7 (Desenvolvimento Aplicações WEB)</h3>
+         <hr>
+         <table align="center" width="50%">
+            <tr>
+               <td><b>Keyname: </b>MIEI-DAW-TPC7
+               </td>
+               <td><b>Título: </b>Servidor de Ficheiros (Pug + Express + MongoDB)
+               </td>
+            </tr>
+            <tr>
+               <td><b>Data Início: </b>29 de Outubro de 2019
+               </td>
+               <td><b>Data Fim: </b>05 de Novembro de 2019
+               </td>
+            </tr>
+            <tr>
+               <td><b>Supervisor: </b><a href="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</a></td>
+               <td><b>Email Supervisor: </b>jcr@di.uminho.pt
+               </td>
+            </tr>
+         </table>
+         <hr>
+         <h3>Equipa</h3>
+         <ul>
+            <li><b>A78957</b> - Diogo Emanuel Silva Nogueira - a78957@alunos.uminho.pt
+            </li>
+         </ul>
+         <hr>
+         <h3>Resumo</h3>
+         <p>O TPC 7 é o culminar das aprendizagens obtidas até então, fazendo-se a substituição
+            de um ficheiro JSON para uma *database* real em MongoDB. Assim, introduz-se uma nova
+            forma de tratar os dados, permitindo uma facilidade superior em se efetuar os pedidos
+            básicos por parte do Cliente.
+         </p>
+         <p>Com um ficheiro JSON relativo ao Arquivo de Filmes, deve-se criar uma Base de Dados
+            limpa, exportanto-se todos os dados existentes para a mesma. Com a Base de Dados pronta
+            e devidamente povoada, pretende-se que seja possível atender às principais operações
+            dos arquivos musicais - *add*, *update* e *delete* - criando assim um **Gestor do
+            Arquivo Filmes** funcional e intuitivo.
+         </p>
+         <p><b>Com isto em mente e com a estrutura de pastas totalmente definida foram desenvolvidos
+               os seguintes ficheiros:</b></p>
+         <p>1. Ficheiro filme.js existente na pasta /controllers - Ficheiro que define os Controlados
+            do conjunto de Filmes, definindo as queries que tratam das operações essenciais para
+            manipular o conteúdo.
+         </p>
+         <p>2. Ficheiro filme.js existente na pasta /models - Ficheiro que define o Modelo de
+            Filmes, pela definição de um *Schema* que é universal a todos os registos.
+         </p>
+         <p>3. Ficheiro funcoes.js existente na pasta /public/javascripts - Ficheiro que processa
+            os pedidos do Cliente, encaminado-o para a devida rota.
+         </p>
+         <p>4. Ficheiro filme.js existente na pasta /routes - Ficheiro que define todas as rotas
+            do Gestor do Arquivo Filmes, que são necessárias para atender às necessidades impostas
+            pelo Cliente.
+         </p>
+         <p><b>
+               Todos os outros ficheiros desenvolvidos são triviais, correspondendo essencialmente
+               aos vários Template Engines localizados na pasta /views necessários para transformar
+               o conteúdo processado em uma página WEB intuitiva. É ainda usado o CSS do Bootstrap,
+               que se encontra na pasta public/sytlesheets..
+               </b></p>
+         <hr>
+         <h3>Entregas</h3>
+         <ul>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/controllers/filme.js">Ficheiro que define os Controlados do conjunto de Filmes, definindo as queries que
+                  tratam das operações essenciais para manipular o conteúdo</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/models/filme.js">Ficheiro que define o Modelo de Filmes, pela definição de um Schema que é universal
+                  a todos os registos</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/public/javascripts/funcoes.js">Ficheiro que processa os pedidos do Cliente, encaminado-o para a devida rota</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/routes/filme.js">Ficheiro que define todas as rotas do Gestor do Arquivo Filmes, que são necessárias
+                  para atender às necessidades impostas pelo Cliente</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/layout.pug">Template que define a estrutura base das várias páginas WEB</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/indice.pug">Template relativo à página inicial do Gestor do Arquivo Filmes - listagem de todos
+                  os Filme</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/consultarFilme.pug">Template relativo à página que permite consultar a informação de uma determinado Filme</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/editarFilme.pug">Template relativo à página que permite consultar a informação de uma determinado Filme
+                  e a alteração dos seus parâmetros</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/adicionarFilme.pug">Template relativo à página que permite adicionar um novo Filme à Base de Dados</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%207/arqFilmes/views/paginaErro.pug">Tempalte de uma página simples em HTML que é acionada quando o pedido ao servidor
+                  for incorreto, adaptando a resposta dada ao Cliente consoante o erro ocorrido</a></li>
+         </ul>
+      </div>
+   </body>
+</html>

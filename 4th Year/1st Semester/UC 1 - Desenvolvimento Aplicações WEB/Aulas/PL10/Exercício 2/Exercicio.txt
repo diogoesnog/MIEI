@@ -1,0 +1,39 @@
+# Exercício 2
+
+### Preparação para o Trabalho Prático
+
+
+
+- Criar ficheiro users.json
+
+- ```
+  json-server --watch users.json --port 5026 
+  ```
+
+- Criar uma *app* autenticacao
+
+  ```
+  npx express-generator --view=pug autenticacao
+  ```
+
+- Instalar módulo uuid para lidar com os IDs das sessões dos utilizadores e módulo para gerar as sessões, algo que o express não faz por omissão
+
+  ```
+  npm i uuid & express-session
+  ```
+
+- Instalar módilo para lidar com a persistência dos dados da sessão em si
+
+  ```
+  npm i session-file-store
+  ```
+
+  Sempre que é feito um **SEND**, é guardado um ficheiro na pasta sessions
+
+- Instalar biblioteca para a parte da autenticação
+
+  ```
+  npm i passport passport-local
+  ```
+
+  

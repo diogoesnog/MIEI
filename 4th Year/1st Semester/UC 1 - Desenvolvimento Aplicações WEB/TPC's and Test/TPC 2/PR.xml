@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC2">
+    <Informacoes>
+        <Titulo>Especificação de DTDs e validação de XML. Queries em XPath</Titulo>
+        <Subtitulo>TPC 2 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>24 de Setembro de 2019</DataInicio>
+        <DataFim>1 de Outubro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>Os DTDs consistem num conjunto de declarações que permitem definir a estrutura de todo um documento XML (elementos e atributos), dando a conhecer aos *user agents* as regras que devem seguir para o posterior desenvolvimento do documento XML.</P>
+        <P>Paralelamente a esta matéria, existe a linguagem XPath, que permite definir, por meio de expressões, consultar/extrair a informação presente nos nós da árvore que representa o documento XML.</P>
+        <P><Negrito>Com este TPC 2 procura-se conciliar ambas as matérias, para que depois todo o processo de transformação do XML em HTML seja mais rápido e intuitivo, consoante a informação a manipular/formatar:</Negrito></P>
+        <P> 1. Desenvolver um DTD de modo a gerar um modelo em XML para arquivar o Registo de Projetos futuros.</P>
+        <P> 2. Pôr em prática a resolução de *queries* **XPath**, dando a entender como se trabalha na seleção de informação presente em um documento XML. </P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%202/PR.dtd">DTD do XML dos Registos de Projetos</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%202/PR.xml">Manifesto do XML dos Registos de Projetos</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TPC%202/Exerc%C3%ADcios%20Extra/Pergunta%206">Ficha 3 - Pergunta 6</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TPC%202/Exerc%C3%ADcios%20Extra/Pergunta%207">Ficha 3 - Pergunta 7</Trabalho>
+    </Entregas>
+</RegistoProjetos>

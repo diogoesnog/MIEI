@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="staff_bu_trigger" directorySegmentName="seg_0" id="537CFA59-67AB-D042-1CE0-6B95B382CAB5">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[BEGIN
+  :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>190D786C-0852-D23D-F215-16476E6404CB</table>
+</TriggerOraclev10g>

@@ -1,0 +1,45 @@
+
+extends layout
+block content
+    .container-fluid
+        br
+        h1 <center><b>Gestor de Tarefas</b></center>
+        h3 <center>Submeter uma Tarefa</center>
+        hr
+
+        br
+
+        .container-fluid
+            form(action="/submeterTarefa" method="POST" style="margin-left: 100px; margin-right: 100px")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Número Aluno" name="numeroAluno" id="numeroAluno")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Nome Aluno" name="nomeAluno" id="nomeAluno")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Nome da Tarefa" name="nome" id="nome")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Data Limite" name="dataLimite")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Unidade Curricular" name="unidadeCurricular")
+                br 
+
+                div(class="form-group row justify-content-center align-items-center")
+                    button.btn.btn-danger.tex(type='submit' value='Enviar') Submeter Tarefa
+
+        div(style="text-align: center; color:#007bff")
+            h4= mensagemSucesso
+        
+        br
+
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr  

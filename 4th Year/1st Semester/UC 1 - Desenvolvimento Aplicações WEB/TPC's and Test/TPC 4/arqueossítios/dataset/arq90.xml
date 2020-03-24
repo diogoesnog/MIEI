@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> S. Julião </IDENTI>
+		<DESCRI> Capela; Cruzeiro </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> S. Julião </LUGAR>
+		<FREGUE> Melgaço </FREGUE>
+		<CONCEL> Melgaço </CONCEL>
+		<LATITU> 572,1 </LATITU>
+		<LONGIT> 189,7 </LONGIT>
+		<ALTITU>150m </ALTITU>
+		<ACESSO>O acesso faz-se directamente pelo antigo traçado da estrada EN.301, na
+direcção Melgaço - Chaviães, que passa junto ao monumento, que não está
+sinalizado. Menos de 10 minutos, a pé, desde a vila.</ACESSO>
+		<DESARQ>As referências documentais à capela de S. Julião são escassas. Sabe-se que
+aí existiu, como era usual na Idade Média à saída das povoações, junto das
+principais vias, uma gafaria. Com ela estaria relacionada a capela de S.
+Julião, cuja edificação tardo-medieval ainda se conserva - pequeno templo de
+planta rectangular, baixo, de paredes de alvenaria simples e fachada mais
+elaborada, construída com <LIGA TERMO="silhar"> silhares</LIGA> montados em
+bom <LIGA TERMO="aparelho isódono"> aparelho isódono</LIGA>, na qual se abre
+um portal de<LIGA TERMO="arco"> arco</LIGA>apontado, liso, apoiado em <LIGA TERMO="imposta"> impostas</LIGA> igualmente lisas, denunciando na sua
+simplicidade a origem gótica da construção ( classificada como IIP - i/86 de
+3-1). No adro fronteiro domina um belíssimo cruzeiro bifronte,
+magnificamente esculturado (classificado como M.N. - Dec. 11454 -
+19-2-1926). No conjunto trata-se de um monumento baixo-medieval
+razoavelmente conservado, mas em evidente estado de abandono.</DESARQ>
+		<INTERP>Capela de fundação tardo-medieval.</INTERP>
+		<INTERE>Para além da sua importância para a história local e regional das
+comunicações e assistência medievais, a capela de S. Julião detem um
+inegável valor patrimonial no contexto da arquitectura medieval regional,
+pois é exemplar único no seu género. </INTERE>
+		<BIBLIO>ALMEIDA C.A.F. (1987) Alto Minho, (novos guias de Portugal, 5), Editorial
+Presença, Lisboa, 1987. </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

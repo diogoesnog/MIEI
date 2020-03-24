@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Castro da Sola; Bouça da Oura </IDENTI>
+		<DESCRI> Povoado da Pré-História Recente</DESCRI>
+		<CRONO> Pré-História Recente / Idade Média</CRONO>
+		<LUGAR> Pitancinhos </LUGAR>
+		<FREGUE> Palmeira </FREGUE>
+		<CONCEL> Braga </CONCEL>
+		<CODADM> 030331 </CODADM>
+		<LATITU> 512,8 </LATITU>
+		<LONGIT> 176,3 </LONGIT>
+		<ALTITU> 127m </ALTITU>
+		<QUADRO>Pequena colina residual, na vertente noroeste de Montariol. O povoado tinha
+boas condições de visibilidade e de acesso aos terrenos dos vales
+circundantes. Nas vertentes sul e sudeste a vegetação é arbórea e arbustiva.</QUADRO>
+		<TRAARQ>Foram realizadas escavações neste povoado entre 1991 e 1992, dirigidas por
+Ana M. S. Bettencourt (U.A.U.M.).</TRAARQ>
+		<DESARQ>Este povoado encontra-se praticamente destruído por pedreiras, restando-lhe
+apenas parte da vertente sul e sudeste. As escavações realizadas em 1991 e
+1992, permitiram colocar a hipótese da existência de três momentos de
+ocupação descontínuos. O primeiro, associado a cerâmicas com decoração
+penteada e incisa metopada de "tipo Penha", bem como a uma estrutura pétrea
+identificada como uma "cerca" ou "muralha", foi atribuído ao Calcolítico. O
+segundo, caracterizado por fossas abertas no saibro, buracos de poste,
+muretes, eventuais cistas e vasos de "largo bordo horizontal", corresponde à
+1ª metade do II milénio A.C.. O terceiro, associa-se à Alta Idade Média. O
+monte onde assenta o povoado deveria corresponder ao "Mons Manioco" da
+documentação medieval. </DESARQ>
+		<INTERP>Povoado da <LIGA TERMO="pré-história recente"> Pré-História recente</LIGA> e
+da Alta Idade Média. </INTERP>
+		<DEPOSI>Museu D. Diogo de Sousa.</DEPOSI>
+		<BIBLIO>MARTINS, M. (1990) Povoamento Proto-Hstórico e a Romanização da Bacia do
+Curso Médio Cávado, Cadernos de Arqueologia, Monografias, pp.84. </BIBLIO>
+		<BIBLIO> FONTES, L. (1993) Inventário de sítios e achados arqueológicos do
+concelho de Braga, Mínia, 3ª sér., 1, Braga, pp. 31-38. </BIBLIO>
+		<BIBLIO> BETTENCOURT (1991-1992) O Povoado da Sola, Braga: notícia
+preliminar das escavações de 1991-92, Cadernos de Arqueologia, 8/9, Braga,
+pp.97-118. </BIBLIO>
+		<AUTOR> Ana M. S. Bettencourt </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

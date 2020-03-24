@@ -1,0 +1,82 @@
+# Tecnologia Criptográfica - Resumos  1.º Mini Teste
+
+### Introdução (Conceitos Básicos e Terminologia)
+
+
+
+#### 1. Conceitos e Terminologia
+
+---
+
+- A segurança de uma cifra é sempre assegurada pela **chave** em si.
+- A ideia é aplicar o texto limpo sobre uma **cifra**, juntamente com a **chave**, acabando assim por gerar um **criptograma** (mensagem secreta baseada na mensagem original).
+
+
+
+**Com isto em mente, surge a seguinte terminologia:**
+
+- **Texto Limpo** - mensagem original que se quer transmitir.
+- **Cifra** - operação que transforma o **texto limpo** numa mensagem secreta - **Criptograma**.
+- **Chave** - parâmetro de segurança da operação da **cifra**.
+
+- **Ataque** - aquilo que compromete toda a técnica criptográfica (tais como a obtenção do *plain text* sem precisar de saber a **chave**; descobrir a **chave** usada para a **cifra** em si; etc.).
+- **Intruso** - entidade que representa quem realiza então estes ataques.
+
+
+
+#### 2. Exemplos de Cifras Clássicas
+
+---
+
+
+
+- **Cifra de César**
+  - Consiste em realizar um deslocamento das letras do alfabeto;
+  - Este método é mau, dado que um baixo número de *keys* permite uma busca exaustiva sobre todas as chaves possíveis, na tentativa de encontrar o texto limpo original - **ataque por força bruta**;
+  - Este **ataque por força bruta** é em si condicionado tendo em conta o tempo que demora a percorrer todo o espaço de chaves;
+  - **Ataque por força bruta** pode ser ultrapassado com a adoção de tamanhos razoáveis para as chaves.
+
+
+
+- **Cifra por substituição mono-alfabética** 
+
+  - Igual à cifra de César mas permite deslocamentos diferentes para as diferentes letras do alfabeto.
+  - Número de chaves aumenta bastante.
+
+  
+
+- **Cifra One Time Pad**
+
+  - Cifra supostamente segura;
+  - Utiliza uma *random key* com o mesmo tamanho da mansagem que se quer transmitir;
+  - As operações de **cifragem** e **decifragem** são simplemente o *xor* ( ⊕ ) com  própria **chave**;
+  - As **chaves** só podem ser usadas uma única vez para cada cifra.
+
+  
+
+$$
+Cifrar  = Texto ⊕ Key
+$$
+
+$$
+Decifar = Cifra (Criptograma) ⊕ Key
+$$
+
+
+
+|  A   |  B   | A ⊕ B |
+| :--: | :--: | :---: |
+|  0   |  0   |   0   |
+|  1   |  1   |   0   |
+|  0   |  1   |   1   |
+|  1   |  0   |   1   |
+
+
+
+#### 3. Segurança da Informação
+
+---
+
+- A segurança de uma cifra é sempre assegurada pela **chave** em si.
+- A ideia é aplicar o texto limpo sobre uma **cifra**, juntamente com a **chave**, acabando assim por gerar um **criptograma** (mensagem secreta baseada na mensagem original).
+

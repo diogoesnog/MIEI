@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC4">
+    <Informacoes>
+        <Titulo>Servidor de Ficheiros</Titulo>
+        <Subtitulo>TPC 4 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>8 de Outubro de 2019</DataInicio>
+        <DataFim>15 de Outubro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>Com o NodeJS, a entrada e saída de dados não bloqueiam os processos de execução das aplicações, tornando a concorrência entre vários clientes simultâneos o mais eficiente e intuitiva possível.</P>
+        <P>Continuando o TPC anterior, pretende-se desenvolver uma Stylesheet que gere um XML para cada registo do arquivo dos Arqueossítios. Com estes ficheiros prontos, a ideia é criar um servidor em NodeJS (na porta 7777) que os sirva, de acordo com o pedido do Cliente (browser).</P>
+        <P><Negrito>Para atender a estes requisitos, foram desenvolvidos os ficheiros:</Negrito></P>
+        <P>1. Construir uma Stylesheet que permita criar vários XML para todos os registos dos Arqueossítios.</P>
+        <P>2. Construir uma Stylesheet que aplique a formatação em HTML para cada ficheiro XML dos registos anteriores.</P>
+        <P>3. Desenvolver um servidor em NodeJS que permita estabelecer a ligação entre Cliente (browser) e Servidor.</P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%204/arqueoss%C3%ADtios/arq.xml">XML com o conjunto dos Arqueossítios</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%204/arqueoss%C3%ADtios/arq2html.xsl">XSL que permite processar a informação de XML para HTML.</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%204/arqueoss%C3%ADtios/xml-split.xsl">XSL que permite criar um ficheiro HTML para cada Arqueossítio</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%204/arqueoss%C3%ADtios/servidor.js">Servidor em NodeJS</Trabalho>      
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%204/arqueoss%C3%ADtios/paginaErro.html">Página de Erro em HTML</Trabalho>
+    </Entregas>
+</RegistoProjetos>

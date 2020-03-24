@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\CMakeFiles\534550e3ba6b4d2c75b5436da0d5362e\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{23EE2833-C4A8-372A-9301-7725336ECB8C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A687F866-BE0B-FA74-F194-E924471917D3" containerWithKeyObject="81ED5DAE-BA25-37A5-3E58-D39F52CD3B17" localFKIndex="6EBCD368-E019-4612-E57A-B06E49041A2B" name="fk_payment_rental">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>C9544BD1-C9AE-D6ED-F0E1-76354E4DAA87</importedID>
+<referredTableLongName>rental</referredTableLongName>
+<deleteRule>SET NULL</deleteRule>
+<referredTableID>7C3C3235-8C35-4AA6-4459-1CEB6BADE9D1</referredTableID>
+<keyObject>AB4D2F5D-93C9-4EAC-DC10-2594FF4F3FB0</keyObject>
+<referredKeyID>AB4D2F5D-93C9-4EAC-DC10-2594FF4F3FB0</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>rental_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

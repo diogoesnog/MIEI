@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte Redondo </IDENTI>
+		<DESCRI> Igreja </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Monte Redondo </LUGAR>
+		<FREGUE> Monte Redondo </FREGUE>
+		<CONCEL> Arcos de Valdevez </CONCEL>
+		<CODADM> 160122 </CODADM>
+		<LATITU> 542,1 </LATITU>
+		<LONGIT> 173,2 </LONGIT>
+		<ALTITU> 227m </ALTITU>
+		<ACESSO>Junto à aldeia de Monte Redondo. O acesso faz-se por estrada municipal, a
+partir da estrada nacional EN.303 (ligação Arcos de Valdevez - Paredes de
+Coura) ou da EN.202 (ligação Arcos de Valdevez - Ponte de Lima). O monumento
+não está sinalizado.</ACESSO>
+		<DESARQ>Nas paredes da <LIGA TERMO="nave"> nave</LIGA> da igreja paroquial de S.
+Bartolomeu de Monte Redondo conservam-se, testemunhando uma antiga
+edificação românica, vestígios dos paramentos coroados por cachorradas com
+<LIGA TERMO="modilhão"> modilhões</LIGA> esculpidos, dominando os motivos
+geométricos e fitomórficos. É o que resta da edificação medieval,
+profundamente alterada por sucessivas remodelações, em relação à qual não se
+conhece qualquer referência ou documento coevo que permita conhecer melhor a
+sua história.</DESARQ>
+		<INTERP>Igreja de fundação medieval.</INTERP>
+		<INTERE>Trata-se de um monumento sem relevância histórica local e de escasso valor
+científico e patrimonial, interessando apenas à compreensão da difusão do
+<LIGA TERMO="românico"> românico</LIGA> na região. </INTERE>
+		<BIBLIO>ALMEIDA,C.A.F (1978a) Arquitectura Românica de Entre Douro e Minho, Tese de
+Doutoramento (policopiada), Faculdade de Letras da Universidade do Porto,
+Porto, 1978. </BIBLIO>
+		<BIBLIO> BARREIROS, M.A.(1926)Egrejas e Capelas Romanicas da Ribeira Lima,
+Edições Marques Abreu, Porto, 1926. </BIBLIO>
+		<AUTOR> Luís Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

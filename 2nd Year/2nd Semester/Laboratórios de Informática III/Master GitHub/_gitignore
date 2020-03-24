@@ -1,0 +1,6 @@
+.vscode
+dump\ exemplo.zip
+/proj-c/src/*.xml
+
+.idea
+/proj-java/target

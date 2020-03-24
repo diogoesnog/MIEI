@@ -1,0 +1,5 @@
+*.ini
+.vscode/*
+Guiões/G7/__pycache__
+Guiões/G7/clientRSA.*
+Guiões/G7/serverRSA.*

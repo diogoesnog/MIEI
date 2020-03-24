@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0D65284E-F85C-FA33-0A96-A11AEE48FD76" containerWithKeyObject="F5E3F507-6E82-F2CC-9347-138A1383517A" localFKIndex="A8E80F9D-9D56-D406-D6A4-37EEE21AA8C5" name="film_category_film_FK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>69EB708E-7EE7-BFCE-0A69-A555CF990DDE</importedID>
+<referredTableLongName>film</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>130825E1-601D-C935-0ACD-3ACC49A1EFEF</referredTableID>
+<keyObject>5349849D-CE90-42F5-DB4F-B30D38718E4C</keyObject>
+<referredKeyID>5349849D-CE90-42F5-DB4F-B30D38718E4C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>film_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

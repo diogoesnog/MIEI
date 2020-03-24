@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="upd_film" directorySegmentName="seg_0" id="C1A81437-9B3B-4ADE-3877-DA00FC4253A7">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[BEGIN
+    IF (:OLD.title != :NEW.title) or (:OLD.description != :OLD.description)
+    THEN
+        UPDATE film_text
+            SET title=:NEW.title,
+                description=:NEW.description,
+                film_id=:NEW.film_id
+        WHERE film_id=:OLD.film_id;
+    END IF;
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<table>130825E1-601D-C935-0ACD-3ACC49A1EFEF</table>
+</TriggerOraclev10g>

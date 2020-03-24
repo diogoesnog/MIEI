@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  button.w3-btn.w3-round-large(onclick="window.location.href = '/register'") Registar utilizador
+  button.w3-btn.w3-round-large(onclick="window.location.href = '/logout'") Logout
+  h1 Agenda de Eventos
+  table(border="1")
+    tr
+      th Data
+      th Título
+      th Local
+      th Participantes
+    each e in lista
+      tr
+        td= e.data
+        td= e.titulo
+        td= e.local
+        td
+          ul
+            each p in e.participantes
+              li= p
+    

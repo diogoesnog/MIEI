@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="AD4F4FE3-17F3-9060-33F2-536A83E106B1" mainViewID="6C606AF5-80B4-860D-C282-B94377DA1600">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:36:42 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>79C73AAF-E1A7-E669-7DF0-025EE81A2AFC</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>schemaSAKILA.sql</fileName>
+<pathName>C:\Users\cocos\Documents\GitHub\BDnoSQL\Oracle</pathName>
+<dbType>14</dbType>
+</importDDLFileStamp>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>sakilaCreateUser.ddl</fileName>
+<pathName>C:\Users\cocos\Documents\GitHub\BDnoSQL\Oracle</pathName>
+<dbType>14</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

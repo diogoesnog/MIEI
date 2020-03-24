@@ -1,0 +1,13 @@
+total 140
+-rwxrwxr-x 1 miguel miguel  8912 Mai 31 09:56 exe1
+-rw-rw-r-- 1 miguel miguel   619 Mai 31 09:56 exe1.c
+-rwxrwxr-x 1 miguel miguel  9056 Mai 31 11:02 exe2
+-rw-rw-r-- 1 miguel miguel   671 Mai 31 11:01 exe2.c
+-rwxrwxr-x 1 miguel miguel  8960 Mai 31 10:11 exe3
+-rw-rw-r-- 1 miguel miguel   624 Mai 31 10:11 exe3.c
+-rw-rw-r-- 1 miguel miguel  1476 Mai 31 19:47 exe4.1.c
+-rwxrwxrwx 1 miguel miguel 49290 Mar 17 17:05 guiao-04.pdf
+-rw-rw-r-- 1 miguel miguel   300 Jun  1 10:47 in.txt
+-rw-rw-r-- 1 miguel miguel     0 Jun  1 10:47 out.txt
+-rwxrwxr-x 1 miguel miguel 13304 Mai 31 19:41 reder1.1
+-rwxrwxr-x 1 miguel miguel 13368 Mai 31 10:50 redir

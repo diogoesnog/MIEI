@@ -1,0 +1,104 @@
+<%- include('partials/header') %>
+<% if(totalGroups > 3) { %>
+<div class="modal fade" id="manage-my-groups" tabindex="-1" role="dialog" aria-labelledby="myGroupsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title font-weight-bold" id="exampleModalLabel">Groups</h4>
+                <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group px-3">
+                    <h5>Groups You Subscribed</h5>
+                    <div id="group-list" class="pt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>
+<div class="container-fluid mt-5 pt-5">
+    <div class="row">
+        <div class="col-sm-2 d-none d-lg-block border-right position-fixed">
+            <div class="circle-avatar" style="background-image:url(<%- infoFeed.photo %>)"></div>
+            <p></p>
+                <h4>
+                    <img alt="User Picture" class="img-fluid" src="/images/Welcome.png">
+                    <p class="text-center font-weight-bold"><%- firstName %></p>
+                </h4>
+            </p>
+            <h6 class="text-center text-muted">
+                @<%- loginUser %>
+            </h6>
+            <div class="text-center">
+                <% if (infoFeed.facebook !== "") { %>
+                    <a class="afacebook" href="https://www.facebook.com/<%- infoFeed.facebook %>" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                <% } %>
+                <% if (infoFeed.twitter !== "") { %>
+                    <a class="atwitter" href="https://www.twitter.com/<%- infoFeed.twitter %>" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                <% } %>
+                <% if (infoFeed.instagram !== "") { %>
+                    <a class="ainstagram" href="https://www.instagram.com/<%- infoFeed.instagram %>" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>                
+                <% } %>
+                <% if (infoFeed.github !== "") { %>
+                    <a class="agithub"  href="https://www.github.com/<%- infoFeed.github %>" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                <% } %>
+                <% if (infoFeed.linkedIn !== "") { %>
+                    <a href="https://www.linkedin.com/in/<%- infoFeed.linkedIn %>" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>                
+                <% } %>
+            </div>
+            <hr>
+                <div class="text-center pt-0 font-weight-bold">Groups</div>
+                <% if(groups.length > 0) { %>
+                    <div class="text-center mt-1">
+                    <% groups.forEach(group => { %>
+                        <a class="text-muted" href="/group/<%= group._id %>">• <%= group.name %></a>
+                    <% }); %>
+                    </div>
+                <%} else { %>
+                    <p class="text-center">You are not associated with any Group</p>
+                <% } %>
+                <% if(totalGroups > 3) { %>
+                    <p class="text-center mt-2">
+                        <button class="btn btn-dark btn-sm rounded-circle manage-my-groups">
+                            <span class="fas fa-plus" style="color:#fff" aria-hidden="true"></span>
+                        </button>
+                    </p>
+                <% } %>
+        </div>
+        <div class="col offset-2 col-sm-10">
+            <h1 class="font-weight-bold">News Feed</h1>
+            <h4>What are you thinking?</h4>
+            <br>
+            <%- include('partials/composer', { action: '/userpost', id: 'feed-post-form' }) %>
+            <% data.forEach(post => { %>
+                <% console.log(post) %>
+                <div class="">
+                    <%- include('partials/post', {post: post}) %>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    require(['./scripts/main'], (main) => {
+        require(['modules/feed/main-feed']);
+    });
+</script>
+
+<%- include('partials/footer') %>

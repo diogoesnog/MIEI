@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm p-0 pl-2 pr-4">
+    
+    <a class="navbar-brand" href="/feed">
+        <img src="/images/Logotipo.png" width="121" height="47" class="d-inline-block align-top" alt="">
+    </a>    
+    <b>Informatics Social Networks</b>&nbsp;
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse sticky-top" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/feed" data-i18n="FEED_STRING">Feed</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/messenger">Messages</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="col-sm-0 col-xs-0 col-md-0 col-lg-0">
+                <input class="form-control mr-lg-0 border-0 bg-light" type="search" placeholder="Search Here...">
+                <i class="btn btn-dark btn-sm rounded-circle" data-toggle="modal" data-target="#new-group">
+                    <span class="fas fa-user-circle" style="color:#fff" aria-hidden="true"></span>
+                </i>
+                <a href="/settings" class="btn btn-dark btn-sm rounded-circle">
+                    <span class="fas fa-cog" style="color:#fff" aria-hidden="true"></span>
+                </a>
+                <i class="btn btn-danger btn-sm rounded-circle" id="signout">
+                    <span class="fas fa-sign-out-alt" style="color:#fff" aria-hidden="true"></span>
+                </i>
+            </div>
+        </form>
+    </div>
+</nav>

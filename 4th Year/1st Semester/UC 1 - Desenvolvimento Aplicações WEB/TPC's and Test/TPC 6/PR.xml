@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC6">
+    <Informacoes>
+        <Titulo>Servidor de Ficheiros (Pug + Express)</Titulo>
+        <Subtitulo>TPC 6 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>22 de Outubro de 2019</DataInicio>
+        <DataFim>29 de Outubro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>Vimos no TPC 5 que o uso de um Template Engine no desenvolvimento de aplicações WEB permite manipular e organizar todo o conteúdo HTML de uma forma mais dinâmica e limpa à vista do utilizador.</P>
+        <P>Através da combinação deste Template Engine com a WEB framework Express, conseguimos construir uma app WEB ainda mais simples e flexível, através de um conjunto robusto de recursos que acaba por ser essencial na construção de aplicações WEB e também Mobile.</P>
+        <P>Com um ficheiro XML relativo ao registo do Arquivo Sonoro EVO, deve-se transformá-lo para um ficheiro JSON adaptado às necessidades futuras, servindo asism como a Base de Dados para este projeto. Através desta Base de Dados, o servidor deve ser capaz de atender às principais operações dos arquivos musicais - add, update e delete - criando assim um Gestor do Arquivo Sonoro funcional e intuitivo.</P>
+        <P><Negrito>Com isto em mente e com a estrutura de pastas totalmente definida foram desenvolvidos os seguintes ficheiros:</Negrito></P>
+        <P>1. Ficheiro funcoes.js existente na pasta /public/javascripts - Ficheiro que processa os pedidos do Cliente, encaminado-o para a devida rota.</P>
+        <P>2. Ficheiro index.js existente na pasta /routes - Ficheiro que define todas as rotas do Gestor do Arquivo Sonoro, que são necessárias para atender às necessidades impostas pelo Cliente.</P>
+        <P>
+            <Negrito>Os restantes ficheiros correspondem aos Template Engines localizados na pasta /views, que definem o processamento do conteúdo das várias páginas WEB criadas para este projeto. É ainda usado o CSS do Bootstrap, que se encontra na pasta public/sytlesheets</Negrito>.
+        </P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/public/javascripts/funcoes.js">Ficheiro funcoes.js que contém as operações para atualizar e eliminar um registo musical</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/routes/index.js">Ficheiro index.js que é onde estão declaradas todas as operações GET, POST, PUT e DELETE</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/layout.pug">Template que define a estrutura base das várias páginas WEB</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/indice.pug">Template relativo à página inicial do Gestor do Arquivo Sonoro - listagem de todos os registos musicais e operações para cada registo</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/consultarMusica.pug">Template relativo à página que permite consultar a informação de uma determinada música</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/editarMusica.pug">Template relativo à página que permite consultar a informação de uma determinada música e a alteração dos seus parâmetros. (O título da música é o único que não pode ser alterado, dado que é através deste parâmetro que existe a procura na Base de Dados)</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/adicionarMusica.pug">Template relativo à página que permite adicionar um nova música à Base de Dados</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%206/arqSonoro/views/paginaErro.pug">Tempalte de uma página simples em HTML que é acionada quando o pedido ao servidor for incorreto, adaptando a resposta dada ao Cliente consoante o erro ocorrido</Trabalho>
+    </Entregas>
+</RegistoProjetos>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Granjinha </IDENTI>
+		<DESCRI> Capela; <LIGA TERMO="villa"> villa</LIGA> romana </DESCRI>
+		<CRONO> Romanização / Idade Média </CRONO>
+		<LUGAR> Granjinha </LUGAR>
+		<FREGUE> Granjinha </FREGUE>
+		<CONCEL> Chaves </CONCEL>
+		<LATITU> 529,1 </LATITU>
+		<LONGIT> 253,4 </LONGIT>
+		<ALTITU> 410m </ALTITU>
+		<ACESSO>Faz-se pela estrada municipal que parte de Chaves. </ACESSO>
+		<QUADRO>O sítio da Granjinha situa-se numa sequência de relevos que descem para o
+Tâmega, a SO de Chaves, na margem direita do rio, inserindo-se já na chamada
+Veiga de Chaves.</QUADRO>
+		<TRAARQ>Escavações realizadas em 1986 por A. R. Colmenero, e em 1986/87, por
+Francisco Sande Lemos (U. A. U. M.)</TRAARQ>
+		<DESARQ>O sítio da Granjinha situa-se no eixo viário da estrada romana Bracara
+Augusta (Braga) e Acquae Flaviae (Chaves), numa zona de alta potencialidade
+agrícola.
+No perímetro da pequena aldeia foram encontrados, em diversas ocasiões,
+numerosos vestígios arqueológicos, bases e fustes de coluna, bocados de
+mosaico, inscrições, peças de bronze, uma estátua de mármore e cerâmica,
+achados que apontavam para a existência de uma <LIGA TERMO="villa">villa</LIGA> romana no local.
+Em 1986, quando se realizaram obras de restauro na igreja, classificada como
+M.N., descobriu-se mais uma<LIGA TERMO="ara"> ara</LIGA>romana, a servir de
+antiga mesa do altar.
+Na mesma altura foram realizadas escavações na loja de uma casa anexa à
+igreja que permitiram pôr a descoberto alguns muros de excelente <LIGA TERMO="aparelho"> aparelho</LIGA> romano.
+Em finais de 1986 e inícios de 1987 foram realizadas novas escavações no
+interior da capela, prévias aos trabalhos de restauro da mesma, dirigidas
+por Francisco Sande Lemos. Estas escavações permitiram constatar que o sítio
+teria conhecido uma ocupação da Idade do Ferro anterior à instalação da
+<LIGA TERMO="villa"> villa</LIGA> romana, da qual foi identificado um
+pavimento de <LIGA TERMO="opus siginum"> opus signinum</LIGA> .
+Verificou-se, também, que o local conheceu uma ocupação entre a Alta e a
+Baixa Idade Média, testemunhada por cerâmicas e sepulturas, estas últimas,
+do período tardo-medievo.
+Trata-se, por conseguinte, de um sítio com uma interessante sequência de
+ocupação entre a Idade do Ferro e a actualidade.
+Entre os vários achados arqueológicos do sítio destacam-se as três aras
+votivas; uma dedicada às Ninfas, outra aos Lares Tarmucenbeacis Graveis
+(Encarnação 1975, 217-218) e a descoberta, em 1986, dedicada aos deuses
+tutelares de Acquae Flaviae por M. Ulpius Vaturninus (Encarnação 1990, pp.
+454-455).</DESARQ>
+		<INTERP> Villa Romana.</INTERP>
+		<DEPOSI>Museu D. Diogo de Sousa,(cerâmica). </DEPOSI>
+		<BIBLIO>ENCARNAÇÃO, J. D`(1975). Divindades indígenas sob o domínio romano em
+Portugal, Imprensa Nacional - Casa da Moeda, Lisboa. </BIBLIO>
+		<BIBLIO> ENCARNAÇÃO, J. D`(1990). O domínio romano, in Portugal das origens
+à romanização, J. de Alarcão (coord), Nova História. </BIBLIO>
+		<BIBLIO> LEMOS, F. S. (1988). Sondagens na Capela da Granjinha, Chaves
+(1986/1987), Cadernos de Arqueologia, Série II, 5, Braga, pp. 163- 171.</BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

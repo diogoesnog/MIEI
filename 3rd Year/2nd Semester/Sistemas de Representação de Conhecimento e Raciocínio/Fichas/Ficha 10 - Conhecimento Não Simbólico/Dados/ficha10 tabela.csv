@@ -1,0 +1,15 @@
+ID,Aspeto,Temperatura,Humidade,Vento,Jogar
+1,Sol,29,85,Falso,Não
+2,Sol,27,90,Verdadeiro,Não
+3,Nuvens,28,86,Falso,Sim
+4,Chuva,21,96,Falso,Sim
+5,Chuva,20,80,Falso,Sim
+6,Chuva,18,70,Verdadeiro,Não
+7,Nuvens,17,65,Verdadeiro,Sim
+8,Sol,22,95,Falso,Não
+9,Sol,20,70,Falso,Sim
+10,Chuva,24,80,Falso,Sim
+11,Sol,24,70,Verdadeiro,Sim
+12,Nuvens,22,90,Verdadeiro,Sim
+13,Nuvens,27,75,Falso,Sim
+14,Chuva,22,91,Verdadeiro,Não

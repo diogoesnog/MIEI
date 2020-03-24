@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Chã do Castro; Castro da Joubreia </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO>Proto-História</CRONO>
+		<LUGAR> Chã do Castro </LUGAR>
+		<FREGUE> Portela </FREGUE>
+		<CONCEL> Amares </CONCEL>
+		<CODADM> 030116 </CODADM>
+		<LATITU> 519,8 </LATITU>
+		<LONGIT> 180,2 </LONGIT>
+		<ALTITU> 308-311m </ALTITU>
+		<ACESSO>O acesso a este povoado pode fazer-se a partir do lugar de Portela, por
+caminho carreteiro.</ACESSO>
+		<QUADRO>O povoado localiza-se num pequeno cabeço conhecido por Chã do Castro, hoje
+densamente arborizado.
+ Situa-se na vertente SO do monte de S. Pedro Fins, relevo importante do
+concelho de Amares. </QUADRO>
+		<DESARQ>Os trabalhos permitiram assinalar vários momentos na ocupação do sítio: o
+mais antigo pode ser atribuído
+ ao período Calcolítico ou ao Bronze Inicial, estando caracterizado por
+cerâmicas decoradas, associadas
+a abundante material lítico, como pontas de seta, <LIGA TERMO="raspadeira">raspadeiras</LIGA>,
+ <LIGA TERMO="raspador"> raspadores</LIGA>, <LIGA TERMO="lasca">lascas</LIGA> e <LIGA TERMO="núcleo"> núcleos</LIGA>;
+ o outro momento encontra-se testemunhado pela construção de uma estrutura ,
+aparentemente defensiva, que surge associada
+ a cerâmicas indígenas de fabrico <LIGA TERMO="micáceo"> micáceo</LIGA>,
+inseríveis na Idade do Ferro. O aparecimento de
+ raros fragmentos de cerâmica romana sugere apenas uma <LIGA TERMO="romanização"> romanização</LIGA> incipiente do povoado. </DESARQ>
+		<INTERP>Trata-se de um local com uma ocupação longa, embora não necessariamente
+continuada. Aí existiu um povoado do Calcolítico, ou Bronze
+ Inicial e, mais tarde, um <LIGA TERMO="povoado fortificado"> povoado
+fortificado</LIGA> proto-histórico.</INTERP>
+		<DEPOSI>Os materiais recolhidos encontram-se no Museu Pio XII, em Braga e no Museu
+da Sociedade Martins Sarmento, em Guimarães.</DEPOSI>
+		<BIBLIO>:
+JORGE S. O. (1979). Escavações arqueológicas no povoado da Chã do Castro
+(Amares, Braga), Revista de Guimarães, 89, pp. 281-292; </BIBLIO>
+		<BIBLIO>JORGE, S. O. e J.J. RIGAUD DE SOUSA (1980). Resultados preliminares de uma
+sondagem na estação arqueológica da Chã do Castro (Amares, Braga), I
+Seminário de Arqueologia do Noroeste Peninsular, 2 , pp. 12. </BIBLIO>
+		<BIBLIO>MARTINS, M. (1990). O Povoamento Proto-Histórico e a romanização da Bacia do
+Médio Cávado, Cadernos de Arqueologia - Monografias, 5, Universidade do
+Minho, Braga, pp.69-70. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<TRAARQ>Os únicos trabalhos de escavação conhecidos no local realizaram-se, entre
+1978 e 1979, sendo dirigidos por Susana O. Jorge e J. J. Rigaud de
+Sousa.</TRAARQ>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

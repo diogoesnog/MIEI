@@ -1,0 +1,3 @@
+BEGIN{}
+/linha/ {conta++}
+END{Print "Encontradas" conta "linhas com a palavra linha";}

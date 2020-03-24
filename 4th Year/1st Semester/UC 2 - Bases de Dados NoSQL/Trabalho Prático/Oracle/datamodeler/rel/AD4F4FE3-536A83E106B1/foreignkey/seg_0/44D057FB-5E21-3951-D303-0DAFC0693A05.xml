@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="44D057FB-5E21-3951-D303-0DAFC0693A05" containerWithKeyObject="190D786C-0852-D23D-F215-16476E6404CB" localFKIndex="B8BFF04D-4AC3-3695-0BE2-BBC5CA645465" name="staff_address_FK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>2E7B3D46-7B51-C032-B249-DF8E50FF5A9B</importedID>
+<referredTableLongName>address</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>42477D26-9846-20A0-639A-7D8829AAED89</referredTableID>
+<keyObject>830A43B5-1784-AB27-FC97-BD41F4D14DF3</keyObject>
+<referredKeyID>830A43B5-1784-AB27-FC97-BD41F4D14DF3</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>address_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

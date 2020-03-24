@@ -1,0 +1,44 @@
+{
+    "LOGIN_STRING": "Iniciar Sessão",
+    "USERNAME_STRING": "Nome de Utilizador",
+    "PASSWORD_STRING": "Palavra-Chave",
+    "REGISTER_STRING": "Registar",
+    "FULL-NAME_STRING": "Nome Completo",
+    "EMAIL_STRING": "E-mail",
+
+    "FEED_STRING": "Cronologia",
+    "PROFILE_STRING": "Perfil",
+    "MESSAGES_STRING": "Mensagens",
+    "SEARCH_STRING": "Procurar",
+
+    "GROUPS_STRING": "Grupos",
+    "LIKE_STRING": "Gosto",
+    "COMMENT_STRING": "Comentar",
+    "RESOURCES_STRING": "Recursos",
+
+    "CODE_STRING": "Código",
+    "PUBLICATION_STRING": "Publicação",
+
+    "PARTICIPANTS_STRING": "Participantes",
+
+    "ACCOUNT_STRING": "Conta",
+    "PLATFORM_STRING": "Plataforma",
+    "ABOUT_STRING": "Sobre",
+    "COURSE_STRING": "Curso",
+    "NEW-PASSWORD_STRING": "Nova Palavra-Chave",
+    "CONFIRM-PASSWORD_STRING": "Confirmar Palavra-Chave",
+
+    "PRIVATE-MESSAGES_STRING": "Mensagens Privadas",
+    "GROUP_STRING": "Grupo",
+    "REPLY-CHAT_STRING": "Responder à conversa",
+    "SETTINGS_STRING": "Definições",
+    "LOGOUT_STRING": "Terminar Sessão",
+
+
+    "REGISTER-BUTTON_STRING": "Registar",
+    "LOGIN-BUTTON_STRING": "Iniciar Sessão",
+    "CANCEL-BUTTON_STRING": "Cancelar",
+    "SAVE-BUTTON_STRING": "Guardar",
+
+    "USER-PICTURE_STRING": "Foto de Perfil do Utilizador"
+}

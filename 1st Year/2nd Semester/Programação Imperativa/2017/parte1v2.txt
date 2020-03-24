@@ -1,0 +1,510 @@
+int bitsUm (unsigned int n) { //10 em 10
+	int count = 0;
+	while (n) {
+		if (n%2 == 1) count ++;
+		n=n/2;
+	}
+	return count;
+}
+
+int trailingZ (unsigned int n) { //10 em 10
+	int count = 0;
+	while (n && n%2==0) {
+		count++;
+		n=n/2;
+	}
+	return count;
+}
+
+int qDig (unsigned int n) { //10 em 10
+	int count = 1;
+	while (n>=10) {
+		count ++;
+		n=n/10;
+	}
+	return count;
+}
+
+int strlen2 (char str[]) { //10 em 10
+	int i;
+	for(i=0;str[i]!='\0'; i++);
+	return i;
+}
+
+char *strcat2 (char s1[], char s2[]) { //10 em 10
+	int i, j;
+	for (i=strlen (s1), j=0; s2[j]!='\0'; i++,j++) {
+		s1[i] = s2[j];
+	}
+	s1[i]='\0' ;
+	return s1;
+}
+
+char *strcpy2 (char *dest, char source[]) { //10 em 10
+	int i;
+	for(i=0;source[i]!='\0';i++) {
+		dest[i] = source[i];
+	}
+	dest[i]='\0';
+	return dest;
+}
+
+int strcmp2 (char s1[], char s2[]) { //10 em 10
+	int i=0;
+	while (s1[i]==s2[i] && s1[i]!='\0')
+		i++;
+	return (s1[i] - s2[i]);
+}
+
+char *strstr2 (char s1[], char s2[]) { //10 em 10
+	int i, j;
+	if(s1[0]=='\0' && s2[0]=='\0') return s1;
+	for (i=0; s1[i]!='\0'; i++) {
+		int s=0; j=i;
+		while (s1[j]==s2[s] && s1[j]!='\0') {
+			s++; j++;
+		}
+		if (s2[s]=='\0') {
+		    return &s1[i]; break;}
+	}
+	return NULL;
+}
+
+void strrev2 (char s[]) { //10 em 10
+	int i, len; char c;
+	for (len =0; s[len]!='\0';len++);
+	for (i=0; i<len/2; i++) {
+		c=s[i];
+		s[i]=s[len-1-i];
+		s[len-1-i]=c;
+	}
+}
+
+void strnoV2 (char s[]) { //10 em 10
+	int i, e=0;
+	for (i=0; s[i]!='\0'; i++) {
+		if (s[i]!='A' && s[i]!='a' && s[i]!='E' && s[i]!='e' && s[i]!='I' && s[i]!='i' && s[i]!='O' && s[i]!='o' && s[i]!='U' && s[i]!='u') {
+			s[e]=s[i]; e++;
+		}
+	}
+	s[e]='\0';
+}
+
+void truncW (char t[], int n) { //10 em 10
+	int i=0, e=0, c=n;
+	while (t[i]!='\0') {
+		if(isspace(t[i])) {
+			t[e] = t[i];
+			e++; i++; c=n;
+			}
+		else {
+			if (c!=0) {
+				t[e] = t[i];
+				e++; i++; c--;
+			}
+			else i++;
+		}
+	}
+	t[e]='\0';
+}
+
+char charMaisfreq (char s[]) { //10 testes de 10
+	int i, j, c, m=0; char f='0';
+	for (i=0; s[i]!='\0'; i++) {
+		c=0;
+		for (j=0; s[j]!='\0'; j++) {
+			if (s[i]==s[j]) c++;
+		}
+		if (c>m) { m=c; f = s[i];}
+	}
+	return f;
+}
+
+int iguaisConsecutivos (char s[]) { //10 em 10
+	int i, c=1, m=0;
+	for (i=0; s[i+1]!='\0'; i++) {
+		if (s[i]!=s[i+1]) c=1;
+		if (s[i]== s[i+1]) c++;
+		if (c>m) m=c;
+	}
+	return m;
+}
+
+int pertence1 (char s[], char x, int j) {
+    int i;
+    for(i=0;i<j&&s[i]!=x;i++);
+    if(i<j && s[i]==x) return 1;
+    return 0;
+}
+
+int difConsecutivos (char s[]) { //10 em 10
+    int i, j=0, k=1, m=0;
+    for(i=0;s[i]!='\0';i++);
+    char aux[i]; i=0;
+    if(s[0]=='\0') return 0;
+    else if(s[1]=='\0') return 1;
+    else while(s[i]!='\0') {
+	    	if(i==0) {
+		      aux[0]=s[i];j++; i++; continue;
+	    	}
+	    	else if ((s[i]!=s[i-1] || s[i]!=s[i+1])) {
+	    	    	if(pertence1(aux, s[i], j)){
+				    	if (j>m) {
+					    	m=j; 
+				    	}
+				    	i=k;j=0; k++;
+		        	}
+			        else {
+			    	    aux[j]=s[i];
+				        j++; i++;
+		    	    }
+	    	    }
+	        	else {
+	    	     if (j>m) m=j; 
+	            	j=0; i=k; k++;
+	        	}
+	    	}
+	return m;
+}
+
+int maiorPrefixo (char s1[], char s2[]) { //10 em 10
+ int i;
+ for (i=0;s1[i]!='\0' && s2[i]!='\0' && s1[i]==s2[i];i++);
+ return i;
+}
+
+int maiorSufixo (char s1[], char s2[]) { //10 em 10
+	int i, j;
+	for(i=strlen(s1)-1, j=strlen(s2)-1; i>=0 && j>=0 && s1[i]==s2[j]; i--,j--);
+	return (strlen(s1)-i-1);
+}
+
+int sufPref (char s1[], char s2[]) { //10 em 10
+	int i, ii, j,c=0, m=0;
+	for(i=0;s1[i]!='\0';i++) {
+		ii=i;
+		if (s1[i]==s2[0]) {
+			for (j=0;s1[ii]!='\0' && s1[ii]==s2[j] && s2[j]!='\0';j++,ii++) c++;
+		}
+		if (s1[ii]!='\0') c=0;
+		else {
+			if (c>m) m=c;
+		}
+	}
+	return m;
+}
+
+/*int i,c=1;
+	if (s[0]=='\0') return 0;
+	else {
+		for (i=0; s[i+1]!='\0'; i++) {
+			if (isspace(s[i]) && !isspace(s[i+1])) c++;
+		}
+	}
+	return c; */
+
+int contaPal (char s[]) { //10 de 10 (o isspace não está a funcionar corretamente)
+   int i=0,c=0, marcador=0;
+	while(s[i]!='\0') {
+	   marcador = 0;
+	   while((s[i]!='\0') && (s[i]==' ')) i++;
+	   while((s[i]!='\0') && (s[i]!=' '))	{
+	    	i++;
+	    	marcador = 1;
+	}
+	if(marcador == 1) c++;
+	}
+	return c;
+}
+
+int contaVogais (char s[]) { //10 em 10
+	int i, c=0;
+	for (i=0; s[i]!='\0'; i++) {
+		if (s[i]=='A' || s[i]=='a' || s[i]=='E' || s[i]=='e' || s[i]=='I' || s[i]=='i' || s[i]=='O' || s[i]=='o' || s[i]=='U' || s[i]=='u') c++;
+	}
+	return c;
+}
+
+int contida (char a[], char b[]) { //10 em 10
+	int i, j;
+	for (i=0; a[i]!='\0';i++) {
+		for(j=0;b[j]!='\0' && a[i]!=b[j];j++);
+		if(b[j]=='\0') { return 0; break; }
+	}
+	return 1;
+}
+
+int palindorome (char s[]) { //10 em 10
+	int i, j=strlen(s);
+	for(i=0; i!=j/2 && s[i]==s[j-i-1]; i++);
+	return (i==j/2);
+} 
+
+int remRep (char x[]) { //10 em 10
+	int i, e=0;
+	for(i=0; x[i]!='\0';i++) 
+		if (x[i]!=x[i+1]) { 
+			x[e]=x[i];
+			e++; 
+		}
+	x[e]='\0';
+	return e;
+}
+
+int limpaEspacos (char t[]) { //10 em 10
+	int i, e=0;
+	for(i=0; t[i]!='\0';i++) {
+		if (!isspace(t[i]) || !isspace(t[i+1])) {
+			t[e]=t[i];
+			e++;
+		}
+	}
+	t[e]='\0';
+	return e;
+}
+
+void insere (int v[], int N, int x) { //1 em 10, problema dos testes
+	int i, l, j;
+	for(i=0; i!=N && v[i]<=x; i++); 
+	l=i; 
+	if(v[i]>x) {
+		for(j=N+1;j>i;j--) {
+			v[j]=v[j-1];
+		}
+	}
+	v[i]=x;	
+}
+
+void merge (int r[], int a[], int b[], int na, int nb) { // 0 em 10, problema nos testes
+	int i,j=0,k=0;
+	/*printf("array a, tamanho %d: ", na);   ****para ver os testes
+	for(i=0;i<na;i++) printf("%d ", a[i]);
+	printf("\n");
+	printf("array b, tamanho %d: ", nb);
+	for(i=0;i<na;i++) printf("%d ", b[i]);
+	printf("\n");*/
+	for (i=0;i!=na+nb && j<na && k<nb;i++) {
+			if(a[j]<=b[k]) {
+			r[i]=a[j]; j++;
+			}
+			else {
+			r[i]=b[k]; k++;
+			}
+	}
+	for(i;i!=na+nb;i++) {  /*caso um dos arrays tenha terminado, acaba de preencher r*/
+		if (j==na && k!=nb) {
+			r[i]=b[k]; k++;
+		}
+		if (j!=na && k==nb) {
+			r[i]=a[j]; j++;
+		}
+	}
+}
+
+int crescente (int a[], int i, int j) { //10 em 10
+	for(i;i<j;i++)
+		if(a[i]>a[i+1]) return 0;
+	return 1;
+}
+
+int retiraNeg (int v[], int N) { //10 em 10
+	int i, e=0;
+	for(i=0;i<N;i++)
+		if (v[i]>=0) {
+			v[e]=v[i];
+			e++;
+		}
+	return e;
+}
+
+int menosFreq (int v[], int N) { //10 em 10
+	int i, f=v[0], c=1, m;
+	for(m=1; m<N-1 && v[m]==v[m+1];m++);
+	i=m;
+	while(i<N-1) {
+		while (v[i]!=v[i+1]) i++;
+		while (v[i]==v[i+1]) { c++; i++; }
+		if(c<m) {
+			m=c;
+			f=v[i];
+		}
+		c=0;
+	}
+	return f;
+}
+
+int maisFreq (int v[], int N) { //10 em 10
+	int i, c=1, m=1; int f=v[0];
+	for(i=0; (i-1)<N;i++) {
+		if (v[i]!=v[i+1]) { if (c>m) { m=c; f=v[i]; c=1; } }
+		if (v[i]==v[i+1]) c++;
+	}
+	return f;
+}
+
+int maxCresc (int v[], int N) { //não está no codeboard
+	int i, c=1, m=1;
+	for (i=0;i-1<N; i++) {
+		if (v[i+1]<v[i]) {
+			if(c>m) {m=c; c=1;}
+		}
+		else c++;
+	}
+	return m;
+}
+
+int elimRep (int v[], int n) {
+	int i, j, k;
+	for (i=0;i<n;i++) {
+		for (j=i+1;j<n;j++) {
+			if (v[i]==v[j]) {
+				for(k=j+1;k<n;k++) {
+					v[k-1]=v[k];
+				}
+				n--;
+			}
+		}
+	}
+	return n;
+}
+
+int elimRepOrd (int v[], int n) {
+	int i, e=0;
+	for(i=0;i<n;i++){
+		if(v[i]!=v[i+1]) {v[e]=v[i]; e++;}
+	}
+	return e;
+}
+
+int comunsOrd (int a[], int na, int b[], int nb) {
+	int i, j=0, c=0;
+	for(i=0;i<na;i++) {
+		for(;j<nb && a[i]>b[j]; j++);
+			if(a[i]==b[j]) c++;
+	}
+	return c;
+}
+
+int comuns (int a[] ,int na, int b[] ,int nb) {
+	int aux[nb], i, j, k, c=0;
+	for(i=0;i<nb;i++) aux[i]=b[i];
+	for (i=0; i<na; i++) { 
+		for (j=0;j<nb && a[i]!=aux[j];j++);
+		if (a[i]==aux[j]) {
+			for(k=j+1;k<nb;k++) {
+				aux[k-1]=aux[k];
+			}
+			c++;
+			nb--;
+		}
+	}
+	return c;
+}
+
+int minInd (int v[], int n) { //10 em 10
+	int i, min=v[0], imin=0;
+	for(i=1;i<n;i++) {
+		if(v[i]<min) { min = v[i]; imin =i;}
+	}
+	return imin;
+}
+
+void somasAc (int v[], int Ac [], int N) { //10 em 10
+	int i, soma=0;
+	for(i=0;i<N;i++) {
+		soma+=v[i];
+		Ac[i]=soma;
+	}
+}
+
+int triSup (int N, int m[N][N]) { //10 em 10
+	int i, j;
+	for(i=0;i<N;i++) {
+		for(j=0;j<N;j++) {
+		printf("%d ", m[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<N;i++) {
+		for(j=0;j<i;j++) {
+			if((m[i][j])!=0) {return 0; break;}
+		}
+	}
+	return 1;
+}
+
+void transposta (int N, float m[N][N]) { //10 em 10
+	int i, j; float aux[N][N];
+	for(i=0;i<N;i++) {
+		for(j=0;j<N;j++) {
+			aux[i][j]=m[i][j];
+		}
+	}
+	for(i=0;i<N;i++) {
+		for(j=0;j<N;j++) {
+			m[j][i]=aux[i][j];
+		}
+	}
+}
+
+void addTo (int N, int M, int a [N][M], int b[N][M]) { //10 em 10
+	int i, j;
+	for(i=0; i<N;i++) {
+		for(j=0;j<M;j++) 
+			a[i][j]+=b[i][j];
+	}
+}
+
+void sumDiag (int N, int m [N][N]) { //10 em 10
+	int i, j, soma;
+	for(i=0;i<N;i++) {
+		soma=0;
+		for(j=0;j<N;j++) {
+			if(i!=j) soma+=m[i][j];
+		}
+		m[i][i]=soma;
+	}
+}
+
+int unionSet (int N, int v1[N], int v2[N], int r[N]) { //10 em 10
+	int i;
+	for(i=0; i<N;i++) r[i]=0;
+	for(i=0; i<N;i++)
+		if(v1[i]==1||v2[i]==1) r[i]=1;
+	return 1;
+}
+
+int intersectSet (int N, int v1[N], int v2[N], int r[N]) { //10 em 10
+	int i;
+	for(i=0; i<N;i++) r[i]=0;
+	for(i=0; i<N;i++)
+		if(v1[i]==1 && v2[i]==1) r[i]=1;
+	return 1;
+}
+
+int intersectMSet (int N, int v1[N], int v2[N], int r[N]){ //10 em 10
+	int i;
+	for(i=0; i<N;i++) r[i]=0;
+	for(i=0; i<N;i++) {
+		if(v1[i]<v2[i]) r[i]=v1[i];
+		else r[i]=v2[i];
+	}
+	return 1;
+}
+
+int unionMSet (int N, int v1[N], int v2[N], int r[N]) { //10 em 10
+	int i;
+	for(i=0; i<N;i++) r[i]=0;
+	for(i=0; i<N;i++) {
+		if(v1[i]<v2[i]) r[i]=v2[i];
+		else r[i]=v1[i];
+	}
+	return 1;
+}
+
+int cardinalMSet (int N, int v[N]) { //10 em 10
+	int i, s=0;
+	for(i=0;i<N;i++)
+		s+=v[i];
+	return s;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <cena>
+        <modelo ficheiro='plano1.3d'/>
+        <modelo ficheiro='plano2.3d'/>
+    </cena>
+</xml>

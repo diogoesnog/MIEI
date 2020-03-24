@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Capela de Nossa Senhora da Conceição ou da Praça </IDENTI>
+		<DESCRI> Capela </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Arcos de Valdevez </LUGAR>
+		<FREGUE> Arcos de Valdevez </FREGUE>
+		<CONCEL> Arcos de Valdevez </CONCEL>
+		<LATITU> 541,9 </LATITU>
+		<LONGIT> 176,3 </LONGIT>
+		<ALTITU> 50m </ALTITU>
+		<ACESSO>A vila dos Arcos de Valdevez é um importante nó viário servido por várias
+estradas que ligam a Monção, Ponte de Lima e Braga (EN.101 e 202). O
+monumento não está sinalizado, encontrando-se na rua da Praça,no centro da
+vila dos Arcos de Valdevez.</ACESSO>
+		<DESARQ>Nos finais do século XV João Domingues, abade de Sabadim, mandou edificar no
+centro da vila dos Arcos, para albergar o seu <LIGA TERMO="sarcófago">sarcófago</LIGA>, a capela de Nossa Senhora da Conceição. Conserva-se ainda
+a singela edificação gótica, com paredes de <LIGA TERMO="silhar">silhar</LIGA>ia granítica regularmente aparelhada, com um pequeno mas
+elegante portal de<LIGA TERMO="arco"> arco</LIGA>ogival com uma <LIGA TERMO="arquivolta"> arquivolta</LIGA> decorada com esferas ou pérolas. A
+função funerária da capela manteve-se ao longo de toda a época moderna, aí
+se fazendo enterrar vários membros da nobreza local, como ilustram as
+diversas tampas de sepultura aí existentes. Segundo alguns estudiosos, o
+<LIGA TERMO="sarcófago"> sarcófago</LIGA> existente no topo da capela, do
+lado direito de quem entra, será a arca tumular do referido abade João
+Domingues.</DESARQ>
+		<INTERE>Trata-se de um monumento de inegável significado histórico local e valor
+patrimonial, classificado como Imóvel de Interesse Público (Dec. 43073 de
+14-7-1960), constituindo um importante testemunho de práticas funerárias
+requintadas e também da produção artística gótica de feição rural.</INTERE>
+		<BIBLIO>ALMEIDA (1987): Carlos Alberto Ferreira de Almeida - Alto Minho, (novos
+guias de Portugal, 5), Editorial Presença, Lisboa, 1987. </BIBLIO>
+		<BIBLIO> BARREIROS, M.A.B.(1926): - Egrejas e Capelas Romanicas da Ribeira
+Lima, Edições Marques Abreu, Porto, 1926. </BIBLIO>
+		<BIBLIO> BARROCA,M.J. (1987) - Necrópoles e Sepulturas Medievais de
+Entre-Douro-E-Minho (séculos V a XV), Provas de Aptidão Pedagógica e
+Capacidade Científica, (policopiado), Faculdade de Letras da Universidade do
+Porto, Porto,1987. </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

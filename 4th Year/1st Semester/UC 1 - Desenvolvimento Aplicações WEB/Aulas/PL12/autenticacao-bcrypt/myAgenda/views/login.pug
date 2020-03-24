@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h3 Agenda de Eventos: Login
+  form(action="/login" method="POST")
+    input(type="text" name="email")
+    input(type="password" name="password")
+    input(type="submit" value="Enviar")
+    

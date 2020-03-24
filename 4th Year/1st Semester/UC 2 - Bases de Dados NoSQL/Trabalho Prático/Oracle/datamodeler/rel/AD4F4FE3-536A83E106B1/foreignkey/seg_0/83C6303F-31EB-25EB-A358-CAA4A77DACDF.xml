@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="83C6303F-31EB-25EB-A358-CAA4A77DACDF" containerWithKeyObject="0790F1AA-29D4-D5A1-9D3D-2370A3E76A05" localFKIndex="4E67F111-B44C-1635-6E29-998B32A9373C" name="city_country_FK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>17024A36-5629-6F8D-73FC-085CEFC420AB</importedID>
+<referredTableLongName>country</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D4C53098-7068-7E52-FDD4-20B3F9001638</referredTableID>
+<keyObject>9B30BB51-A58F-3E07-A961-C567117D60B7</keyObject>
+<referredKeyID>9B30BB51-A58F-3E07-A961-C567117D60B7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>country_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

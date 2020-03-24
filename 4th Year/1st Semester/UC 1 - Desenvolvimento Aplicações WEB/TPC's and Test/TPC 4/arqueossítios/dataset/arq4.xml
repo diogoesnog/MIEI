@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Bouro (Santa Maria) </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-História</CRONO>
+		<LUGAR> Monte do Outeiro </LUGAR>
+		<FREGUE> Bouro (Santa Maria) </FREGUE>
+		<CONCEL> Amares </CONCEL>
+		<CODADM> 030120 </CODADM>
+		<LATITU> 521,3 </LATITU>
+		<LONGIT> 186,9 </LONGIT>
+		<ALTITU> 175m </ALTITU>
+		<ACESSO>O acesso ao local pode fazer-se por caminho carreteiro, a partir da estrada
+nacional Amares-Gerês, em direcção ao lugar
+ de Outeiro.</ACESSO>
+		<QUADRO>O monte do Outeiro corresponde a um pequeno cabeço, situado perto do rio
+Cávado, numa zona razoavelmente plana de um
+ terraço fluvial.</QUADRO>
+		<DESARQ>O povoado possui uma única plataforma, no topo do cabeço, que se encontra
+circundada por um talude.
+ Este parece corresponder a uma estrutura defensiva. Na superfície do solo
+recolhem-se fragmentos de tijoleira e são
+ visíveis pedras, correspondentes a derrubes de estruturas. No entanto, não
+se registam quaisquer alinhamentos coerentes.
+ Trata-se, aparentemente, de um povoado de baixa altitude, provavelmente
+romanizado, semelhante ao povoado do Lago, em
+ Amares. </DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+proto-histórico. </INTERP>
+		<BIBLIO>MARTINS, M. (1990). O Povoamento Proto-Histórico e a romanização da Bacia do
+Médio Cávado, Cadernos de Arqueologia - Monografias, 5, Universidade do
+Minho, Braga, pp. 70-71. </BIBLIO>
+		<AUTOR>Manuela Martins </AUTOR>
+		<TRAARQ>Não são conhecidos trabalhos arqueológicos no local. </TRAARQ>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

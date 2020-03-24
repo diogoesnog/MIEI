@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte das Antas </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="necrópole"> Necrópole</LIGA> megalítica </DESCRI>
+		<CRONO>Pré-História Recente</CRONO>
+		<LUGAR> Monte das Antas</LUGAR>
+		<FREGUE> Medelo </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030716 </CODADM>
+		<LATITU> 500,1 </LATITU>
+		<LONGIT> 198,4 </LONGIT>
+		<ALTITU> 370m </ALTITU>
+		<ACESSO>Faz-se a partir da E.N. 311, seguida pela E.M. 614 que atravessa o Monte das
+Antas, entre Largateira e Corujeira. </ACESSO>
+		<QUADRO>Os monumentos situam-se numa vertente suave com plataformas, sobranceira à
+bacia hidrográfica do rio Vizela.</QUADRO>
+		<DESARQ>Duas <LIGA TERMO="mamoa"> mamoas</LIGA> no lugar da Corujeira, junto à E. M.
+614. Uma delas encontra-se destruída, estando a outra ainda intacta, não
+apresentando quaisquer vestígios de violação da câmara. Trata-se de um
+monumento de razoáveis dimensões com 8m de diâmetro por cerca de 2m de
+altura.
+No lugar de Sargaça, já no Monte Formigueiro, a Norte, existe uma outra
+<LIGA TERMO="mamoa"> mamoa</LIGA> semi-destruída. </DESARQ>
+		<INTERP> Necrópole megalítica. </INTERP>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Ponte de Varziela </IDENTI>
+		<DESCRI> Ponte </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Varziela </LUGAR>
+		<FREGUE> Castro Laboreiro </FREGUE>
+		<CONCEL> Melgaço </CONCEL>
+		<CODADM> 160302 </CODADM>
+		<LATITU> 562,9 </LATITU>
+		<LONGIT> 198,9 </LONGIT>
+		<ALTITU> 950m </ALTITU>
+		<ACESSO>Junto à "inverneira" de Varziela, cerca de 1,5 kms para nascente de Castro
+Laboreiro. O acesso faz-se a partir do lugar seguindo o caminho antigo em
+direcção a <LIGA TERMO="castro"> castro</LIGA> Laboreiro. A Varziela
+chega-se pela estrada municipal que prolonga a EN.202-3 até à fronteira da
+Ameixoeira. O monumento não está sinalizado.</ACESSO>
+		<DESARQ>Ponte sobre o rio da Varziela, de um<LIGA TERMO="arco"> arco</LIGA>de volta
+perfeita alicerçado na rocha granítica que aflora nas margens, através de
+paramentos de <LIGA TERMO="aparelho"> aparelho</LIGA> rude em mamposteria de
+calhaus e blocos graníticos mal afeiçoados. O aro do arco, que cobre um<LIGA TERMO="triedro"> triedro</LIGA>de cerca de 6 metros de comprimento e quase
+5,5 metros de altura, apresenta um <LIGA TERMO="aparelho"> aparelho</LIGA>
+mais cuidado, observando-se no intradorso os orifícios para encaixe do
+cimbre. O tabuleiro, em cavalete muito pouco pronunciado, é lajeado e
+guarnecido por guardas pétreas, tem de largura menos de 3 metros e vence
+um<LIGA TERMO="triedro"> triedro</LIGA>total superior a 8 metros.
+Encontra-se razoavelmente conservada, embora apresente excesso de vegetação
+arbustiva nos paramentos.</DESARQ>
+		<INTERP>Podendo não ser uma construção cronologicamente medieval, como parece
+indicar a ausência de siglas de <LIGA TERMO="canteiro"> canteiro</LIGA>,
+revela características técnicas e formais dessa época, servindo a antiga via
+que por aí passava.</INTERP>
+		<INTERE>Estamos perante uma obra de arte viária talvez tardo-medieval ou já moderna,
+relacionável não apenas com a rede de comunicações vicinais de Castro
+Laboreiro, servindo as aldeias da margem esquerda do vale do rio Laboreiro,
+mas sobretudo com a rede viária regional minhoto-galaica que colocava Castro
+Laboreiro na ligação entre Melgaço ou Arcos de Valdevez e Bande, por Entrimo
+e Lobios. Embora não se conheça qualquer referência documental, este
+monumento tem grande importância para a compreensão da organização do
+povoamento e comunicações medievais regionais. Apesar de classificado como
+IIP (Dec. 1/86 de 3-1), este monumento não possui nenhum elemento
+qualitativamente distintivo, constituindo um valor patrimonial vulgar.</INTERE>
+		<BIBLIO>:
+Rodrigues, A.R. (1985) Pontes Romanas e Românicas de Castro Laboreiro
+(separata dos "Cadernos da Câmara Municipal de Melgaço, 2), Câmara Municipal
+de Melgaço, 1985. </BIBLIO>
+		<AUTOR> Luís Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

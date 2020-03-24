@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A9FC76C4-7C18-C72C-1596-6451FDD2263F" name="film_actor">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>F9DF76A1-DDD7-BB9A-051D-285E12AB5996</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="actor_id" id="B7B6CBCB-9FBB-8D79-613F-9ED15D94A585">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>B67E04E6-FC66-5563-7EA4-90E10CDCE806</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>5E754F50-3795-098B-3EC8-73844037EE9F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="30ED0F83-73AE-383D-D056-992065FE635F" referredColumn="78E7FCBB-ADA5-008C-701A-AAD1171892B5"/>
+</associations>
+</Column>
+<Column name="film_id" id="614424AB-7CB8-776F-3F06-A549A276F2EE">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>5FF96519-87A6-AEF2-B5B7-10AE1D015AC5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0D1C830-1DBC-6A48-CE5D-E6107FE304E7" referredColumn="765EAD7F-8693-2F4B-2016-7A9B0F277F4C"/>
+</associations>
+</Column>
+<Column name="last_update" id="7610B3F0-6C06-1DE9-9B21-4AEF7145F064">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>438F479C-8095-7192-3C4C-8FE8ED834B93</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13F3F940-7EB9-C353-7A96-01992BEADF0C" name="film_actor_PK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>2DF1E841-3230-48A6-E96B-52EA8C6A1DF1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7B6CBCB-9FBB-8D79-613F-9ED15D94A585"/>
+<colUsage columnID="614424AB-7CB8-776F-3F06-A549A276F2EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0178687B-B620-E50B-D8B9-B55EC3EA245C" name="film_actor_actor_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7B6CBCB-9FBB-8D79-613F-9ED15D94A585"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21CCF1CE-C820-1F07-D957-027101E33E88" name="film_actor_film_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="614424AB-7CB8-776F-3F06-A549A276F2EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

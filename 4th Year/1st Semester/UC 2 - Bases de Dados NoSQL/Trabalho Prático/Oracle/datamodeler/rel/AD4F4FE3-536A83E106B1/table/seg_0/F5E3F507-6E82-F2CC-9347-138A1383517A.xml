@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F5E3F507-6E82-F2CC-9347-138A1383517A" name="film_category">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>676CFD3A-CC78-B94A-0731-23867BFE4141</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="film_id" id="82E3F732-ACC9-26D8-DBC7-0C909B842BB0">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>1168A189-06E8-459A-512C-8BEA12B72E89</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D65284E-F85C-FA33-0A96-A11AEE48FD76" referredColumn="765EAD7F-8693-2F4B-2016-7A9B0F277F4C"/>
+</associations>
+</Column>
+<Column name="category_id" id="E0C338B5-7D7B-7086-3375-76542DE2FCEE">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>4F381DBA-5033-283C-3FA0-8799B68D53BC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<domain>9D4136D2-10F8-9397-1AA6-F49549FF123A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D45F5840-0D6A-FF81-CFC1-6061C9989E5F" referredColumn="742118BD-912F-2239-FBE3-BAF180A9AD44"/>
+</associations>
+</Column>
+<Column name="last_update" id="2825DC80-8F94-79E2-41FD-B6C17B5DCCCA">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>EF25E9EF-0C33-8CF0-F5D5-4580ED8E7ABE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9781725-9A7A-94B3-C39D-7E92E911C784" name="film_category_PK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>3034A8CA-2986-0985-7BB5-F0A6D104621D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82E3F732-ACC9-26D8-DBC7-0C909B842BB0"/>
+<colUsage columnID="E0C338B5-7D7B-7086-3375-76542DE2FCEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CC6791C-6C5B-90F2-928E-283C0BB7EEF3" name="film_category_category_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E0C338B5-7D7B-7086-3375-76542DE2FCEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8E80F9D-9D56-D406-D6A4-37EEE21AA8C5" name="film_category_film_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82E3F732-ACC9-26D8-DBC7-0C909B842BB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

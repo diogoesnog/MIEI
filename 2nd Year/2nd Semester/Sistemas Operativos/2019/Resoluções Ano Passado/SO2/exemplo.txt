@@ -1,0 +1,4 @@
+read():
+. -1 em caso de erro
+. 0 em caso de EOF
+. 1 otherwise

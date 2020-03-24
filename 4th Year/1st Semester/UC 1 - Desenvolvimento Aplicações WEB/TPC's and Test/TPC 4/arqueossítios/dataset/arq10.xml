@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte de Lousado </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado </LIGA>
+		</DESCRI>
+		<CRONO> Proto-História / Romanização</CRONO>
+		<LUGAR> Monte do Lousado</LUGAR>
+		<FREGUE> Alheira </FREGUE>
+		<CONCEL> Barcelos </CONCEL>
+		<CODADM> 030207 </CODADM>
+		<LATITU> 517,1 </LATITU>
+		<LONGIT> 165,5 </LONGIT>
+		<ALTITU> 300m </ALTITU>
+		<ACESSO>O acesso pode fazer-se a partir de Alheira.</ACESSO>
+		<QUADRO>O Monte de Lousado situa-se nos limites das freguesias de Alheira e de
+Panque, ambas do concelho de Barcelos. Corresponde ao extremo NE de uma
+pequena crista montanhosa, que se dispõe no sentido NE/SO, paralela ao rio
+Neiva. A parte alta desta crista separa as bacias dos rios Cávado e Neiva.</QUADRO>
+		<TRAARQ>Não são conhecidos trabalhos arqueológicos no local. </TRAARQ>
+		<DESARQ>O povoado é conhecido e referido na bibliografia, pelo menos, a partir do
+século XVIII. É citado por Contador de Argote e por L. Cardoso, no
+"Dicionário Geográfico". Apesar dessas referências e da monumentalidade dos
+seus vestígios nunca foi objecto de trabalhos arqueológicos. A maioria dos
+vestígios concentra-se na parte mais alta do monte: aí são visíveis restos
+de muralhas e alicerces de construções habitacionais. Na superfície do
+povoado recolhem-se fragmentos de <LIGA TERMO="cerâmica indígena"> cerâmica
+indígena</LIGA> de fabrico <LIGA TERMO="micáceo"> micáceo</LIGA> e de
+cerâmica romana.</DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+romanizado.</INTERP>
+		<BIBLIO>: FONSECA, T. (1948). O concelho de Barcelos Aquém e Além Cávado,
+Barcelos, 2 Vol., pp. 13; 65-66. </BIBLIO>
+		<BIBLIO>MARTINS, M. (1990). O Povoamento Proto-Histórico e a Romanização da Bacia do
+Médio Cávado, Cadernos de Arqueologia - Monografias, 5, Universidade do
+Minho, Braga, pp. 73. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

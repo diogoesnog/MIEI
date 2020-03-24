@@ -1,0 +1,60 @@
+# Função que conta o número de processos associados a um dado tipo de processo.
+function contaTipoProcessos(array, indice){
+    
+    contador=0;
+
+    for(i in array){
+        if(array[i]==array[indice]) contador++;
+    }
+
+    return contador;
+}
+
+# Função que verifica se um tipo de processo já existe no novo array.
+function existeTipoProcesso(novoArray, array, indice){
+
+    for(x in novoArray){
+        if(novoArray[x]==array[indice]) return 1;
+    }
+
+    return 0;
+}
+
+BEGIN {
+    RS="NILL" # Definir o que separa os vários registos.
+    FS="NOVOCAMPO - " # Definir o que separa os vários campos.
+}
+
+NR==1 {next}
+
+NR<=30 {
+    
+    i=1; j;
+
+    # Colocamos num array o tipo de processo de cada registo.
+    while(i<=27){
+        if(i==10 && $10!~"VAZIO") array[j++]=$10;
+        i++;
+    }
+}
+
+END{
+
+    k; contador;
+
+    # Vamos correndo o array anterior e colocando num novo os diferentes tipos de processo.
+    # A diferença é que neste novo array não vão existir tipos repetidos.
+    # Ao menos tempo que se insere no novo, conta-se as ocorrências no antigo.
+    for(indice in array){
+
+        if (!existeTipoProcesso(novoArray, array, indice)){
+            novoArray[k]=array[indice];
+            contador=contaTipoProcessos(array, indice);
+
+            printf("Processo do tipo %s", novoArray[k]);
+            printf("Número de processos associados: %i\n\n", contador);
+
+            k++;
+        }
+    }
+}

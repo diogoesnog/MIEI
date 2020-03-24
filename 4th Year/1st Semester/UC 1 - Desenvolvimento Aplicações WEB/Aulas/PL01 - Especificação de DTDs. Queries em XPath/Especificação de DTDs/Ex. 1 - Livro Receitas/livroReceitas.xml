@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE livro-de-receitas SYSTEM "file:/C:/Users/diogo/Google%20Drive/Universidade/Engenharia%20Inform%C3%A1tica/4%C2%BA%20Ano/UC%201%20-%20Desenvolvimento%20Aplica%C3%A7%C3%B5es%20WEB/Aulas/PL01%20-%20Especifica%C3%A7%C3%A3o%20de%20DTDs.%20Queries%20em%20XPath/Especifica%C3%A7%C3%A3o%20de%20DTDs/Ex.%201%20-%20Livro%20Receitas/livroReceitas.dtd">
+<livro-de-receitas>
+    <abertura>
+        <autor></autor>
+        <data></data>
+        <local></local>
+    </abertura>
+    <receitas>
+        <receita classificação="">
+            <título></título>
+            <ingredientes>
+                <ingrediente></ingrediente>
+            </ingredientes>
+            <preparação>
+                <instrução></instrução>
+            </preparação>
+        </receita>
+    </receitas>
+</livro-de-receitas>

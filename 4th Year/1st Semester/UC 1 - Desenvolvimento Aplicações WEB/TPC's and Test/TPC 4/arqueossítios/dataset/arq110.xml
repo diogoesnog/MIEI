@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Tourém </IDENTI>
+		<DESCRI> Igreja </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Tourém </LUGAR>
+		<FREGUE> Tourém </FREGUE>
+		<CONCEL> Montalegre </CONCEL>
+		<CODADM> 170632 </CODADM>
+		<LATITU> 548,3 </LATITU>
+		<LONGIT> 219,5 </LONGIT>
+		<ALTITU> 500m </ALTITU>
+		<ACESSO>O acesso faz-se por várias ruas desde o centro da aldeia de Tourém. A esta
+chega-se pela estrada municipal que cruza com a estrada EN 308 em Covelães.
+O monumento não está sinalizado.</ACESSO>
+		<DESARQ>Tourém é documentada já desde os tempos medievais como parte integrante do
+extinto termo de Piconha, território sob administração portuguesa até 1866 e
+que fora capitaneado pelo castelo do mesmo nome, demolido pelos castelhanos
+em 1650 na sequência das guerras da "restauração". No foral da Piconha dado
+pelo rei Manuel I em 1515 estabelece-se o foro a pagar pela igreja de S.
+Pedro (de Tourém), à qual deveria corresponder o actual templo paroquial,
+edifício do qual, apesar das ampliações posteriores, se conserva a quase
+totalidade da metade inferior das <LIGA TERMO="nave"> nave</LIGA> e <LIGA TERMO="cabeceira"> cabeceira</LIGA> onde, para além da excelente fábrica em
+<LIGA TERMO="aparelho isódono"> aparelho isódono</LIGA>, se destacam os
+seguintes elementos de decoração arquitectónica: portal Sul em<LIGA TERMO="arco"> arco</LIGA> de volta perfeita, um fecho de <LIGA TERMO="fresta"> fresta</LIGA> no interior da capela-mor com decoração
+esculpida e fragmentos de <LIGA TERMO="arquivolta"> arquivolta</LIGA> de
+portal decorados com "lanceolados", reaproveitados na parte superior da
+parede Sul da <LIGA TERMO="cabeceira"> cabeceira</LIGA>. As austeridade
+decorativa e a tipologia geometrizante dos motivos desenhados denunciam uma
+certa influência do modelo <LIGA TERMO="cisterciense"> cisterciense</LIGA>
+de Pitões das Júnias. No conjunto trata-se de um monumento baixo-medieval
+razoavelmente conservado.</DESARQ>
+		<INTERP>Igreja de fundação tardo-medieval.</INTERP>
+		<INTERE>Para além da sua importância para a história da arte, a igreja de Tourém
+constitui um valor patrimonial importante no contexto da arquitectura
+religiosa medieval regional, pois é um dos poucos testemunhos da penetração
+dos modelos arquitectónicos <LIGA TERMO="românico"> românicos</LIGA> no
+actual concelho de Montalegre.</INTERE>
+		<BIBLIO>FONTES, L.(1992). Sítios e Achados Arqueológicos do Concelho de Montalegre.
+Braga, 1992 (edição policopiada da CCRN - Porto). </BIBLIO>
+		<AUTOR> Luis Fontes</AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Fiães </IDENTI>
+		<DESCRI> Igreja </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Fiães</LUGAR>
+		<FREGUE> Fiães </FREGUE>
+		<CONCEL> Melgaço </CONCEL>
+		<CODADM> 160307 </CODADM>
+		<LATITU> 570,3 </LATITU>
+		<LONGIT> 193,3 </LONGIT>
+		<ALTITU> 700m </ALTITU>
+		<ACESSO>Na periferia da aldeia de Fiães, pela estrada municipal que liga
+directamente à sede do concelho (passa frente à igreja)</ACESSO>
+		<DESARQ>A actual igreja paroquial de Fiães era o templo do antigo mosteiro de Fiães,
+cuja origem se desconhece mas que se sabe ter adoptado a regra <LIGA TERMO="cisterciense"> cisterciense</LIGA> em finais do século XII,
+distinguindo-se nos séculos seguintes pela sua influência e riqueza, como um
+dos estabelecimentos monásticos mais ricos do reino cujo abade era
+simultaneamente um alto e influente dignatário da coroa. No século XVI,
+contudo, estava já arruinado. Apesar de reformado, nunca mais atingiu o
+esplendor anterior, vindo a ser oficialmente extinto em 1834. Do século XIII
+deverá datar a edificação românica da igreja, edifício do qual, apesar das
+reconstruções e ampliações posteriores, em que sobressai a remodelação
+setecentista da fachada, se conservou a volumetria global, toda a <LIGA TERMO="cabeceira"> cabeceira</LIGA> e a parede meridional da <LIGA TERMO="nave"> nave</LIGA>. Do conjunto destaca-se o desenho contido e a
+cércea baixa da <LIGA TERMO="cabeceira"> cabeceira</LIGA> tripartida de
+capelas quadrangulares, de <LIGA TERMO="abóbada"> abóbada</LIGA> apontada,
+repetindo aqui o característico modelo <LIGA TERMO="cisterciense">cisterciense</LIGA>, bem como os pouco luminosos vãos dos portais e <LIGA TERMO="fresta"> frestas</LIGA> da fachada Sul. Na decoração arquitectónica
+releva, adentro da característica austeridade, o <LIGA TERMO="entabelamento"> entabelamento</LIGA> exterior da capela colateral
+Norte, com <LIGA TERMO="cornija"> cornija</LIGA> sobre <LIGA TERMO="arcatura"> arcaturas</LIGA> apoiadas em <LIGA TERMO="modilhão">modilhões</LIGA> "em proa". Refira-se ainda, abandonada no exterior, a tampa
+de sepultura medieval decorada com uma cruz florenciada, cujo pé longo
+separa duas regras de uma epígrafe relativa ao epitáfio de um Martinus
+Iohanis, natural de Cavaleiros e falecido em 1 de Junho de 1316.</DESARQ>
+		<INTERP>Igreja de fundação medieval: sèc. XIII.</INTERP>
+		<INTERE>Trata-se de um monumento de inegável significado histórico regional,
+classificado como M.N. Dec. De 16-6-1910 e 129/77 de 29-9) e de razoável
+valor científico e patrimonial, fundamental não só para o estudo da difusão
+das arquitectura e decoração românicas, como para o conhecimento da
+organização e evolução do povoamento medieval nesta franja fronteiriça
+portuguesa.</INTERE>
+		<BIBLIO>ALMEIDA, C.A.F (1968) Vias Medievais de Entre Douro e Minho, Dissertação de
+Licenciatura em História (policopiada), Faculdade de Letras da Universidade
+do Porto, Porto, 1968. </BIBLIO>
+		<BIBLIO> ALMEIDA, C.A.F (1978a) Arquitectura Românica de Entre Douro e
+Minho, Tese de Doutoramento (policopiada), Faculdade de Letras da
+Universidade do Porto, Porto, 1978. </BIBLIO>
+		<BIBLIO> ALMEIDA, C.A.F. (1986) História da Arte em Portugal. 2:
+românico Lisboa, 1986, pp.104. </BIBLIO>
+		<BIBLIO> ALMEIDA, C.A.F.(1987) Alto Minho, (novos guias de Portugal, 5),
+Editorial Presença, Lisboa, 1987. </BIBLIO>
+		<BIBLIO> BARROCA, M.J.1987 Necrópoles e Sepulturas Medievais de
+Entre-Douro-E-Minho (séculos v a XV), Provas de Aptidão Pedagógica e
+Capacidade Científica, (policopiado), Faculdade de Letras da Universidade do
+Porto, Porto,1987. </BIBLIO>
+		<AUTOR> Luís Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

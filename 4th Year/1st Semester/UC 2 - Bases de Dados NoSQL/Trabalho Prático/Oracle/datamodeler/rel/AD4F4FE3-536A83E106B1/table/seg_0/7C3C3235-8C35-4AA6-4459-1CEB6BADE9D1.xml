@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C3C3235-8C35-4AA6-4459-1CEB6BADE9D1" name="rental">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>13609A5E-2997-4BF4-9AC2-D65929736CF9</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rental_id" id="47D38CE7-6DD5-441A-99B5-2A5371DB31B8">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>C99E90D3-3F80-536B-BBA2-3865BB3B418C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rental_date" id="DB0AA20B-302D-10A8-B0CD-6E2798DE3BDA">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>00387FFA-07A7-1FC7-6D70-CDEE9D387FEE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="inventory_id" id="A485D44B-7818-5D70-6E2B-0294A247802D">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>80393588-32E0-8631-46C8-634F70C1169C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7831C123-14B6-8A55-B4F2-4E985D4A2543" referredColumn="2608E02E-E7FC-4B7F-6B81-49DB2476A4FB"/>
+</associations>
+</Column>
+<Column name="customer_id" id="8E18F8B4-E6DE-CEBB-77B9-042D49995163">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>1978131D-2961-A402-1A2B-C85691B76066</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D020FF10-C282-5655-E472-8ADD554E9168</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FEE717F-02D6-8BD8-495E-BF85DAA4F41E" referredColumn="28F80989-12D2-219E-E5CC-9E6D36167ACC"/>
+</associations>
+</Column>
+<Column name="return_date" id="C6B692D1-3B02-FA6D-E08D-2DC180E7B8AF">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>05D78D09-BF67-94BD-3E2C-7C622200B8A6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<defaultValue>NULL</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="staff_id" id="247450A9-8AFC-3721-7F3B-9E8F4A5E9E34">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>06B15AB6-DA64-B30C-DE2F-61861F8D0FB5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<domain>9D4136D2-10F8-9397-1AA6-F49549FF123A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91EB4104-80D2-A1DD-ED0C-9D04AF1C45CF" referredColumn="4FA79167-D30D-1592-BADB-0F6954888265"/>
+</associations>
+</Column>
+<Column name="last_update" id="7E2BC8EE-FCBC-9341-4746-FE21E4957B13">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>B12223A8-D11E-7DD9-6B44-7D95953A8FB8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>4A5C7219-0E60-4947-ED65-77B10E67D80F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB4D2F5D-93C9-4EAC-DC10-2594FF4F3FB0" name="rental_PK">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>D09F46B2-ADB5-9A26-869A-EA20F06B0B83</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47D38CE7-6DD5-441A-99B5-2A5371DB31B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="325A04AB-01C4-BA06-3D96-FA3AACFCD59B" name="rental_I">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>898A30EC-C68B-309E-6648-23CB879C302E</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB0AA20B-302D-10A8-B0CD-6E2798DE3BDA"/>
+<colUsage columnID="A485D44B-7818-5D70-6E2B-0294A247802D"/>
+<colUsage columnID="8E18F8B4-E6DE-CEBB-77B9-042D49995163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1F72C7E-E526-6ADC-E42D-581C6806FBC9" name="rental_customer_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E18F8B4-E6DE-CEBB-77B9-042D49995163"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83842099-B6B4-4DA7-13E9-ED2B096052DC" name="rental_inventory_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A485D44B-7818-5D70-6E2B-0294A247802D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB8BE16F-2E64-65D8-58AF-35495FD054F8" name="rental_staff_FK">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="247450A9-8AFC-3721-7F3B-9E8F4A5E9E34"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

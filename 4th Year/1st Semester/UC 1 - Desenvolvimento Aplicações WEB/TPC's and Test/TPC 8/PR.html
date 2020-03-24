@@ -1,0 +1,103 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <div class="container">
+         <hr>
+         <title>Registo de Projetos</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      </div>
+   </head>
+   <body>
+      <div class="container">
+         <h1 align="center"><b>Servidor de Ficheiros (Pug + Express + MongoDB + API Dados)</b></h1>
+         <h3 align="center">TPC 8 (Desenvolvimento Aplicações WEB)</h3>
+         <hr>
+         <table align="center" width="50%">
+            <tr>
+               <td><b>Keyname: </b>MIEI-DAW-TPC8
+               </td>
+               <td><b>Título: </b>Servidor de Ficheiros (Pug + Express + MongoDB + API Dados)
+               </td>
+            </tr>
+            <tr>
+               <td><b>Data Início: </b>05 de Novembro de 2019
+               </td>
+               <td><b>Data Fim: </b>12 de Novembro de 2019
+               </td>
+            </tr>
+            <tr>
+               <td><b>Supervisor: </b><a href="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</a></td>
+               <td><b>Email Supervisor: </b>jcr@di.uminho.pt
+               </td>
+            </tr>
+         </table>
+         <hr>
+         <h3>Equipa</h3>
+         <ul>
+            <li><b>A78957</b> - Diogo Emanuel Silva Nogueira - a78957@alunos.uminho.pt
+            </li>
+         </ul>
+         <hr>
+         <h3>Resumo</h3>
+         <p>O TPC 8 procura combinar todo o conteúdo programático da Unidade Curricular, introduzindo-se
+            a noção de API de Dados para se criar uma "ponte" entre as aplicações. Dessa forma,
+            consegue-se processar os pedidos do Cliente através da Interface, recorrendo à API
+            para tratar a informação em modo bruto.
+         </p>
+         <p>Com um ficheiro JSON relativo a um conjunto de Prémios Nobel, deve-se criar uma Base
+            de Dados limpa, exportanto-se todos os dados existentes para a mesma. Tendo-se a Base
+            de Dados pronta e devidamente povoada, pretende-se que seja possível manipular a sua
+            informação de modo bruto através de uma API, que é depois mostrada ao Cliente através
+            de uma Interface preparada para esse mesmo efeito.
+         </p>
+         <p><b>Com isto em mente e com a estrutura de pastas totalmente definida foram desenvolvidos
+               os seguintes ficheiros:</b></p>
+         <p>1. Ficheiro premio.js existente na pasta /controllers - Ficheiro que define os Controlados
+            do conjunto de Prémios, definindo as queries que tratam das operações essenciais para
+            manipular o conteúdo.
+         </p>
+         <p>2. Ficheiro premio.js existente na pasta /models - Ficheiro que define o Modelo de
+            um Prémio Nobel, pela definição de um Schema que é universal a todos os registos.
+            Dado que cada Prémio Nobel tem um conjunto de Laureados, foi necessário definir também
+            o seu Modelo
+         </p>
+         <p>3. Ficheiro funcoes.js existente na pasta /public/javascripts - Ficheiro que processa
+            os pedidos do Cliente, encaminado-o para a devida rota. Neste ficheiro é declarada
+            uma função que serve para eliminar um registo de Prémio Nobel e ainda uma função que
+            devolve um registo consoante a sua categoria e data.
+         </p>
+         <p>4. Ficheiro index.js existente na pasta /routes - Ficheiros que definem conjuntamente
+            todas as rotas que são necessárias para atender às necessidades impostas pelo Cliente.
+            Uma vez que se está a trabalhar agora com a ideia de API de Dados, existe um ficheiro
+            que trata de toda a parte da informação em si e outro que perante este tratamento,
+            manda os dados para as devidas views.
+         </p>
+         <p><b>
+               Todos os outros ficheiros desenvolvidos são triviais, correspondendo essencialmente
+               aos vários Template Engines localizados na pasta /views necessários para transformar
+               o conteúdo processado em uma página WEB intuitiva. É ainda usado o CSS do Bootstrap,
+               que se encontra na pasta public/sytlesheets..
+               </b></p>
+         <hr>
+         <h3>Entregas</h3>
+         <ul>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/controllers/premio.js">Ficheiro que define os Controlados do conjunto de Prémios Nobel, definindo as queries
+                  que tratam das operações essenciais para manipular o conteúdo</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/models/premio.js">Ficheiro que define o Modelo de um Prémio e de um Laureado</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/public/javascripts/funcoes.js">Ficheiro que processa os pedidos do Cliente, encaminado-o para a devida rota</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/routes/api.js">Ficheiro que trata da informação da Base de Dados em modo bruto</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/routes/index.js">Ficheiro que trata de acionar as views consoante os pedidos do Cliente</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/tree/master/TPC%208/premiosNobel/views/layout.pug">Template que define a estrutura base das várias páginas WEB</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaPrincipal.pug">Template relativo à página inicial dos Prémios Nobel</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaPremios.pug">Template relativo à página que permite consultar a lista de todos os Prémios Nobel</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaLaureados.pug">Template relativo à página que permite consultar a lista de todos os Laureados</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaCategorias.pug">Template relativo à página que permite consultar a informação de todas as categorias</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaPremio.pug">Template relativo à página que permite consultar a informação de uma determinado Prémio
+                  Nobel</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%208/premiosNobel/views/paginaErro.pug">Tempalte de uma página simples em HTML que é acionada quando o pedido ao servidor
+                  for incorreto, adaptando a resposta dada ao Cliente consoante o erro ocorrido</a></li>
+         </ul>
+      </div>
+   </body>
+</html>

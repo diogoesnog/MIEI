@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="E2E64F1D-AAAF-C582-B354-82CA47D90CE7" name="customer_list">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>2E874629-ED14-5017-902A-451E2C6104D4</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT cu.customer_id                     AS ID,
+       cu.first_name||' '||cu.last_name   AS name,
+       a.address                          AS address,
+       a.postal_code                      AS zip_code,
+       a.phone                            AS phone,
+       city.city                          AS city,
+       country.country                    AS country,
+       DECODE(cu.active, 1, 'active', '') AS notes, -- usado o decode para fazer o equivalente ao if em mySQL
+       cu.store_id                        AS SID
+FROM customer cu
+    JOIN address a ON cu.address_id = a.address_id
+    JOIN city ON a.city_id = city.city_id
+    JOIN country ON city.country_id = country.country_id]]></userDefinedSQL>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="ID" id="C6FC1B0B-FAAB-CF0F-8B70-D87841F67DF5">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>ID</alias>
+<dataType>INTEGER</dataType>
+<headerAlias>ID</headerAlias>
+<reference>false</reference>
+<referencedColumn>28F80989-12D2-219E-E5CC-9E6D36167ACC</referencedColumn>
+<table>DFE2061C-A78D-9854-BEFA-53CF5B748354</table>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="name" id="0CC21D26-55C6-4CB5-C993-6411A608916D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>name</alias>
+<dataType>VARCHAR2</dataType>
+<headerAlias>name</headerAlias>
+<expression>cu.first_name||&apos; &apos;||cu.last_name</expression>
+<reference>false</reference>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="address" id="EFE2D5C6-ECCC-861A-6026-51BCBEAA534A">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>address</alias>
+<dataType>VARCHAR2 (50)</dataType>
+<headerAlias>address</headerAlias>
+<reference>false</reference>
+<referencedColumn>7600F5A9-C761-813B-9A0A-F72B48656AE2</referencedColumn>
+<table>42477D26-9846-20A0-639A-7D8829AAED89</table>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="zip_code" id="7E294376-6DE0-E0F6-E772-B7CE0C4F3BC6">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>zip_code</alias>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>zip_code</headerAlias>
+<reference>false</reference>
+<referencedColumn>5937CF7D-8983-62ED-6F35-B8FFB02A5B03</referencedColumn>
+<table>42477D26-9846-20A0-639A-7D8829AAED89</table>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="phone" id="375D90E1-066A-D291-02F6-FBE6E0487E2D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>phone</alias>
+<dataType>VARCHAR2 (20)</dataType>
+<headerAlias>phone</headerAlias>
+<reference>false</reference>
+<referencedColumn>3F6734BF-B748-25E2-A3CD-4D5229AEB213</referencedColumn>
+<table>42477D26-9846-20A0-639A-7D8829AAED89</table>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="city" id="C330DC73-BA88-1899-FAAE-9C65E817109C">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>city</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>city</headerAlias>
+<reference>false</reference>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="country" id="4BEDAC17-3EF2-92E2-909C-C2181DD17188">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>country</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>country</headerAlias>
+<reference>false</reference>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="notes" id="A9EDB69B-0073-4D04-E7A7-46DB9624977F">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>notes</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>notes</headerAlias>
+<expression>DECODE(cu.active,1,&apos;active&apos;,&apos;&apos;)</expression>
+<reference>false</reference>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="SID" id="DCBCF8D2-0593-1BF6-5019-FD345890B2F3">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>SID</alias>
+<dataType>INTEGER</dataType>
+<headerAlias>SID</headerAlias>
+<reference>false</reference>
+<referencedColumn>689D48C4-5D9F-517B-7A64-7C2D3FDF55F9</referencedColumn>
+<table>DFE2061C-A78D-9854-BEFA-53CF5B748354</table>
+<viewID>E2E64F1D-AAAF-C582-B354-82CA47D90CE7</viewID>
+</viewElement>
+</viewElements>
+</TableView>

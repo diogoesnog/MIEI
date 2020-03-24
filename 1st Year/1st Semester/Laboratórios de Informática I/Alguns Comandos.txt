@@ -1,0 +1,50 @@
+Laboratórios de Informática
+
+Docente: Alberto  // ambs@di.uminho.pt
+Importante ter UNIX (Mac OS ou distribuições Linux) em dualboot ou pode ser Máquina Virtual
+
+Terminal:
+cd (Change Directory)
+
+cd .. (Passar para a diretoria anterior)
+
+pwd (Ver onde estamos)
+
+ls (ver o que está na pasta em questão) // também pode funcionar (Linux) "dir"
+
+cat ficheiro (Mostra o texto do ficheiro) (Também se pode utilizar o TAB para preencher o nome do ficheiro)
+
+less ficheiro (Ver o ficheiro em termos de tamanho. Facilita a procura de texto em ficheiros grandes)
+
+cp ficheiro novo_ficheiro (copy paste em modo terminal)
+
+mkdir pasta (cria uma pasta na diretoria em que estamos a trabalhar)
+
+mv ficheiro pastaDestino (mover ficheiros)
+
+rm ficheiro (Apaga o ficheiro
+
+rmdir pasta (Apaga a pasta/diretoria. Só apaga caso esteja vazia)
+
+tree (Ver ramificação de diretórios)
+
+clear (limpa o terminal)
+
+./executavel (executa o programa já compilado)
+
+GHCI
+:load ficheiro.hs (carrega o ficheiro)
+:reload (volta a carregar ficheiro)
+:t modulo (saber o tipo de modulo)
+:q (sai o GHCI)
+
+GHC
+--make ficheiro.hs (compila o ficheiro num executável)
+
+Editores de Texto:
+SublimeText (O melhor)
+Notepad++
+Vi (+ poderoso - userfriendly)
+Emacs (parecido ao Vi)
+pico (não usar)
+gedit (não usar)

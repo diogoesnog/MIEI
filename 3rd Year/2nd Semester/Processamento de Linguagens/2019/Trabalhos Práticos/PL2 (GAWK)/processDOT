@@ -1,0 +1,28 @@
+BEGIN {
+    RS="NILL" # Definir o que separa os vários registos.
+    FS="NOVOCAMPO - " # Definir o que separa os vários campos.
+}
+
+NR==1 { 
+    print "digraph grafo{" > "grafo.dot"
+}
+
+NR<=30 {
+
+    # Substituir o delimitador # por uma mudança de linha.
+    # Assim imprime-se no nodo sem este carácter desnecessário.
+    gsub("#", "\n")
+
+    # Eliminar ocorrências de linhas em branco/espaços desnecessários que possam existir.
+    gsub("\n[ ]*\n", "")
+    
+    if($8!~"VAZIO" && $2!="") 
+        print "\"Código AF\n\n"$2"\"" "->" "\"Diplomas Tipo REF\n\n"$8"\"" ";" > "grafo.dot"
+    
+    if($9!~"VAZIO" && $2!="")
+        print "\"Código AF\n\n"$2"\"" "->" "\"Diplomas Tipo Complementar\n\n"$9"\"" ";" > "grafo.dot"
+}
+
+END{
+    print "}\n" > "grafo.dot"
+}

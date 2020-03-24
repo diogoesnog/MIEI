@@ -1,0 +1,8 @@
+Resolução das Queries
+
+1. /arq/doc[contains(tit, "Jesus")] ou //doc[contains(tit, "Jesus")]
+2. //doc[contains(tit, "Jesus")]/prov
+3. //doc[contains(local,"Castelo Branco")]/tit
+4. //inst
+5. //musico
+6. //doc[prov="Minho"]/inst

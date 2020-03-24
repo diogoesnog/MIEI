@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte Castro; Castro Máximo</IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-História</CRONO>
+		<LUGAR> Monte Castro; Castro Máximo </LUGAR>
+		<FREGUE> Real </FREGUE>
+		<CONCEL> Braga </CONCEL>
+		<CODADM> 030337 </CODADM>
+		<LATITU> 510,9 </LATITU>
+		<LONGIT> 175,9 </LONGIT>
+		<ALTITU> 198m </ALTITU>
+		<QUADRO>O Monte Castro localiza-se na periferia da área urbana de Braga,
+constituindo um dos pontos mais elevados da cidade. Encontra-se virado ao
+vale do rio Cávado e domina a vasta e fértil planície que se espraia pelas
+duas margens do rio. A configuração do monte é actualmente bastante
+irregular devido à enorme pedreira aí existente, que destruiu completamente
+a vertente Sul e ainda boa parte das encostas norte e oeste. Apenas a
+vertente este mantem ainda o seu perfil original, de pendor suave.</QUADRO>
+		<TRAARQ>Tratando-se de um sítio bastante referido na bibliografia, nunca foi objecto
+de escavações sistemáticas, mas apenas de sondagens esporádicas. Destas,
+destacam-se duas, realizadas em 1977 e 1978 pela Unidade de Arqueologia da
+Universidade do Minho.</TRAARQ>
+		<DESARQ>O Castro Máximo aparece citado pela primeira vez em documentos medievais
+(COSTA 1965, 35), sendo referido, também, por Contador de Argote (1744,
+299). Entre os séculos XIX e XX encontramos inúmeras alusões a achados
+ocorridos no povoado (FREITAS 1890, 320; BELINO 1909, 5). Carlos Teixeira
+descreve-o com certa minúcia (1936=1955-56) afirmando a existência de
+fossos, no lado virado à cidade, admitindo ainda que ele teria duas linhas
+de muralhas, embora, nessa altura, fosse já difícil seguir-lhes o traçado.
+Este autor alude, também, ao aparecimento de vestígios de habitações
+circulares, em pedra, e considera, finalmente, com base nos achados
+cerâmicos e metálicos encontrados, que o povoado não foi romanizado. Em 1977
+e 1978 a Unidade de Arquelogia da Universidade do Minho realizou duas
+sondagens na estação, a última das quais viria a ser sumariamente noticiada
+(CASTRO et alii 1980, 37-51). Mau grado as inúmeras referências ao povoado,
+e apesar dos múltiplos achados e, até, das sondagens realizadas, é díficil
+precisar a cronologia da ocupação deste sítio e vislumbrar a sua organização
+defensiva, ou mesmo considerar com rigor a época do seu abandono. O material
+cerâmico conhecido da estação permite admitir, contudo, uma intensa ocupação
+entre meados do século I a.C. e meados do século I da nossa era, altura em
+que provavelmente deverá ter sido abandonado. No entanto, os raros vestígios
+de louça romana, nomeadamente fragmentos de ânforas e a presença de moedas,
+levam a admitir a possível coexistência do povoado com a primitiva ocupação
+romana do sítio da Cividade. </DESARQ>
+		<INTERP> Povoado fortificado proto-histórico.</INTERP>
+		<DEPOSI> Museu D. Diogo de Sousa, Braga; Museu Pio XII, Braga e Museu da
+Sociedade Martins Sarmento, Guimarães.</DEPOSI>
+		<BIBLIO> COSTA, A. J. (1965). Liber Fidei Sanctae Bracarensis Ecclisiae, 1,
+Braga, pp. 35. </BIBLIO>
+		<BIBLIO> FREITAS, B. S. (1890). Memórias de Braga, 1, Braga., pp.320.</BIBLIO>
+		<BIBLIO> BELINO, A. (1909). Cidades Mortas, Arqueólogo Português, 14, pp. 5.</BIBLIO>
+		<BIBLIO> TEIXEIRA, C. (1936= 1955-56). Subsídios para o estudo da
+arqueologia bracarense - I. O Monte do Castro ( Castrum Maximum), Anais da
+Faculdade de Ciências do Porto, Porto, 21 (4), pp. 231-254; 1955-56, Bracara
+Augusta, 6-7, 1-9, (31-34), pp. 17-38. </BIBLIO>
+		<BIBLIO> MARTINS, M. (1990).O Povoamento Proto-Histórico e a Romanização da
+Bacia do Curso Médio do Cávado, Cadernos de Arqueologia - Monografias, 5,
+Universidade do Minho, Braga , pp.86-87. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

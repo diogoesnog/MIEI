@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="MIEI-DAW-TPC5">
+    <Informacoes>
+        <Titulo>Servidor de Ficheiros / Introdução ao Template Engine Pug</Titulo>
+        <Subtitulo>TPC 5 (Desenvolvimento Aplicações WEB)</Subtitulo>
+        <DataInicio>15 de Outubro de 2019</DataInicio>
+        <DataFim>22 de Outubro de 2019</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>O uso de um Template Engine no desenvolvimento de aplicações WEB permite manipular e organizar todo o conteúdo HTML de uma forma dinâmica e limpa à vista do utilizador. </P>
+        <P>O Template Engine Pug é um mecanismo de modelagem bastante poderoso, permitindo uma variedade de recursos que são depois úteis na construção do servidor em si. É precisamente sobre este mecanismo que se pretende trabalhar, apurando o trabalho feito na aula, construindo assim uma página WEB que permita gerir todo um conjunto de tarefas.</P>
+        <P>Neste TPC torna a ser necessário desenvolver um servidor baseado na tecnologia NodeJS, mas com novas funcionalidades Core, no sentido de se adaptar o seu uso com a criação dos ficheiros Pug relativos às páginas WEB essenciais a este projeto.</P>
+        <P>Com os templates Pug modelados, o servidor deve ser capaz de os processar consoante o pedido do Cliente, criando um gestor de tarefas em tempo real e perfeitamente conectado à Base de Dados que agrega o conjunto de tarefas que são enviadas/requiridas pelo utilizador.</P>
+        <P><Negrito>Com essa finalidade em mente, foram desenvolvidos os seguintes ficheiros:</Negrito></P>
+        <P>1. Ficheiros layout.pug, indice.pug, listaTarefas.pug, submeterTarefa.pug que servem para modelar as várias páginas WEB que existirão para o website.</P>
+        <P>2. Desenvolver um servidor em NodeJS que permita estabelecer a ligação entre Cliente (browser) e Servidor, permitindo listar/submeter todas as tarefas.</P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/layout.pug">Ficheiro Pug que define a estrutura base das várias páginas WEB</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/indice.pug">Template relativo à página inicial do Gestor de Tarefas</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/listaTarefas.pug">Template relativo à página que agrega o conjunto de tarefas presentes até então na Base de Dados</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/submeterTarefa.pug">Template relativo à página dedicada para se submeter uma tarefa</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/paginaErro.pug">Template relativo à página de erro que é acionada quando o pedido ao servidor é inválido</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/servidor.js">Servidor em NodeJS que permite fazer toda a gestão do sistema</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TPC%205/listaTarefas/listaTarefas.json">Ficheiro JSON que agrega todo o conjunto de tarefas</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TPC%205/listaTarefas/imagens">Pasta com as imagens/icons usados para o website</Trabalho>
+    </Entregas>
+</RegistoProjetos>

@@ -1,0 +1,33 @@
+extends layout
+block content
+    .container-fluid
+        br
+        h1 <center><b>Gestor de Tarefas</b></center>
+        h3 <center>Lista de Tarefas</center>
+        hr
+        .container-fluid
+            table.table.text-center
+                thead.thead-dark
+                    tr
+                        th Nome/Número do Aluno
+                        th Nome da Tarefa
+                        th Data Limite
+                        th Unidade Curricular
+            
+                    each tarefa in listaTarefas
+                        div(style="align: center")
+                            tr
+                                td= tarefa.nomeAluno + " (" + tarefa.numeroAluno + ")"
+                                td= tarefa.nome
+                                td= tarefa.dataLimite
+                                td= tarefa.unidadeCurricular
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

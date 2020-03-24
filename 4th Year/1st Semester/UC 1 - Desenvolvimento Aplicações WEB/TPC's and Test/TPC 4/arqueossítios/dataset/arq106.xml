@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Paredes </IDENTI>
+		<DESCRI> Ponte; Calçada </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Ponte Velha </LUGAR>
+		<FREGUE> Salto </FREGUE>
+		<CONCEL> Montalegre </CONCEL>
+		<CODADM> 170626 </CODADM>
+		<LATITU> 519,8 </LATITU>
+		<LONGIT> 211,8 </LONGIT>
+		<ALTITU> 830m </ALTITU>
+		<ACESSO>Sobre a Corga de Caniçó, a menos de 500 metros para Sul da aldeia de
+Paredes. O acesso faz-se a pé (cerca de 10 minutos), por caminho carreteiro,
+a partir da aldeia de Paredes. A esta acede-se por estradão de terra batida,
+a partir da estrada municipal que liga Salto a Ruivães por Zebral. O
+monumento não está sinalizado.</ACESSO>
+		<DESARQ>Entre Caniçó e Torrinheiras conserva-se o traçado da via medieval que dava
+ligação a <LIGA TERMO="cabeceira"> cabeceiras</LIGA> de Basto. Até à Senhora
+dos Aflitos e sobretudo nas proximidades da aldeia de Paredes, conservam-se
+amplos troços de via lajeada, com 2,5m de largura média. Passa sobre a Corga
+de Caniçó, a cerca de 300 metros para Sul de Paredes, através de uma ponte
+de pedra de tradição arquitectónica medieval, com tabuleiro em cavalete
+sobre um<LIGA TERMO="arco"> arco</LIGA>de volta perfeita, bem aparelhado com
+<LIGA TERMO="silhar"> silhares</LIGA>. Exceptuando a ponte, que necessita
+ser limpa e restaurada, a calçada e a envolvência paisagística, com relevo
+para o tradicional ordenamento agrário da veiga, apresentam-se muito bem
+conservadas.</DESARQ>
+		<INTERP>Ponte e calçada medievais.</INTERP>
+		<INTERE>Embora não possua um significativo valor patrimonial, este monumento tem
+muito interesse para a compreensão da rede de comunicações medieval,
+oferecendo simultaneamente um elevado potencial para a implementação de
+circuitos pedonais.</INTERE>
+		<BIBLIO>COSTA, J.G.(1968). Montalegre e Terras de Barroso. Montalegre, 1968.</BIBLIO>
+		<BIBLIO> FONTES, L.(1992). Sítios e Achados Arqueológicos do Concelho de
+Montalegre. Braga, 1992 (edição policopiada da CCRN - Porto). </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

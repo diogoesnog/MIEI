@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="payment_bi_trigger" directorySegmentName="seg_0" id="3D6B6D24-CD96-7680-1562-20AF51FE1A9E">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+ IF (:NEW.payment_id IS NULL) THEN
+   SELECT payment_sq.nextval INTO :NEW.payment_id
+    FROM DUAL;
+  END IF;
+ :NEW.payment_date:=current_date;
+ :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>81ED5DAE-BA25-37A5-3E58-D39F52CD3B17</table>
+</TriggerOraclev10g>

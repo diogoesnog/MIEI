@@ -1,0 +1,6 @@
+Resolução das Queries
+
+1. //aula[@tipo="T"]
+2. //aula[not(@tipo)]
+3. //aula/data
+4. //aula/sumario/p[1]

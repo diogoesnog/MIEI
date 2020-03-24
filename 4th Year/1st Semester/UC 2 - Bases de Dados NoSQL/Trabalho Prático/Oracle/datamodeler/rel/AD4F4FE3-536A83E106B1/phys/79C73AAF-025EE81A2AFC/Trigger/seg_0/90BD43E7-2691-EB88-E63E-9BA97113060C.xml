@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="del_film" directorySegmentName="seg_0" id="90BD43E7-2691-EB88-E63E-9BA97113060C">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[BEGIN
+    DELETE FROM film_text WHERE film_id = :OLD.film_id;
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<table>130825E1-601D-C935-0ACD-3ACC49A1EFEF</table>
+</TriggerOraclev10g>

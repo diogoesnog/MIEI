@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="film_in_stock" directorySegmentName="seg_0" id="A99335E6-9218-7EC2-972B-C4EB3586C445">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<source>CREATE OR REPLACE PROCEDURE film_in_stock(p_film_id IN int, p_store_id IN int, p_film_count OUT int)
+IS
+
+BEGIN
+     SELECT COUNT(inventory_id) INTO p_film_count
+     FROM inventory
+     WHERE film_id = p_film_id
+     AND store_id = p_store_id
+     AND inventory_in_stock(inventory_id) = 1;
+END;</source>
+</StoredProcedureOraclev10g>

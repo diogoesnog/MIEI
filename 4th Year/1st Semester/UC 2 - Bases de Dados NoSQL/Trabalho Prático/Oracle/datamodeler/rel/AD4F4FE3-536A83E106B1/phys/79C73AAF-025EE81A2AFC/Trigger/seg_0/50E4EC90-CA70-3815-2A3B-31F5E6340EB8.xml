@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="ins_film" directorySegmentName="seg_0" id="50E4EC90-CA70-3815-2A3B-31F5E6340EB8">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    INSERT INTO film_text (film_id, title, description)
+        VALUES (:NEW.film_id, :NEW.title, :NEW.description);
+END;]]></body>
+<triggerTime>AFTER</triggerTime>
+<table>130825E1-601D-C935-0ACD-3ACC49A1EFEF</table>
+</TriggerOraclev10g>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="sakilanosql" directorySegmentName="seg_0" id="15E92946-4D44-8502-C034-D768E94F627F">
+<sourceDDLFile>sakilaCreateUser.ddl</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:15 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<schemaObject>7278C877-1341-6FC0-B7B1-4B64D1E0DD93</schemaObject>
+<defTableSpace>2281BE95-5B4A-FAB7-ECC9-5DE23992249F</defTableSpace>
+<identifier>05160CCA75CC9C58F0C46D9602A5162010</identifier>
+<privileges>CONNECT, CREATE SESSION, CREATE ANY TABLE, CREATE ANY TRIGGER, CREATE ANY VIEW, CREATE ANY SEQUENCE, CREATE ANY PROCEDURE</privileges>
+<temptableSpace>862B5846-60A0-243F-66D1-1BF370ABF0F0</temptableSpace>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="9D1B5EA2-6AD9-3EBE-D564-10AD1DD3670D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:47 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<tableSpace>2281BE95-5B4A-FAB7-ECC9-5DE23992249F</tableSpace>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

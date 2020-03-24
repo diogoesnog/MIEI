@@ -1,0 +1,28 @@
+html, body {
+    height: 100%
+}
+
+.post-container {
+    border-width:2px;
+    border-style:solid;
+    border-color:black;
+}
+
+/**
+ * Adds a border to limit of a row column
+ */
+.border {
+    border-right: 1px solid black;
+}
+
+.full-height {
+    min-height: 100%;
+}
+
+.ql-editor{
+    min-height: 100px;
+}
+
+.col-sm-2.d-none.d-lg-block.border-right.position-fixed {
+    height: 100%;
+}

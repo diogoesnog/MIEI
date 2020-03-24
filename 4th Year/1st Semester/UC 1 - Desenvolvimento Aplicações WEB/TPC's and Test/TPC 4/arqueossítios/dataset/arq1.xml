@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Castro do Caires </IDENTI>
+		<IMAGEM NOME="taca.gif"/>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<LUGAR> Grovos </LUGAR>
+		<FREGUE> Caires </FREGUE>
+		<CONCEL> Amares </CONCEL>
+		<CODADM> 030105 </CODADM>
+		<LATITU> 519,9 </LATITU>
+		<LONGIT> 181,5 </LONGIT>
+		<ALTITU> 320m </ALTITU>
+		<ACESSO>O acesso ao povoado faz-se a partir do lugar de Caires, por caminho
+carreteiro, que circunda o monte. </ACESSO>
+		<QUADRO>O cabeço onde assenta o <LIGA TERMO="castro"> castro</LIGA> corresponde a um
+esporão, de vertentes abruptas, situado praticamente na base da encosta Sul
+do monte de S. Pedro de Fins. A Norte, um profundo talvegue separa o monte
+de um outro, mais pequeno, onde se encontram também vestígios de ocupação.</QUADRO>
+		<DESARQ>São perceptíveis 3 linhas de muralhas, que definem outros tantos tabuleiros
+do povoado. São também visíveis alguns muros circulares e outros rectos,
+pertencentes a estruturas habitacionais. Na superfície do solo recolheram-se
+alguns fragmentos de <LIGA TERMO="cerâmica indígena"> cerâmica
+indígena</LIGA>, de fabrico <LIGA TERMO="micáceo"> micáceo</LIGA>, bem como
+outros de <LIGA TERMO="cerâmica comum romana"> cerâmica comum romana</LIGA>.
+O sítio é referido na bibliografia arqueológica desde os princípios do
+século, devido à descoberta de alguns materiais importantes. Pinho Leal
+refere o aparecimento, no lugar de Gróvios, localizado na vertente oeste do
+povoado, de "canos de metal ", tijolos, ânforas e de um possível forno (DIAS
+1903, 78). Dados também como procedentes do sítio, são: um baixo-relevo, em
+granito, representando uma figura equestre masculina, seguramente romana
+(CARDOSO 1972, 156) e uma pedra lavrada com um motivo geométrico (PEREIRA
+1941, 30 ; CARDOSO 1971, 174). </DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado romanizado"> povoado fortificado
+romanizado</LIGA>. </INTERP>
+		<DEPOSI>Museu Martins Sarmento, em Guimarães e Quinta do lugar do Paço, em
+Caires.</DEPOSI>
+		<BIBLIO>DIAS. A. R. (1903). Notícias arqueológicas extraídas do "Portugal Antigo e
+Moderno" de Pinho Leal, com algumas notas e indicações, Boletim da Real
+Associação dos Arquitectos e Arqueólogos Portugueses, pp. 78. </BIBLIO>
+		<BIBLIO>CARDOSO, M. (1972). Catálogo do Museu Martins Sarmento. Secção de Epigrafia
+e de Escultura Antiga, Guimarães, 2ª ed., pp.156. </BIBLIO>
+		<BIBLIO>MARTINS, M. (1990). O Povoamento Proto-Histórico e a romanização da Bacia do
+Médio Cávado, Cadernos de Arqueologia - Monografias, 5, Universidade do
+Minho, Braga, pp.65. </BIBLIO>
+		<AUTOR> Manuela Martins</AUTOR>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

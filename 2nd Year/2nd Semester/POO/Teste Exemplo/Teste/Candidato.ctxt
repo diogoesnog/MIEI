@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Candidato
+comment0.text=\n\ Classe\ Candidato.\n\n\ @author\ Diogo\ Nogueira.\n\ @version\ 29.05.2017.\n
+comment1.params=c
+comment1.target=Candidato(Candidato)
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+comment3.params=
+comment3.target=int\ getIdade()
+comment4.params=c
+comment4.target=int\ compareTo(Candidato)
+comment5.params=
+comment5.target=Candidato\ clone()
+numComments=6

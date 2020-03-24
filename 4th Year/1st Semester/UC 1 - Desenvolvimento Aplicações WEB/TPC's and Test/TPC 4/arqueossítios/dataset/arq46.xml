@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte do Castro </IDENTI>
+		<DESCRI> Povoado </DESCRI>
+		<CRONO> Proto-história / Romanização</CRONO>
+		<LUGAR> Castro </LUGAR>
+		<FREGUE> S. João de Rei </FREGUE>
+		<CONCEL> Póvoa de Lanhoso </CONCEL>
+		<CODADM> 030923 </CODADM>
+		<LATITU> 516,4 </LATITU>
+		<LONGIT> 186,5 </LONGIT>
+		<ALTITU> 202m </ALTITU>
+		<ACESSO>Faz-se a partir do lugar da Devesa por estrada municipal. </ACESSO>
+		<QUADRO>O povoado localiza-se num remate de um esporão de média altitude, na
+vertente noroeste de Santo Tirso. A vertente oeste deste povoado é abrupta,
+mas as restantes são suaves permitindo um fácil acesso ao planalto e ao vale
+da ribeira do castro.</QUADRO>
+		<TRAARQ>Escavações em 1993, realizadas por Ana M. S. Bettencourt (U.A.U.M.).</TRAARQ>
+		<DESARQ>A análise do espólio de superfície e das escavações realizadas, em 1993, nas
+várias vertentes e na plataforma superior do monte permitiram concluir a
+existência de vários momentos de ocupação. À Idade do Bronze fazemos
+corresponder o bipene metálico, encontrado nas vertentes norte ou oeste,
+aquando do corte da estrada que dá acesso ao centro da freguesia. A este
+período associamos, também, os fragmentos cerâmicos exumados nas escavações,
+cujo fabrico e forma paralelizam com louça da primeira metade do Iº milénio
+a.C.. Na Idade do Ferro Inicial inserimos fragmentos cerâmicos, algumas
+estruturas perecíveis, supostamente de armazenagem de cereais e uma
+quantidade considerável de sementes de trigo. Ao Ferro Recente
+corresponderá, por sua vez, um conjunto de olaria, contas de colar e
+objectos metálicos, bem conhecidos noutros povoados da região. Predominam
+ainda as estruturas perecíveis. A etapa da <LIGA TERMO="romanização">romanização</LIGA> está bem marcada por construções pétreas e por espólio
+cerâmico e metálico característico deste período. </DESARQ>
+		<INTERP>Povoado da Idade do Bronze, da Idade do Ferro, romanizado. </INTERP>
+		<DEPOSI>Museu D. Diogo de Sousa. </DEPOSI>
+		<BIBLIO>BELLINO, A. (1909), Cidades mortas, Arqueólogo Português, 14 (1-8), Lisboa,
+pp. 6. </BIBLIO>
+		<BIBLIO> CORTEZ, F. R. (1946), Machados e outros objectos de bronze. Museu
+Nacional Soares dos Reis, Porto. </BIBLIO>
+		<BIBLIO> MARTINS, M. (1990), O Povoamento Proto-Histórico e a Romanização da
+Bacia do Curso Médio do Cávado, Cadernos de Arqueologia, Monografias, 5,
+Universidade do Minho, Braga, pp. 92. </BIBLIO>
+		<AUTOR> Ana M.S. Bettencourt </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

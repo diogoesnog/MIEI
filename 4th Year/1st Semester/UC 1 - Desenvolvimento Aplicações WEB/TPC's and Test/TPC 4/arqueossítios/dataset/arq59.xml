@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte de Riba; Bouça do Senhor </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="necrópole"> Necrópole</LIGA> megalítica </DESCRI>
+		<CRONO>Pré-História Recente</CRONO>
+		<LUGAR> Argande </LUGAR>
+		<FREGUE> Monte </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030717 </CODADM>
+		<LATITU> 506,5 </LATITU>
+		<LONGIT> 196,7 </LONGIT>
+		<ALTITU> 680m </ALTITU>
+		<ACESSO>Faz-se a partir C. M. 1637. </ACESSO>
+		<QUADRO>Chã planáltica entre o Monte de Riba e a Bouça do Senhor, pertencente à
+bacia hidrográfica do rio Ave.</QUADRO>
+		<DESARQ>Conjunto de quatro <LIGA TERMO="mamoa"> mamoas</LIGA> de dimensões médias,
+com cerca de 10 a 15m de diâmetro, todas violadas. </DESARQ>
+		<INTERP> Necrópole megalítica.</INTERP>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

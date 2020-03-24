@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="staff_bi_trigger" directorySegmentName="seg_0" id="3229B61A-B10E-A4A6-6AAE-3E5B07585A9D">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+ IF (:NEW.staff_id IS NULL) THEN
+   SELECT staff_sq.nextval INTO :NEW.staff_id
+    FROM DUAL;
+  END IF;
+  :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>190D786C-0852-D23D-F215-16476E6404CB</table>
+</TriggerOraclev10g>

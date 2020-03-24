@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Exercicio7
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=n
+comment2.target=java.lang.String\ factMillion(java.math.BigDecimal)
+numComments=3

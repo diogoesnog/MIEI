@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="country_bi_trigger" directorySegmentName="seg_0" id="4ABCC6E5-C93B-A65F-4E04-E562A7BC07BF">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF (:NEW.country_id IS NULL) THEN
+        SELECT country_sq.nextval INTO :NEW.country_id
+        FROM DUAL;
+    END IF;
+    -- aproveitar o trigger para adicionar o timestamp em modo ORACLE
+    :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>D4C53098-7068-7E52-FDD4-20B3F9001638</table>
+</TriggerOraclev10g>

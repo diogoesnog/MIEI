@@ -1,0 +1,15 @@
+P: 1. Quantas Entidades estão catalogadas?
+R: 546 Entidades
+
+P: A que Tipologias pertence a Entidade "Autoridade para as Condições de Trabalho" (ent_ACT)?
+R: Tipologia de ID tip_AP e tipologia de ID tip_ASF
+[{"sigla":"AP","designacao":"Administração Pública","id":"tip_AP"}
+{"sigla":"ASF","designacao":"Autoridades de supervisão e fiscalização","id":"tip_ASF"}]
+
+P: Em que processos a entidade "Autoridade Nacional de Segurança Rodoviária" (ent_ANSR) participa como Iniciador?
+R: Apenas 1 processo.
+{"tipoPar":"temParticipanteIniciador","codigo":"400.10.056","titulo":"Registo nacional de condutores"}  
+
+P: De que processos é dona a entidade "Colégio Militar" (ent_CML)?
+R: Apenas 1 processo.
+[{"codigo":"750.20.601","titulo":"Realização de atividades de formação e treino animal"}]

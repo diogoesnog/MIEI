@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9" name="film_list">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>B63C9417-2763-143B-F8E6-B8E8A4E1AC6E</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT film.film_id AS FID,
+       film.title AS title,
+       film.description AS description,
+       category.name AS category,
+       film.rental_rate AS price,
+       film.length AS length,
+       film.rating AS rating,
+       actor.first_name||' '||actor.last_name AS actors
+FROM category
+    LEFT JOIN film_category ON category.category_id = film_category.category_id
+    LEFT JOIN film ON film_category.film_id = film.film_id
+    JOIN film_actor ON film.film_id = film_actor.film_id
+    JOIN actor ON film_actor.actor_id = actor.actor_id]]></userDefinedSQL>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="FID" id="5EC1ABBB-D0BB-C25B-E3B8-3318F4622F0D">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>FID</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>FID</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="title" id="28ABA5B8-F851-3BDB-3E96-29C2378E27E6">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>title</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>title</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="description" id="4D1403DB-EDF7-B484-FE34-6FAE5CEBFF40">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>description</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>description</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="category" id="85591F20-67A4-C9AB-A9AF-5B7D3C220139">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>category</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>category</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="price" id="0C629227-45A0-C4EC-E72E-0FA45709D1EF">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>price</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>price</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="length" id="DBD310AF-3AFF-73A5-9172-F531605E56CF">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>length</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>length</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="rating" id="FDE27F5A-BC50-0DB0-6229-38D6E0641279">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>rating</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>rating</headerAlias>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="actors" id="1DB9F682-7609-FDAC-62F1-FB24AB2D0FCD">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>actors</alias>
+<dataType>VARCHAR2</dataType>
+<headerAlias>actors</headerAlias>
+<expression>actor.first_name||&apos; &apos;||actor.last_name</expression>
+<reference>false</reference>
+<viewID>16B8BEAC-B5DD-CA28-5DEC-AF99EB8D0AD9</viewID>
+</viewElement>
+</viewElements>
+</TableView>

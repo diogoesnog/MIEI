@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> S. Miguel-o-Anjo </IDENTI>
+		<DESCRI> Aras; <LIGA TERMO="miliário"> Miliário</LIGA>
+		</DESCRI>
+		<CRONO> Romanização </CRONO>
+		<LUGAR> S. Miguel-o-Anjo </LUGAR>
+		<FREGUE> Prozelo </FREGUE>
+		<CONCEL> Amares </CONCEL>
+		<CODADM> 030117 </CODADM>
+		<LATITU> 517,1 </LATITU>
+		<LONGIT> 180,4 </LONGIT>
+		<ALTITU> 85m </ALTITU>
+		<QUADRO>Procedentes do lugar de S. Miguel-o-Anjo, junto à capela do Anjo da Guarda,
+são conhecidas duas <LIGA TERMO="ara"> aras</LIGA>. No largo da capela
+existe ainda um <LIGA TERMO="miliário"> miliário</LIGA>, que serve de
+cruzeiro e que se encontra deslocado. </QUADRO>
+		<DESARQ>Ara 1: ara em granito anepígrafa. Encontra-se actualmente recolhida na
+capela. Quer a parte superior, quer a inferior são molduradas: a superior,
+por uma série de cinco <LIGA TERMO="friso"> frisos</LIGA>; a inferior possui
+apenas dois. Em cima observam-se vestígios do foculus. Dimensões:
+60x26x20(31); campo epigráfico: 25x26.
+
+Ara 2: ara em granito, com inscrição. Encontra-se no Museu dos Biscainhos,
+em Braga. A peça está bastante degradada. O seu lado direito foi alterado
+provavelmente por uma reutilização. Na parte superior são visíveis restos do
+foculus. Em baixo, existem vestígios de um soco, sob duas molduras que orlam
+a parte inferior da peça. Dimensões: 81,5x27x26; campo epigráfico: 41x23,5;
+letras: 5,5.
+
+.../ CAND / EBERO / NIO CA / EDVRA / DIO
+
+A Candeberónio Cedurádio
+ </DESARQ>
+		<INTERP> O monumento parece dedicado a uma divindade indígena de origem
+céltica, sendo provavelmente do século I.</INTERP>
+		<DEPOSI> Ara 2 - Museu dos Biscainhos.</DEPOSI>
+		<BIBLIO> LE ROUX, P. e A. Tranoy (1973). Rome et les indigénes dans le NO de
+la Pèninsule Ibérique. Problèmes d`epigraphie et d`histoire, Mélanges de la
+Casa Velázquez, Paris, 9, pp. 249-258. </BIBLIO>
+		<BIBLIO> TRANOY, A. (1981). La Galice Romaine. Recherchesur le Nord-Ouest de
+la Péninsula Ibérique dans l`Antiquité, Diffusion du Boccard, Paris.</BIBLIO>
+		<BIBLIO> MARTINS, M. (1990) O Povoamento Proto-Histórico e a Romanização da
+Bacia do Curso do Médio Cávado, Cadernos de Arqueologia - Monografias, 5,
+Universidade do Minho, Braga, pp. 70. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

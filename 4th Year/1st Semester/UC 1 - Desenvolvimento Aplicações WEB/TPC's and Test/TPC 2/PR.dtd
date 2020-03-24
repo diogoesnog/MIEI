@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT RegistoProjetos (Informacoes, Equipa, Resumo, Entregas?) >
+<!ATTLIST RegistoProjetos 
+                keyname CDATA #REQUIRED >
+
+<!-- Informacoes: Pequena informação sobre o projeto em si. -->
+<!ELEMENT Informacoes (Titulo, SubTitulo?, DataInicio, DataFim, Supervisor) >
+<!ELEMENT Titulo (#PCDATA) >
+<!ELEMENT SubTitulo (#PCDATA) >
+<!ELEMENT DataInicio (#PCDATA) >
+<!ELEMENT DataFim (#PCDATA) >
+               
+<!ELEMENT Supervisor (Nome, Email) >
+<!ATTLIST Nome
+                PáginaInicial CDATA #IMPLIED >
+<!ELEMENT Email (#PCDATA) >
+
+<!-- Equipa: Conjunto de estudantes envolvidos no trabalho. -->
+<!ELEMENT Equipa (Estudante+) >
+<!ELEMENT Estudante (IdentEstudante, Nome, Email, GitHub?) >
+<!ELEMENT IdentEstudante (#PCDATA) >
+<!ELEMENT Nome (#PCDATA) >
+<!ELEMENT GitHub (#PCDATA) >
+
+<!-- Resumo: Parte abstrata do documento. -->
+<!-- Ter em conta que o texto pode ter várias formatações. -->
+<!ELEMENT Resumo (P+) >
+<!ELEMENT P (#PCDATA | Negrito | Italico | Link)* > <!--  Nestes casos tem de ter sempre o "*". O "+" daria erro. -->
+<!ELEMENT Negrito (#PCDATA | Italico | Link)* >
+<!ELEMENT Italico (#PCDATA | Negrito | Link)* >
+<!ELEMENT Link (#PCDATA) >
+<!ATTLIST Link 
+                URL CDATA #REQUIRED >
+
+<!-- Entregas: Conjunto de entregas e do seu respetivo caminho. -->
+<!ELEMENT Entregas (Trabalho+) >
+<!ELEMENT Trabalho (#PCDATA) >
+<!ATTLIST Trabalho
+                    Caminho CDATA #REQUIRED >

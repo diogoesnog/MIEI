@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Vila Nova de Muía </IDENTI>
+		<DESCRI> Igreja </DESCRI>
+		<CRONO> Idade Média</CRONO>
+		<LUGAR> Igreja </LUGAR>
+		<FREGUE> Vila Nova de Muía </FREGUE>
+		<CONCEL> Ponte da Barca </CONCEL>
+		<CODADM> 160625 </CODADM>
+		<LATITU> 536,9 </LATITU>
+		<LONGIT> 179,5 </LONGIT>
+		<ALTITU> 150m </ALTITU>
+		<ACESSO>No lugar da igreja (mosteiro). O acesso faz-se por caminho largo alcatroado,
+desde a estrada municipal que liga a aldeia à estrada nacional EN.203. O
+monumento não está sinalizado.</ACESSO>
+		<DESARQ>A actual igreja paroquial de Vila Nova de Muía era o templo do antigo
+mosteiro agostinho de Santa Maria de Vila Nova, beneficiado com couto já em
+1140-1141, o qual englobava a vizinha paróquia de Santo André de Muía,
+depois extinta e incorporada na de Vila Nova, acrescentando-lhe então o nome
+Muía. A comunidade de cónegos regrantes de Santa Maria de Vila Nova de Muía
+sobreviveu com dificuldade às crises dos séculos XIV e XV, época em que deve
+ter sido edificada a torre defensiva tardo-medieval que subsiste no canto
+Nordeste da quadra claustral moderna, correspondendo provavelmente à
+manifestação de uma qualquer senhoria, laica ou religiosa, como também se
+evidencia no vizinho mosteiro de S. Martinho de Crasto. Deverá datar de
+finais do século XII ou inícios do século XIII a edificação românica da
+igreja, edifício do qual se conservaram alguns troços, pese embora as
+diversas reconstruções e ampliações posteriores: na capela-mor subsiste,
+denunciando a primitiva planta quadrada da <LIGA TERMO="cabeceira">cabeceira</LIGA>, o <LIGA TERMO="entablamento"> entabelamento</LIGA> de
+<LIGA TERMO="cornija"> cornijas</LIGA> com decoração enxaquetada sobre
+cachorrada de <LIGA TERMO="modilhão"> modilhões</LIGA> esculpidos; no
+interior, o<LIGA TERMO="arco"> arco</LIGA>cruzeiro foi alteado mas
+reaproveitou-se todo o<LIGA TERMO="arco"> arco</LIGA>anterior, decorado com
+lanceolados. Conservou-se também a porta lateral Norte da <LIGA TERMO="nave"> nave</LIGA>, com <LIGA TERMO="tímpano"> tímpano</LIGA> de cruz
+vazada; constata-se ainda que grande parte dos paramentos das paredes
+laterais foram conservados, como se percebe pelos <LIGA TERMO="friso">frisos</LIGA> que ladeiam a capela-mor e a <LIGA TERMO="nave"> nave</LIGA>,
+tanto exterior como interiormente. Merece ainda referência o cruzeiro <LIGA TERMO="gótico"> gótico</LIGA> do adro, um dos mais antigos do país.</DESARQ>
+		<INTERE>Trata-se de um monumento com reconhecido significado histórico local e algum
+interesse científico classificado como Imóvel de Interesse Público (Dec.
+35817, de 20-8-1946), interessando à compreensão das difusão das ordens
+monásticas e do <LIGA TERMO="românico"> românico</LIGA> na região. </INTERE>
+		<BIBLIO>ALMEIDA, C.A.F.(1978). Arquitectura Românica de Entre Douro e Minho, Tese de
+Doutoramento (policopiada), Faculdade de Letras da Universidade do Porto,
+Porto, 1978. </BIBLIO>
+		<BIBLIO>ALMEIDA, C.A.F.(1986). História da Arte em Portugal. 2: O românico. Lisboa,
+1986, pp.104. </BIBLIO>
+		<BIBLIO>ALMEIDA, C.A.F.(1987). Alto Minho, (novos guias de Portugal, 5), Editorial
+Presença, Lisboa, 1987. </BIBLIO>
+		<BIBLIO>BARREIROS, M.A.(1926). Egrejas e Capelas Romanicas da Ribeira Lima,
+Edições Marques Abreu, Porto, 1926. </BIBLIO>
+		<BIBLIO>GRAF, G.N. e GUSMÃO, N.(1988). Portugal Roman / 2, Ediciones Encuentro,
+Madrid, 1988. </BIBLIO>
+		<AUTOR> Luis Fontes </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

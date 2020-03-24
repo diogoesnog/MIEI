@@ -1,0 +1,10 @@
+prefix=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/
+libdir=C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/
+includedir=${prefix}/include
+
+Name: glut
+Description: A freely licensed and improved alternative to the GLUT library
+Version: 3.0.0
+Libs: -L${libdir} -lglut
+Libs.private: -lopengl32 -lwinmm -lgdi32 -lm
+Cflags: -I${includedir} 

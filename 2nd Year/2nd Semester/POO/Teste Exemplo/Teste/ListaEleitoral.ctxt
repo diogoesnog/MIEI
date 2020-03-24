@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=ListaEleitoral
+comment0.text=\ \n\ Classe\ ListaEleitoral.\n\ \n\ @author\ Diogo\ Nogueira.\n\ @version\ 27.05.2017.\n
+comment1.params=partido\ candidatos
+comment1.target=ListaEleitoral(java.lang.String,\ java.util.Collection)
+comment1.text=Construtor\ inicial\ que\ cria\ uma\ lista\ com\ os\ candidatos\ a\ serem\ eleitos.
+comment2.params=
+comment2.target=Candidato\ aElegerV1()
+comment2.text=Metodo\ que\ devolve\ o\ proximo\ candidato\ a\ eleger.
+comment3.params=
+comment3.target=Candidato\ aElegerV2()
+comment4.params=
+comment4.target=void\ elege()
+comment4.text=Metodo\ que\ elege\ o\ proximo\ candidato\ (caso\ ainda\ existam\ candidatos\ por\ eleger).
+comment5.params=n
+comment5.target=void\ elege(int)
+comment5.text=Metodo\ que\ elege\ n\ candidatos\ se\ possivel,\ caso\ contrario,\ deixa\ a\ lista\ inalterada.
+comment6.params=
+comment6.target=java.util.Collection\ candidatos()
+comment6.text=Metodo\ que\ devolve\ uma\ colecao\ com\ todos\ os\ candidatos\ do\ partido.
+comment7.params=
+comment7.target=java.util.TreeSet\ eleitos()
+comment7.text=Metodo\ que\ devolte\ todos\ os\ candidatos\ ja\ eleitos,\ segundo\ a\ ordem\ natual\ de\ Candidato.
+numComments=8

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{319EA5FC-CD77-3C41-81F7-F3066626E0A0}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>nauGLUTDemo</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nauGLUTDemo.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nauGLUTDemod</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nauGLUTDemo.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nauGLUTDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">nauGLUTDemo.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">nauGLUTDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">nauGLUTDemo.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">nauGLUTDemo</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\nau\DEBUG\naud.lib;..\contrib\tinyxml\Debug\tinyxmld.lib;..\contrib\assimp3.3.1\code\Debug\assimp-vc140-mtd.lib;..\contrib\freeglut-3.0.0\lib\Debug\freeglut_staticd.lib;..\contrib\glbinding-master\Debug\glbindingd.lib;opengl32.lib;glu32.lib;..\nau\contrib\devil\lib64\DevIL.lib;..\nau\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\contrib\lua-5.3.3\lua53.lib;..\contrib\assimp3.3.1\contrib\zlib\Debug\zlibstaticd.lib;..\nau\nau\..\contrib\devil\lib64\DevIL.lib;..\nau\nau\..\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\nau\..\contrib\lua-5.3.3\lua53.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudart_static.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/Debug/nauGLUTDemod.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/bin/nauGLUTDemod.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\nau\Release\nau.lib;..\contrib\tinyxml\Release\tinyxml.lib;..\contrib\assimp3.3.1\code\Release\assimp-vc140-mt.lib;..\contrib\freeglut-3.0.0\lib\Release\freeglut_static.lib;..\contrib\glbinding-master\Release\glbinding.lib;opengl32.lib;glu32.lib;..\nau\contrib\devil\lib64\DevIL.lib;..\nau\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\contrib\lua-5.3.3\lua53.lib;..\contrib\assimp3.3.1\contrib\zlib\Release\zlibstatic.lib;..\nau\nau\..\contrib\devil\lib64\DevIL.lib;..\nau\nau\..\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\nau\..\contrib\lua-5.3.3\lua53.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudart_static.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/Release/nauGLUTDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/bin/nauGLUTDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\nau\MinSizeRel\nau.lib;..\contrib\tinyxml\MinSizeRel\tinyxml.lib;..\contrib\assimp3.3.1\code\MinSizeRel\assimp-vc140-mt.lib;..\contrib\freeglut-3.0.0\lib\MinSizeRel\freeglut_static.lib;..\contrib\glbinding-master\MinSizeRel\glbinding.lib;opengl32.lib;glu32.lib;..\nau\contrib\devil\lib64\DevIL.lib;..\nau\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\contrib\lua-5.3.3\lua53.lib;..\contrib\assimp3.3.1\contrib\zlib\MinSizeRel\zlibstatic.lib;..\nau\nau\..\contrib\devil\lib64\DevIL.lib;..\nau\nau\..\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\nau\..\contrib\lua-5.3.3\lua53.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudart_static.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/MinSizeRel/nauGLUTDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/bin/nauGLUTDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;TIXML_USE_STL;GLBINDING_STATIC_DEFINE;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\nau\src;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\lua-5.3.3\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\freeglut-3.0.0\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\..\contrib\glbinding-master\source\glbinding\include;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\tinyxml;C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\contrib\glbinding-master\source\glbinding\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\nau\RelWithDebInfo\nau.lib;..\contrib\tinyxml\RelWithDebInfo\tinyxml.lib;..\contrib\assimp3.3.1\code\RelWithDebInfo\assimp-vc140-mt.lib;..\contrib\freeglut-3.0.0\lib\RelWithDebInfo\freeglut_static.lib;..\contrib\glbinding-master\RelWithDebInfo\glbinding.lib;opengl32.lib;glu32.lib;..\nau\contrib\devil\lib64\DevIL.lib;..\nau\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\contrib\lua-5.3.3\lua53.lib;..\contrib\assimp3.3.1\contrib\zlib\RelWithDebInfo\zlibstatic.lib;..\nau\nau\..\contrib\devil\lib64\DevIL.lib;..\nau\nau\..\contrib\AntTweakBar\lib\AntTweakBar64.lib;..\nau\nau\..\contrib\lua-5.3.3\lua53.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64\cudart_static.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/RelWithDebInfo/nauGLUTDemo.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/bin/nauGLUTDemo.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau/nauGLUT/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau" "-BC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II" --check-stamp-file "C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nauGlut\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau/nauGLUT/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau" "-BC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II" --check-stamp-file "C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nauGlut\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau/nauGLUT/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau" "-BC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II" --check-stamp-file "C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nauGlut\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau/nauGLUT/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nau" "-BC:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II" --check-stamp-file "C:/Users/diogo/Desktop/MIEI/4th Year/2nd Semester/Perfil 2 - Computação Gráfica/Visão e Iluminação II/nauGlut/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nauGlut\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nauGLUT\nauGlut.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\ZERO_CHECK.vcxproj">
+      <Project>{D8BE1BAA-E214-3D77-BEB9-F609DD952B42}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\assimp3.3.1\code\assimp.vcxproj">
+      <Project>{98884D44-FD3C-3983-9AF2-4D8FE83168BD}</Project>
+      <Name>assimp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\freeglut-3.0.0\freeglut_static.vcxproj">
+      <Project>{AA3B7D1F-EF3C-3E73-A06D-A9C88751393D}</Project>
+      <Name>freeglut_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\glbinding-master\source\glbinding\glbinding.vcxproj">
+      <Project>{CF52F601-5FF6-3DC6-BA8C-A3E48025CD38}</Project>
+      <Name>glbinding</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\nau\nau.vcxproj">
+      <Project>{948086FA-1DDA-3DBD-9625-B98DA4534B80}</Project>
+      <Name>nau</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\tinyxml\tinyxml.vcxproj">
+      <Project>{2A749929-1C33-3CFF-9B32-5E799552B0CA}</Project>
+      <Name>tinyxml</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\diogo\Desktop\MIEI\4th Year\2nd Semester\Perfil 2 - Computação Gráfica\Visão e Iluminação II\contrib\assimp3.3.1\contrib\zlib\zlibstatic.vcxproj">
+      <Project>{B1AA30A3-C7F9-3C1F-ACB5-D588778E92C7}</Project>
+      <Name>zlibstatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

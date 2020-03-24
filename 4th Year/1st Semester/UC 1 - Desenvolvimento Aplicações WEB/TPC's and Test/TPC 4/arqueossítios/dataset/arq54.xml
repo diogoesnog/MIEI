@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte de Fornos </IDENTI>
+		<DESCRI> Necrópole megalítica </DESCRI>
+		<CRONO>Pré-História Recente</CRONO>
+		<LUGAR> Monte de Fornos </LUGAR>
+		<FREGUE> Medelo </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030716 </CODADM>
+		<LATITU> 500,6 </LATITU>
+		<LONGIT> 197,2 </LONGIT>
+		<ALTITU> 385m </ALTITU>
+		<ACESSO>Faz-se a partir do Monte das Antas, por caminho florestal. </ACESSO>
+		<DESARQ>Conjunto de dez <LIGA TERMO="mamoa"> mamoas</LIGA>, pertencentes a uma <LIGA TERMO="necrópole"> necrópole</LIGA> megalítica. </DESARQ>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

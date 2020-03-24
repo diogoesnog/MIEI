@@ -1,0 +1,90 @@
+a.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c
+HELLoa.out
+buffer.c
+circularBuffer.c
+enunciado-so-2017-18.pdf
+exemplo.nb
+out.txt
+reader
+reader.c
+reader (copy).c

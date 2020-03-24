@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Monte de Santa Marinha </IDENTI>
+		<DESCRI> Monumento megalítico</DESCRI>
+		<CRONO>Pré-História Recente</CRONO>
+		<LUGAR> Santa Marinha </LUGAR>
+		<FREGUE> Travassós </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030733 </CODADM>
+		<LATITU> 503,3 </LATITU>
+		<LONGIT> 193,2 </LONGIT>
+		<ALTITU> 580m </ALTITU>
+		<ACESSO>Entre Castanheira e Santa Marinha, a seguir ao lugar dos Poços Salgueiros,
+1Km a leste, por caminho carreteiro que atravessa o planalto. </ACESSO>
+		<QUADRO>Extensa chã planáltica do Monte de Santa Marinha, integrada na bacia
+hidrográfica do rio Ave.</QUADRO>
+		<DESARQ>
+			   <LIGA TERMO="mamoa"> Mamoa</LIGA> de grandes dimensões, com cerca de 20 a
+25m de diâmetro, certamente pertencente à mesma <LIGA TERMO="necrópole">necrópole</LIGA> a que pertenciam os monumentos de Poços Salgueiros.</DESARQ>
+		<INTERP> Necrópole megalítica.</INTERP>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

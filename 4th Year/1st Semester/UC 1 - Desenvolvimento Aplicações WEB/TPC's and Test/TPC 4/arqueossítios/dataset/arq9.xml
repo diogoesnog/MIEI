@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Castro de Airó/ Castelo de Bastuço </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado
+fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-História / Romanização</CRONO>
+		<LUGAR> Outeiro do Castro </LUGAR>
+		<FREGUE> Airó </FREGUE>
+		<CONCEL> Barcelos </CONCEL>
+		<CODADM> 030205 </CODADM>
+		<LATITU> 506,1 </LATITU>
+		<LONGIT>165,7 </LONGIT>
+		<ALTITU> 222m </ALTITU>
+		<ACESSO>O acesso pode fazer-se pela encosta Sul do monte, que liga o esporão à
+serra.</ACESSO>
+		<QUADRO>Localiza-se no extremo Oeste da Serra de Airó, ocupando um esporão virado a
+NO, que domina a confluência dos rios Covo e Cávado. </QUADRO>
+		<TRAARQ> Não são conhecidos trabalhos arqueológicos no local. </TRAARQ>
+		<DESARQ>Na vertente Norte do monte registam-se vestígios de 3 linhas de muralhas. Na
+superfície encontram-se abundantes fragmentos de <LIGA TERMO="tégula">tégulas</LIGA>, imbrices e <LIGA TERMO="cerâmica micácea"> cerâmica
+micácea</LIGA>, feita a torno. Entre a primeira e a segunda linhas de
+muralhas foram descobertas uma<LIGA TERMO="ara"> ara</LIGA>em granito e uma
+pedra decorada. A<LIGA TERMO="ara"> ara</LIGA> está mutilada, apresentando a
+parte superior muito desgastada. Apenas se conservam bem as molduras das
+faces laterais. Possuía uma inscrição, actualmente ilegível, pois sobre o
+texto inicial foram feitas gravações modernas. A pedra decorada tem a forma
+de meio cilindro, com uma face plana. A decoração é composta por três SSS
+encadeados.</DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+romanizado.</INTERP>
+		<BIBLIO> FONSECA, T. (1948). O concelho de Barcelos Aquém e Além Cávado,
+Barcelos, 2 Vol., pp. 13; 65-66; </BIBLIO>
+		<BIBLIO>CÈSAR, M. (1964). O Castelo da Pena (Bastuço). História e Lenda, O distrito
+de Braga., 2 (3-4), Braga, pp.15-22; </BIBLIO>
+		<BIBLIO>SOEIRO, T. (1983). Inventário arqueológico. O outeiro do castro
+(Airó-Barcelos), Barcelos-Revista,1 (2), Barcelos, pp.67-80. </BIBLIO>
+		<BIBLIO>MARTINS, M. (1990). O Povoamento Proto-Histórico e a romanização da Bacia do
+Médio Cávado, Cadernos de Arqueologia - Monografias, 5, Universidade do
+Minho, Braga, pp. 73. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-Fev-1998</DATA>
+	</ARQELEM>

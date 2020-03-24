@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    .container
+        br
+        h1
+            center 
+                b Gestor do Arquivo Filmes
+        hr
+        h3
+            center Lista de Filmes
+        br 
+        
+        .container
+            div(class="input-group")
+                input(type="text" class="form-control input-sm" name="filmeTitulo" id="filmeTitulo" placeholder="Insira o título do Filme que pretende visualizar")
+                div(class="input-group-append")
+                    button.btn.btn-danger(onclick="mostraFilmeTitulo(document.getElementById('filmeTitulo').value)") Pesquisar Filme
+            br
+            table.table.table-stripped#musicos
+                thead.thead
+                    tr
+                        th.bg-dark.text-light Título do Filme
+                        th.bg-dark.text-light.text-center Ano do Filme
+                        th.bg-danger.text-light.text-center Operações
+                    tr
+                thead
+                    each filme in filmes
+                        tr
+                            td= filme.title
+                            td.text-center= filme.year
+                            td.text-center
+                                a(href="/filmes/adicionarFilme/" style="color:gray")
+                                    i.fa.fa-plus &nbsp&nbsp&nbsp                           
+                                a(href="/filmes/editar/" + filme._id style="color:gray")
+                                    i.fa.fa-pencil &nbsp&nbsp&nbsp
+                                a(href="/filmes/id/" + filme._id style="color:gray")
+                                    i.fa.fa-search &nbsp&nbsp&nbsp
+                                a(href="/filmes/")
+                                    i.fa.fa-trash-o.delete(onclick="eliminarFilme('" + filme._id + "')" style="color:gray")
+                        tr
+                        
+
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/filmes/") <center>Voltar ao Topo</center>
+        hr

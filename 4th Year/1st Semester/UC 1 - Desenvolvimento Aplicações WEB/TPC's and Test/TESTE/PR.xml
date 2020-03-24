@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RegistoProjetos keyname="EXAME-DAW">
+    <Informacoes>
+        <Titulo>Exame DAW</Titulo>
+        <Subtitulo>Avaliação: Desenvolvimento Aplicações WEB</Subtitulo>
+        <DataInicio>16 de Janeiro de 2020</DataInicio>
+        <DataFim>16 de Janeiro de 2020</DataFim>
+        <Supervisor>
+            <Nome PáginaInicial="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</Nome>
+            <Email>jcr@di.uminho.pt</Email>
+        </Supervisor>
+    </Informacoes>
+    <Equipa>
+        <Estudante>
+            <IdentEstudante>A78957</IdentEstudante>
+            <Nome>Diogo Emanuel Silva Nogueira</Nome>
+            <Email>a78957@alunos.uminho.pt</Email>
+        </Estudante>
+    </Equipa>
+    <Resumo>
+        <P>O exame de DAW consistiu em resolver dois exercícios práticos.</P>
+        <P><Negrito>Esses exercícios foram:</Negrito></P> 
+        <P> 1. API Arquivo de Música Digital</P>
+        <P> 2. API + Interface Classificação e Avaliação da Informação Pública</P>
+        <P>Relativamente à persistência dos dados, optei por MongoDB, dado que simplifica sempre em termos de inserções e também na redundância em si. Para resolver toda a parte da transformação em JSON, recorri a uma ferramente online hoespedada em https://jsonformatter.org/.</P>
+        <P>Para depois proceder ao import da informação em si, criei primeiro a database/collection de nome obras, usando depois o comando <Negrito>.\mongoimport.exe --jsonArray --db obras --collection obras --file .\data.json</Negrito>.</P>
+        <P>Para isso foi necessário que o ficheiro <Negrito>data.json</Negrito> estivesse na pasta do MongoDB em si.</P>
+    </Resumo>
+    <Entregas>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TESTE/EX%201%20-%20Arquivo%20de%20M%C3%BAsica%20Digital">Exercício 1</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/tree/master/TESTE/EX%202%20-%20CLAV%20API%20(Entidades)">Exercício 2</Trabalho>
+        <Trabalho Caminho="https://github.com/diogoesnog/DWeb2019/blob/master/TESTE/Al%C3%ADneas%20Aquecimento.txt">Alíneas de Aquecimento</Trabalho>
+    </Entregas>
+</RegistoProjetos>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="city_bi_trigger" directorySegmentName="seg_0" id="B0D06456-2D9C-8B1C-A6C8-8C9CBC751F22">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<actions>INSERT</actions>
+<body><![CDATA[BEGIN
+    IF (:NEW.city_id IS NULL) THEN
+        SELECT city_sq.nextval INTO :NEW.city_id
+        FROM DUAL;
+    END IF;
+    -- aproveitar o trigger para adicionar o timestamp em modo ORACLE
+    :NEW.last_update:=current_date;
+END;]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>0790F1AA-29D4-D5A1-9D3D-2370A3E76A05</table>
+</TriggerOraclev10g>

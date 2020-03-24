@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Paranhos (S. Lourenço de); Monte de Santa Cruz </IDENTI>
+		<DESCRI>Necrópole megalítica</DESCRI>
+		<CRONO> Pré-História Recente</CRONO>
+		<LUGAR> Lugar de Paranhos de Cima </LUGAR>
+		<FREGUE> Paranhos (S. Lourenço) e Vilela </FREGUE>
+		<CONCEL> Amares </CONCEL>
+		<CODADM> 030114 </CODADM>
+		<LATITU> 525,1 </LATITU>
+		<LONGIT> 181,6 </LONGIT>
+		<ALTITU> 466m a 550m </ALTITU>
+		<ACESSO>Faz-se a partir da estrada que liga Paranhos ao alto do planalto do Monte de
+Santa Cruz. </ACESSO>
+		<QUADRO>O planalto correspondente a um contraforte da Serra do Gerês, situado na
+margem esquerda do rio Homem. É uma zona de vegetação predominantemente
+arbustiva e herbácea, embora já se notem as manchas de eucaliptos de
+introdução recente, ao lado de resquícios de carvalhos e sobreiros.</QUADRO>
+		<DESARQ>Neste planalto foram identificados três monumentos com tumulus, todos eles
+violados, de câmara simples e com dimensões que oscilam entre os 8m e os 17m
+de diâmetro.</DESARQ>
+		<INTERP> Necrópole megalítica. </INTERP>
+		<AUTOR> Ana M.S. Bettencourt </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

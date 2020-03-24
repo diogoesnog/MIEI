@@ -1,0 +1,3 @@
+C:/Users/diogo/Downloads/Computação Gráfica/Aula 2/build/CMakeFiles/class2.dir
+C:/Users/diogo/Downloads/Computação Gráfica/Aula 2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/diogo/Downloads/Computação Gráfica/Aula 2/build/CMakeFiles/ZERO_CHECK.dir

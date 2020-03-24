@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="B86F4FFD-42F1-8718-3ABB-8482A035FAB6" name="sales_by_film_category">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<importedID>7E796F73-F1F6-3EF3-E0FB-3D1207067E66</importedID>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[SELECT
+    c.name AS category,
+    SUM(p.amount) AS total_sales
+FROM payment p
+    INNER JOIN rental r ON p.rental_id = r.rental_id
+    INNER JOIN inventory i ON r.inventory_id = i.inventory_id
+    INNER JOIN film f ON i.film_id = f.film_id
+    INNER JOIN film_category fc ON f.film_id = fc.film_id
+    INNER JOIN category c ON fc.category_id = c.category_id
+GROUP BY c.name
+ORDER BY total_sales DESC]]></userDefinedSQL>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="category" id="987A4E1D-9EBA-6A0D-B6F0-D35CFCBC6AA0">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>category</alias>
+<dataType>VARCHAR2 (25)</dataType>
+<headerAlias>category</headerAlias>
+<reference>false</reference>
+<referencedColumn>E7387CFA-B1A9-4678-D0C4-4F0DB8C8CC06</referencedColumn>
+<table>4F4517FB-502C-9862-08E6-81F925A6CB4A</table>
+<viewID>B86F4FFD-42F1-8718-3ABB-8482A035FAB6</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="total_sales" id="9F857F46-BF12-80E2-59D7-A46665837A9F">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:59 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<alias>total_sales</alias>
+<dataType>UNKNOWN</dataType>
+<headerAlias>total_sales</headerAlias>
+<expression>SUM(p.amount)</expression>
+<reference>false</reference>
+<viewID>B86F4FFD-42F1-8718-3ABB-8482A035FAB6</viewID>
+</viewElement>
+</viewElements>
+</TableView>

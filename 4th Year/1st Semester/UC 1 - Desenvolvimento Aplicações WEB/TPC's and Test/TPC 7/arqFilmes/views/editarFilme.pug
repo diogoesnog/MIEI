@@ -1,0 +1,66 @@
+extends layout
+
+block content
+    .container
+        br
+        h1
+            center 
+                b Gestor do Arquivo Filmes
+        hr
+        h3 
+            center Editar Registo Filme 
+                b
+                    =filme.title
+        hr
+        br 
+
+        br
+
+        div.input-field.form-row.justify-content-center.align-items-center
+            div.col-md-6.mb-2
+                label 
+                    b Identificador do Filme
+                input(id="id" class="input-field form-control" type="text" placeholder=filme._id value=filme._id readonly)        
+        div.input-field.form-row.justify-content-center.align-items-center
+            div.col-md-3.mb-2
+                label 
+                    b Título do Filme
+                input(id="titulo" class="input-field form-control" type="text" placeholder=filme.title value=filme.title)     
+            div.col-md-3.mb-2
+                label 
+                    b Ano do Filme
+                input(id="ano" class="input-field form-control" type="text" placeholder=filme.year value=filme.year)           
+        div.input-field.form-row.justify-content-center.align-items-center
+            div.col-md-6.mb-2
+                label 
+                    b Atore(s) do Filme
+                if(filme.cast.length == 0)
+                    p Não existem Atores associados ao filme 
+                        = filme.title
+                else
+                    each ator, indiceAtor in filme.cast
+                        input(id="ator" + indiceAtor class="input-field form-control" type="text" placeholder=ator value=ator)
+        div.input-field.form-row.justify-content-center.align-items-center
+            div.col-md-6.mb-2
+                label 
+                    b Género(s) do Filme
+                if(filme.genres.length == 0)
+                    p Não existem Géneros associados ao filme 
+                        = filme.title
+                else
+                    each genero, indiceGenero in filme.genres
+                        input(id="genero" + indiceGenero class="input-field form-control" type="text" placeholder=genero value=genero)
+        br
+        div.input-field.form-row.justify-content-center.align-items-center
+            button.btn.btn-danger(type='submit' name='update' value='Update' onclick="atualizarFilme(document.getElementById('id').value,document.getElementById('titulo').value,document.getElementById('ano').value,'" + filme.cast + "','" + filme.genres + "')") Atualizar Filme
+        
+        br                  
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/filmes/") <center>Voltar à <i>Homepage</i></center>
+        hr

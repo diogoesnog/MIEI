@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Penedos Pintos; Laje Branca </IDENTI>
+		<DESCRI> Necrópole megalítica </DESCRI>
+		<CRONO>Pré-História Recente</CRONO>
+		<LUGAR> Lagoa </LUGAR>
+		<FREGUE> Aboim </FREGUE>
+		<CONCEL> Fafe </CONCEL>
+		<CODADM> 030701 </CODADM>
+		<LATITU> 506,5 </LATITU>
+		<LONGIT> 203,2 </LONGIT>
+		<ALTITU> 750m </ALTITU>
+		<ACESSO>Faz-se a partir da E.M. 614. Em Lagoa toma-se o Estradão Novo que segue para
+Gontim e sobe-se para o planalto por caminho de pé posto. </ACESSO>
+		<DESARQ>Conjunto de três monumentos megalíticos, dois deles muito destruídos. O
+melhor conservado tem cerca de 15m de diâmetro, por 2m de altura,
+apresentando ainda sinais de violação da câmara funerária. </DESARQ>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

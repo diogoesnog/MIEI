@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=NotEnoughCandidatosException
+comment1.params=mensagem
+comment1.target=NotEnoughCandidatosException(java.lang.String)
+numComments=2

@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=IdadeNomeComparator
+comment1.params=c1\ c2
+comment1.target=int\ compare(Candidato,\ Candidato)
+numComments=2

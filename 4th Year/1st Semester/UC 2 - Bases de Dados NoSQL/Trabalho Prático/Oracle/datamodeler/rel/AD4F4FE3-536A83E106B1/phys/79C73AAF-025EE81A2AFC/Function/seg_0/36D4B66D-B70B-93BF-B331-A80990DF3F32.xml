@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FunctionOracle class="oracle.dbtools.crest.model.design.storage.oracle.FunctionOracle" name="inventory_held_by_customer" directorySegmentName="seg_0" id="36D4B66D-B70B-93BF-B331-A80990DF3F32">
+<sourceDDLFile>schemaSAKILA.sql</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:38:07 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<source>CREATE FUNCTION inventory_held_by_customer(p_inventory_id IN int) RETURN INT
+IS
+    v_customer_id INT;
+BEGIN
+    SELECT customer_id INTO v_customer_id
+    FROM rental
+    WHERE return_date IS NULL
+    AND inventory_id = p_inventory_id;
+
+    RETURN v_customer_id;
+END;</source>
+</FunctionOracle>

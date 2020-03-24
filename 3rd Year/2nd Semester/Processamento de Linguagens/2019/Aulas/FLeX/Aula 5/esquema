@@ -1,0 +1,18 @@
+#!/usr/bin/gawk -f
+
+BEGIN {
+    FS="\t" # Field Separator - O que separa cada campo - \t
+}
+
+#NR==2 { for(i=1; i<=NF; i++) print i,$i }  # Imprimir apenas a lista de todas as fields que estao na linha 2
+
+#NR>2 { print $20 " = " $28 }  # Imprime uma tabela com o nome (field 20) e email (field 28) de cada pessoa 
+
+NR>2 {
+    a[$10]++; # Ao fazermos isto e como uma HashTable. Ja procura a posicao no array e aumenta nessa posicao
+}
+
+END {
+   #print "Numero de Registos = " NR-2 # Retiramos os dois primeiros registos (cada linha) porque nao contem informacao necessaria
+   for(k in a) print a[k],k # Por cada k (chave) do array a.
+}

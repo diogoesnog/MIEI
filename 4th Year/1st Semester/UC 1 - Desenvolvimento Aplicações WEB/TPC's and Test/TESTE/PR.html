@@ -1,0 +1,65 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <div class="container">
+         <hr>
+         <title>Registo de Projetos</title>
+         <meta charset="UTF-8">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      </div>
+   </head>
+   <body>
+      <div class="container">
+         <h1 align="center"><b>Exame DAW</b></h1>
+         <h3 align="center">Avaliação: Desenvolvimento Aplicações WEB</h3>
+         <hr>
+         <table align="center" width="50%">
+            <tr>
+               <td><b>Keyname: </b>EXAME-DAW
+               </td>
+               <td><b>Título: </b>Exame DAW
+               </td>
+            </tr>
+            <tr>
+               <td><b>Data Início: </b>16 de Janeiro de 2020
+               </td>
+               <td><b>Data Fim: </b>16 de Janeiro de 2020
+               </td>
+            </tr>
+            <tr>
+               <td><b>Supervisor: </b><a href="http://www.di.uminho.pt/~jcr/">José Carlos Ramalho</a></td>
+               <td><b>Email Supervisor: </b>jcr@di.uminho.pt
+               </td>
+            </tr>
+         </table>
+         <hr>
+         <h3>Equipa</h3>
+         <ul>
+            <li><b>A78957</b> - Diogo Emanuel Silva Nogueira - a78957@alunos.uminho.pt
+            </li>
+         </ul>
+         <hr>
+         <h3>Resumo</h3>
+         <p>O exame de DAW consistiu em resolver dois exercícios práticos.</p>
+         <p><b>Esses exercícios foram:</b></p>
+         <p> 1. API Arquivo de Música Digital</p>
+         <p> 2. API + Interface Classificação e Avaliação da Informação Pública</p>
+         <p>Relativamente à persistência dos dados, optei por MongoDB, dado que simplifica sempre
+            em termos de inserções e também na redundância em si. Para resolver toda a parte da
+            transformação em JSON, recorri a uma ferramente online hoespedada em https://jsonformatter.org/.
+         </p>
+         <p><b>Para depois proceder ao import da informação em si, criei primeiro a database/collection
+               de nome obras, usando depois o comando .\mongoimport.exe --jsonArray --db obras --collection
+               obras --file .\data.json.</b></p>
+         <p><b>Para isso foi necessário que o ficheiro data.json estivesse na pasta do MongoDB em
+               si.</b></p>
+         <hr>
+         <h3>Entregas</h3>
+         <ul>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/tree/master/TESTE/EX%201%20-%20Arquivo%20de%20M%C3%BAsica%20Digital">Exercício 1</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/tree/master/TESTE/EX%202%20-%20CLAV%20API%20(Entidades)">Exercício 2</a></li>
+            <li><a href="https://github.com/diogoesnog/DWeb2019/blob/master/TESTE/Al%C3%ADneas%20Aquecimento.txt">Alíneas de Aquecimento</a></li>
+         </ul>
+      </div>
+   </body>
+</html>

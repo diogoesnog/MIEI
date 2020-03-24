@@ -1,0 +1,99 @@
+extends layout
+
+block content
+    .container
+        br
+        h1
+            center 
+                b Gestor do Arquivo Sonoro
+        hr
+        h3 
+            center Editar Música 
+                b
+                    =musica.tit
+        hr
+        br 
+
+        br
+        div.input-field.form-row.justify-content-center.align-items-center
+            div.col-md-6.mb-2
+                label 
+                    b Título
+                input(class="input-field form-control" type="text" placeholder=musica.tit value=musica.tit id="tit" readonly)
+        div.input-field.form-row.justify-content-center.align-items-center
+            if (musica.prov)
+                div.col-md-3.mb-2
+                    label 
+                        b Província
+                    input(class="input-field form-control" type="text" placeholder=musica.prov value=musica.prov id="prov")
+            else 
+                div.col-md-3.mb-2
+                    label
+                        b Província
+                    input(class="input-field form-control" type="text" placeholder="Insira aqui a província" value="" id="prov") 
+            if (musica.local)
+                div.col-md-3.mb-2
+                    label 
+                        b Local
+                    input(class="input-field form-control" type="text" placeholder=musica.local value=musica.local id="local")
+            else
+                div.col-md-3.mb-2
+                    label
+                        b Local
+                    input(class="input-field form-control" type="text" placeholder="Insira aqui o local" value="" id="local") 
+        div.input-field.form-row.justify-content-center.align-items-center
+            if (musica.inst)
+                div.col-md-3.mb-2
+                    label
+                        b Instrumentos
+                    input(class="input-field form-control" type="text" placeholder=musica.inst value=musica.inst id="inst")
+            else 
+                div.col-md-3.mb-2
+                    label
+                        b Instrumentos
+                    input(class="input-field form-control" type="text" placeholder="Insira aqui os Instrumentos" value="" id="inst")                
+                div.col-md-3.mb-2
+                    label
+                        b Duração
+                    input(class="input-field form-control" type="text" placeholder=musica.duracao value=musica.duracao id="duracao")   
+        br
+        h4 
+            center ------------------
+        br
+        div.input-field.form-row.justify-content-center.align-items-center
+            if (musica.file["@t"])
+                div.col-md-3.mb-2
+                    label
+                        b Tipo Ficheiro
+                    input(class="input-field form-control" type="text" placeholder=musica.file["@t"] value=musica.file["@t"] id="file@t")
+            else
+                div.col-md-3.mb-2
+                    label
+                        b Tipo Ficheiro
+                    input(class="input-field form-control" type="text" placeholder="Insira aqui o Tipo de Ficheiro" value="" id="file@t")                
+            if (musica.file["#text"])
+                div.col-md-3.mb-2
+                    label 
+                        b Nome Ficheiro
+                    input(class="input-field form-control" type="text" placeholder=musica.file["#text"] value=musica.file["#text"] id="file#text")
+            else
+                div.col-md-3.mb-2
+                    label
+                        b Nome Ficheiro
+                    input(class="input-field form-control" type="text" placeholder="Insira aqui o Nome do Ficheiro" value="" id="file#text")                
+        br
+        center
+            button.btn.btn-danger(type='submit' name='update' value='Update' onclick="atualizaMusica(document.getElementById('prov').value,document.getElementById('local').value,document.getElementById('tit').value,document.getElementById('inst').value,document.getElementById('file@t').value,document.getElementById('file#text').value,document.getElementById('duracao').value)") Atualizar Música
+        br
+        hr
+        h6 
+            center
+                b Aplicação <i>WEB</i> desenvolvida pelo aluno:
+                
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

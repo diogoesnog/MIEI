@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TemporaryTablespaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TemporaryTablespaceOraclev10g" name="TABLESAKILATEMP" directorySegmentName="seg_0" id="862B5846-60A0-243F-66D1-1BF370ABF0F0">
+<sourceDDLFile>sakilaCreateUser.ddl</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:15 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<dataFiles>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="DataFile2" id="FFE35C4B-F3EB-C4A9-0CE5-7B8B10ED7243">
+<sourceDDLFile>sakilaCreateUser.ddl</sourceDDLFile>
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:49:47 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<fileName>DATAFILESAKILATEMP</fileName>
+<measureUnit>M</measureUnit>
+<reuse>NO</reuse>
+<size>5</size>
+</DataFile>
+</dataFiles>
+</TemporaryTablespaceOraclev10g>

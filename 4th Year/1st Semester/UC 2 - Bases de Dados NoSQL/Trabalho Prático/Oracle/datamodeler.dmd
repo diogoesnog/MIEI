@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="datamodeler" id="456A5BEE-8BB4-DD34-C5A5-5FD76FB5B8F9" version="3.5">
+<createdBy>cocos</createdBy>
+<createdTime>2020-01-13 14:36:38 UTC</createdTime>
+<ownerDesignName>datamodeler</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>456A5BEE-8BB4-DD34-C5A5-5FD76FB5B8F9</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="A071BBBA-6AF0-E6CB-680A-9BF7825E61E6">
+<designStoragePath>C:\schemaSAKILA</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="9A33B53C-BC30-92E0-BDCF-B5BFD04FB0E3">
+<designStoragePath>C:\sakilaCreateUser</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

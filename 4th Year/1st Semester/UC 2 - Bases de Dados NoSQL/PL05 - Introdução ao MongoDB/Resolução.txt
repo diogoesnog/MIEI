@@ -1,0 +1,539 @@
+# **Resolução PL05 - Bases de Dados NoSQL**
+
+### Introdução ao MongoDB
+
+---
+
+
+
+#### 1. customers.json
+
+
+
+- **Alíneas 1, 2, 3, 4 e 5**
+
+```sql
+> show databases
+```
+
+Através do comando acima descrito conseguimos verificar as *databases* disponíveis. Após a criação da *collection* e da *database* customers, conseguimos validar a criação de ambas.
+
+<img src="C:\Users\diogo\AppData\Roaming\Typora\typora-user-images\1571822407157.png" alt="1571822407157" style="zoom: 67%;" />
+
+---
+
+- **Alínea 6** 
+
+```sqlite
+> use customers
+> db.customers.insertOne( {first_name: "John", last_name: "Doe", age: 30} )
+```
+
+---
+
+- **Alínea 7**
+
+```sql
+	{first_name: "Steven", last_name: "Williams", gender: "male"}, 
+	{first_name: "Mary", last_name: "Troy", age: 19} 
+  ] )
+```
+
+---
+
+- **Alínea 8**
+
+```mysql
+> db.customers.insertOne( {first_name: "Ric", last_name: "Foe", adress: {street: "4 main st", city: "Boston"} } )
+```
+
+---
+
+- **Alínea 9**
+
+```mysql
+> db.customers.insertOne( {first_name: "Ana", last_name: "Durant", graduations: ["phD", "Msc"], adress: {street: "4 Square Garden", city: "New York"}, age: 32} 
+```
+
+---
+
+- **Alínea 10** 
+
+```sql
+db.customers.insertOne( {first_name: "Natalia", last_name: "Will", age: 44, gender: "female"} 
+```
+
+---
+
+- **Alínea 11 e 12**
+
+```sql
+> db.customers.find()
+```
+
+![1571823612343](C:\Users\diogo\AppData\Roaming\Typora\typora-user-images\1571823612343.png)
+
+
+
+```sql
+> db.customers.find().pretty()
+```
+
+<img src="C:\Users\diogo\AppData\Roaming\Typora\typora-user-images\1571823731802.png" alt="1571823731802" style="zoom:67%;" />
+
+​																							*etc.*
+
+---
+
+- **Alínea 13**
+
+```sql
+> db.customers.update( {first_name: "Ric"}, {$set: {age: 45}}
+```
+
+---
+
+- **Alínea 14**
+
+```sql
+> db.customers.find( {last_name: {$regex: ".*Wil.*"}} )
+```
+
+---
+
+- **Alínea 15** 
+
+```sql
+> db.customers.update( {first_name: "Steven"}, {$set: {age: 35}} )
+```
+
+---
+
+- **Alínea 16**
+
+```sql
+> db.customers.update( {first_name: "Ana", age: {$gt: 30}}, {$inc: {age: 10}} )
+```
+
+---
+
+- **Alínea 17**
+
+```sql
+> db.customers.update( {first_name: "Ric"}, {$unset: {age: ""}} )
+```
+
+---
+
+- **Alínea 18**
+
+```sql
+> db.customers.find( {first_name: "Jimy"}, {first_name: "Jimmy", last_name: "Connors", age: 25, gender: "male"}, {upsert: true})
+```
+
+---
+
+- **Alínea 19**
+
+```sql
+> db.customers.find( {age: {$gt: 25}} )
+```
+
+---
+
+- **Alínea 20**
+
+```sql
+> db.customers.find( {gender: "male"} )
+```
+
+---
+
+- **Alínea 21**
+
+```sql
+> db.customers.deleteOne( {first_name: "Mary"} )
+```
+
+---
+
+- **Alínea 22**
+
+```sql
+> db.customers.find( {first_name: {$in: ["Ana", "Ric"]}} )
+```
+
+
+
+#### 2. restaurants.json
+
+​	
+
+- **Alínea 1**
+
+```
+FILTER: {}
+```
+
+```sql
+db.getCollection("restaurants").find({})
+```
+
+---
+
+- **Alínea 2**
+
+```SQL
+FILTER: {} 
+PROJECT: {"restaurante_id": 1, "name": 1, "borough": 1, "cuisine": 1}
+```
+
+```sql
+db.getCollection("restaurants").find({}, 
+    { 
+        "restaurante_id" : 1.0, 
+        "name" : 1.0, 
+        "borough" : 1.0, 
+        "cuisine" : 1.0
+    }
+)
+```
+
+---
+
+- **Alínea 3**
+
+```sql
+FILTER: {}
+PROJECT: {"restaurante_id": 1, "name": 1, "borough": 1, "cuisine": 1, "_id": 0}
+```
+
+```sql
+db.getCollection("restaurants").find({}, 
+    { 
+        "restaurante_id" : 1.0, 
+        "name" : 1.0, 
+        "borough" : 1.0, 
+        "cuisine" : 1.0, 
+        "_id" : 0.0
+    }
+)
+```
+
+---
+
+- **Alínea 4**
+
+```sql
+FILTER: {}
+PROJECT: {"restaurante_id": 1, "name": 1, "borough": 1, "address.zipcode": 1, "_id": 0}
+```
+
+```sql
+db.getCollection("restaurants").find({}, 
+    { 
+        "restaurante_id" : 1.0, 
+        "name" : 1.0, 
+        "borough" : 1.0, 
+        "address.zipcode" : 1.0, 
+        "_id" : 0.0
+    }
+);
+```
+
+---
+
+- **Alínea 5**
+
+```sql
+FILTER: {"borough": "Bronx"}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "borough" : "Bronx"
+    }
+)
+```
+
+---
+
+- **Alínea 6**
+
+```sql
+FILTER: {"borough": "Bronx"}
+LIMIT: 5
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "borough" : "Bronx"
+    }
+).limit(5)
+```
+
+---
+
+- **Alínea 7**
+
+```sql
+FILTER: {"borough": "Bronx"}
+LIMIT: 5
+SKIP: 5
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "borough" : "Bronx" }
+).skip(5).limit(5)
+```
+
+---
+
+- **Alínea 8**
+
+```sql
+FILTER: {"grades.score": {$gte: 90}}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "grades.score" : {"$gte" : 90.0} }
+)
+```
+
+---
+
+- **Alínea 9**
+
+```sql
+FILTER: {"grades": {$elemMatch: {"score": {$gt:80, $lt: 100}} }
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "grades" : {
+            "$elemMatch" : {
+                "score" : { "$gt" : 80.0, "$lt" : 100.0 }
+            }
+        }
+    }
+)
+```
+
+---
+
+- **Alínea 10**
+
+```sql
+FILTER: {"address.coord.0": {$lt :-95.754168}}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "address.coord.0" : {"$lt" : -95.754168} }
+)
+```
+
+---
+
+- **Alínea 11** 
+
+```sql
+FILTER: {$and: [ 
+    		{ "cuisine": {$nin : ["American"]} },
+    		{ "grades.score": {$gt :70} }, 
+    		{ "address.coord.0": {$lt: -65.754168} } 
+		]}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "$and" : [
+            { "cuisine" : { "$nin" : ["American"] } }, 
+            { "grades.score" : {"$gt" : 70.0} }, 
+            { "address.coord.0" : {"$lt" : -65.754168} }
+        ]
+    }
+)
+```
+
+---
+
+- **Alínea 12** 
+
+```sql
+FILTER: { 
+			"cuisine": { $nin : ["American"] },
+			"grades.score": {$gt :70}, 
+			"address.coord.0": {$lt: -65.754168} 
+		}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "cuisine" : { "$nin" : ["American"] }, 
+        "grades.score" : {"$gt" : 70.0}, 
+        "address.coord.0" : {"$lt" : -65.754168}
+    }
+)
+```
+
+---
+
+- **Alínea 13**
+
+```sql
+FILTER: { 
+			"cuisine": {$nin : ["American "]}, 
+			"grades.grade": {$in: ["A"]} , 
+			"borough": {$nin: ["Brookly"]} 
+		}
+SORT: {"cuisine": 1}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "cuisine" : { "$nin" : ["American"] }, 
+        "grades.grade" : { "$in" : ["A"] }, 
+        "borough" : { "$nin" : ["Brookly"] }
+    }
+).sort({"cuisine" : 1.0})
+```
+
+---
+
+- **Alínea 14**
+
+```sql
+FILTER: { 
+			"borough": "Bronx", 
+			"cuisine": {$in : ["American ","Chinese"]}
+		}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "borough" : "Bronx", 
+        "cuisine" : { "$in" : ["American ", "Chinese"] }
+    }
+)
+```
+
+---
+
+- **Alínea 15**
+
+```sql
+// Duas formas diferentes de se fazer.
+FILTER: { "address.coord": {$type: 1} }
+FILTER: {$or: [
+    		{"address.coord.0":{$type :1}}, 
+    		{"address.coord.1":{$type :1}} 
+		]}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "address.coord" : {"$type" : 1.0} }
+)
+```
+
+---
+
+- **Alínea 16**
+
+```sql
+FIELD: { "address.street" : {$exists: true} }
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "address.street" : {"$exists" : true} }
+)
+```
+
+---
+
+- **Alínea 17**
+
+```sql
+SORT: {"cuisine": -1, "borough": 1}
+```
+
+```sql
+db.getCollection("restaurants").find({}).sort(
+    {"cuisine" : -1.0, "borough" : 1.0}
+)
+```
+
+---
+
+- **Alínea 18**
+
+```sql
+FILTER: { "address.coord.1": { $gt: NumberInt(42), $lte: NumberInt(52) } }
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "address.coord.1" : {
+            "$gt" : NumberInt(42), 
+            "$lte" : NumberInt(52)
+        }
+    }
+)
+```
+
+---
+
+- **Alínea 19**
+
+```sql
+FILTER: { "grades.score": {$lt : 10} }
+PROJECT: {"restaurant_id": 1, "name": 1, "borough": 1, "cuisine":1}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { "grades.score" : {"$lt" : 10.0} }, 
+    { 
+        "restaurant_id" : 1.0, 
+        "name" : 1.0, 
+        "borough" : 1.0, 
+        "cuisine" : 1.0
+    }
+)
+```
+
+---
+
+- **Alínea 20**
+
+```sql
+FILTER: { "borough": {$nin: ["Staten Island", "Queens", "Bronx", "Brooklin" ]} }
+PROJECT: {"restaurant_id": 1, "name": 1, "borough": 1, "cuisine":1}
+```
+
+```sql
+db.getCollection("restaurants").find(
+    { 
+        "borough" : { "$nin" : ["Staten Island", "Queens", "Bronx", "Brooklin"] }
+    }, 
+    { 
+        "restaurant_id" : 1.0, 
+        "name" : 1.0, 
+        "borough" : 1.0, 
+        "cuisine" : 1.0
+    }
+)
+```
+

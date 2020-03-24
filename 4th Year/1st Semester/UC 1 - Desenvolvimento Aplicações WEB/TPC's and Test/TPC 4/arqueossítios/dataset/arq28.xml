@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="arq2html.xsl"?>
+<ARQELEM>
+		<TIPO ASSUNTO="arqueossitio"/>
+		<IDENTI> Outeirinho </IDENTI>
+		<DESCRI>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+		</DESCRI>
+		<CRONO> Proto-His´toria / Romanização </CRONO>
+		<LUGAR> Outeirinho </LUGAR>
+		<FREGUE> Vila Verde </FREGUE>
+		<CONCEL> Vila Verde </CONCEL>
+		<CODADM> 031357 </CODADM>
+		<LATITU> 519,5 </LATITU>
+		<LONGIT> 175,1 </LONGIT>
+		<ALTITU> 74m </ALTITU>
+		<ACESSO>O acesso a este povoado faz-se a partir de Vila Verde.</ACESSO>
+		<QUADRO>.
+O povoado assenta num pequeno cabeço de baixa altitude situado em pleno
+vale, perto do curso do rio Homem.</QUADRO>
+		<TRAARQ>Não são conhecidos trabalhos arqueológicos no local.</TRAARQ>
+		<DESARQ>Pequeno povoado de baixa altitude, apenas com uma plataforma localizada na
+parte mais elevada do cabeço. À superfície encontram-se abundantes
+fragmentos de cerâmica romana e de <LIGA TERMO="tégula"> tégulas</LIGA>. O
+povoado apresenta características semelhantes ao povoado do Lago, em Amares.</DESARQ>
+		<INTERP>
+			   <LIGA TERMO="povoado fortificado"> Povoado fortificado</LIGA>
+romanizado.</INTERP>
+		<BIBLIO>MARTINS, M. (1990) O Povoamento Proto-Histórico e a Romanização da Bacia do
+Curso do Médio Cávado, Cadernos de Arqueologia - Monografias, 5,
+Universidade do Minho, Braga, pp. 102. </BIBLIO>
+		<AUTOR> Manuela Martins </AUTOR>
+		<DATA>04-FEV-1998</DATA>
+	</ARQELEM>

@@ -1,0 +1,53 @@
+
+extends layout
+
+block content
+    .container-fluid
+        br
+        h1
+            center 
+                b Gestor do Arquivo Sonoro
+        hr
+        h3 
+            center Adicionar Música
+        hr
+        br 
+        .container-fluid
+            form(action="/" method="POST" style="margin-left: 100px; margin-right: 100px")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-6 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Título" name="tit" id="tit")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Província" name="prov" id="prov")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Local" name="local" id="local")
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Instrumentos" name="inst" id="inst")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Duração" name="duracao" id="duracao")
+                br
+                h4 
+                    center ------------------
+                br
+
+                div(class="input-field form-row justify-content-center align-items-center")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Tipo de Ficheiro" name="file@t" id="file@t")
+                    div(class="col-md-3 mb-2")
+                        input(class="input-field form-control" type="text" placeholder="Nome do Ficheiro" name="file#text" id="file#text")
+                br
+                div(class="form-group row justify-content-center align-items-center")
+                    button.btn.btn-danger(type='submit' name='enviar' value='Submeter') Submeter Música
+
+        br                  
+        hr
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr

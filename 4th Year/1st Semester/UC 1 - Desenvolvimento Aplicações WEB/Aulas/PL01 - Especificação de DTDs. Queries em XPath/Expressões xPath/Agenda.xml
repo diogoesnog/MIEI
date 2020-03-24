@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <entrada id="e1" tipo="pessoa">
+    <nome>José Carlos Ramalho</nome>
+    <email>jcr@di.uminho.pt</email>
+    <telefone>253-604479</telefone>
+  </entrada>
+  <grupo gid="ep1">
+    <entrada id="e2" tipo="pessoa">
+      <nome>Pedro Henriques</nome>
+      <email>prh@di.uminho.pt</email>
+      <telefone>253-604469</telefone>
+    </entrada>
+    <entrada id="e3" tipo="pessoa">
+      <nome>João Saraiva</nome>
+      <email>jas@di.uminho.pt</email>
+      <telefone>253-604479</telefone>
+    </entrada>
+    <ref entref="e1"/>
+  </grupo>
+  <entrada id="e4" tipo="empresa">
+    <nome>Lavandaria Tudo Branco</nome>
+    <telefone>253-604433</telefone>
+  </entrada>
+  <entrada id="e5" tipo="pessoa">
+    <nome>José Alves de Castro</nome>
+    <telefone>253-777888</telefone>
+  </entrada>
+  <entrada id="e6" tipo="pessoa">
+    <nome>David José Lopes Ramalho</nome>
+    <telefone>253-610666</telefone>
+  </entrada>
+  <grupo gid="familia">
+    <entrada id="e7">
+      <nome>Carmen Lopes</nome>
+      <telefone>253-600700</telefone>
+    </entrada>
+    <ref entref="e1"/>
+    <ref entref="e6"/>
+    <entrada id="e8">
+      <nome>Leonardo Lopes Ramalho</nome>
+      <telefone>253-999988</telefone>
+    </entrada>
+  </grupo>
+  <entrada id="e11">
+    <nome>CAJO</nome>
+    <telefone>234-456789</telefone>
+    <email>cajo@ua.pt</email>
+  </entrada>
+</agenda>

@@ -1,0 +1,44 @@
+extends layout
+
+block content
+
+    .container
+        br
+        h1(class="display-3")
+            center 
+                strong CLAV API
+        h3
+            center Lista de Processos Donos da Entidade
+            center 
+                a(href="/entidades/" + idEntidade style="color:black")
+                    =idEntidade
+        br 
+        
+        .container
+            table.table.table-stripped
+                thead.thead
+                    tr
+                        th.bg-dark.text-light Título
+                        th.bg-danger.text-light.text-center ID
+                    tr
+                thead
+                    each processo in processos
+                        tr
+                            td= processo.titulo
+                            td.text-center
+                                a(href="http://clav.dglab.gov.pt/classes/consultar/c" + processo.codigo style="color:gray")
+                                    = processo.codigo
+
+                        tr            
+
+        hr
+
+        h6 <center><b>Aplicação <i>WEB</i> desenvolvida pelo aluno:</b></center>
+            br
+            div(style="text-align: center")
+                p Diogo Nogueira - a78957@alunos.uminho.pt - <a href='http://github.com/diogoesnog'> GitHub </a>
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+            a(href="/entidades/" + idEntidade) <center> Voltar <i>Atrás</i></center>
+        hr
