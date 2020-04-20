@@ -1,0 +1,56 @@
+=== meta
+
+email: a78485@uminho.pt
+author: Diogo Araújo
+
+=== tree
+{%name%}/
+- {%name%}.fl
+- doc/
+-- {%name%}.md
+- src/
+-- python/
+--- src/
+---- main.py
+--- test/
+---- test.py
+-- javascript/
+--- test/
+---- test.js
+
+=== {%name%}.md 
+# NAME
+
+{%name%} - o nosso fabuloso trabalho em Python
+
+## Author
+
+Comments and bug reports to {%author%}, {%email%}.
+
+=== {%name%}.fl
+%option noyywrap yylineno 
+%%
+
+%% 
+int main(){ 
+    yylex();
+    return 0;
+}
+
+=== test.py
+
+def test:
+    print("Teste da função Python\n")
+
+=== main.py
+
+def main:
+    print("Main a funcionar\n")
+
+=== test.js
+
+window.onload = function() {
+                document.getElementById("hello").addEventListener("click", function() {
+                    alert("Bem-vindo ao projeto {%name%} feito por {%author%}!");
+                }, false);
+};

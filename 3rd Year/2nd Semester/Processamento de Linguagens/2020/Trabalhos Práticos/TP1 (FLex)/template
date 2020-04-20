@@ -1,0 +1,51 @@
+=== meta
+
+email: jj@di.uminho.pt
+author: J.João
+
+=== tree
+{%name%}/
+- {%name%}.fl
+- doc/
+-- {%name%}.md
+- exemplo/
+-- doc/
+--- novapasta/
+--- exemplo.md
+--- doc/
+--- lol/
+-- xd/
+- Makefile
+
+=== Makefile
+
+{%name%}: {%name%}.fl 
+        flex {%name%}.fl 
+        cc -o {%name%} lex.yy.c
+
+install: {%name%} 
+        cp {%name%} /usr/local/bin/
+
+=== {%name%}.md 
+# NAME
+
+{%name%} - o nosso fabuloso filtro ...FIXME
+
+## Synopsis
+    {%name%} file*
+
+## Description 
+## See also 
+## Author
+
+Comments and bug reports to {%author%}, {%email%}.
+
+=== {%name%}.fl
+%option noyywrap yylineno 
+%%
+
+%% 
+int main(){ 
+    yylex();
+    return 0;
+}
