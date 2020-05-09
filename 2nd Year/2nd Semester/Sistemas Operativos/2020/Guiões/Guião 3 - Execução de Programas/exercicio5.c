@@ -12,12 +12,11 @@ int main(int argc, char * argv[]) {
 
 	int pid,i;
 
-	for(i = 1; i < argc; i++){
+	for(i = 1; i < argc; i++) {
 		pid = fork();
 		if (pid == 0) execlp(argv[i], argv[i], NULL);
 	}
 	
-	for(i = 1; i < argc; i++){
-		wait(NULL);
-	}
+	for(i = 1; i < argc; i++) wait(NULL);
+	
 }

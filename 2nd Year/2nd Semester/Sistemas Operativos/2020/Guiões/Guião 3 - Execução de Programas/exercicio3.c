@@ -5,15 +5,14 @@
 
 int main(int argc,char * argv[]) {
 
-	if (argc < 2){
+	if (argc < 2) {
 		perror("Falta os argumentos.");
 		return (-1);
 	}
+
 	int i;
 
-	for(i = 1; i < argc; i++){
-		printf("%s\n", argv[i]);
-	}
+	for(i = 1; i < argc; i++) printf("%s\n", argv[i]);
 	
 	return 0;
 

@@ -6,8 +6,8 @@
 
 int main(int argc, char *argv[]) {
 	
-	int num,i,j,z,status;
-	int linhas=5, colunas=10;
+	int num, i, j, z, status;
+	int linhas = 5, colunas = 10;
 	int pid[linhas];
 	int matriz[linhas][colunas];
 	int resultados[linhas];
@@ -15,7 +15,10 @@ int main(int argc, char *argv[]) {
 	
 	srand((unsigned)time(NULL)); //random seed
 	
-	if (argc < 2) { printf("Number to search is missing use:\n ./%s number\n",argv[0]); exit(1);}
+	if (argc < 2) { 
+		printf("Number to search is missing use:\n ./%s number\n",argv[0]);
+		exit(1);
+	}
 	num = atoi(argv[1]);
 	
 	//create random matrix

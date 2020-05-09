@@ -9,19 +9,19 @@
  * WEXITSTATUS(status) - Devolve o exit_status do processo filho.
  */
 
-int main(){
+int main() {
 
     int i;
     int pid;
     int status;
 
     // Criar 10 processos filhos
-    for(i = 1; i <= 10; i++){
+    for(i = 1; i <= 10; i++) {
 
         // Cria-se um Processo Filho a partir do Processo Pai atual.
         pid = fork();
 
-        if(pid == 0){
+        if(pid == 0) {
             printf("Eu sou o processo filho número %d e o meu pid é = %d\n", (i), getpid());
             printf("O pid do meu processo pai é = %d\n", getppid());
             _exit(i);

@@ -25,8 +25,9 @@ int main(int argc, char *argv[]) {
 	elemento = atoi(argv[1]);
 	
     // Criar uma matriz aleatoriamente.
-	for (i=0; i<linhas; i++){
-		for (j=0; j<colunas; j++){
+	for (i = 0; i < linhas; i++) {
+
+		for (j = 0; j < colunas; j++) {
 			matriz[i][j] = rand()%10; // Gera números até 10.
 			printf("%i\t",matriz[i][j]);
 		}
@@ -41,14 +42,14 @@ int main(int argc, char *argv[]) {
     /* Como temos muito menos linhas que colunas (segundo o enunciado), faz mais
      * sentido criar um processo paralelo para cada linha. */
 
-	for (i=0; i<linhas; i++){
+	for (i = 0; i < linhas; i++) {
 
 		pid[i] = fork();
 
         // Os processos filhos é que vão procurar.
-		if (pid[i]==0){
-			for(j=0; j<colunas; j++){
-				if (matriz[i][j]==elemento){ 
+		if (pid[i] == 0) {
+			for(j = 0; j < colunas; j++) {
+				if (matriz[i][j] == elemento) { 
                     printf("Elemento %i presenta na matriz[%i][%i]\n", elemento, i, j); 
                 }
 			}
@@ -57,7 +58,7 @@ int main(int argc, char *argv[]) {
 	}
 
     // O processo pai tem de esperar que cada processo filho termine o seu trabalho.
-	for(i=0; i<linhas; i++) wait(NULL);
+	for(i = 0; i < linhas; i++) wait(NULL);
 	
 	return 1;
 

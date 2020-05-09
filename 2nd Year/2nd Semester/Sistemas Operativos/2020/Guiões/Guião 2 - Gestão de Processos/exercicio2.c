@@ -2,7 +2,7 @@
 #include <sys/wait.h>
 #include <stdio.h>
 
-int main(){
+int main() {
     
     // O programa cria um processo filho.
     int pid = fork();
@@ -11,7 +11,7 @@ int main(){
     
     // Processo Filho
     // Imprime seu identificador e o do seu pai
-    if(pid == 0){
+    if(pid == 0) {
         printf("Sou o processo filho e o meu pid é = %d. O pid do meu processo pai é = %d\n", getpid(), getppid());
     }
     // Processo Pai
