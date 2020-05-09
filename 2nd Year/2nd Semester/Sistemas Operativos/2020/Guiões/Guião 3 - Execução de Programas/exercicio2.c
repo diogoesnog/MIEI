@@ -4,16 +4,17 @@
 #include <sys/wait.h>
 
 
-int main(){
+int main() {
 
 	int pid = fork();
 
 	if (pid == 0){
-		execlp("ls","ls","-l",NULL);
+		execlp("ls", "ls", "-l", NULL);
 		_exit(0);
 	}
 	else{
 		wait(NULL);
 	}
+	
 	return 0;
 }
