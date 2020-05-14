@@ -1,12 +1,14 @@
 %{
-#define ABREP   1000
-#define FECHAP  1001
 
-#define PAL     1002
-#define NUM     1003
+    #define ABREP   1000
+    #define FECHAP  1001
 
-// É importante sinalizar sempre o erro.
-#define ERRO    -1 
+    #define PAL     1002
+    #define NUM     1003
+
+    // É importante sinalizar sempre o erro.
+    #define ERRO    -1 
+
 %}
 
 %option noyywrap

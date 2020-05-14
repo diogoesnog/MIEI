@@ -1,0 +1,30 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+& é usado para representar o vazio e NÃO É UM SÍMBOLO TERMINAL porque não tem materialização
+Nesta caso não vamos usar esse símbolo
+
+SeqListas --> Lista SeqListas
+            | 
+Lista     --> '[' ']'
+          --> '[' Elems ']'
+Elems     --> num
+          --> Intervalo
+          --> Lista
+Intervalo --> num DOISPONTOS num
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 8 produções diferentes
+2. Existem 4 símbolos não-terminais -> SeqListas, Lista, Elems, Intervalo
+3. Existem 4 símbolos terminais     -> '[', ']', num e DOISPONTOS
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. []
+2. [17]
+3. [1..10]
+4. [1,2,[3,4],5,6]
+5. [1..10,21..30]
+6. [1,3,5,7,9,10..20,[23,25,30..40]]

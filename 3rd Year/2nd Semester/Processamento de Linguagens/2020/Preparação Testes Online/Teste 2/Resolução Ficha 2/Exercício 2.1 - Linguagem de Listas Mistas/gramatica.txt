@@ -1,0 +1,24 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+Frase --> INICIO Lista FIM
+Lista --> Elem
+        | Elem VIRG Cauda
+Cauda --> Lista
+Elem  --> pal
+        | num
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 6 produções diferentes
+2. Existem 4 símbolos não-terminais -> Frase, Axioma da Gramática, Lista, Cauda e Elem
+3. Existem 5 símbolos terminais     -> INICIO, FIM, VIRG, pal e num
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. INICIO 1 FIM
+2. INICIO exemplo FIM
+3. INICIO 1, 2, 3 FIM
+4. INICIO e, um ,  exemplo FIM
+5. INICIO e  , 1, exemplo, com ,  6,palavras FIM

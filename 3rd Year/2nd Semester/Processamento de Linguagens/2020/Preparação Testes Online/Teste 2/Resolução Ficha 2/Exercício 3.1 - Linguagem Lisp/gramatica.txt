@@ -1,0 +1,25 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+& é usado para representar o vazio e NÃO É UM SÍMBOLO TERMINAL porque não tem materialização
+
+Lisp    --> SExp
+SExp    --> pal
+         |  num
+         |  "(" SExpLst ")"
+SExpLst --> SExp SExpLst
+         |  &            
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 6 produções diferentes
+2. Existem 3 símbolos não-terminais -> Lisp, SExp, SExpLst
+3. Existem 4 símbolos terminais     -> "(", ")", num  e pal
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. 12
+2. nil
+3. (add 1 2)
+4. (mul (add 3 2)(sub (power 2 5) 10))
