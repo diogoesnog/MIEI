@@ -11,7 +11,7 @@ Elem  --> pal
 # De acordo com esta gramática, podemos concluir:
 
 1. Existem 6 produções diferentes
-2. Existem 4 símbolos não-terminais -> Frase, Axioma da Gramática, Lista, Cauda e Elem
+2. Existem 4 símbolos não-terminais -> Frase (Axioma da Gramatica), Lista, Cauda e Elem
 3. Existem 5 símbolos terminais     -> INICIO, FIM, VIRG, pal e num
 
 # Frases que pertencem a esta GIC:

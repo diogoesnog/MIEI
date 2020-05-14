@@ -1,0 +1,18 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+ABin  --> '(' ')'
+        | '(' num ABin ABin ')'   
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 2 produções diferentes
+2. Existem 1 símbolos não-terminais -> ABin (O próprio Axioma)
+3. Existem 3 símbolos terminais     -> '(', ')' e num
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. ()
+2. (23 () ())
+3. (23 (17 (6 () ()) (20 () ())) (35 () ()))
