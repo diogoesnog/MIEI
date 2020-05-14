@@ -6,11 +6,14 @@ Nesta caso não vamos usar esse símbolo
 
 SeqListas --> Lista SeqListas
             | 
+
 Lista     --> '[' ']'
           --> '[' Elems ']'
+
 Elems     --> num
           --> Intervalo
           --> Lista
+          
 Intervalo --> num DOISPONTOS num
 
 # De acordo com esta gramática, podemos concluir:

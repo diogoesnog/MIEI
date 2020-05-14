@@ -13,14 +13,22 @@
 // O vazio não é um token, representa ausência de derivação
 // O ERRO é um extra à linguagem mas deve ser sempre considerado
 // O ERRO é símbolo terminal VARIÁVEL
-// Os símbolos terminais '(' e ')' como são apenas constituídos por um símbolo, não viram Token
-%token ERRO
+%token ERRO num pal
 
 %%
 
-Parentesis  : '(' Parentesis ')' Parentesis
-            | 
+Lisp        : SExp
             ;
+
+SExp        : pal
+            | num
+            | '(' SExpLst ')'
+            | Lisp
+            ;
+
+SExpLst     : SExp SExpLst
+            |
+            ;        
 
 %%
 
