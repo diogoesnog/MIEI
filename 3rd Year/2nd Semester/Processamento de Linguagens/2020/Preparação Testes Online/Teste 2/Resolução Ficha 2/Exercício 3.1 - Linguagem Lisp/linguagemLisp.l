@@ -21,7 +21,7 @@
 \)                  return FECHAP;
  
 [a-zA-Z]+           return PAL;
-(\+|\-)?[0-9]+       return NUM; // Colocamos a possibilidade de inserir sinal nos números.
+(\+|\-)?[0-9]+      return NUM; // Colocamos a possibilidade de inserir sinal nos números.
 
 .                   return ERRO;
 
