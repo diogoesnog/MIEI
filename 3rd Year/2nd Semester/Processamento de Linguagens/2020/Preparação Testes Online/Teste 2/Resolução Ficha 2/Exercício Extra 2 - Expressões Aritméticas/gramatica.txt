@@ -1,0 +1,24 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+Estamos perante Recursividade à Direita. Para colocar à esquerda seria ExpAritm sinal num
+
+SeqExpAritm --> SeqExpAritm ExpAritm
+              | ExpAritm
+
+ExpAritm    --> ExpAritm operador num
+              | num 
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 2 produções diferentes
+2. Existem 1 símbolos não-terminais -> ABin (O próprio Axioma)
+3. Existem 3 símbolos terminais     -> '(', ')' e num
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. 23
+2. 45+67-3
+3. 8-2
+4. 8+8+8+9-2
