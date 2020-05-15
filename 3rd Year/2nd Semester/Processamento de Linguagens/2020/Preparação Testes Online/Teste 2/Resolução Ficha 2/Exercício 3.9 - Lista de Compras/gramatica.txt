@@ -1,0 +1,35 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+& é usado para representar o vazio e NÃO É UM SÍMBOLO TERMINAL porque não tem materialização
+Nesta caso não vamos usar esse símbolo
+
+ListaCompras --> ListaCompras Seccao
+               | Seccao
+
+Seccao       --> pal ':' Itens
+
+Itens        --> Itens Item
+               | Item
+
+Item         --> '(' numInt ',' pal ',' numFloat ',' Quantidade ')'
+
+Quantidade   --> '[' unidade ':' numInt ']'
+               | '[' peso ':' numInt ']'
+               | '[' peso ':' numFloat ']'
+               | '[' volume ':' numInt ']'
+               | '[' volume ':' numFloat ']'
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 11 produções diferentes
+2. Existem 5 símbolos não-terminais -> ListaCompras, Seccao, Itens, Item, Quantidade
+3. Existem 6 símbolos terminais     -> '[', ']', ':', numInt, numFloat e pal
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
+1. Limpeza :
+    (1,vassoura,13.2,[unidade:12])
+    (2,lixivia,7.99,[unidade:1])
+    (3,esponja,1.29,[unidade:2])
