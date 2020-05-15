@@ -1,0 +1,26 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+Calculadora --> Expressao
+
+Expressao   --> Termo
+              | Expressao '+' Termo
+              | Expressao '-' Termo
+
+Termo       --> Fator
+              | Termo '*' Fator
+              | Termo '/' Fator
+
+Fator       --> num
+              | '(' Expressao ')'
+
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 9 produções diferentes
+2. Existem 4 símbolos não-terminais -> Calculadora, Expressao, Termo e Fator 
+3. Existem 7 símbolos terminais     -> num, '+', '-', '*', '/', '(' e ')' 
+
+# Frases que pertencem a esta GIC:
+# No Flex está definida uma regra para ignorar por completo os espaços
+
