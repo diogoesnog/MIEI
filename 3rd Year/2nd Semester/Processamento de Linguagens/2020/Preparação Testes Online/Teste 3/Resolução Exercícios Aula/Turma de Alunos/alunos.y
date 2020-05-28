@@ -7,7 +7,7 @@
     int numAlunos = 0;
 %}
 
-%union{
+%union {
     char *stringValue;
 }
 
@@ -51,13 +51,13 @@ Valor   : ABREVALOR string FECHAVALOR                               { asprintf(&
 
 %%
 
-int main(){
+int main() {
     yyparse();
 
     return 0;
 }
 
-int yyerror(){
+int yyerror() {
     printf("Erro Sintático ou Léxico na linha: %d\n", yylineno);
 
     return 0;
