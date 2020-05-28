@@ -1,0 +1,14 @@
+// Atribuição de Variável
+a = 5;
+
+// Produção valor em STDOUT
+print 2+a*3;
+
+// Ler valor de c do STDIN
+read c;
+
+// Imprimir a soma dos valores de a e c
+print a+c;
+
+// Atribuição de um valor f
+f = a+c;

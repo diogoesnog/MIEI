@@ -1,0 +1,25 @@
+%{
+    #include "y.tab.h"
+%}
+
+%option yylineno
+
+%%
+
+[ \t\r\n]                 ;
+
+;                       return SEPARADOR;
+
+[+*\-/=()]              return *yytext;
+
+(?i:halt)               return HALT;
+(?i:print)              return PRINT;
+(?i:read)               return READ;
+(?i:show)               return SHOW;
+
+[0-9]+                  { yylval.numberValue = atoi(yytext); return number; }
+[a-z]                   { yylval.carValue = *yytext; return id; }
+
+.                       return ERRO; 
+
+
