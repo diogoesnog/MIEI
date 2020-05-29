@@ -1,0 +1,38 @@
+    pushn   26
+
+start
+
+// Lê dois números e escreve o maior
+    pushs "Introduza um valor: "
+    writes
+
+    read
+    atoi
+    storeg  0
+
+    pushs "Introduza um valor: "
+    writes
+
+    read
+    atoi
+    storeg  1
+
+// Condição de Verificação
+    pushg   0
+    pushg   1
+    sup
+    jz      else
+    pushg   0
+    writei
+    jump    fimCondicao
+
+else:
+    pushg   1
+    writei
+
+fimCondicao:
+    pushs "That's all."
+    writes
+
+
+stop
