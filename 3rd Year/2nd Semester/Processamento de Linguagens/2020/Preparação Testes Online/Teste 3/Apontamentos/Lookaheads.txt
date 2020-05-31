@@ -1,0 +1,14 @@
+// Gramática 1
+
+p1:     Lst --> '[' Els ']'
+
+p2:     Els --> Elem
+p3:           | Els ',' Elem
+
+p4:     Elem --> num                LA(p4) = First(num) = {num}
+p5:            | Range              LA(p5) = First(Range) = First(num '.''.' num) = {num}
+p6:            | Lst                LA(p6) = First(Lst) = First('[' Els ']') = {'['}
+
+p7:     Range --> num '.''.' num
+
+// Gramática 2
