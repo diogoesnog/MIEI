@@ -8,7 +8,8 @@
 #include <sys/stat.h>
 #include <time.h>
 
-int main() {
+int main()
+{
 
     int bytesLidos;
     char buffer[1024];
@@ -20,7 +21,7 @@ int main() {
     // Abrir o ficheiro log.txt onde se vão escrever as mensagens vindas do Cliente
     int fileDescriptor1 = open("newFifo", O_RDONLY);
     int fileDescriptor2 = open("log.txt", O_CREAT | O_TRUNC | O_WRONLY, 0666);
- 
+
     // O que está a ser lido do STDIN passa para o Pipe com Nome
     dup2(fileDescriptor1, 0);
     close(fileDescriptor1);
@@ -31,10 +32,10 @@ int main() {
 
     // Note-se que aqui vamos lendo do STDIN dado que sabemos que já está a ser redirecionado para o Pipe com Nome
     // Escrevemos no STDOUt dado que sabemos que irá para o ficheiro log.txt
-    while( (bytesLidos = read(0, buffer, sizeof(buffer))) > 0) {
-        write(1, buffer, n);
+    while ((bytesLidos = read(0, buffer, sizeof(buffer))) > 0)
+    {
+        write(1, buffer, bytesLidos);
     }
 
     return 0;
-
 }
