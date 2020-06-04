@@ -14,6 +14,15 @@ int processosFilhos[5];
 
 void terminaProcessos()
 {
+    for (int i = 0; i <= 5; i++)
+    {
+        if (processosFilhos[i] != 0)
+        {
+            printf("\nkill pid %d\n", processosFilhos[i]);
+            kill(processosFilhos[i], SIGKILL);
+        }
+    }
+    //_exit(0);
 }
 
 int main(int argc, char *argv[])
@@ -34,19 +43,30 @@ int main(int argc, char *argv[])
         {
             if (fork() == 0)
             {
+                printf("Eu sou o %d\n", getpid());
                 execlp("grep", "grep", palavra, ficheiro, NULL);
             }
             else
-                signal(SIGKILL)
+            {
+                wait(NULL);
+                terminaProcessos();
+                return 0;
+                //printf("AAAAA\n");
+
+                //wait(NULL);
+                //signal(SIGKILL, terminaProcessos);
+            }
         }
 
-        _exit(i);
+        //_exit(i);
     }
 
+    /*
     for (i = 0; i <= 5; i++)
     {
         return (0);
     }
+    */
 
     return 0;
 }
