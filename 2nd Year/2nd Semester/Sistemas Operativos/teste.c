@@ -1,17 +1,32 @@
 #include <unistd.h>
-#include <string.h>
 #include <fcntl.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <time.h>
+#include <signal.h>
 
-int main(){
+int main()
+{
+    char *string1 = "teste1\n";
+    char *string2 = "teste2\n";
 
-    char buf[5];
-    char *contents = "abcdefghij";
-    int read_bytes = 0;
+    int fd = open("out.txt", O_CREAT | O_TRUNC | O_WRONLY, 0666);
+    dup2(fd, 1);
+    close(fd);
 
-    int fd = open("ficheiro.txt", O_CREAT, 0777);
-    
-    write(fd, contents, strlen(contents));
-    read_bytes = read(fd, buf, 5);
-    write(1, buf, read_bytes);
-
+    if (fork() == 0)
+    {
+        write(1, string1, strlen(string1));
+        _exit(0);
+    }
+    else
+    {
+        wait(NULL);
+        write(1, string2, strlen(string2));
+    }
 }
