@@ -12,21 +12,33 @@
 
 int main()
 {
-    char *string1 = "teste1\n";
-    char *string2 = "teste2\n";
+    int bytes_read;
 
-    int fd = open("out.txt", O_CREAT | O_TRUNC | O_WRONLY, 0666);
-    dup2(fd, 1);
+    int fd = open("log.txt", O_CREAT | O_WRONLY, 0666);
+    while ((bytes_read = read(0, buffer, MAX_BUFFER)) > 0)
+    {
+        pipe(p);
+        switch (fork())
+        {
+        case -1:
+            perror("fork");
+            return -1;
+        case 0:
+            dup2(p[1], 1);
+            close(p[1]);
+
+            execlp("date", "date", "+%Y-%m-%d_%H:%M", NULL);
+            _exit(-1);
+        default:
+            close(p[1]);
+            while (read(p[0], &c, 1))
+                write(fd, &c, 1);
+            close(p[0]);
+            wait(&status);
+            lseek(fd, -1, SEEK_END);
+            write(fd, &space, 1);
+            write(fd, buffer, bytes_read);
+        }
+    }
     close(fd);
-
-    if (fork() == 0)
-    {
-        write(1, string1, strlen(string1));
-        _exit(0);
-    }
-    else
-    {
-        wait(NULL);
-        write(1, string2, strlen(string2));
-    }
 }
