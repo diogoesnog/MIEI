@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<project name="Optix Test - Iterative Path Tracing" width=1024 height=1024>
+	<assets>
+		<!-- Definição dos Atributos -->
+		<!-- Adicionou-se o Glossiness e o Glossy Rays para o Metal -->
+        <attributes>
+            <attribute type="PASS" name="SHADOW_RAYS" data="INT" value="1" />
+            <attribute type="PASS" name="GAMMA" data="FLOAT" value="2.2" />
+            <attribute type="PASS" name="LIGHT_SCALE" data="FLOAT" value="1.0" />
+			<attribute type="PASS" name="GLOSSINESS" data="FLOAT" value="128" />
+			<attribute type="PASS" name="GLOSSY_RAYS" data="INT" value="1" />
+		</attributes>
+		<!-- Definição da Cena Principal/a Usar -->
+		<scenes>
+			<scene name="MainScene" >
+                <file name="C:/Users/diogo/Documents/GitHub/nau-optix7/models/cornellBox/CornellBox-Sphere2.obj" />
+				<!--file name="../../../models/sponza/crytek-sponza/sponza.nbo" /-->
+				<!--file name="../../../models/LargoCamoes/largoCamoes.nbo" /-->
+				<!--file name="../../../models/SanMiguel/san-miguel.nbo" /-->
+                <!--file name="../../../models/cornellBox/CornellBox-Original2.obj" /-->
+			</scene>
+		</scenes>
+		<viewports>
+			<viewport name="MainViewport" fixed="true">
+				<CLEAR_COLOR r="0.0" g="0.5" b="0.0" />
+			</viewport>
+		</viewports>
+		<cameras>
+			<camera name="MainCamera" >
+				<viewport name="MainViewport" />
+				<projection TYPE="PERSPECTIVE" FOV=60.0 NEAR=1.0 FAR=10000.0 />
+				<POSITION x="0.0" y="0.75" z="2.5" />
+				<VIEW x="0.0" y="0.0" z="-1.0"  />
+				<!--POSITION x="9.822" y="1.269" z="12.338" />
+				<VIEW x="0.871" y="-0.286" z="-0.40"  /-->
+				<UP x="0.0" y="1.0" z="0.0" />
+			</camera>
+		</cameras>
+		<lights>
+			<light name="Sun" >
+				<POSITION x="-0.23" y="1.58" z="-0.19" />
+			</light>
+		</lights>
+		<materialLibs>   
+			<materialLib filename="optix.mlib"/>
+		</materialLibs>
+	</assets>
+	<pipelines>
+		<pipeline name="iterativePathTracing" default="true" defaultCamera="MainCamera">
+			<pass class="rt" name="pass1">
+				<scenes>
+					<scene name="MainScene" />
+				</scenes>
+				<camera name="MainCamera" />
+				<renderTarget name="test" fromLibrary="Optix Ray Tracer Render Target" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+                <viewport name="MainViewport" />
+				<rtRayTypes>
+					<rayType name="Lambert"/>
+					<rayType name="Shadow"/>
+				</rtRayTypes>
+				<rtVertexAttributes>
+					<attribute name="position"/>
+					<attribute name="normal"/>
+					<attribute name="texCoord0"/>
+				</rtVertexAttributes>
+				<rtEntryPoint>
+					<rayGen file="optix.ptx" proc="__raygen__renderFrame"/> 
+				</rtEntryPoint>
+				<rtDefaultMaterial>
+					<rayType name="Radiance">
+						<rtProgram type="ANY_HIT" 		file="optix.ptx" proc="__anyhit__radiance"/> 
+						<rtProgram type="CLOSEST_HIT" 	file="optix.ptx" proc="__closesthit__radiance"/> 
+						<rtProgram type="MISS"			file="optix.ptx" proc="__miss__radiance"/> 
+					</rayType>
+					<rayType name="Shadow">
+						<rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__shadow"/> 
+						<rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__shadow"/> 
+						<rtProgram type="MISS"			file="optix.ptx" proc="__miss__shadow"/> 
+					</rayType>
+				</rtDefaultMaterial>
+				<rtMaterialMap>
+                    <rtMap to="rightSphere">
+                        <rayType name="Radiance">
+                            <rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__radiance_glass"/> 
+                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__radiance_glass"/> 
+                            <rtProgram type="MISS"			file="optix.ptx" proc="__miss__radiance_glass"/> 
+                        </rayType>
+                        <rayType name="Shadow">
+                            <rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__shadow_glass"/> 
+                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__shadow_glass"/> 
+                            <rtProgram type="MISS"			file="optix.ptx" proc="__miss__shadow_glass"/> 
+                        </rayType>
+                    </rtMap>
+                    <rtMap to="leftSphere">
+                        <rayType name="radiance">
+                            <rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__radiance"/> 
+                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__radiance_metal"/> 
+                            <rtProgram type="MISS"			file="optix.ptx" proc="__miss__radiance"/> 
+                        </rayType>
+                        <rayType name="Shadow">
+                            <rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__shadow"/> 
+                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__shadow"/> 
+                            <rtProgram type="MISS"			file="optix.ptx" proc="__miss__shadow"/> 
+                        </rayType>
+                    </rtMap> 
+                </rtMaterialMap>
+				<rtGlobalParams>
+                    <param name="lightPos" type="LIGHT" context="CURRENT" id=0 component="POSITION" />
+                    <param name="accumBuffer" type="BUFFER" context="Optix Ray Tracer Render Target::accumBuffer" component="ID"/>               
+                    <param name="shadowRays" type="PASS" context="CURRENT" component= "SHADOW_RAYS" />
+                    <param name="gamma" type="PASS" context="CURRENT" component= "GAMMA" />
+                    <param name="lightScale" type="PASS" context="CURRENT" component= "LIGHT_SCALE" />
+					<param name="glossiness" type="PASS" context="CURRENT" component="GLOSSINESS" />
+					<param name="glossyRays" type="PASS" context="CURRENT" component="GLOSSY_RAYS" />
+				</rtGlobalParams>
+			</pass>
+			<pass class="quad" name="pass2">
+				<viewport name="MainViewport" />
+				<texture name="offscreenrender" fromLibrary="Optix Ray Tracer Render Target" />
+			</pass>
+		</pipeline>
+	</pipelines>
+    <interface>
+        <window label="settings">
+            <var label="Squared rays per pixel" type="PASS" context="iterativePathTracing#pass1" component="RAYS_PER_PIXEL"
+                def="min=1 max=10" />
+            <var label="Max depth" type="PASS" context="iterativePathTracing#pass1" component="MAX_DEPTH"
+                def="min=1 max=10" />
+            <var label="Gamma" type="PASS" context="iterativePathTracing#pass1" component="GAMMA"
+                def="min=0.1 max=3" />
+            <var label="Light Scale" type="PASS" context="iterativePathTracing#pass1" component="LIGHT_SCALE" />
+			<var label="Glossy Rays" type="PASS" context="iterativePathTracing#pass1" component="GLOSSY_RAYS"
+                def="min=10 max=40" />
+			<var label="Glossiness" type="PASS" context="iterativePathTracing#pass1" component="GLOSSINESS"
+				def="min=0.1 max=100" />
+		</window>
+    </interface>
+</project>
