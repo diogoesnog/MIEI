@@ -2,22 +2,18 @@
 <project name="Optix Test - Iterative Path Tracing" width=1024 height=1024>
 	<assets>
 		<!-- Definição dos Atributos -->
-		<!-- Adicionou-se o Glossiness e o Glossy Rays para o Metal -->
+		<!-- Adicionou-se o Glossiness e o Glossy Rays -->
         <attributes>
             <attribute type="PASS" name="SHADOW_RAYS" data="INT" value="1" />
             <attribute type="PASS" name="GAMMA" data="FLOAT" value="2.2" />
             <attribute type="PASS" name="LIGHT_SCALE" data="FLOAT" value="1.0" />
-			<attribute type="PASS" name="GLOSSINESS" data="FLOAT" value="128" />
+			<attribute type="PASS" name="GLOSSINESS" data="FLOAT" value="100" />
 			<attribute type="PASS" name="GLOSSY_RAYS" data="INT" value="1" />
 		</attributes>
-		<!-- Definição da Cena Principal/a Usar -->
+		<!-- Definição da Cena Principal a Usar -->
 		<scenes>
 			<scene name="MainScene" >
                 <file name="C:/Users/diogo/Documents/GitHub/nau-optix7/models/cornellBox/CornellBox-Mirror.obj" />
-				<!--file name="../../../models/sponza/crytek-sponza/sponza.nbo" /-->
-				<!--file name="../../../models/LargoCamoes/largoCamoes.nbo" /-->
-				<!--file name="../../../models/SanMiguel/san-miguel.nbo" /-->
-                <!--file name="../../../models/cornellBox/CornellBox-Original2.obj" /-->
 			</scene>
 		</scenes>
 		<viewports>
@@ -31,8 +27,6 @@
 				<projection TYPE="PERSPECTIVE" FOV=60.0 NEAR=1.0 FAR=10000.0 />
 				<POSITION x="0.0" y="0.75" z="2.5" />
 				<VIEW x="0.0" y="0.0" z="-1.0"  />
-				<!--POSITION x="9.822" y="1.269" z="12.338" />
-				<VIEW x="0.871" y="-0.286" z="-0.40"  /-->
 				<UP x="0.0" y="1.0" z="0.0" />
 			</camera>
 		</cameras>
