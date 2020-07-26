@@ -27,6 +27,9 @@ struct RadiancePRD
     float3      origin;
     float3      direction;
 
+    // Float correspondente à Roulette
+    float       roulette;
+
     bool        done;
     uint32_t    seed;
     int32_t     countEmitted;
@@ -87,47 +90,94 @@ extern "C" __global__ void __closesthit__radiance()
         prd.countEmitted = false;
     }
     
-    const float z1 = rnd(seed);
-    const float z2 = rnd(seed);
-    prd.seed = seed;
+    // Roleta Russa
+    float randomValue = rnd(prd.seed);
+    float probability;
 
-    const float3 lightV1 = make_float3(0.47f, 0.0, 0.0f);
-    const float3 lightV2 = make_float3(0.0f, 0.0, 0.38f);
-    const float3 light_pos = make_float3(optixLaunchParams.global->lightPos) + lightV1 * z1 + lightV2 * z2;
-
-    // Calculate properties of Light Sample (for area based pdf)
-    const float  Ldist = length(light_pos - pos );
-    const float3 L     = normalize(light_pos - pos );
-    const float  nDl   = dot( nn, L );
-    const float3 Ln    = normalize(cross(lightV1, lightV2));
-    const float  LnDl  = -dot( Ln, L );
-
-    float weight = 0.0f;
-    if( nDl > 0.0f && LnDl > 0.0f )
+    // Caso não se acione a Roulette nas Settings do Composer
+    if (optixLaunchParams.global->roulette == 0)
     {
-        uint32_t occluded = 0u;
-        optixTrace(optixLaunchParams.traversable,
-            pos,
-            L,
-            0.001f,         // tmin
-            Ldist - 0.01f,  // tmax
-            0.0f,                    // rayTime
-            OptixVisibilityMask( 1 ),
-            OPTIX_RAY_FLAG_TERMINATE_ON_FIRST_HIT,
-            SHADOW,      // SBT offset
-            RAY_TYPE_COUNT,          // SBT stride
-            SHADOW,      // missSBTIndex
-            occluded);
-
-        if( !occluded )
-        {
-            const float att = Ldist * Ldist;
-            const float A = length(cross(lightV1, lightV2));
-            weight = nDl * LnDl * A  / att;
-        }
+        probability = 1;
+    }
+    else 
+    {
+        probability = (prd.attenuation.x + prd.attenuation.y + prd.attenuation.z)/3;
     }
 
-    prd.radiance += make_float3(5.0f, 5.0f, 5.0f) * weight * optixLaunchParams.global->lightScale;
+    if(randomValue < probability)
+    {
+        prd.roulette = probability;
+        prd.done = false;
+        prd.seed = seed;
+
+        const float z1 = rnd(seed);
+        const float z2 = rnd(seed);
+
+        const float3 lightV1 = make_float3(0.47f, 0.0, 0.0f);
+        const float3 lightV2 = make_float3(0.0f, 0.0, 0.38f);
+        const float3 light_pos = make_float3(optixLaunchParams.global->lightPos) + lightV1 * z1 + lightV2 * z2;
+
+        // Calculate Properties of Light Sample (for area based pdf)
+        const float  Ldist = length(light_pos - pos );
+        const float3 L     = normalize(light_pos - pos );
+        const float  nDl   = dot( nn, L );
+        const float3 Ln    = normalize(cross(lightV1, lightV2));
+        const float  LnDl  = -dot( Ln, L );
+
+        float weight = 0.0f;
+        if( nDl > 0.0f && LnDl > 0.0f )
+        {
+            uint32_t occluded = 0u;
+            optixTrace(optixLaunchParams.traversable,
+                pos,
+                L,
+                0.001f,         // tmin
+                Ldist - 0.01f,  // tmax
+                0.0f,                    // rayTime
+                OptixVisibilityMask( 1 ),
+                OPTIX_RAY_FLAG_TERMINATE_ON_FIRST_HIT,
+                SHADOW,      // SBT offset
+                RAY_TYPE_COUNT,          // SBT stride
+                SHADOW,      // missSBTIndex
+                occluded);
+
+            if( !occluded )
+            {
+                const float att = Ldist * Ldist;
+                const float A = length(cross(lightV1, lightV2));
+                weight = nDl * LnDl * A  / att;
+            }
+        }
+        
+        float3 ldir = make_float3(0.600,-0.400,0.700);
+        float i = dot(nn, normalize(-ldir));
+        
+        // Para renderizar as Texturas no caso de Cenários que as possuam
+        if (sbtData.hasTexture && sbtData.vertexD.texCoord0) {
+            
+            // Compute Pixel Texture Coordinate
+            const float4 tc
+                = (1.f-u-v) * sbtData.vertexD.texCoord0[index.x]
+                +         u * sbtData.vertexD.texCoord0[index.y]
+                +         v * sbtData.vertexD.texCoord0[index.z];
+            // Fetch Texture Value
+            float4 fromTexture = tex2D<float4>(sbtData.texture,tc.x,tc.y);
+            
+            if (i > 0.8) {
+                prd.radiance = make_float3(fromTexture) * i;
+            } else {
+                prd.radiance = make_float3(fromTexture) * 0.4; 
+            }
+        }
+        else
+        {
+            prd.radiance += make_float3(5.0f, 5.0f, 5.0f) * weight * optixLaunchParams.global->lightScale/probability;
+        }
+    }
+    else
+    {
+        prd.done= true;
+    }
 }
 
 // Esta função não sofre alterações
@@ -143,7 +193,7 @@ extern "C" __global__ void __miss__radiance()
     RadiancePRD &prd = *(RadiancePRD*)getPRD<RadiancePRD>();
     
     // Cor de Fundo representada pelo Float3
-    prd.radiance = make_float3(1.0f, 1.0f, 1.0f);
+    prd.radiance = make_float3(0.0f, 0.0f, 0.0f);
     prd.done = true;
 }
 
@@ -156,28 +206,20 @@ extern "C" __global__ void __closesthit__radiance__glass()
     
     RadiancePRD &prd = *(RadiancePRD*)getPRD<RadiancePRD>();
 
-    // retrieve primitive id and indexes
+    // Recuperar Id Primitivo e Índices
     const int primID = optixGetPrimitiveIndex();
     const uint3 index = sbtData.index[primID];
 
-    // get barycentric coordinates
+    // Obter Barycentric Coordinates
     const float u = optixGetTriangleBarycentrics().x;
     const float v = optixGetTriangleBarycentrics().y;
 
-    // compute normal
+    // Calcular o Vetor Normal à Superfície
     const float4 n
         = (1.f-u-v) * sbtData.vertexD.normal[index.x]
         +         u * sbtData.vertexD.normal[index.y]
         +         v * sbtData.vertexD.normal[index.z];
     
-    float3 normal = normalize(make_float3(n));
-    const float3 normRayDir = optixGetWorldRayDirection();
-
-    // intersection position
-    const float3 &rayDir = optixGetWorldRayDirection();
-    const float3 pos = optixGetWorldRayOrigin() + optixGetRayTmax() * rayDir;
-    float3 reflectDir = reflect(normRayDir, normal);
-
     if(prd.countEmitted && length(sbtData.emission) != 0)
     {
         prd.emitted = sbtData.emission;
@@ -186,154 +228,54 @@ extern "C" __global__ void __closesthit__radiance__glass()
     else
     {
         prd.emitted = make_float3(0.0f);
-    }
+    }   
 
-    uint32_t seed = prd.seed;
+    // Tratar da Parte da Reflexão
 
-    const float z1 = rnd(seed);
-    const float z2 = rnd(seed);
-    prd.seed = seed;
-    const float z = rnd(prd.seed);
+    // 1. Normalizar o Vetor Normal
+    // O Vetor Normalizado é dado com a mesma direção
+    const float3 normalSurface = normalize(make_float3(n));
 
-    const float3 lightV1 = make_float3(0.47f, 0.0, 0.0f);
-    const float3 lightV2 = make_float3(0.0f, 0.0, 0.38f);
-    const float3 light_pos = make_float3(optixLaunchParams.global->lightPos) + lightV1 * z1 + lightV2 * z2;
+    // 2. Calcular a Direção do Raio
+    const float3 rayDirection = optixGetWorldRayDirection();
+    
+    // 3. Calcular a Posição
+    const float3 position = optixGetWorldRayOrigin() + rayDirection * optixGetRayTmax();
+    
+    // 4. Aplicar a Reflexão com a Direção do Raio e a Normal à Superfície
+    float3 reflection = reflect(rayDirection, normalSurface);
 
-    // calculate properties of light sample (for area based pdf)
-    const float Ldist = length(light_pos - pos);
-    const float3 L = normalize(light_pos - pos);
-    const float nDl = dot(normal,L);
-    const float3 Ln = normalize(cross(lightV1, lightV2));
-    const float LnDl = -dot(Ln, L);
+    // Tratar da Parte da Refração
+    // Refração vem sempre acompanhada da Reflexão
+    // Parte da Luz que incide é Refletida e outra Refratada
 
-    // nova direcao do raio
-    float3 direcao;
+    float3 refraction;
 
-    // entering glass
-    float dotP;
-    if(dot(normRayDir, normal) < 0)
+    // Produto Escalar do Vetor da Direção do Raio e do Vetor da Normal à Superfície < 0
+    if(dot(rayDirection, normalSurface) < 0)
     {
-        dotP = dot(normRayDir, -normal);
-
-        direcao = refract(normRayDir, normal, 0.66);
-        prd.direction = direcao;
-        prd.attenuation *= sbtData.diffuse;
-        prd.countEmitted = true;
-        prd.origin = pos;
-        prd.done = false;
-        prd.seed = seed; 
+        refraction = refract(rayDirection, normalSurface, 0.60);
     }
-    // exiting glass
+    // Produto Escalar do Vetor da Direção do Raio e do Vetor da Normal > 0
     else
     {
-        dotP = 0;
-        
-        direcao = refract(normRayDir, -normal, 1.5);
-        prd.direction = direcao;
-        prd.attenuation *= sbtData.diffuse;
-        prd.countEmitted = true;
-        prd.origin = pos;
-        prd.done = false;
-        prd.seed = seed; 
+        refraction = refract(rayDirection, -normalSurface, 1.5);
     }
 
-    RadiancePRD refractPRD;
-    refractPRD.radiance = make_float3(0.0f);
-    refractPRD.seed = prd.seed;
-    uint32_t u0, u1;
-    packPointer(&refractPRD, u0, u1);
+    prd.direction = refraction;
+    prd.attenuation *= sbtData.diffuse;
+    prd.countEmitted = true;
+    prd.origin = position;
+    prd.done = false;
 
-    float weight = 0.0f;
-    if(nDl > 0.0f && LnDl > 0.0f)
+    // Seed é a semente que se usa para gerar o número através da função random(rnd)
+    if(rnd(prd.seed) < rnd(prd.seed) * M_PIf)
     {
-        uint32_t occluded = 0u;
-        if(length(direcao) > 0)
-        {
-            optixTrace(optixLaunchParams.traversable,
-                pos,
-                direcao,
-                0.00001f,
-                Ldist - 0.01f,
-                0.0f,
-                OptixVisibilityMask(1),
-                OPTIX_RAY_FLAG_NONE,
-                RAIDANCE,
-                RAY_TYPE_COUNT,
-                RAIDANCE,
-                u0,u1);
-        }
-        RadiancePRD reflectPRD;
-        reflectPRD.radiance = make_float3(0.0f);
-        reflectPRD.seed = prd.seed;
-
-        if(dotP > 0)
-        {
-            packPointer(&reflectPRD, u0, u1);
-
-            //Achar o número de raios brilhantes, e o grau de brilho
-            const float glossiness = optixLaunchParams.global->glossiness;
-            const int glossyRays = optixLaunchParams.global->glossyRays;
-            float3 glossy = make_float3(0.0f);
-            float3 direcaoL;
-            float3 reflectDir = reflect(optixGetWorldRayDirection(), normal);
-            
-            //Lançar os raios
-            for (int i = 0; i < glossyRays; ++i) {
-                reflectPRD.radiance = make_float3(1.0f);
-                do{
-                    const float z1 = rnd(seed);
-                    const float z2 = rnd(seed);
-                    prd.seed = seed;
-                
-                    cosine_power_sample_hemisphere( z1, z2, direcaoL, glossiness );
-                    Onb onb( reflectDir );
-                    onb.inverse_transform( direcaoL );
-                    prd.direction = direcaoL;
-                    prd.origin    = pos;
-                    prd.attenuation *= sbtData.diffuse ;
-                // prd.countEmitted = false;
-                } while (dot(direcaoL, normal) < 0.001);
-            
-                glossy += reflectPRD.radiance;
-            
-            }
-
-            optixTrace(optixLaunchParams.traversable,
-                pos,
-                L,
-                0.00001f,
-                Ldist - 0.01f,
-                0.0f,
-                OptixVisibilityMask(1),
-                OPTIX_RAY_FLAG_NONE,
-                RAIDANCE,
-                RAY_TYPE_COUNT,
-                RAIDANCE,
-                u0,u1);
-            
-            float r0 = (15.0f - 1.0f)/(15.0f + 1.0f);
-            r0 = r0*r0 + (1-r0*r0) * pow(1-dotP, 5);
-            prd.radiance += make_float3(5.0f, 5.0f, 5.0f)*(weight)*optixLaunchParams.global->lightScale * (refractPRD.radiance * (1-r0) + r0 * reflectPRD.radiance);
-        }
-        else
-        {
-            prd.radiance += make_float3(5.0f, 5.0f, 5.0f)*(weight)*optixLaunchParams.global->lightScale * refractPRD.radiance;
-        }
-        if(!occluded)
-        {
-            const float att = Ldist * Ldist;
-            const float A = length(cross(lightV1,lightV2));
-            weight = nDl * LnDl * A / att;
-        }
-    }
-
-    if(rnd(prd.seed) > 0.5)
-    {
-        prd.direction = direcao;
+        prd.direction = refraction;
     }
     else
     {
-        prd.direction = reflectDir;
+        prd.direction = reflection;
     }
 
 }
@@ -342,21 +284,20 @@ extern "C" __global__ void __closesthit__radiance__glass()
 
 extern "C" __global__ void __closesthit__radiance__metal()
 {
-
     const TriangleMeshSBTData &sbtData
       = *(const TriangleMeshSBTData*)optixGetSbtDataPointer();  
 
     RadiancePRD &prd = *(RadiancePRD *)getPRD<RadiancePRD>();
 
     // Recuperar Id Primitivo e Índices
-    const int   primID = optixGetPrimitiveIndex();
-    const uint3 index  = sbtData.index[primID];
+    const int primID = optixGetPrimitiveIndex();
+    const uint3 index = sbtData.index[primID];
 
     // Obter Barycentric Coordinates
     const float u = optixGetTriangleBarycentrics().x;
     const float v = optixGetTriangleBarycentrics().y;
 
-    // Calcular o Vetor Normal
+    // Calcular o Vetor Normal à Superfície
     const float4 n
         = (1.f-u-v) * sbtData.vertexD.normal[index.x]
         +         u * sbtData.vertexD.normal[index.y]
@@ -364,7 +305,7 @@ extern "C" __global__ void __closesthit__radiance__metal()
 
     // Normalizar o Vetor Normal
     // O Vetor Normalizado é dado com a mesma direção
-    const float3 normal = normalize(make_float3(n));
+    const float3 normalSurface = normalize(make_float3(n));
 
     // Posição da Interceção
     const float3 &rayDir =  optixGetWorldRayDirection();
@@ -380,13 +321,9 @@ extern "C" __global__ void __closesthit__radiance__metal()
         prd.emitted = make_float3(0.0f);
     }
 
-    RadiancePRD afterPRD;
-    afterPRD.radiance = make_float3(2.0f);
-    afterPRD.seed = prd.seed;
-
-    uint32_t u0, u1;
-
     // Pack Pointer essencial para o resultado
+    RadiancePRD afterPRD;
+    uint32_t u0, u1;
     packPointer(&afterPRD, u0, u1);
     
     // Parte Essencial ao Path Tracing
@@ -395,48 +332,65 @@ extern "C" __global__ void __closesthit__radiance__metal()
     const float glossiness = optixLaunchParams.global->glossiness;
     const int glossyRays = optixLaunchParams.global->glossyRays;
     
-    float3 glossy = make_float3(0.0f);
-    float3 direcaoL;
-    float3 reflectDir = reflect(optixGetWorldRayDirection(), normal);
-    
-    //Lançar os raios
-    for (int i = 0; i < glossyRays; ++i) {
-        afterPRD.radiance = make_float3(1.0f);
+    int numberGlossyRays = 0;
+
+    float3 directionLightIncident = make_float3(0.0f);
+    float3 rayDirectionReflected = reflect(optixGetWorldRayDirection(), normalSurface);
+
+    float3 glossyMetal = make_float3(0.0f);
+
+    // Lançar o Número de Raios Brilhantes escolhidos aquando da Execução
+    while(numberGlossyRays < glossyRays) {
+
         do{
             const float z1 = rnd(prd.seed);
             const float z2 = rnd(prd.seed);
+            
+            // Produz o Efeito Glossy ao Metal
+            // Hemisphere Sampling consiste em disparar raios em direção ao Hemisférico
+            // O w_in no exemplo base passa a ser a Direção da Luz Incidente
+            cosine_power_sample_hemisphere(z1, z2, directionLightIncident, glossiness);
+            
+            Onb onb(rayDirectionReflected);
+            onb.inverse_transform(directionLightIncident);
+            
+            // Atualização dos Valores do RadiancePRD
+            prd.direction = directionLightIncident;
+            prd.origin = pos;
+            prd.attenuation *= sbtData.diffuse;
+
+            // Para se poder emitir a luz na Bola
+            prd.countEmitted = true;
+        } while (dot(directionLightIncident, normalSurface) < 0.001);
+    
+        // Dá o efeito Glossy ao Metal
+        // Quanto maior este valor, maior a "bola" de luz que cai sobre o cimo da Superfície
+        glossyMetal = glossyMetal + make_float3(0.5f);
         
-            cosine_power_sample_hemisphere( z1, z2, direcaoL, glossiness );
-            Onb onb( reflectDir );
-            onb.inverse_transform( direcaoL );
-            prd.direction = direcaoL;
-            prd.origin    = pos;
-            prd.attenuation *= sbtData.diffuse ;
-           // prd.countEmitted = false;
-        } while (dot(direcaoL, normal) < 0.001);
-    
-        glossy += afterPRD.radiance;
-    
+        ++numberGlossyRays;
     }
+
+    // O restanto do Código Base
+    
+    const float z1 = rnd(prd.seed);
+    const float z2 = rnd(prd.seed);
 
     const float3 lightV1 = make_float3(0.47f, 0.0, 0.0f);
     const float3 lightV2 = make_float3(0.0f, 0.0, 0.38f);
-
-    const float z1 = rnd(prd.seed);
-    const float z2 = rnd(prd.seed);
     const float3 light_pos = make_float3(optixLaunchParams.global->lightPos) + lightV1 * z1 + lightV2 * z2;
 
-    // Calculate properties of light sample (for area based pdf)
-    const float  Ldist = length(light_pos - pos );
-    const float3 L     = normalize(light_pos - pos );
-    const float  nDl   = dot( normal, L );
+    // Calculate Properties of Light Sample
+    const float  Ldist = length(light_pos - pos);
+    const float3 L     = normalize(light_pos - pos);
+    const float  nDl   = dot(normalSurface, L);
     const float3 Ln    = normalize(cross(lightV1, lightV2));
-    const float  LnDl  = -dot( Ln, L );
+    const float  LnDl  = -dot(Ln, L);
 
     float weight = 0.0f;
+
     if( nDl > 0.0f && LnDl > 0.0f )
     {
-    uint32_t occluded = 0u;
+        uint32_t occluded = 0u;
         optixTrace(optixLaunchParams.traversable,
             pos,
             L,
@@ -450,15 +404,19 @@ extern "C" __global__ void __closesthit__radiance__metal()
             RAIDANCE,      // missSBTIndex
             u0,u1);
 
-    if( !occluded )
+        if(!occluded)
         {
             const float att = Ldist * Ldist;
             const float A = length(cross(lightV1, lightV2));
-        weight = nDl * LnDl * A  / att;
+            weight = nDl * LnDl * A  / att;
         }
     }
 
-    prd.radiance += make_float3(5.0f, 5.0f, 5.0f)*weight* optixLaunchParams.global->lightScale * (glossy *make_float3(0.8f, 0.8f, 0.8f) / glossyRays);
+    prd.radiance
+        += make_float3(5.0f, 5.0f, 5.0f)
+        * weight
+        * optixLaunchParams.global->lightScale 
+        * (glossyMetal/glossyRays);
 }
 
 // ############################################################
@@ -491,7 +449,7 @@ extern "C" __global__ void __raygen__renderFrame()
     const auto &camera = optixLaunchParams.camera;  
 
     const int &maxDepth = optixLaunchParams.frame.maxDepth;
- 
+
     float squaredRaysPerPixel = float(optixLaunchParams.frame.raysPerPixel);
     float2 delta = make_float2(1.0f/squaredRaysPerPixel, 1.0f/squaredRaysPerPixel);
 

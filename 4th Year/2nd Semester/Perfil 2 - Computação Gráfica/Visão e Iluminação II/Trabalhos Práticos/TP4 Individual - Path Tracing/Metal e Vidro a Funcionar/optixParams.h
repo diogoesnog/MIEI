@@ -12,6 +12,9 @@ struct GlobalParams
     // Parâmetros usados para o Metal
     float                       glossiness; // Grau do Brilho em si
     int                         glossyRays; // Quantidade de Raios Brilhantes
+
+    // Parâmetro usado para definir(ou não) o uso da Roulette
+    int                         roulette;
 };
 
 

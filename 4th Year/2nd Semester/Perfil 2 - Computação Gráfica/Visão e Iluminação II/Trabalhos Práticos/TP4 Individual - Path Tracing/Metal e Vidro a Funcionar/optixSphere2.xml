@@ -2,13 +2,14 @@
 <project name="Optix Test - Iterative Path Tracing" width=1024 height=1024>
 	<assets>
 		<!-- Definição dos Atributos -->
-		<!-- Adicionou-se o Glossiness e o Glossy Rays -->
+		<!-- Adicionou-se o Glossiness, Glossy Rays e Roullete -->
         <attributes>
             <attribute type="PASS" name="SHADOW_RAYS" data="INT" value="1" />
             <attribute type="PASS" name="GAMMA" data="FLOAT" value="2.2" />
             <attribute type="PASS" name="LIGHT_SCALE" data="FLOAT" value="1.0" />
 			<attribute type="PASS" name="GLOSSINESS" data="FLOAT" value="100" />
 			<attribute type="PASS" name="GLOSSY_RAYS" data="INT" value="1" />
+			<attribute type="PASS" name="ROULETTE" data="INT" value="0" />
 		</attributes>
 		<!-- Definição da Cena Principal a Usar -->
 		<scenes>
@@ -109,6 +110,7 @@
                     <param name="lightScale" type="PASS" context="CURRENT" component= "LIGHT_SCALE" />
 					<param name="glossiness" type="PASS" context="CURRENT" component="GLOSSINESS" />
 					<param name="glossyRays" type="PASS" context="CURRENT" component="GLOSSY_RAYS" />
+					<param name="roulette" type="PASS" context="CURRENT" component="ROULETTE" />
 				</rtGlobalParams>
 			</pass>
 			<pass class="quad" name="pass2">
@@ -130,6 +132,8 @@
                 def="min=10 max=40" />
 			<var label="Glossiness" type="PASS" context="iterativePathTracing#pass1" component="GLOSSINESS"
 				def="min=0.1 max=100" />
+			<var label="Roulette" type="PASS" context="iterativePathTracing#pass1" component="ROULETTE"
+				def="min=0 max=1" />
 		</window>
     </interface>
 </project>
