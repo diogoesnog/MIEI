@@ -38,7 +38,8 @@ struct RadiancePRD
 // ############################################################
 // Radiance Rays
 
-// Esta função não sofre alterações
+// Acrescenta-se a ideia de Roleta Russa
+// Cria-se uma verificação para as possíveis Texturas dos cenários em Teste
 extern "C" __global__ void __closesthit__radiance() 
 {
     const TriangleMeshSBTData &sbtData
@@ -106,10 +107,6 @@ extern "C" __global__ void __closesthit__radiance()
 
     if(randomValue < probability)
     {
-        prd.roulette = probability;
-        prd.done = false;
-        prd.seed = seed;
-
         const float z1 = rnd(seed);
         const float z2 = rnd(seed);
 
@@ -186,8 +183,6 @@ extern "C" __global__ void __anyhit__radiance()
 }
 
 // Miss usada para definir a Cor de Fundo
-// Cor mudada de float3(0,0,0) para float3(1,1,1)
-// Fundo branco. Nota-se no Reflexo do Objecto
 extern "C" __global__ void __miss__radiance()
 {
     RadiancePRD &prd = *(RadiancePRD*)getPRD<RadiancePRD>();
@@ -254,15 +249,14 @@ extern "C" __global__ void __closesthit__radiance__glass()
     // Produto Escalar do Vetor da Direção do Raio e do Vetor da Normal à Superfície < 0
     if(dot(rayDirection, normalSurface) < 0)
     {
-        refraction = refract(rayDirection, normalSurface, 0.60);
+        refraction = refract(rayDirection, normalSurface, 0.6);
     }
     // Produto Escalar do Vetor da Direção do Raio e do Vetor da Normal > 0
     else
     {
-        refraction = refract(rayDirection, -normalSurface, 1.5);
+        refraction = refract(rayDirection, -normalSurface, 1.50);
     }
-
-    prd.direction = refraction;
+    
     prd.attenuation *= sbtData.diffuse;
     prd.countEmitted = true;
     prd.origin = position;
@@ -271,13 +265,12 @@ extern "C" __global__ void __closesthit__radiance__glass()
     // Seed é a semente que se usa para gerar o número através da função random(rnd)
     if(rnd(prd.seed) < rnd(prd.seed) * M_PIf)
     {
-        prd.direction = refraction;
+        prd.direction = rnd(prd.seed) * M_PIf * refraction;
     }
     else
     {
         prd.direction = reflection;
     }
-
 }
 
 //Funções Usadas para o Metal
@@ -303,13 +296,20 @@ extern "C" __global__ void __closesthit__radiance__metal()
         +         u * sbtData.vertexD.normal[index.y]
         +         v * sbtData.vertexD.normal[index.z];
 
-    // Normalizar o Vetor Normal
+    // Tratar da Parte da Reflexão
+
+    // 1. Normalizar o Vetor Normal
     // O Vetor Normalizado é dado com a mesma direção
     const float3 normalSurface = normalize(make_float3(n));
 
-    // Posição da Interceção
-    const float3 &rayDir =  optixGetWorldRayDirection();
-    const float3 pos = optixGetWorldRayOrigin() + optixGetRayTmax() * rayDir;
+    // 2. Calcular a Direção do Raio
+    const float3 &rayDirection = optixGetWorldRayDirection();
+    
+    // 3. Calcular a Posição
+    const float3 position = optixGetWorldRayOrigin() + rayDirection * optixGetRayTmax();
+    
+    // 4. Aplicar a Reflexão com a Direção do Raio e a Normal à Superfície
+    float3 reflection = reflect(rayDirection, normalSurface);
 
     if (prd.countEmitted && length(sbtData.emission) != 0)
     {
@@ -335,8 +335,6 @@ extern "C" __global__ void __closesthit__radiance__metal()
     int numberGlossyRays = 0;
 
     float3 directionLightIncident = make_float3(0.0f);
-    float3 rayDirectionReflected = reflect(optixGetWorldRayDirection(), normalSurface);
-
     float3 glossyMetal = make_float3(0.0f);
 
     // Lançar o Número de Raios Brilhantes escolhidos aquando da Execução
@@ -351,17 +349,17 @@ extern "C" __global__ void __closesthit__radiance__metal()
             // O w_in no exemplo base passa a ser a Direção da Luz Incidente
             cosine_power_sample_hemisphere(z1, z2, directionLightIncident, glossiness);
             
-            Onb onb(rayDirectionReflected);
+            Onb onb(reflection);
             onb.inverse_transform(directionLightIncident);
             
             // Atualização dos Valores do RadiancePRD
             prd.direction = directionLightIncident;
-            prd.origin = pos;
+            prd.origin = position;
             prd.attenuation *= sbtData.diffuse;
 
-            // Para se poder emitir a luz na Bola
+            // Para se poder criar a luz que é refratada da Bola
             prd.countEmitted = true;
-        } while (dot(directionLightIncident, normalSurface) < 0.001);
+        } while (dot(directionLightIncident, normalSurface) < 0);
     
         // Dá o efeito Glossy ao Metal
         // Quanto maior este valor, maior a "bola" de luz que cai sobre o cimo da Superfície
@@ -380,8 +378,8 @@ extern "C" __global__ void __closesthit__radiance__metal()
     const float3 light_pos = make_float3(optixLaunchParams.global->lightPos) + lightV1 * z1 + lightV2 * z2;
 
     // Calculate Properties of Light Sample
-    const float  Ldist = length(light_pos - pos);
-    const float3 L     = normalize(light_pos - pos);
+    const float  Ldist = length(light_pos - position);
+    const float3 L     = normalize(light_pos - position);
     const float  nDl   = dot(normalSurface, L);
     const float3 Ln    = normalize(cross(lightV1, lightV2));
     const float  LnDl  = -dot(Ln, L);
@@ -392,7 +390,7 @@ extern "C" __global__ void __closesthit__radiance__metal()
     {
         uint32_t occluded = 0u;
         optixTrace(optixLaunchParams.traversable,
-            pos,
+            position,
             L,
             0.001f,         // tmin
             Ldist - 0.01f,  // tmax

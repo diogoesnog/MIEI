@@ -14,7 +14,7 @@
 		<!-- Definição da Cena Principal a Usar -->
 		<scenes>
 			<scene name="MainScene" >
-                <file name="C:/Users/diogo/Documents/GitHub/nau-optix7/models/cornellBox/CornellBox-Sphere2.obj" />
+                <file name="C:/Users/diogo/Documents/GitHub/nau-optix7/models/cornellBox/CornellBox-Original.obj" />
 			</scene>
 		</scenes>
 		<viewports>
@@ -92,7 +92,7 @@
                     <rtMap to="shortBox">
                         <rayType name="Radiance">
                             <rtProgram type="ANY_HIT"		file="optix.ptx" proc="__anyhit__radiance"/> 
-                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__radiance__metal"/> 
+                            <rtProgram type="CLOSEST_HIT"	file="optix.ptx" proc="__closesthit__radiance__glass"/> 
                             <rtProgram type="MISS"			file="optix.ptx" proc="__miss__radiance"/> 
                         </rayType>
                         <rayType name="Shadow">
