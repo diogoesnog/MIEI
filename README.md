@@ -41,7 +41,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 #### :one: **First Year** 
 
-- [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. 
+- [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. :star:
   <br>
   **Set of all Slides and Practical Exercises.**
 
@@ -157,7 +157,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and solved Practical Exercises.**
 
-- [**Databases**]() Introduction of formal tools for a rigorous specification, verification and implementation of relational, deductive and object-oriented databases.
+- [**Databases**]() Introduction of formal tools for a rigorous specification, verification and implementation of relational, deductive and object-oriented databases. :star:
   <br>
   **Creation of a Database for a Cinema Ticket Office using MySQL Workbench.**
 
@@ -191,7 +191,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Development of the Home Pet app! which allows you to order canine/feline services at home.**
 
-- [**Languages Processing**]() Introduction of the notion of formal language and concepts of regular expression (RE), automaton and their application to the development of Language Processors (LP's).
+- [**Languages Processing**]() Introduction of the notion of formal language and concepts of regular expression (RE), automaton and their application to the development of Language Processors (LP's). :star:
   <br>
   **Set of all Practical Exercises.**
 
@@ -228,7 +228,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **Complementary Course Units**
   
-  - [**Web Application Development**]() Knowledge about the Node.js cross-platform, through the creation of websites. Use of Database for the construction of the Data API and subsequent connection with the Interface.
+  - [**Web Application Development**]() Knowledge about the Node.js cross-platform, through the creation of websites. Use of Database for the construction of the Data API and subsequent connection with the Interface. :star:
     <br>
     **Set of all Practical Exercises.**
     <br>
