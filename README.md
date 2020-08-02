@@ -35,13 +35,17 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 All UCs are organized in alphabetical. Each Semester corresponding to the **1st Cycle Degree** is composed of 6 UCs each.
 
+**Favorite Course Units** Marked with :star:
+<br>
+**Disliked Course Units** Marked with :boom:
+
 <br>
 
 ### **1st Cycle Degree - Bachelor**
 
 #### :one: **First Year** 
 
-- [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. :star:
+- :star: [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus.
   <br>
   **Set of all Slides and Practical Exercises.**
 
@@ -94,7 +98,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 #### :two: **Second Year** 
 
-- [**Algorithms and Complexity**]() The main focus is the analysis of algorithms, from two perspectives: correction and efficiency.
+- :boom: [**Algorithms and Complexity**]() The main focus is the analysis of algorithms, from two perspectives: correction and efficiency.
   <br>
   **Set of all solved Practical Exercises.**
 
@@ -128,7 +132,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Puzzle Video Game like Sokoban developed in C and Java Language.**
    
-- [**Object Oriented Programming**]() Introduction the Object Oriented Paradigm, its formal basis and its main characteristics.
+- :star: [**Object Oriented Programming**]() Introduction the Object Oriented Paradigm, its formal basis and its main characteristics.
   <br>
   **Set of all solved Practical Exercises.**
   <br>
@@ -138,7 +142,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and Practical Exercises.**
 
-- [**Program Calculation**]() Learning competencies in the form of programming laws directly applicable to functional programming.
+- :boom: [**Program Calculation**]() Learning competencies in the form of programming laws directly applicable to functional programming.
   <br>
   **Set of all Slides and Practical Exercises.**
   
@@ -157,7 +161,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and solved Practical Exercises.**
 
-- [**Databases**]() Introduction of formal tools for a rigorous specification, verification and implementation of relational, deductive and object-oriented databases. :star:
+- :star: [**Databases**]() Introduction of formal tools for a rigorous specification, verification and implementation of relational, deductive and object-oriented databases.
   <br>
   **Creation of a Database for a Cinema Ticket Office using MySQL Workbench.**
 
@@ -191,7 +195,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Development of the Home Pet app! which allows you to order canine/feline services at home.**
 
-- [**Languages Processing**]() Introduction of the notion of formal language and concepts of regular expression (RE), automaton and their application to the development of Language Processors (LP's). :star:
+- :star: [**Languages Processing**]() Introduction of the notion of formal language and concepts of regular expression (RE), automaton and their application to the development of Language Processors (LP's).
   <br>
   **Set of all Practical Exercises.**
 
@@ -228,7 +232,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **Complementary Course Units**
   
-  - [**Web Application Development**]() Knowledge about the Node.js cross-platform, through the creation of websites. Use of Database for the construction of the Data API and subsequent connection with the Interface. :star:
+  - :star: [**Web Application Development**]() Knowledge about the Node.js cross-platform, through the creation of websites. Use of Database for the construction of the Data API and subsequent connection with the Interface.
     <br>
     **Set of all Practical Exercises.**
     <br>
