@@ -244,27 +244,29 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
                                 </li>
                                 <li>
                                 <a href="https://github.com/diogoesnog/MIEI/tree/master/4th%20Year/1st%20Semester/Perfil%201%20-%20Criptografia%20e%20Seguran%C3%A7a%20da%20Informa%C3%A7%C3%A3o/Tecnologia%20Criptogr%C3%A1fica"><b>Cryptographic Technology</b></a>
-                                Knowledge of the Symmetric and Asymmetric Cryptography using cryptographic libraries the coding of secure systems.
+                                Knowledge of the Symmetric and Asymmetric Cryptography using cryptographic libraries for encrypting secure systems.
                                 <br>
                                 <b>Set of all Practical Assignments.</b>
                                 </li>
                             </ul>
                         </li>
                         </p>
-                        <li><b>Complementar CU 1</b> - <a href="https://github.com/diogoesnog/MIEI/tree/master/4th%20Year/1st%20Semester/UC%201%20-%20Desenvolvimento%20Aplica%C3%A7%C3%B5es%20WEB"><b>Web Application Development</b></a></li>
+                        <li><b>Complementar CU 1</b> - <a href="https://github.com/diogoesnog/MIEI/tree/master/4th%20Year/1st%20Semester/UC%201%20-%20Desenvolvimento%20Aplica%C3%A7%C3%B5es%20WEB"><b>Web Application Development</b></a>
                         Knowledge about the Node.js cross-platform, through the creation of websites. Use of Database for the construction of the Data API and subsequent connection with the Interface.
                         <br>
                         <b>Set of all Practical Exercises.</b>
                         <br>
                         <b>Development of simplified version of Web App Facebook (ISN) developed in JavaScript using Node.js technology.</b>
                         </p>
-                        <li><b>Complementar CU 2</b> - <a href="https://github.com/diogoesnog/MIEI/tree/master/4th%20Year/1st%20Semester/UC%202%20-%20Bases%20de%20Dados%20NoSQL"><b>NoSQL Databases</b></a></li>
+						</li>
+                        <li><b>Complementar CU 2</b> - <a href="https://github.com/diogoesnog/MIEI/tree/master/4th%20Year/1st%20Semester/UC%202%20-%20Bases%20de%20Dados%20NoSQL"><b>NoSQL Databases</b></a>
                         In-depth knowledge of different types of Non-Relational Databases. Small study about the Oracle Database.
                         <br>
                         <b>Set of all solved Practical Exercises.</b>
                         <br>
                         <b>Analysis, planning and implementation of a Relational DBS(Oracle) and two Non-Relational (MongoDB and Neo4J), based on the famous SAKILA model.</b>
                         </p>
+						</li>
                     </ul>
                 </li>
 		<p>
@@ -274,10 +276,17 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
                         <li><b>Profile 1</b> - Cryptography and Information Security
                             <ul>
                                 <li>
-                                <a href=""><b>Cryptographic Structures</b></a> 
+                                <a href=""><b>Cryptographic Structures</b></a>
+                                Descrição.
+                                <br>
+                                <b>Set of all Practical Assignments.</b>
+                                </li>
                                 </li>
                                 <li>
-                                <a href=""><b>Safety Engineering</b></a> 
+                                <a href=""><b>Safety Engineering</b></a>
+                                Descrição.
+                                <br>
+                                <b>Set of all Practical Assignments.</b>
                                 </li>
                             </ul>
                         </li>
@@ -286,15 +295,24 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
                             <ul>
                                 <li>
                                 <a href=""><b>Lighting and Visualisation II</b></a>
+                                Descrição.
+                                <br>
+                                <b>Set of all Practical Assignments.</b>
                                 </li>
                                 <li>
                                 <a href=""><b>Technologies and Applications</b></a>
+                                Descrição.
+                                <br>
+                                <b>Set of all Practical Assignments.</b>
                                 </li>
                             </ul>
                         </li>
                         </p>
                         <li>
                         <a href=""><b>Informatics Engineering Laboratory</b></a>
+							Descrição.
+							<br>
+							<b>Set of all Practical Assignments.</b>
                         </li>
                     </ul>
                 </li>
