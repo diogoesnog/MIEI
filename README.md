@@ -28,8 +28,6 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 ### **1st Cycle Degree - Bachelor**
 
-<br>
-
 #### :one: **First Year** 
 
 - [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. 
@@ -81,8 +79,6 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Topics in Modern Physics**]() Overview of modern physics to Computer Science students.
   <br>
   **Set of all Slides.**
-
-<br>
 
 #### :two: **Second Year** 
 
@@ -137,8 +133,6 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Leadership and Entrepreneurship**]() Knowledge about towards strengthening the innovative and proactive attitudes and to sensitize students to entrepreneurial initiatives as a means of creating collective wealth.
   <br>
   **Business Points of the FOCUS project.**
-  
-<br>
 
 #### :three: **Third Year** 
 
@@ -196,11 +190,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and solved Practical Exercises.**
 
-<br>
-
 ### 2st Cycle Degree - Master's
-
-<br>
 
 #### :four: **Fourth Year** 
 
