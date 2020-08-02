@@ -7,7 +7,7 @@
 
 Repository reserved for the contents of Informatics Engineering (Integrated Master's) at University of Minho started in the year 2015. 
 
-**Bachelor + Master in Cryptography and Information Security and Computer Graphics.**  
+**Bachelor + Master in Cryptography and Information Security and Computer Graphics**  
 
 **Main Scientific Area:** Computer Engineering
 <br>
@@ -34,10 +34,9 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 ## Study Plan
 
 All UCs are organized in alphabetical. Each Semester corresponding to the **1st Cycle Degree** is composed of 6 UCs each.
-
+<br>
 
 ### **1st Cycle Degree - Bachelor**
-<br>
 
 #### :one: **First Year** 
 
@@ -90,6 +89,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Topics in Modern Physics**]() Overview of modern physics to Computer Science students.
   <br>
   **Set of all Slides.**
+
 
 #### :two: **Second Year** 
 
@@ -144,6 +144,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Leadership and Entrepreneurship**]() Knowledge about towards strengthening the innovative and proactive attitudes and to sensitize students to entrepreneurial initiatives as a means of creating collective wealth.
   <br>
   **Business Points of the FOCUS project.**
+
 
 #### :three: **Third Year** 
 
@@ -204,6 +205,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 <br>
 
 ### 2nd Cycle Degree - Master's
+
 
 #### :four: **Fourth Year** 
 
