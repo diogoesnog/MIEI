@@ -34,6 +34,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 ## Study Plan
 
 All UCs are organized in alphabetical. Each Semester corresponding to the **1st Cycle Degree** is composed of 6 UCs each.
+
 <br>
 
 ### **1st Cycle Degree - Bachelor**
