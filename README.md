@@ -37,9 +37,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 
 ### **1st Cycle Degree - Bachelor**
-
 <br>
-
 #### :one: **First Year** 
 
 - [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. 
