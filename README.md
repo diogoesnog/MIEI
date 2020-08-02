@@ -19,13 +19,14 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 <br>
 ### **1st Cycle Degree - Bachelor**
 
-- **Year 1**
+- **:one: First Year**
 	
 	<ul>
 		<li> 
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/C%C3%A1lculo"><b>Calculus</b></a>
 		Introduction of the basic concepts and results of single-variable Calculus.
 		</li>
+			<p>
 	    	<b>Set of all Slides and Practical Exercises.</b>
 		<p>
 		<li>
@@ -98,7 +99,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 	
 <br>
 	
-- **Year 2**
+- **:two: Second Year**
   
 	<ul>
 		<li> 
@@ -166,7 +167,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 <br>
   
-- **Year 3**
+- **:three: Third Year**
   
 	<ul>
 		<li> 
@@ -239,7 +240,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 ### **2st Cycle Degree - Master's**
 
 <ul>
-    <li><b>Year 4</b>
+    <li><b>Fourth Year</b>
 	</p>
             <ul>
                 <li><b>1st Semester</b>
