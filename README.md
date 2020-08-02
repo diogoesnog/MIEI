@@ -17,7 +17,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 ## Table of Contents
 
-1. [**1st Cycle Degree**](#1st-cycle-degree---bachelor)
+1. [**1st Cycle Degree - Bachelor**](#1st-cycle-degree---bachelor)
    
    1.1. [First Year](#one-first-year)
    
@@ -25,7 +25,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
    
    1.3. [Third Year](#three-third-year)
    
-2. [**2nd Cycle Degree**](#2st-cycle-degree---masters)
+2. [**2nd Cycle Degree - Master's**](#2st-cycle-degree---masters)
 
    2.1. [Fourth Year](#four-fourth-year)
    
@@ -38,6 +38,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 ### **1st Cycle Degree - Bachelor**
 
+<br>
 
 #### :one: **First Year** 
 
@@ -91,6 +92,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides.**
 
+<br>
 
 #### :two: **Second Year** 
 
@@ -146,6 +148,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Business Points of the FOCUS project.**
 
+<br>
 
 #### :three: **Third Year** 
 
@@ -203,9 +206,11 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and solved Practical Exercises.**
 
+<br>
 
 ### 2nd Cycle Degree - Master's
 
+<br>
 
 #### :four: **Fourth Year** 
 
