@@ -17,16 +17,27 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 ## Table of Contents
 
+1. [**1st Cycle Degree**](#1st-cycle-degree---bachelor)
+   
+   1.1. [First Year](#one-first-year)
+   
+   1.2. [Second Year](#two-second-year)
+   
+   1.3. [Third Year](#three-third-year)
+   
+2. [**2nd Cycle Degree**](#2st-cycle-degree---masters)
 
+   2.1. [Fourth Year](#four-fourth-year)
+   
 ---
 
 ## Study Plan
 
 All UCs are organized in alphabetical. Each Semester corresponding to the **1st Cycle Degree** is composed of 6 UCs each.
 
-<br>
 
 ### **1st Cycle Degree - Bachelor**
+
 
 #### :one: **First Year** 
 
@@ -79,6 +90,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Topics in Modern Physics**]() Overview of modern physics to Computer Science students.
   <br>
   **Set of all Slides.**
+
 
 #### :two: **Second Year** 
 
@@ -133,6 +145,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - [**Leadership and Entrepreneurship**]() Knowledge about towards strengthening the innovative and proactive attitudes and to sensitize students to entrepreneurial initiatives as a means of creating collective wealth.
   <br>
   **Business Points of the FOCUS project.**
+
 
 #### :three: **Third Year** 
 
@@ -190,7 +203,9 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and solved Practical Exercises.**
 
-### 2st Cycle Degree - Master's
+
+### 2nd Cycle Degree - Master's
+
 
 #### :four: **Fourth Year** 
 
