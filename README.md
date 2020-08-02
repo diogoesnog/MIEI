@@ -17,6 +17,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 ## Table of Contents
 
+
 ---
 
 ## Study Plan
@@ -29,7 +30,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 <br>
 
-:one: **First Year** 
+#### :one: **First Year** 
 
 - [**Calculus**]() Introduction of the basic concepts and results of single-variable Calculus. 
   <br>
@@ -83,7 +84,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 <br>
 
-:two: **Second Year** 
+#### :two: **Second Year** 
 
 - [**Algorithms and Complexity**]() The main focus is the analysis of algorithms, from two perspectives: correction and efficiency.
   <br>
@@ -139,7 +140,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   
 <br>
 
-:three: **Third Year** 
+#### :three: **Third Year** 
 
 - [**Numerical Methods and Nonlinear Optimization**]() Numerical Methods and Nonlinear Optimization.
   <br>
@@ -201,7 +202,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 <br>
 
-:four: **Fourth Year** 
+#### :four: **Fourth Year** 
 
 - **First Specialization Profile** Cryptography and Information Security
   
