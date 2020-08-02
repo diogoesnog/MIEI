@@ -27,21 +27,25 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 		Introduction of the basic concepts and results of single-variable Calculus.
 		</li>
 	    	<b>Set of all Slides and Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/Programa%C3%A7%C3%A3o%20Funcional"><b>Functional Programming</b></a>
 		Learning how to program in an Functional Setting using <i>Haskell Language</i>.
 		</li>
 	    	<b>Set of all solved Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/Laborat%C3%B3rios%20de%20Inform%C3%A1tica%20I"><b>Informatics Laboratories I</b></a>
 		Knowledge application about <i>Haskell Language</i>.
 		</li>
 		<b>Puzzle Video Game like Sokoban developed in <i>Haskell Language</i>.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/%C3%81lgebra%20Linear%20Ei"><b>Linear Algebra EI</b></a>
 		Development basic knowledge on Linear Algebra.
 		</li>
 	    	<b>Set of all Slides and Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/Elementos%20de%20Engenharia%20de%20Sistemas"><b>Topics of Systems Engineering</b></a>
 		Introduction of the area of Systems Engineering through its characterization, methodology, and representative tools.  
@@ -49,35 +53,42 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 	    	<b>Set of all Slides and Practical Exercises.</b>
 		<br>
 	    	<b>Airpot Simulation Project developed on Software Arena.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/1st%20Semester/T%C3%B3picos%20de%20Matem%C3%A1tica%20Discreta"><b>Topics of Systems Engineering</b></a> 
 	    	Development basic knowledge of Propositional Calculus, Set Theory, and Graph Theory.
 		</li>
 	    	<b>Set of all Slides and Practical Exercises.</b>
+		<p>
 		<li>
 		<b>Analysis</b> 
 		No content for this UC.
 		</li>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/2nd%20Semester/Sistemas%20da%20Computa%C3%A7%C3%A3o"><b>Computer Systems</b></a> 
 	    	Development basic knowledge knowledge on the structure and organization of a CS, with a focus on the pair processor-memory.
 		</li>
 	    	<b>Set of all Slides and Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/2nd%20Semester/Programa%C3%A7%C3%A3o%20Imperativa"><b>Imperative Programming</b></a> 
 		Introduction to Imperative, or Procedural, Programming Paradigm using <b>C</b> Language.
 		</li>
 		<b>Set of all solved Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/2nd%20Semester/Laborat%C3%B3rios%20de%20Inform%C3%A1tica%20II"><b>Imformatics Laboratories II</b></a> 
 		Knowledge application about <i>C Language</i>.
 		</li>
 		<b>Cards Game developed in <i>C Language</i>.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/2nd%20Semester/L%C3%B3gica%20EI"><b>Logic EI</b></a> 
 	    	Propositional Logic and First-order logic.
 		</li>
 	    	<b>Set of all Slides and Practical Exercises.</b>
+		<p>
 		<li>
 		<a href="https://github.com/diogoesnog/MIEI/tree/master/1st%20Year/2nd%20Semester/T%C3%B3picos%20de%20F%C3%ADsica%20Moderna"><b>Topics in Modern Physics</b></a>
 	   	Overview of modern physics to Computer Science students.
