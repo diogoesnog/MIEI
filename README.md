@@ -9,7 +9,13 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 **Bachelor + Master in Cryptography and Information Security and Computer Graphics.**  
 
-**Main Scientific Area:** Computer Software Engineering
+**Main Scientific Area:** Computer Engineering
+<br>
+**Partial Average (At the Moment):** 14,205
+
+---
+
+## Table of Contents
 
 ---
 
