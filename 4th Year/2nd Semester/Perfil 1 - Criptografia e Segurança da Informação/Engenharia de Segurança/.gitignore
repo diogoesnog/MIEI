@@ -1,0 +1,5 @@
+.vscode/
+.idea/
+target/
+*.pem
+Projetos/Projeto 3/CMD-SOAP/CMD-SOAP.iml

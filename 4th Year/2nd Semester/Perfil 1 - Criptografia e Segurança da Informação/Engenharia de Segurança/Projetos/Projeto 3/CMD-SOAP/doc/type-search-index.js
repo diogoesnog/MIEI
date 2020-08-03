@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"code","l":"CmdConfig"},{"p":"code","l":"CmdSoapMsg"},{"p":"code","l":"TestCmdWsdl"}]

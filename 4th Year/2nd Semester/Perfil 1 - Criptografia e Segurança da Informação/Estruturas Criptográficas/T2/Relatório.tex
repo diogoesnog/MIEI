@@ -1,0 +1,1463 @@
+\documentclass[12pt]{report}
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage[portuguese]{babel}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for grffile with XeLaTeX
+    \def\Gread@@xetex#1{%
+      \IfFileExists{"\Gin@base".bb}%
+      {\Gread@eps{\Gin@base.bb}}%
+      {\Gread@@xetex@aux#1}%
+    }
+    \makeatother
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{T1E01}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+
+
+    
+
+\begin{document}
+    
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.50]{logo.png}\\[1.0 cm]	% University Logo
+	\text{\large Universidade do Minho}\\[0.1 cm]
+	\text{\large Escola de Engenharia}\\[3.0 cm]
+	\text{\LARGE Estruturas Criptográficas}\\[0.5 cm]				% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries Iniciação aos Corpos Finitos Primos}\\[0.3 cm]
+	{ \LARGE Curvas Elípticas sobre esses corpos e Esquemas Criptográficos baseados nos mesmos}
+	\rule{\linewidth}{0.2 mm} \\[3.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{\textbf{Submitted To:}}\\
+			José Valença\\
+            Professor Catedrático\\
+             Tecnologias da Informação e Segurança\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+			\emph{\textbf{Submitted By :}} \\
+			Diogo Araújo, A78485\\
+		Diogo Nogueira, A78957\\
+            Group 4\\
+		\end{flushright}
+        
+	\end{minipage}\\[2 cm]
+
+	
+\end{titlepage}
+    
+   
+    \newpage
+	  \hypersetup{linkcolor=black}
+\vfill
+
+	\tableofcontents
+\vfill
+
+	\newpage
+
+
+\section{Implementação do esquema
+KEM-RSA-OAEP}\label{implementauxe7uxe3o-do-esquema-kem-rsa-oaep}
+\vspace{10 mm}
+\subsection{Descrição do
+Exercício}\label{descriuxe7uxe3o-do-exercuxedcio}
+
+A ideia do exercício passa por criar toda uma classe em Python que seja
+capaz de implementar o esquema \textbf{KEM-RSA-OAEP}.
+
+Dado que os algoritmos e a forma como funcionam são públicos, o grupo
+apenas precisou de compreender como cada um deles funciona,
+transformando essa ideia para modo \textbf{SageMath}.
+\vspace{5 mm}
+\subsection{Descrição da
+Implementação}\label{descriuxe7uxe3o-da-implementauxe7uxe3o}
+
+Estando feita estra triagem de informação inicial, o grupo penso desde
+logo na ideia de criar duas classes. Uma que respondesse aos pedidos do
+OAEP e outra que fizesse depois a continuidade em modo RSA,
+possibilitando dessa forma a criação das chaves pública e privada e toda
+a parte de crifragem e decifragem.
+\vspace{5 mm}
+
+\textbf{Com a pesquisa necessária e com a ideia do funcionamento do
+algortimo em mente, estabelecem-se as seguintes implementacões:}
+\vspace{5 mm}
+
+\begin{itemize}
+\item
+  \textbf{Passos da algoritmia do OAEP (Codificação e Descodificação):}
+\vspace{3 mm}
+
+  	\textbf{(a) Para codificar (\emph{padding}):}
+
+	  \begin{enumerate}
+	  \def\labelenumi{\arabic{enumi}.}
+	  \tightlist
+	  \item
+	    Mensagens ficam com um padding de k1-zeros para ficarem com o
+	    tamanho \(n - k0\) bits;
+\vspace{2 mm}
+	  \item
+	    \emph{r} é uma string random de tamanho \(k0\) bits;
+\vspace{2 mm}
+	  \item
+	    \emph{G} expande os \(k0\) bits do \emph{r} para \(n − k0\) bits;
+\vspace{2 mm}
+	  \item
+	    \emph{X} = \emph{m00...0} ⊕ \(G(r)\);
+\vspace{2 mm}
+	  \item
+	    \emph{H} reduz os \(n − k0\) bits do X para \(k0\) bits;
+\vspace{2 mm}
+	  \item
+	    \emph{Y} = \emph{r} ⊕ \(H(X)\);
+\vspace{2 mm}
+	  \item
+	    O output é \(X || Y\).
+	  \end{enumerate}
+\vspace{2 mm}
+\textbf{Assim a mensagem pode ser agora cifrada pelo RSA. A propriedade determinística do RSA é evitada usando o encoding OAEP.}
+\newpage
+
+	  \textbf{(b) Para descodificar (\emph{unpadding}):}
+	
+	  \begin{enumerate}
+	  \def\labelenumi{\arabic{enumi}.}
+	  \tightlist
+	  \item
+	    Recuperar a random string \emph{r} = Y ⊕ \(H(X)\);
+\vspace{2 mm}
+	  \item
+	    Recuperar a messagem \emph{m00...0} = X ⊕ \(G(r)\).
+	  \end{enumerate}
+
+
+\end{itemize}
+\vspace{6 mm}
+
+\begin{itemize}
+
+\item
+  \textbf{Passos da algoritmia do RSA:}
+
+\vspace{2 mm}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Gerar primos aleatórios pela utilização da função do \textbf{SageMath}
+  que nos oferece um primo até ao limite superior (1º argumento), bem
+  como com o limite inferior (3º argumento);
+\vspace{2 mm}
+
+\textbf{Assim neste caso temos um primo \(2^{b-1} < primo < 2^b-1\)}.
+\vspace{2 mm}
+
+\item
+  Criação dos primos "\emph{p}" e "\emph{q}", bem como o módulo \emph{n};
+\vspace{2 mm}
+\item
+  Computação rápida de Fórmula de Euler de n, conhecendo \emph{p} e
+  \emph{q};
+\vspace{2 mm}
+
+\textbf{Assim, \(\varphi(n) = (p − 1)(q − 1)\)}.
+\vspace{2 mm}
+
+\item
+  Criação do ring dos inteiros modulo phi e a escolha aleatória dum
+  inteiro para ser o \emph{e};
+\vspace{2 mm}
+
+\textbf{Assim, escolhe-se um inteiro que \(1 < e < φ(n)\) e
+    \(gcd(e, φ(n)) = 1\);
+    \emph{e} e \(φ(n)\) são co-primos.}
+\vspace{2 mm}
+
+\item
+  Criação do \emph{d}. Como \(d \equiv e^{-1} \pmod{\varphi(n)}\), então
+  utilizamos o algoritmo Euclideano extendido para passar para esta
+  forma: \(1=de−k⋅\varphi(n)\) e assim fica na identidade de
+  \emph{Bézout}: \(g = gcd(x,y) = sx + ty\);
+\vspace{2 mm}
+
+\textbf{Assim, o trio da variável vai ser \$(1, d, -k).}
+\vspace{2 mm}
+
+\item 
+	Com todos os números criados, temos assim as chaves criadas em SageMath.
+\end{enumerate}
+\end{itemize}
+\vspace{3 mm}
+
+\textbf{Estando todos estes algoritmos definidos e entendidos, desenvolveram-se
+os metodos necessários para cada classe Python e através de um mini
+teste pode-se verificar a verdade de toda esta implementação.}
+\vspace{5 mm}
+\subsection{Resolução do
+Exercício}\label{resoluuxe7uxe3o-do-exercuxedcio}
+\vspace{5 mm}
+    \subsubsection{\texorpdfstring{Classe Python
+\textbf{OAEP}}{Classe Python OAEP}}\label{classe-python-oaep}
+\vspace{2 mm}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{random}
+        
+        \PY{k}{class} \PY{n+nc}{OAEP}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            
+            \PY{c+c1}{\PYZsh{} Função que inicializa toda a instância e os valores globais necessários à sua execução}
+            \PY{c+c1}{\PYZsh{} Recebe o valor do módulo de n como parâmetro.}
+            \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{n}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n} \PY{o}{=} \PY{n}{n} \PY{c+c1}{\PYZsh{} Tamanho do RSA modulus (key length)}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0} \PY{o}{=} \PY{l+m+mi}{128} \PY{c+c1}{\PYZsh{} Tamanho\PYZhy{}bits da string r (random)}
+                
+            
+            \PY{k}{def} \PY{n+nf}{string\PYZus{}to\PYZus{}strbits}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{string}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n}{strbits} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n}{format}\PY{p}{(}\PY{n+nb}{ord}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{b}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n}{string}\PY{p}{)}
+                
+                \PY{k}{return} \PY{n}{strbits}
+            
+            \PY{k}{def} \PY{n+nf}{strbits\PYZus{}to\PYZus{}string}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{strbits}\PY{p}{)}\PY{p}{:}
+        
+                \PY{n}{string} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}
+        
+                \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{strbits}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{)}\PY{p}{:} 
+        
+                    \PY{n}{tempcharbit} \PY{o}{=} \PY{n}{strbits}\PY{p}{[}\PY{n}{i}\PY{p}{:}\PY{n}{i} \PY{o}{+} \PY{l+m+mi}{7}\PY{p}{]} 
+                    \PY{n}{decimalChar} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{tempcharbit}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+                    \PY{n}{string} \PY{o}{=} \PY{n}{string} \PY{o}{+} \PY{n+nb}{chr}\PY{p}{(}\PY{n}{decimalChar}\PY{p}{)} 
+        
+                \PY{k}{return} \PY{n}{string}
+                
+            \PY{k}{def} \PY{n+nf}{pad}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{mensagem}\PY{p}{)}\PY{p}{:}
+                
+                \PY{c+c1}{\PYZsh{} Passar mensagem para String bits}
+                \PY{n}{m\PYZus{}strbits} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{string\PYZus{}to\PYZus{}strbits}\PY{p}{(}\PY{n}{mensagem}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} O valor de k1 é n\PYZhy{}k0\PYZhy{}tamanhoMensagem (para depois fazer padding de zeros, caso seja preciso)}
+                \PY{n}{m\PYZus{}tamanho} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{m\PYZus{}strbits}\PY{p}{)}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k1} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{o}{\PYZhy{}}\PY{n}{m\PYZus{}tamanho}
+        
+                \PY{c+c1}{\PYZsh{} Efetuar o padding de zeros à mensagem (String Bits)}
+                \PY{n}{m\PYZus{}strbits\PYZus{}pad} \PY{o}{=} \PY{n}{m\PYZus{}strbits} \PY{o}{+} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{o}{*}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k1}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Criação da string random de k0\PYZhy{}bits}
+                \PY{n}{r\PYZus{}number} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{getrandbits}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{)}
+                \PY{n}{r\PYZus{}strbits} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n}{r\PYZus{}number}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}
+                
+                \PY{k}{while} \PY{n+nb}{len}\PY{p}{(}\PY{n}{r\PYZus{}strbits}\PY{p}{)} \PY{o}{!=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{:}
+                    \PY{n}{r\PYZus{}strbits} \PY{o}{=} \PY{n}{r\PYZus{}strbits} \PY{o}{+} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Só para o raro caso de r não ser perto de k0\PYZhy{}bits}
+                    
+                \PY{c+c1}{\PYZsh{} Expandir o r para (n\PYZhy{}k0) bits (tamanho do X) \PYZhy{}\PYZhy{}\PYZhy{} G(r)}
+                \PY{n}{tam\PYZus{}expansao} \PY{o}{=} \PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n} \PY{o}{\PYZhy{}} \PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{)}
+                \PY{n}{r\PYZus{}exp\PYZus{}strbits} \PY{o}{=} \PY{n}{r\PYZus{}strbits} \PY{o}{+} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{o}{*}\PY{n}{tam\PYZus{}expansao}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Efetuar o XOR da mensagem pad e o G(r) \PYZhy{}\PYZhy{}\PYZhy{} X}
+                \PY{n}{x\PYZus{}strbits} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{m\PYZus{}strbits\PYZus{}pad}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{\PYZca{}}\PY{o}{\PYZca{}} \PY{n+nb}{int}\PY{p}{(}\PY{n}{r\PYZus{}exp\PYZus{}strbits}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{m\PYZus{}strbits\PYZus{}pad}\PY{p}{)}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Truncar o X para k0 bits \PYZhy{}\PYZhy{}\PYZhy{} H(X)}
+                \PY{n}{h\PYZus{}x\PYZus{}strbits} \PY{o}{=} \PY{n}{x\PYZus{}strbits}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{]}
+                
+                \PY{c+c1}{\PYZsh{} Efetuar o XOR do r com o H(x) \PYZhy{}\PYZhy{}\PYZhy{} Y}
+                \PY{n}{y\PYZus{}strbits} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{r\PYZus{}strbits}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{\PYZca{}}\PY{o}{\PYZca{}} \PY{n+nb}{int}\PY{p}{(}\PY{n}{h\PYZus{}x\PYZus{}strbits}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{r\PYZus{}strbits}\PY{p}{)}\PY{p}{)}  
+                                
+                \PY{k}{return} \PY{n}{x\PYZus{}strbits}\PY{o}{+}\PY{n}{y\PYZus{}strbits}
+                
+                
+            \PY{k}{def} \PY{n+nf}{unpad}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{:}
+                
+                \PY{c+c1}{\PYZsh{} Truncar o X para k0 bits \PYZhy{}\PYZhy{}\PYZhy{} H(X)}
+                \PY{n}{h\PYZus{}x\PYZus{}strbits} \PY{o}{=} \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{]}
+                
+                \PY{c+c1}{\PYZsh{} Efetuar o XOR do Y com o H(x) \PYZhy{}\PYZhy{}\PYZhy{} r}
+                \PY{n}{r\PYZus{}strbits} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{\PYZca{}}\PY{o}{\PYZca{}} \PY{n+nb}{int}\PY{p}{(}\PY{n}{h\PYZus{}x\PYZus{}strbits}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Expandir o r para (n\PYZhy{}k0) bits (tamanho do X) \PYZhy{}\PYZhy{}\PYZhy{} G(r)}
+                \PY{n}{tam\PYZus{}expansao} \PY{o}{=} \PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n} \PY{o}{\PYZhy{}} \PY{l+m+mi}{2}\PY{o}{*}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0}\PY{p}{)}
+                \PY{n}{g\PYZus{}r\PYZus{}strbits} \PY{o}{=} \PY{n}{r\PYZus{}strbits} \PY{o}{+} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0}\PY{l+s+s1}{\PYZsq{}}\PY{o}{*}\PY{n}{tam\PYZus{}expansao}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Efetuar o XOR do X com o G(r) \PYZhy{}\PYZhy{}\PYZhy{} mensagemPad}
+                \PY{n}{mensagemPad} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{\PYZca{}}\PY{o}{\PYZca{}} \PY{n+nb}{int}\PY{p}{(}\PY{n}{g\PYZus{}r\PYZus{}strbits}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{zfill}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+                
+                \PY{n}{tamMensagem} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n} \PY{o}{\PYZhy{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k0} \PY{o}{\PYZhy{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{k1}
+                
+                \PY{n}{mensagem\PYZus{}strbits} \PY{o}{=} \PY{n}{mensagemPad}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{n}{tamMensagem}\PY{p}{]}
+                \PY{n}{mensagem} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{strbits\PYZus{}to\PYZus{}string}\PY{p}{(}\PY{n}{mensagem\PYZus{}strbits}\PY{p}{)}
+
+                \PY{k}{return} \PY{n}{mensagem}
+\end{Verbatim}
+
+
+    \subsubsection{\texorpdfstring{Teste Classe Python
+\textbf{OAEP}}{Teste Classe Python OAEP}}\label{teste-classe-python-oaep}
+\vspace{2 mm}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{myOAEP} \PY{o}{=} \PY{n}{OAEP}\PY{p}{(}\PY{l+m+mi}{1024}\PY{p}{)}
+        \PY{n}{rsa} \PY{o}{=} \PY{n}{myOAEP}\PY{o}{.}\PY{n}{pad}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{TesteString}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        
+        \PY{n}{x} \PY{o}{=} \PY{n}{rsa}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{896}\PY{p}{]}
+        \PY{n}{y} \PY{o}{=} \PY{n}{rsa}\PY{p}{[}\PY{l+m+mi}{896}\PY{p}{:}\PY{p}{]}
+        
+        \PY{n}{mensagem} \PY{o}{=} \PY{n}{myOAEP}\PY{o}{.}\PY{n}{unpad}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{X: \PYZob{}\PYZcb{} com o tamanho\PYZhy{}bit de \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Y: \PYZob{}\PYZcb{} com o tamanho\PYZhy{}bit de \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RSA: \PYZob{}\PYZcb{} com o tamanho\PYZhy{}bit de \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{rsa}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{rsa}\PY{p}{)}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mensagem: \PYZob{}\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{mensagem}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+X: 0010010001000010000010100011011001100100111101100111000001000100101011011
+101000000111010101110001110110000101110111010101011010100000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000 
+com o tamanho-bit de 896
+Y: 1010100110010111100111110100110010110100111110100111001011010011101110110
+0111000000000000000000000000000000000000000000000000000 
+com o tamanho-bit de 128
+RSA: 00100100010000100000101000110110011001001111011001110000010001001010110
+1110100000011101010111000111011000010111011101010101101010000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000000000000000
+(...) com o tamanho-bit de 1024
+Mensagem: TesteString
+
+    \end{Verbatim}
+
+    \subsubsection{\texorpdfstring{Classe Python
+\textbf{RSA}}{Classe Python RSA}}\label{classe-python-rsa}
+\vspace{2 mm}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{class} \PY{n+nc}{RSA}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        
+            \PY{c+c1}{\PYZsh{} Função que inicializa toda a instância e os valores globais necessários à sua execução}
+            \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{n}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{keylength} \PY{o}{=} \PY{n}{n}
+            
+            \PY{k}{def} \PY{n+nf}{randomprime}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{bits}\PY{p}{)}\PY{p}{:}
+                \PY{k}{return} \PY{n}{random\PYZus{}prime}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{n}{bits}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb+bp}{True}\PY{p}{,}\PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{bits}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+            
+            \PY{k}{def} \PY{n+nf}{generatekeys}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n}{t} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{keylength}\PY{o}{/}\PY{l+m+mi}{2}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{modulus} \PY{o}{=} \PY{l+m+mi}{0}
+                
+                \PY{k}{while} \PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{modulus}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{p}{)} \PY{o}{!=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{keylength}\PY{p}{:}
+                    
+                    \PY{c+c1}{\PYZsh{} Valor dos primos \PYZdq{}p\PYZdq{} e \PYZdq{}q\PYZdq{}}
+                    \PY{n}{p} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{randomprime}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+                    \PY{n}{q} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{randomprime}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+        
+                    \PY{c+c1}{\PYZsh{} Valor do Módulo N}
+                    \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{modulus} \PY{o}{=} \PY{n}{p} \PY{o}{*} \PY{n}{q}
+                    
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{r} \PY{o}{=} \PY{n}{IntegerModRing}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{modulus}\PY{p}{)}
+                    
+                
+                \PY{c+c1}{\PYZsh{} Valor do phi(n)}
+                \PY{n}{phi} \PY{o}{=} \PY{p}{(}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{q}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+                
+                \PY{n}{e} \PY{o}{=} \PY{n}{ZZ}\PY{o}{.}\PY{n}{random\PYZus{}element}\PY{p}{(}\PY{n}{phi}\PY{p}{)}
+        
+                \PY{k}{while} \PY{n}{gcd}\PY{p}{(}\PY{n}{e}\PY{p}{,} \PY{n}{phi}\PY{p}{)} \PY{o}{!=} \PY{l+m+mi}{1}\PY{p}{:} \PY{c+c1}{\PYZsh{}\PYZsh{} e tem de ser coprimo de phi}
+                    \PY{n}{e} \PY{o}{=} \PY{n}{ZZ}\PY{o}{.}\PY{n}{random\PYZus{}element}\PY{p}{(}\PY{n}{phi}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} G = IntegerModRing(phi)}
+                \PY{c+c1}{\PYZsh{} e = G(randomprime(512))}
+        
+                \PY{c+c1}{\PYZsh{} O S é igual ao D dado que o inverse multiplicative module é igual a seguir o teorema de bezout.}
+                \PY{c+c1}{\PYZsh{} Apenas colocado aqui para nível pedagógico}
+                \PY{c+c1}{\PYZsh{} s = 1/e}
+                \PY{n}{bezout} \PY{o}{=} \PY{n}{xgcd}\PY{p}{(}\PY{n}{e}\PY{p}{,}\PY{n}{phi}\PY{p}{)}
+                \PY{n}{d} \PY{o}{=} \PY{n}{Integer}\PY{p}{(}\PY{n}{mod}\PY{p}{(}\PY{n}{bezout}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{phi}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+                
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tamanho do N (key\PYZhy{}length): }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{bin}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{modulus}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} RSA public key}
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Chave pública: (e: \PYZob{}\PYZcb{})}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{e}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} RSA private key }
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Chave privada: (d: \PYZob{}\PYZcb{})}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{d}\PY{p}{)}
+                
+                \PY{k}{return} \PY{p}{(}\PY{n}{e}\PY{p}{,} \PY{n}{d}\PY{p}{)}
+        
+            \PY{k}{def} \PY{n+nf}{cifrar}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{m}\PY{p}{,} \PY{n}{e}\PY{p}{)}\PY{p}{:}
+        
+                \PY{n}{a} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{r}\PY{p}{(}\PY{n}{m}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} cm = (m \PYZca{} e) \PYZpc{} self.modulus}
+                
+                \PY{n}{cm} \PY{o}{=} \PY{n}{a}\PY{o}{*}\PY{o}{*}\PY{n}{e}
+                
+                \PY{k}{return} \PY{n}{cm}
+                
+            \PY{k}{def} \PY{n+nf}{decifrar}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{cm}\PY{p}{,} \PY{n}{d}\PY{p}{)}\PY{p}{:}
+        
+                \PY{n}{b} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{r}\PY{p}{(}\PY{n}{cm}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} dm = (cm \PYZca{} d) \PYZpc{} self.modulus}
+                
+                \PY{n}{dm} \PY{o}{=} \PY{n}{b}\PY{o}{*}\PY{o}{*}\PY{n}{d}
+                
+                \PY{k}{return} \PY{n}{dm}
+\end{Verbatim}
+
+
+    \subsubsection{\texorpdfstring{Teste Classe Python
+\textbf{RSA}}{Teste Classe Python RSA}}\label{teste-classe-python-rsa}
+\vspace{2 mm}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{tamanhoN} \PY{o}{=} \PY{l+m+mi}{256}
+        
+        \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{rsamsg = int(rsamsg\PYZus{}strbits, 2)}
+        
+        \PY{l+s+sd}{myRSA = RSA(tamanhoN)}
+        
+        \PY{l+s+sd}{(pubkey, privkey) = myRSA.generatekeys()}
+        
+        \PY{l+s+sd}{ciphertext = myRSA.cifrar(rsamsg, pubkey)}
+        
+        \PY{l+s+sd}{print ciphertext}
+        
+        \PY{l+s+sd}{rsamensagem = myRSA.decifrar(ciphertext, privkey)}
+        
+        \PY{l+s+sd}{print rsamensagem}
+        
+        \PY{l+s+sd}{rsamensagem\PYZus{}strbits = str(bin(int(rsamensagem,2))[2:]).zfill(len(rsamensagem))}
+        
+        \PY{l+s+sd}{x = rsamensagem[:128]}
+        \PY{l+s+sd}{y = rsamensagem[128:]}
+        
+        \PY{l+s+sd}{mensagemfinal = myOAEP.unpad(x,y)}
+        
+        \PY{l+s+sd}{print mensagemfinal}
+        
+        \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        
+        \PY{n}{myRSA} \PY{o}{=} \PY{n}{RSA}\PY{p}{(}\PY{n}{tamanhoN}\PY{p}{)}
+        
+        \PY{p}{(}\PY{n}{pubkey}\PY{p}{,} \PY{n}{privkey}\PY{p}{)} \PY{o}{=} \PY{n}{myRSA}\PY{o}{.}\PY{n}{generatekeys}\PY{p}{(}\PY{p}{)}
+        
+        \PY{n}{ciphertext} \PY{o}{=} \PY{n}{myRSA}\PY{o}{.}\PY{n}{cifrar}\PY{p}{(}\PY{l+m+mi}{110}\PY{p}{,} \PY{n}{pubkey}\PY{p}{)}
+        
+        \PY{n}{mensagem} \PY{o}{=} \PY{n}{myRSA}\PY{o}{.}\PY{n}{decifrar}\PY{p}{(}\PY{n}{ciphertext}\PY{p}{,} \PY{n}{privkey}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{RSA funcionou? }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mensagem} \PY{o}{==} \PY{l+m+mi}{110}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+Tamanho do N (key-length): 256
+Chave pública: (e: 45442704347296726502485820465662804526282074652382115438007791410159709848499)
+Chave privada: (d: 50635373912691781259367731963541570719007932522770514866395590312930160020887)
+RSA funcionou?  True
+
+    \end{Verbatim}
+
+    \subsection{Referências}\label{referuxeancias}
+
+\begin{itemize}
+\tightlist
+\item
+  Wikipedia, \emph{Optimal asymmetric encryption padding}
+  \url{https://en.wikipedia.org/wiki/Optimal\_asymmetric\_encryption\_padding}
+  (Acedido a 18 abril 2020)
+\vspace{2 mm}
+\item
+  Wikipedia, \emph{Ciphertext indistinguishability}
+ \url{https://en.wikipedia.org/wiki/Ciphertext\_indistinguishability}
+  (Acedido a 18 abril 2020)
+\vspace{2 mm}
+\item
+  \url{Wikipedia, RSA https://en.wikipedia.org/wiki/RSA\_(cryptosystem)}
+  (Acedido a 18 abril 2020)
+\end{itemize}   
+
+\newpage
+
+\section{Implementação do esquema
+DSA}\label{implementauxe7uxe3o-do-esquema-dsa}
+\vspace{10 mm}
+\subsection{Descrição do
+Exercício}\label{descriuxe7uxe3o-do-exercuxedcio}
+\vspace{2 mm}
+\textbf{Construir uma classe Python que implemente o DSA. A
+implementação deve:}
+\vspace{2 mm}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A iniciação, receber como parâmetros o tamanho dos primos \(p\) e
+  \(q\);
+\vspace{2 mm}
+\item
+  Conter funções para assinar digitalmente e verificar a assinatura.
+\end{enumerate}
+\vspace{5 mm}
+\subsection{Descrição da
+Implementação}\label{descriuxe7uxe3o-da-implementauxe7uxe3o}
+\vspace{2 mm}
+Para a inicialização do DSA existiu a criação duma classe que tivesse
+como parâmetros de construção os tamanhos dos primos \(p\) e \(q\),
+também comummente chamados de \(L\) e \(N\), com valores recomendados de
+\((1024, 160), (2048, 224), (2048, 256), (3072, 256)\).
+\vspace{2 mm}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Geração dos parâmetros DSA:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(q\) é um \textbf{número primo} de tamanho \(2^{N–1} < p < 2^{N}\);\vspace{2 mm}
+  \item
+    \(p\) é um \textbf{número primo} de tamanho \(2^{L–1} < p < 2^{L}\),
+    tal que \((p-1)\) tem de ser múltiplo de \(q\);\vspace{2 mm}
+  \item
+    \(g\) é um gerador tal que \(g := h^{(p - 1)/q} \mod p\).
+  \end{itemize}
+\vspace{2 mm}
+\item
+  \textbf{Geração das chaves DSA:}
+
+  Após existirem os parâmetros DSA \((p, q, g)\) podemos assim
+  criar as chaves DSA da seguinte forma:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seleção dum inteiro que \(\in \{ 1 \ldots q-1 \}\) que servirá de
+    \textbf{chave privada} DSA;\vspace{2 mm}
+  \item
+    A geração da \textbf{chave pública} utilizando a seguinte equação
+    \(g^x \mod p\).
+  \end{itemize}
+\item
+  \textbf{Assinatura DSA:}
+
+  Agora com as chaves DSA já geradas, podemos efetuar uma
+  assinatura duma mensagem simples, usando para tal efeito a \textbf{chave
+  privada} criada anteriormente.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seleção dum inteiro \(k\) que \(\in \{ 1 \ldots q-1 \}\);
+\vspace{2 mm}
+  \item
+    A geração do \(r\) sendo que \(r := (g^{k}\bmod\,p)\bmod\,q\);
+\vspace{2 mm}
+  \item
+    A geração do \(s\) sendo que \(s := (k^{-1}(H(m)+xr))\bmod\,q\).
+  \end{itemize}
+
+  Ficando assim com o par que representa a assinatura DSA \((r,s)\).
+\vspace{6 mm}
+\item
+  \textbf{Verificação DSA:}
+
+  Para verificar que a assinatura DSA \((r,s)\) é válida para a
+  mensagem \(m\) segue-se os seguintes passos:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Verifica-se se \(0 < r < q\) e \(0 < s < q\);
+\vspace{2 mm}
+  \item
+    Gera-se $w:=s^{-1}{\bmod {\,}}q$;
+\vspace{2 mm}
+  \item
+    Gera-se \(u_1 := H(m) \cdot w\, \bmod\,q\);
+\vspace{2 mm}
+  \item
+    Gera-se \(u_2 := r \cdot w\, \bmod\,q\).
+\vspace{2 mm}
+  \item
+    Gera-se $v:=\left(g^{u_{1}}y^{u_{2}}{\bmod {\,}}p\right){\bmod {\,}}q$
+  \end{itemize}
+
+  A assinatura é válida para a mensagem se e só se \(v == r\).
+\end{enumerate}
+\vspace{5 mm}
+\subsection{Resolução do
+Exercício}\label{resoluuxe7uxe3o-do-exercuxedcio}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{random} \PY{k+kn}{import} \PY{n}{randint}
+        
+        
+        \PY{k}{class} \PY{n+nc}{DSA}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            
+            \PY{c+c1}{\PYZsh{} Função que inicializa toda a instância e os valores globais necessários à sua execução}
+            \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{l}\PY{p}{,} \PY{n}{n}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimop} \PY{o}{=} \PY{n}{l}
+                \PY{k}{if} \PY{n}{n} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{l+m+mi}{256}\PY{p}{:}
+                    \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimoq} \PY{o}{=} \PY{n}{n}
+                \PY{k}{else}\PY{p}{:} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimoq} \PY{o}{=} \PY{l+m+mi}{256} \PY{c+c1}{\PYZsh{} Por causa do tamanho de N \PYZlt{}= | H | e a hash a usar é SHA\PYZhy{}256}
+                    
+            
+            \PY{k}{def} \PY{n+nf}{gerarparametros}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+         
+                \PY{c+c1}{\PYZsh{} Escolha de primos grandes}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p} \PY{o}{=} \PY{n}{random\PYZus{}prime} \PY{p}{(} \PY{l+m+mi}{2}\PY{o}{\PYZca{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimop} \PY{p}{,} \PY{n}{proof}\PY{o}{=}\PY{n+nb+bp}{False} \PY{p}{,} \PY{n}{lbound}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{\PYZca{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimop}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{)}
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{P: }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}
+                
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q} \PY{o}{=} \PY{n}{random\PYZus{}prime} \PY{p}{(} \PY{l+m+mi}{2}\PY{o}{\PYZca{}}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimoq} \PY{p}{,} \PY{n}{proof}\PY{o}{=}\PY{n+nb+bp}{False} \PY{p}{,} \PY{n}{lbound}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{\PYZca{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{tamprimoq}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{p}{)}
+                
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Q: }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+        
+                \PY{n}{h} \PY{o}{=} \PY{n}{Integer}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+                    
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{g} \PY{o}{=} \PY{p}{(} \PY{p}{(} \PY{n}{h} \PY{o}{\PYZca{}} \PY{p}{(} \PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{/} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q} \PY{p}{)} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}\PY{p}{)}
+                    
+            \PY{k}{def} \PY{n+nf}{gerarchaves}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        
+                \PY{n}{privkey} \PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{c+c1}{\PYZsh{} privkey é um inteiro de \PYZob{}1 .. q\PYZhy{}1\PYZcb{}}
+                \PY{n}{pubkey} \PY{o}{=} \PY{n}{power\PYZus{}mod}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{g}\PY{p}{,} \PY{n}{privkey}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}\PY{p}{)} \PY{c+c1}{\PYZsh{} pubkey = g\PYZca{}x mod p}
+        
+                \PY{k}{return} \PY{p}{(}\PY{n}{privkey}\PY{p}{,} \PY{n}{pubkey}\PY{p}{)}
+            
+            \PY{k}{def} \PY{n+nf}{assinar}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{privkey}\PY{p}{,} \PY{n}{mensagem}\PY{p}{)}\PY{p}{:}
+                
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}\PYZhy{} A assinar a mensagem: \PYZob{}\PYZcb{} \PYZhy{}\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{mensagem}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Criação do inteiro random k}
+                \PY{n}{k} \PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Criar o par da assinatura DSA}
+                \PY{n}{r} \PY{o}{=} \PY{p}{(} \PY{p}{(} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{g}\PY{o}{\PYZca{}}\PY{n}{k} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                \PY{n}{s} \PY{o}{=} \PY{p}{(} \PY{p}{(} \PY{n}{k}\PY{o}{\PYZca{}}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1} \PY{p}{)} \PY{o}{*} \PY{p}{(} \PY{n+nb}{hash} \PY{p}{(} \PY{n}{mensagem} \PY{p}{)} \PY{o}{+} \PY{n}{privkey} \PY{o}{*} \PY{n}{r} \PY{p}{)} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                
+                \PY{c+c1}{\PYZsh{} Assinatura = ( r , s ) }
+                \PY{k}{return} \PY{p}{(}\PY{n}{r}\PY{p}{,}\PY{n}{s}\PY{p}{)} 
+            
+            
+            \PY{k}{def} \PY{n+nf}{verificar}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{assinatura}\PY{p}{,} \PY{n}{pubkey}\PY{p}{,} \PY{n}{mensagem}\PY{p}{)}\PY{p}{:}
+                
+                \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}\PYZhy{} A verificar a assinatura para a mensagem: \PYZob{}\PYZcb{} \PYZhy{}\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n}{mensagem}\PY{p}{)}
+                
+                \PY{n}{r} \PY{o}{=} \PY{n}{assinatura}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+                \PY{n}{s} \PY{o}{=} \PY{n}{assinatura}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+                
+                \PY{n}{w} \PY{o}{=} \PY{p}{(}\PY{n}{s}\PY{o}{\PYZca{}}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                
+                \PY{n}{u1} \PY{o}{=} \PY{p}{(}\PY{n+nb}{hash} \PY{p}{(}\PY{n}{mensagem}\PY{p}{)} \PY{o}{*} \PY{n}{w}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                \PY{n}{u2} \PY{o}{=} \PY{p}{(}\PY{n}{r} \PY{o}{*} \PY{n}{w}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                
+                \PY{n}{v} \PY{o}{=} \PY{p}{(} \PY{p}{(} \PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{g}\PY{o}{\PYZca{}}\PY{n}{u1}\PY{p}{)} \PY{o}{*} \PY{p}{(}\PY{n}{pubkey}\PY{o}{\PYZca{}}\PY{n}{u2}\PY{p}{)} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p} \PY{p}{)} \PY{o}{\PYZpc{}} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{q}
+                
+                \PY{k}{if} \PY{n}{v} \PY{o}{==} \PY{n}{r}\PY{p}{:} \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}\PYZhy{} Assinatura verificada para a mensagem. \PYZhy{}\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}
+                \PY{k}{else}\PY{p}{:} \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}\PYZhy{} Assinatura não corresponde à mensagem. \PYZhy{}\PYZhy{}\PYZhy{}}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+\vspace{5 mm}
+    \subsubsection{Teste da Classe}\label{teste-da-classe}
+\vspace{2 mm}
+Segue-se abaixo um teste desenvolvido para esta classe. \textbf{A ideia
+passa pelos seguintes passos:}
+
+\begin{itemize}
+\tightlist
+\item
+  Gerar um par de chaves (privkey,pubkey);
+\vspace{2 mm}
+\item
+  Assinar essa mensagem inicial com a \emph{Private Key} X;
+\vspace{2 mm}
+\item
+  Criar uma nova mensagem diferente;
+\vspace{2 mm}
+\item
+  Verificar a assinatura com essa nova mensagem.
+\end{itemize}
+\vspace{3 mm}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} Criar uma instância e sua inicialização}
+        \PY{n}{myDSA} \PY{o}{=} \PY{n}{DSA}\PY{p}{(}\PY{l+m+mi}{2048}\PY{p}{,} \PY{l+m+mi}{256}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Gerar os parâmetros de instância (p, q, g)}
+        \PY{n}{myDSA}\PY{o}{.}\PY{n}{gerarparametros}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Obter o par de chaves DSA}
+        \PY{p}{(}\PY{n}{privkey}\PY{p}{,} \PY{n}{pubkey}\PY{p}{)} \PY{o}{=} \PY{n}{myDSA}\PY{o}{.}\PY{n}{gerarchaves}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Assinar uma pequena mensagem}
+        \PY{n}{assinatura} \PY{o}{=}  \PY{n}{myDSA}\PY{o}{.}\PY{n}{assinar}\PY{p}{(}\PY{n}{privkey}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Pequena mensagem}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Verificar se a assinatura é da mensagem}
+        \PY{n}{myDSA}\PY{o}{.}\PY{n}{verificar}\PY{p}{(}\PY{n}{assinatura}\PY{p}{,} \PY{n}{pubkey}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Pequena Mensagem}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P:  267557916636702751005062208257692016299278666040350638463769679960161784495259
+302727460122935736080093975317572466106905102085054477333476249029511083825581910
+639536565398978742357996795452128941909813649113416195584038645936351716734531952
+494606590527704663809293329490166636236041228593274198214602339023815764477469011
+561174102706250185444984697459909528297850413883857805776886889420167001346338037
+944340301715053801373416635255919114261655092553992342057688672695764847588232913
+000422504830859760971001938112359303253772770791989136609739466989117245522629463
+7238312135770574138974904048155317364392591096573749
+Q:  104433067033800923149449905571372533070605156566956955797894614612183632462729
+--- A assinar a mensagem: Pequena mensagem ---
+--- A verificar a assinatura para a mensagem: Pequena Mensagem ---
+--- Assinatura verificada para a mensagem. ---
+
+    \end{Verbatim}
+
+    \subsection{Observações Finais}\label{observauxe7uxf5es-finais}
+
+\begin{itemize}
+\tightlist
+\item
+  O algoritmo \textbf{DSA} encontra-se detalhadamente descrito em várias
+  fontes \emph{online};
+\vspace{2 mm}
+\item
+  Depois de compreender o seu funcionamento torna-se mais simples de
+  começar a aplicar toda a ideia em SageMath.
+\end{itemize}
+
+    \subsection{Referências}\label{referuxeancias}
+
+\begin{itemize}
+\tightlist
+\item
+  Wikipedia, SHA-2 \url{https://en.wikipedia.org/wiki/SHA-2} (Acedido a 14 de
+  Abril 2020)
+\vspace{2 mm}
+\item
+  Python, HashLib package \url{https://docs.python.org/3/library/hashlib.html}
+  (Acedido a 14 de Abril 2020)
+\vspace{2 mm}
+\item
+  Wikipedia, Digital Signature Algorithm
+  \url{https://en.wikipedia.org/wiki/Digital\_Signature\_Algorithm} (Acedido a
+  14 abril 2020)
+\end{itemize}
+
+\newpage
+
+\section{Implementação do ECDSA com a Curva Elíptica prima
+P-192}\label{implementauxe7uxe3o-do-ecdsa-com-a-curva-eluxedptica-prima-p-192}
+\vspace{10 mm}
+\subsection{Descrição do
+Exercício}\label{descriuxe7uxe3o-do-exercuxedcio}
+\vspace{2 mm}
+A ideia do exercício passa por criar toda uma classe em Python que seja
+capaz de implementar o \textbf{\emph{Eliptic Curve Digital Signature
+Algorithm} (ECDSA)} com o uso de uma das curvas elípticas definidas no
+FIPS186-4.
+
+Dessa forma, o grupo recorreu ao documento de seu nome \textbf{FIS PUB
+186-4} que permitiu estabelecer a escolha desta curva. Escolheu-se assim
+a curva P-192, cujos seus valores \emph{standard} são fornecidos pelo
+próprio documento em si.
+\vspace{5 mm}
+\subsection{Descrição da
+Implementação}\label{descriuxe7uxe3o-da-implementauxe7uxe3o}
+\vspace{2 mm}
+Com a curva elíptica prima escolhida, podem-se definir o conjunto de
+definicões que a classe Python terá e que permitirão no final fazer um
+pequeno teste em termos de resultados.
+\vspace{2 mm}
+\textbf{Com a pesquisa necessária e com a ideia do funcionamento do
+algortimo em mente, estabelecem-se as seguintes implementacões:}
+\vspace{2 mm}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Criação do par das chaves em modo Curva Elíptica:}
+
+\vspace{2 mm}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\vspace{2 mm}
+\item
+  \emph{Private Key} - \(d_{A}\) - que corresponderá a um inteiro gerado
+  aleatoriamente dentro do intervalo \([1, n-1]\);
+\vspace{2 mm}
+\item
+  \emph{Public Key} - \(Q_{A}\) - que corresponderá a um ponto da Curva
+  Elíptica tal que \(Q_{A} = d_{A} \times G\)
+\vspace{2 mm} onde
+\textbf{\(G\) é um ponto gerador da Curva Elíptica}.
+
+\end{enumerate}
+\end{itemize}
+\vspace{2 mm}
+\begin{itemize}
+\vspace{2 mm}
+\item
+  \textbf{Criação da assinatura da mensagem em si:}
+
+\begin{enumerate}
+\vspace{2 mm}
+\item
+    Cálculo do valor de \(e = HASH(m)\), em que \(HASH\) corresponderá a
+    uma função de hash criptográfica em que o seu \emph{return} se irá
+    converter em um inteiro;
+
+\vspace{1 mm}
+\textbf{A função de \(HASH\) será declara à parte}.
+
+\vspace{2 mm}
+\item
+    Criação/Escolha de um inteiro \(k\) gerado aleatoriamente dentro do
+    intervalo \([1, n-1]\);
+\item
+    Cálculo de um ponto da Curva tal que \((x1,y1) = k \times G\);
+
+\vspace{1 mm}
+\textbf{\(G\) continua a ser o mesmo ponto gerador da Curva Elíptica
+      definido inicialmente}.
+\vspace{2 mm}
+\item
+    Cálculo do valor de \(r\) tal que
+    \({\displaystyle r=x_{1}\,{\bmod {\,}}n}\), sendo esse \emph{mod}
+    calculado com base nos ensinamentos de \textbf{Corpos Finitos}
+    abordados no \textbf{Trabalho 1};
+
+\vspace{1 mm}
+\textbf{Dessa forma, cria-se um \textbf{Corpo Finito} em torno do primo
+      \(n\) e aplica-se o valor de \(x1\) a esse mesmo tal que
+      \(r = F_{n}(x_{1})\)}.
+\vspace{2 mm}
+\item
+    Cálculo do valor de \(s\) tal que
+    \({\displaystyle r=x_{1}\,{\bmod {\,}}n}\);
+
+\vspace{1 mm}
+\textbf{Assume-se \(z\) como sendo o valor calculado para \(e\)}
+\textbf{
+      e aplica-se o mesmo princípio do valor de \(r\) tal que
+      \(s = F_{n}(k)^{-1} \times (e + r \times d)\)}.
+\end{enumerate}
+\end{itemize}
+\vspace{4 mm}
+\begin{itemize}
+\item
+  \textbf{Verificação dessa mesma assinatura:}
+
+  \begin{enumerate}
+
+  \item
+    Calcular \(e = HASH(m)\), em que \(HASH\) terá de ser a mesma função
+    usada para criar a assinatura;
+
+\vspace{2 mm}
+  \item
+    Calcular o valor de \(w\) tal que
+    \({\displaystyle w=s^{-1}\,{\bmod {\,}}n}\);
+\vspace{2 mm}
+  \item
+    Calcular o valor de dois valores necessários para um ponto da Curva;
+
+\vspace{1 mm}
+\textbf{Calcular o valor de \(u_{1}\) tal que
+      \({\displaystyle u_{1}=zw\,{\bmod {\,}}n}\)};
+
+\textbf{Calcular o valor de \(u_{2}\) tal que
+      \({\displaystyle u_{2}=rw\,{\bmod {\,}}n}\)}.
+\vspace{2 mm}
+  \item
+    Com os dois valores de cima calcular um ponto da Curva tal que
+    \({\displaystyle (x_{1},y_{1})=u_{1}\times G+u_{2}\times Q_{A}}\);
+\vspace{2 mm}
+  \item
+    Caso \({\displaystyle r\equiv x_{1}{\pmod {n}}}\), a assinatura é
+    dada como válida.
+
+\vspace{2 mm}
+ \textbf{Aplicando-se o princípio dos \textbf{Corpos Finitos} a assinatura
+      é valida se e só se \(r\equiv F_{n}(x_{1})\)}.
+
+  \end{enumerate}
+\end{itemize}
+\vspace{2 mm}
+
+\textbf{Estando todos estes algoritmos definidos e entendidos, desenvolveram-se
+os metodos necessários para classe Python e através de um mini teste
+pode-se verificar a verdade de toda esta implementação.}
+\vspace{5 mm}
+\subsection{Resolução do
+Exercício}\label{resoluuxe7uxe3o-do-exercuxedcio}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{hashlib}
+        
+        \PY{k}{class} \PY{n+nc}{ECDSA}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+            
+            \PY{c+c1}{\PYZsh{} Função que inicializa toda a instância e os valores globais necessários à sua execução}
+            \PY{k}{def} \PY{n+nf+fm}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                
+                \PY{c+c1}{\PYZsh{} Parâmetros da Curva Elíptica P\PYZhy{}192}
+                \PY{c+c1}{\PYZsh{} Os parâmetros \PYZsq{}p\PYZsq{} e \PYZsq{}n\PYZsq{} são dados na forma decimal}
+                \PY{c+c1}{\PYZsh{} Os restantes são dados na forma hexadecimal}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p} \PY{o}{=} \PY{l+m+mi}{6277101735386680763835789423207666416083908700390324961279}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n} \PY{o}{=} \PY{l+m+mi}{6277101735386680763835789423176059013767194773182842284081}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{a} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{l+m+mi}{3}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{b} \PY{o}{=} \PY{l+m+mh}{0x64210519E59C80E70FA7E9AB72243049FEB8DEECC146B9B1}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Gx} \PY{o}{=} \PY{l+m+mh}{0x188DA80EB03090F67CBF20EB43A18800F4FF0AFD82FF1012}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Gy} \PY{o}{=} \PY{l+m+mh}{0x07192B95FFC8DA78631011ED6B24CDD573F977A11E794811}
+        
+                \PY{c+c1}{\PYZsh{} Corpo Finito Fp em torno do primo p}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fp} \PY{o}{=} \PY{n}{FiniteField}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{p}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Corpo Finito Fn em torno do primo n}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fn} \PY{o}{=} \PY{n}{FiniteField}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Curva Elíptica E}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{E} \PY{o}{=} \PY{n}{EllipticCurve}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fp}\PY{p}{,} \PY{p}{[}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{a}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{b}\PY{p}{]}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Ponto Gerador G pertencente à Curva Elíptica E}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{G} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{E}\PY{p}{(}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Gx}\PY{p}{,}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Gy}\PY{p}{)}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Função de HASH criptográfica}
+            \PY{c+c1}{\PYZsh{} Input: Mensagem para a qual se quer calcular o valor de HASH}
+            \PY{c+c1}{\PYZsh{} Output: Devolve o valor de HASH}
+            \PY{k}{def} \PY{n+nf}{HASH}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{m}\PY{p}{)}\PY{p}{:}
+                \PY{n}{message} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{m}\PY{p}{)}
+                
+                \PY{k}{return} \PY{n}{Integer}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0x}\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n}{hashlib}\PY{o}{.}\PY{n}{sha1}\PY{p}{(}\PY{n}{message}\PY{p}{)}\PY{o}{.}\PY{n}{hexdigest}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Algoritmo de criação do par de chaves da Curva Elíptica}
+            \PY{c+c1}{\PYZsh{} Input: Não recebe qualquer valor como Input}
+            \PY{c+c1}{\PYZsh{} Output: Um par de chaves (Q, d)         }
+            \PY{k}{def} \PY{n+nf}{keyGenerator}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+          
+                \PY{n}{d} \PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{c+c1}{\PYZsh{} Valor Aleatório entre [1, n\PYZhy{}1]}
+                \PY{n}{Q} \PY{o}{=} \PY{n}{d} \PY{o}{*} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{G}
+                              
+                \PY{k}{return} \PY{p}{(}\PY{n}{Q}\PY{p}{,} \PY{n}{d}\PY{p}{)}
+            
+            \PY{c+c1}{\PYZsh{} Algoritmo de criação da assinatura}
+            \PY{c+c1}{\PYZsh{} Input: Chave Privada da entidade que quer assinar a mensagem, Mensagem a ser assinada}
+            \PY{c+c1}{\PYZsh{} Output: Devolve o par [r,s] a ser usado na verificação da assinatura}
+            \PY{k}{def} \PY{n+nf}{createSignature}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{d}\PY{p}{,} \PY{n}{m}\PY{p}{)}\PY{p}{:}
+        
+                \PY{n}{e} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{HASH}\PY{p}{(}\PY{n}{m}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Variáveis que vão controlar os dois ciclos}
+                \PY{n}{r} \PY{o}{=} \PY{l+m+mi}{0}
+                \PY{n}{s} \PY{o}{=} \PY{l+m+mi}{0}
+                
+                \PY{k}{while} \PY{n}{s} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+                    \PY{c+c1}{\PYZsh{} k = 1 ACHO QUE NAO E PRECISO           }
+                    \PY{k}{while} \PY{n}{r} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+        
+                        \PY{c+c1}{\PYZsh{} Cálculo do valor de k}
+                        \PY{n}{k} \PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+                        
+                        \PY{c+c1}{\PYZsh{} Cálculo do ponto da Curva Elíptica}
+                        \PY{n}{P} \PY{o}{=} \PY{n}{k} \PY{o}{*} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{G}
+                        \PY{p}{(}\PY{n}{x1}\PY{p}{,} \PY{n}{y1}\PY{p}{)} \PY{o}{=} \PY{n}{P}\PY{o}{.}\PY{n}{xy}\PY{p}{(}\PY{p}{)}
+                        
+                        \PY{c+c1}{\PYZsh{} Cálculo do valor de r}
+                        \PY{n}{r} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fn}\PY{p}{(}\PY{n}{x1}\PY{p}{)}
+                    
+                    \PY{c+c1}{\PYZsh{} Cálculo do valor de s}
+                    \PY{n}{s} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fn}\PY{p}{(}\PY{n}{k}\PY{p}{)} \PY{o}{\PYZca{}} \PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)} \PY{o}{*} \PY{p}{(}\PY{n}{e} \PY{o}{+} \PY{n}{r}\PY{o}{*}\PY{n}{d}\PY{p}{)}
+                
+                \PY{k}{return} \PY{p}{[}\PY{n}{r}\PY{p}{,}\PY{n}{s}\PY{p}{]}
+            
+            \PY{c+c1}{\PYZsh{} Algoritmo de verificação da assinatura}
+            \PY{c+c1}{\PYZsh{} Input: Chave Pública, Mensagem e par [r,s] obtidos na assinatura da Mensagem Inicial/Original}
+            \PY{c+c1}{\PYZsh{} Output: Resultado da verificação}
+            \PY{k}{def} \PY{n+nf}{verifySignature}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{Q}\PY{p}{,} \PY{n}{m}\PY{p}{,} \PY{n}{r}\PY{p}{,} \PY{n}{s}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n}{e} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{HASH}\PY{p}{(}\PY{n}{m}\PY{p}{)}
+                
+                \PY{n}{w} \PY{o}{=} \PY{n}{s} \PY{o}{\PYZca{}} \PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+                
+                \PY{n}{u1} \PY{o}{=} \PY{p}{(}\PY{n}{e} \PY{o}{*} \PY{n}{w}\PY{p}{)}
+                \PY{n}{u2} \PY{o}{=} \PY{p}{(}\PY{n}{r} \PY{o}{*} \PY{n}{w}\PY{p}{)}
+                
+                \PY{n}{P1} \PY{o}{=} \PY{n}{Integer}\PY{p}{(}\PY{n}{u1}\PY{p}{)} \PY{o}{*} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{G}
+                \PY{n}{P2} \PY{o}{=} \PY{n}{Integer}\PY{p}{(}\PY{n}{u2}\PY{p}{)} \PY{o}{*} \PY{n}{Q}
+                \PY{n}{P} \PY{o}{=} \PY{n}{P1} \PY{o}{+} \PY{n}{P2}
+                \PY{p}{(}\PY{n}{x1}\PY{p}{,} \PY{n}{y1}\PY{p}{)} \PY{o}{=} \PY{n}{P}\PY{o}{.}\PY{n}{xy}\PY{p}{(}\PY{p}{)}
+                
+                \PY{k}{return} \PY{n}{r} \PY{o}{==} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{Fn}\PY{p}{(}\PY{n}{x1}\PY{p}{)}
+                        
+\end{Verbatim}
+
+\vspace{5 mm}
+    \subsubsection{Teste da Classe}\label{teste-da-classe}
+\vspace{2 mm}
+Segue-se abaixo um teste desenvolvido para esta classe. \textbf{A ideia
+passa pelos seguintes passos:}
+
+\begin{itemize}
+\tightlist
+\item
+  Gerar um par de chaves (Q,d);
+\vspace{2 mm}
+\item
+  Criar uma mensagem inicial \textbf{"A mensagem que vou pedir para
+  assinar"};
+\vspace{2 mm}
+\item
+  Assinar essa mensagem inicial com a \emph{Private Key} \(d_{A}\);
+\vspace{2 mm}
+\item
+  Criar uma nova mensagem \textbf{"Vou tentar uma nova mensagem"};
+\vspace{2 mm}
+\item
+  Verificar a assinatura com essa nova mensagem.
+\end{itemize}
+\vspace{2 mm}
+\textbf{Isto vai permitir verificar que o resultado é \textbf{\emph{false}} dado
+que não corresponde à mensagem inicialmente assinada pela chave em si.}
+\vspace{2 mm}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} Criar uma instância e sua inicialização}
+        \PY{n}{myECDSA} \PY{o}{=} \PY{n}{ECDSA}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Obter o par de chaves da Curva Elíptica}
+        \PY{p}{(}\PY{n}{Q}\PY{p}{,} \PY{n}{d}\PY{p}{)} \PY{o}{=} \PY{n}{myECDSA}\PY{o}{.}\PY{n}{keyGenerator}\PY{p}{(}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Eliptic Curve Public Key \PYZhy{} }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{Q}\PY{o}{.}\PY{n}{xy}\PY{p}{(}\PY{p}{)}
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Eliptic Curve Private Key \PYZhy{} }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{d}
+        
+        \PY{c+c1}{\PYZsh{} Assinar a mensagem}
+        \PY{n}{originalMessage} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{A mensagem que vou pedir para assinar}\PY{l+s+s1}{\PYZsq{}}
+        \PY{p}{[}\PY{n}{r}\PY{p}{,} \PY{n}{s}\PY{p}{]} \PY{o}{=} \PY{n}{myECDSA}\PY{o}{.}\PY{n}{createSignature}\PY{p}{(}\PY{n}{d}\PY{p}{,} \PY{n}{originalMessage}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mensagem Original \PYZhy{} }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{originalMessage}
+        
+        \PY{c+c1}{\PYZsh{} Verificar a assinatura da mensagem}
+        \PY{n}{fakeMessage} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vou tentar uma nova mensagem}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{result} \PY{o}{=} \PY{n}{myECDSA}\PY{o}{.}\PY{n}{verifySignature}\PY{p}{(}\PY{n}{Q}\PY{p}{,} \PY{n}{fakeMessage}\PY{p}{,} \PY{n}{r}\PY{p}{,} \PY{n}{s}\PY{p}{)}
+        
+        \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Resultado \PYZhy{} }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{result}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Eliptic Curve Public Key -  (2038752860592359119426082346061557950338888622821805043945, 306303741022623073521196141447092461082295559180875188991)
+Eliptic Curve Private Key -  2009916947488637617038617525489375040057193637677791988684
+Mensagem Original -  A mensagem que vou pedir para assinar
+Resultado -  False
+
+    \end{Verbatim}
+\vspace{5 mm}
+    \subsection{Observações Finais}\label{observauxe7uxf5es-finais}
+
+\begin{itemize}
+\tightlist
+\item
+  O algoritmo \textbf{ECDSA} encontra-se detalhadamente descrito em
+  várias fontes \emph{online};
+\vspace{2 mm}
+\item
+  Depois de compreender o seu funcionamento torna-se mais simples de
+  começar a aplicar toda a ideia em SageMath.
+\end{itemize}
+\vspace{5 mm}
+    \subsection{Referências}\label{referuxeancias}
+
+\begin{itemize}
+\tightlist
+\item
+  Cameron F. Kerry, Acting Secretary,Patrick D. Gallagher. (julho 2013).
+  FEDERAL INFORMATION PROCESSING STANDARDS PUBLICATION, Digital
+  Signature Standard (DSS)
+  \url{https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf}
+\item
+  Wikipedia, Elliptic Curve Digital Signature Algorithm
+  \url{https://en.wikipedia.org/wiki/Elliptic\_Curve\_Digital\_Signature\_Algorithm}
+  (Acedido a 13 abril 2020)
+\end{itemize}
+
+
+    
+\end{document}

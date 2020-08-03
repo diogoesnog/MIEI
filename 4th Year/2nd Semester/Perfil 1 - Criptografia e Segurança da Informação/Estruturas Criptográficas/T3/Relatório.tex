@@ -1,0 +1,1109 @@
+\documentclass[12pt]{report}
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage[portuguese]{babel}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for grffile with XeLaTeX
+    \def\Gread@@xetex#1{%
+      \IfFileExists{"\Gin@base".bb}%
+      {\Gread@eps{\Gin@base.bb}}%
+      {\Gread@@xetex@aux#1}%
+    }
+    \makeatother
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{T1E01}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        \ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+
+
+    
+
+\begin{document}
+    
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.50]{logo.png}\\[1.0 cm]	% University Logo
+	\text{\large Universidade do Minho}\\[0.1 cm]
+	\text{\large Escola de Engenharia}\\[3.0 cm]
+	\text{\LARGE Estruturas Criptográficas}\\[0.5 cm]				% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries Criptosistemas pós-quânticos PKE/KEM}\\[0.3 cm]
+	{ \LARGE Implementação esquemas KEM \textbf{NTRU-Prime} e \textbf{NewHope} em Python/SageMath}
+	\rule{\linewidth}{0.2 mm} \\[3.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{\textbf{Submitted To:}}\\
+			José Valença\\
+            Professor Catedrático\\
+             Tecnologias da Informação e Segurança\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+			\emph{\textbf{Submitted By :}} \\
+			Diogo Araújo, A78485\\
+		Diogo Nogueira, A78957\\
+            Group 4\\
+		\end{flushright}
+        
+	\end{minipage}\\[2 cm]
+
+	
+\end{titlepage}
+    
+   
+    \newpage
+	  \hypersetup{linkcolor=black}
+\vfill
+
+	\tableofcontents
+\vfill
+
+	\newpage
+
+
+
+
+    \section{\texorpdfstring{Implementação do NTRU-Prime com o
+\emph{SageMath}}{Implementação do NTRU-Prime com o SageMath}}\label{implementauxe7uxe3o-do-ntru-prime-com-o-sagemath}
+\vspace{5mm}
+\subsection{Descrição do
+Exercício}\label{descriuxe7uxe3o-do-exercuxedcio}
+\vspace{2mm}
+A ideia do exercício passa por construir toda uma classe Python/SageMath
+que implemente o esquema KEM \textbf{NTRU-Prime}, algoritmo candidato ao
+\textbf{NIST's \emph{Post-Quantum Cryptography Standardization
+Project}}.
+
+Com esse fim em mente, o grupo recorreu à documentação de candidatura do
+algoritmo fornecida pelo documento, mais especificamente ao documento de
+envio principal de seu nome \textbf{"NTRU Prime"}, submitido no dia
+30/11/2017.
+\vspace{3mm}
+\subsection{Descrição da
+Implementação}\label{descriuxe7uxe3o-da-implementauxe7uxe3o}
+\vspace{2mm}
+Com o \emph{Primary Submission Document} em mão e com uma análise atenta
+de todo o processo algorítmico, podem-se definir o conjunto de
+definições que a classe Python terá e que permitirão no final fazer um
+pequeno teste em termos de resultados, para as versões PKE-IND-CCA e
+KEM-IND-CPA. De forma a faciliar a compreensão/execução de todas as
+etapas pensadas para o algoritmo, criou-se a divisão que consta no
+próprio documento em análise.
+\vspace{3mm}
+
+\textbf{Com a pesquisa necessária e com a ideia do funcionamento do
+algoritmo em mente, estabelecem-se as seguintes implementações:}
+\vspace{2mm}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{\emph{Parameter Space} - Criação/Geração dos Parâmetros e de
+  todos os Anéis de Polinómios necessários para o restante do programa:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Criação do parâmetro \(q\) - que corresponde a um número primo
+  \item
+    Criação do parâmetro \(p\) - que corresponde também a um número
+    primo
+  \item
+    O parâmetro \(w\) é criado e usado em toda a parte da \emph{Key
+    Generation}, \emph{Encapsulation} e \emph{Desencapsulation}
+  \item
+    Verificar se \(x^{p}-x-1\) é irredutível no Anel de Polinómios
+    \((\mathbb{Z}/q)[x]\)
+  \item
+    Abreviar os 2 Anéis de Polinónimo \(\mathbb{Z}[x]/(x^{p}-x-1)\) e
+    \((\mathbb{Z}/3)[x]/(x^{p}-x-1)\) e o Campo/Grupo Finito
+    \((\mathbb{Z}/q)[x]/(x^{p}-x-1)\) respetivamente como \({R}\),
+    \({R}/3\) e \({R}/q\)
+  \end{itemize}
+
+  \textbf{Note-se que o \emph{field} criado é usado para verificar a
+  irredutibilidade de \(x^{p}-x-1\), justificando-se assim a ordem a
+  nível do código.}
+\vspace{3mm}
+
+\item
+  \textbf{\emph{Key Generation} - Geração das Chaves (\emph{Secret} e
+  \emph{Public Key}):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Criação de um elemento pequeno \(g\) uniforme e aleatório tal que
+    \(g\in{R}\). Repetir o processo de modo a verificar que \(g\) é
+    invertível em \({R}/3\)
+  \item
+    Criação de um elemento pequeno \(f\) uniforme e aleatório tal que
+    \(f\in{R}\). Este elemento \(f\) deve ser de peso \(w\), diferente
+    de 0 e por isso, invertível em \({R}/q\)
+  \item
+    O Segredo guardado será o \textbf{par ordenado} \((f, 1/g)\) em que
+    \(f\) em \({R}\) e \(1/g\) em \({R}/3\)
+  \item
+    A Chave Pública corresponderá ao cálculo \(h = g/(3f)\) em \({R}/q\)
+  \end{itemize}
+\vspace{3mm}
+
+\item
+  \textbf{\emph{Encapsulation} - Processo de Encapsulamento:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Obtenção do \(h\in{R}/q\). Para este teste algorítmico corresponderá
+    à \emph{Public Key} dada como parâmetro da função criada para o
+    efeito
+  \item
+    Criação de um elemento pequeno \(e\) uniforme e aleatório tal que
+    \(r\in{R}\). Este elemento \(r\) deve ser de peso \(w\)
+  \item
+    Calcular \(hr\in{R}/q\)
+  \item
+    Arredondar cada coeficiente de \(hr\) visto como um inteiro entre
+    \(-(q-1)/2\) e \((q-1)/2\), para o múltiplo de 3 mais próximo,
+    obtendo-se assim \(C\in{R}\)
+  \end{itemize}
+
+  \textbf{A parte da Hash é feita na secção de teste criada para esta
+  classe Python, de modo a se conseguir testar as versões PKE-IND-CCA e
+  KEM-IND-CPA.}
+\vspace{3mm}
+
+\item
+  \textbf{\emph{Decapsulation} - Processo de Desencapsulamento:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Obtenção do valor de \(C\) que é passado como argumento
+  \item
+    Multiplicar o valor de \(C\) por \(3f\) em \({R}/q\)
+  \item
+    Arredondar cada coeficiente de \(3fC\) visto como um inteiro entre
+    \(-(q-1)/2\) e \((q-1)/2\), reduzindo ao módulo 3, obtendo-se um
+    polinómio em \({R}/3\)
+  \item
+    Multiplicar esse valor por \(1/g\in{R}/3\)
+  \item
+    Calcular \(r'\)
+  \end{itemize}
+\end{enumerate}
+\vspace{3mm}
+
+\subsection{Resolução do
+Exercício}\label{resoluuxe7uxe3o-do-exercuxedcio}
+\vspace{2mm}
+
+    \subsubsection{\texorpdfstring{1. \emph{Parameter
+Space}}{1. Parameter Space}}\label{parameter-space}
+
+Geração dos Parâmetros e dos Anéis de Polinómios necessários para o
+restante do programa. Dado a necessidade de usar estas variáveis ao
+longo do algoritmo, criou-se uma célula à parte para permitir a
+globalidade do programa de forma correta.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{c+c1}{\PYZsh{} Parâmetro primo q}
+        \PY{n}{q} \PY{o}{=} \PY{l+m+mi}{24}\PY{o}{*}\PY{l+m+mi}{64}
+        
+        \PY{c+c1}{\PYZsh{} Verifica se o valor dado ao q é primo}
+        \PY{c+c1}{\PYZsh{} Cria\PYZhy{}se um ciclo while para fazer essa verificação}
+        \PY{k}{while} \PY{n+nb+bp}{True}\PY{p}{:}
+            
+            \PY{k}{if} \PY{p}{(}\PY{l+m+mi}{1} \PY{o}{+} \PY{n}{q}\PY{p}{)}\PY{o}{.}\PY{n}{is\PYZus{}prime}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+                \PY{k}{break}
+            \PY{k}{else}\PY{p}{:}
+                \PY{n}{q} \PY{o}{=} \PY{n}{q} \PY{o}{+} \PY{l+m+mi}{3}
+        \PY{n}{q} \PY{o}{=} \PY{n}{q} \PY{o}{+} \PY{l+m+mi}{1}
+        
+        \PY{c+c1}{\PYZsh{} Anéis de Polinómios e Campo/Grupo Finito}
+        \PY{n}{Zx}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{x}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{ZZ}\PY{p}{[}\PY{p}{]}                   \PY{c+c1}{\PYZsh{} Anel de Inteiros}
+        \PY{n}{Z3}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{y}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{PolynomialRing}\PY{p}{(}\PY{n}{GF}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Anel do Grupo Finito do módulo 3}
+        \PY{n}{Gq}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{z}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{GF}\PY{p}{(}\PY{n}{q}\PY{p}{)}\PY{p}{[}\PY{p}{]}                \PY{c+c1}{\PYZsh{} Grupo Finito do módulo q}
+        
+        \PY{c+c1}{\PYZsh{} Parâmetro primo p}
+        \PY{c+c1}{\PYZsh{} Dado que se declarou o primo q anteriormente pode\PYZhy{}se fazer logo uso da função next\PYZus{}prime}
+        \PY{n}{p} \PY{o}{=} \PY{n}{next\PYZus{}prime}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{l+m+mi}{64}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Verifica se x\PYZca{}p \PYZhy{} x \PYZhy{} 1 é irredutível no Grupo Finito Gq}
+        \PY{c+c1}{\PYZsh{} Cria\PYZhy{}se um ciclo while para fazer essa verificação}
+        \PY{k}{while} \PY{n+nb+bp}{True}\PY{p}{:}
+            
+            \PY{k}{if}  \PY{n}{Gq}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZca{}}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{.}\PY{n}{is\PYZus{}irreducible}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+                \PY{k}{break}
+            \PY{k}{else}\PY{p}{:}
+                \PY{n}{p} \PY{o}{=} \PY{n}{next\PYZus{}prime}\PY{p}{(}\PY{n}{p}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Resolver/Abreviar os Anéis e o Campo/Grupo como R, R/3 e R/q}
+        \PY{n}{ZxR}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{x}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{Zx}\PY{o}{.}\PY{n}{quotient}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZca{}}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+        \PY{n}{ZR3}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{y}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{Z3}\PY{o}{.}\PY{n}{quotient}\PY{p}{(}\PY{n}{y}\PY{o}{\PYZca{}}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{n}{y}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+        \PY{n}{GRq}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{z}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{Gq}\PY{o}{.}\PY{n}{quotient}\PY{p}{(}\PY{n}{z}\PY{o}{\PYZca{}}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{n}{z}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+\vspace{2mm}
+
+    \subsubsection{\texorpdfstring{2, 3 e 4. \emph{Key Generation},
+\emph{Encapsulation} e
+\emph{Decapsulation}}{2, 3 e 4. Key Generation, Encapsulation e Decapsulation}}\label{e-4.-key-generation-encapsulation-e-decapsulation}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{} Imports Necessários}
+        \PY{k+kn}{import} \PY{n+nn}{hashlib}
+        \PY{k+kn}{from} \PY{n+nn}{random} \PY{k+kn}{import} \PY{n}{choice}\PY{p}{,} \PY{n}{randint}
+        
+        \PY{c+c1}{\PYZsh{} Função auxiliar que gera um Pequeno Elemento Aleatório}
+        \PY{k}{def} \PY{n+nf}{smallPoly}\PY{p}{(}\PY{n}{p}\PY{p}{,} \PY{n}{t} \PY{o}{=} \PY{n+nb+bp}{None}\PY{p}{)}\PY{p}{:}
+        
+            \PY{k}{if} \PY{o+ow}{not} \PY{n}{t}\PY{p}{:}
+                \PY{k}{return} \PY{n}{Zx}\PY{p}{(}\PY{p}{[}\PY{n}{choice}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)} \PY{k}{for} \PY{n}{k} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{p}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+        
+            \PY{n}{u} \PY{o}{=} \PY{n}{floor}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{p}{(}\PY{n}{p}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{o}{/}\PY{n}{t}\PY{p}{)} 
+            \PY{n}{k} \PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{u}\PY{p}{)} 
+            \PY{n}{l} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{*}\PY{n}{p}
+        
+            \PY{k}{while} \PY{n}{k} \PY{o}{\PYZlt{}} \PY{n}{p}\PY{p}{:}
+        
+                \PY{n}{l}\PY{p}{[}\PY{n}{k}\PY{p}{]} \PY{o}{=} \PY{n}{choice}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+                \PY{n}{k} \PY{o}{+}\PY{o}{=} \PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{u}\PY{p}{)}
+        
+            \PY{k}{return} \PY{n}{Zx}\PY{p}{(}\PY{n}{l}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Função auxiliar que trata de arredondar cada coeficiente visto como um inteiro entre \PYZhy{}(q\PYZhy{}1)/2 e (q\PYZhy{}1)/2}
+        \PY{c+c1}{\PYZsh{} Função adaptada para funcionar tanto para o Encapsulamento como Desencapsulamento}
+        \PY{k}{def} \PY{n+nf}{myRound}\PY{p}{(}\PY{n}{round3OrNot}\PY{p}{,} \PY{n}{hr} \PY{o}{=} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{w} \PY{o}{=} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{q} \PY{o}{=} \PY{n}{q}\PY{p}{)}\PY{p}{:}          
+        
+            \PY{c+c1}{\PYZsh{} Caso seja 0 significa que estamos a tratar do arredondamento pedido pelo Desencapsulamento}
+            \PY{k}{if} \PY{n}{round3OrNot} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
+                \PY{n}{r} \PY{o}{=} \PY{n}{q}\PY{o}{/}\PY{o}{/}\PY{l+m+mi}{2}
+                
+                \PY{k}{return} \PY{n}{Zx}\PY{p}{(}\PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{lift}\PY{p}{(}\PY{n}{x} \PY{o}{+} \PY{n}{r}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{r}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{list}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+            
+            \PY{c+c1}{\PYZsh{} Caso contrário, pelo Encapsulamento}
+            \PY{c+c1}{\PYZsh{} Daí o arredondamento para múltiplo de 3 mais próximo}
+            \PY{k}{elif} \PY{n}{round3OrNot} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{:}
+                
+                \PY{c+c1}{\PYZsh{} Aredondar para multpilo de 3 mais próximo}
+                \PY{k}{def} \PY{n+nf}{mul3}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+                    \PY{k}{return} \PY{p}{(}\PY{p}{(}\PY{n}{x}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{3}
+        
+                \PY{n}{r} \PY{o}{=} \PY{n}{q}\PY{o}{/}\PY{o}{/}\PY{l+m+mi}{2}
+        
+                \PY{k}{return}  \PY{n}{Zx}\PY{p}{(}\PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{mul3}\PY{p}{(}\PY{n}{lift}\PY{p}{(}\PY{n}{x}\PY{o}{+}\PY{n}{r}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{r}\PY{p}{)}\PY{p}{,} \PY{n}{hr}\PY{o}{.}\PY{n}{list}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Classe NTRU\PYZhy{}Prime que trata da Geração das Chaves, Encapsulamento e Desencapsulamento}
+        \PY{k}{class} \PY{n+nc}{NTRU\PYZus{}Prime}\PY{p}{:}   
+        
+            \PY{c+c1}{\PYZsh{} Função de Hash}
+            \PY{k}{def} \PY{n+nf}{Hash}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{w}\PY{p}{)}\PY{p}{:}
+                \PY{n}{ww} \PY{o}{=} \PY{n+nb}{reduce}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{:} \PY{n}{x} \PY{o}{+} \PY{n}{y}\PY{o}{.}\PY{n}{binary}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{list}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        
+                \PY{k}{return} \PY{n}{hashlib}\PY{o}{.}\PY{n}{sha256}\PY{p}{(}\PY{n}{ww}\PY{p}{)}\PY{o}{.}\PY{n}{hexdigest}\PY{p}{(}\PY{p}{)}
+            
+            \PY{c+c1}{\PYZsh{} Geração das Chaves (Segredo e Public Key)}
+            \PY{k}{def} \PY{n+nf}{keyGeneration}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        
+                \PY{c+c1}{\PYZsh{} Pequeno Elemento aleatório g pertecente a R}
+                \PY{c+c1}{\PYZsh{} Verificar que g seja invertível em R/3}
+                \PY{n}{g} \PY{o}{=} \PY{n}{smallPoly}\PY{p}{(}\PY{n}{p}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Daí se recorrer ao Anel de Polinómios (Z/3)[x]}
+                \PY{k}{while} \PY{o+ow}{not} \PY{n}{ZR3}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{o}{.}\PY{n}{is\PYZus{}unit}\PY{p}{(}\PY{p}{)}\PY{p}{:}   
+                    \PY{n}{g} \PY{o}{=} \PY{n}{smallPoly}\PY{p}{(}\PY{n}{p}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Pequeno Elemento aleatório f pertencente a R de peso w}
+                \PY{c+c1}{\PYZsh{} Verificar que f é diferente de 0 e invertível em R/q}
+                \PY{n}{w} \PY{o}{=} \PY{n}{smallPoly}\PY{p}{(}\PY{n}{p}\PY{p}{,} \PY{l+m+mi}{64}\PY{p}{)}
+                \PY{n}{f} \PY{o}{=} \PY{n}{GRq}\PY{p}{(}\PY{n}{w}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Calcular 1/g pertencente a R/3}
+                \PY{n}{gInv} \PY{o}{=} \PY{n}{ZR3}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{o}{\PYZca{}}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Chave Privada (Secrets)}
+                \PY{c+c1}{\PYZsh{} Par Ordenado (f, 1/g)}
+                \PY{n}{secret} \PY{o}{=} \PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{gInv}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Chave Pública em Gqr (h)}
+                \PY{n}{publicKey} \PY{o}{=} \PY{n}{GRq}\PY{p}{(}\PY{n}{g}\PY{p}{)}\PY{o}{/}\PY{n}{GRq}\PY{p}{(}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{f}\PY{p}{)}
+        
+                \PY{k}{return} \PY{p}{(}\PY{n}{secret}\PY{p}{,} \PY{n}{publicKey}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Encapsulamento}
+            \PY{k}{def} \PY{n+nf}{encapsulate}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{publicKey}\PY{p}{)}\PY{p}{:}
+        
+                \PY{c+c1}{\PYZsh{} Public Key h}
+                \PY{c+c1}{\PYZsh{} Neste caso é o argumento passado como pk}
+                \PY{n}{h} \PY{o}{=} \PY{n}{publicKey}
+                
+                \PY{c+c1}{\PYZsh{} Pequeno Elemento aleatório f pertencente a R de peso w}
+                \PY{n}{w} \PY{o}{=} \PY{n}{smallPoly}\PY{p}{(}\PY{n}{p}\PY{p}{,} \PY{l+m+mi}{64}\PY{p}{)}
+                \PY{n}{r} \PY{o}{=} \PY{n}{GRq}\PY{p}{(}\PY{n}{w}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Calcular hr}
+                \PY{c+c1}{\PYZsh{} Arredondar cada coeficiente de hr}
+                \PY{n}{C} \PY{o}{=} \PY{n}{myRound}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{h}\PY{o}{*}\PY{n}{r}\PY{p}{)}
+        
+                \PY{k}{return} \PY{p}{(}\PY{n}{w}\PY{p}{,} \PY{n}{C}\PY{p}{)}
+            
+            \PY{c+c1}{\PYZsh{} Desencapsulamento}
+            \PY{k}{def} \PY{n+nf}{decapsulate}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{secret}\PY{p}{,} \PY{n}{C}\PY{p}{)}\PY{p}{:}
+                
+                \PY{c+c1}{\PYZsh{} Obter o valor de f e 1/g}
+                \PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{gInv}\PY{p}{)} \PY{o}{=} \PY{n}{secret}
+                
+                \PY{c+c1}{\PYZsh{} Multiplicar C por 3f em R/q}
+                \PY{c+c1}{\PYZsh{} Arredondar cada coeficiente de 3fc}
+                \PY{c+c1}{\PYZsh{} Multiplicar por 1/g (gInv)}
+                \PY{n}{e} \PY{o}{=} \PY{n}{gInv} \PY{o}{*} \PY{n}{ZR3}\PY{p}{(}\PY{n}{myRound}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{GRq}\PY{p}{(}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{f}\PY{p}{)} \PY{o}{*} \PY{n}{GRq}\PY{p}{(}\PY{n}{C}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+                
+                \PY{c+c1}{\PYZsh{} Calcular r\PYZsq{}}
+                \PY{n}{rlinha} \PY{o}{=} \PY{n}{myRound}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{e}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}
+                
+                \PY{k}{return} \PY{n}{rlinha}
+\end{Verbatim}
+\vspace{3mm}
+
+    \subsection{Teste da Classe}\label{teste-da-classe}
+\vspace{2mm}
+
+    \textbf{Teste e Verificação para o modo PKE-IND-CCA}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{c+c1}{\PYZsh{} Criação da Instância}
+         \PY{n}{ntruPrime} \PY{o}{=} \PY{n}{NTRU\PYZus{}Prime}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Geração das Chaves (Segredo e Chave Pública)}
+         \PY{p}{(}\PY{n}{secret}\PY{p}{,} \PY{n}{publicKey}\PY{p}{)} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{keyGeneration}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Cifrar}
+         \PY{p}{(}\PY{n}{key}\PY{p}{,}\PY{n}{C}\PY{p}{)} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{encapsulate}\PY{p}{(}\PY{n}{publicKey}\PY{p}{)} 
+         
+         \PY{c+c1}{\PYZsh{} Decifrar e Verificar}
+         \PY{k}{if} \PY{n}{key} \PY{o}{==} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{decapsulate}\PY{p}{(}\PY{n}{secret}\PY{p}{,} \PY{n}{C}\PY{p}{)}\PY{p}{:}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{As chaves correspondem.}\PY{l+s+s2}{\PYZdq{}}
+             \PY{k}{print}\PY{p}{(}\PY{n}{key}\PY{p}{)}
+         \PY{k}{else}\PY{p}{:}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Erro na correspondência das chaves.}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+As chaves correspondem.
+-x\^{}246 + x\^{}243 + x\^{}242 + x\^{}240 - x\^{}239 - x\^{}235 - x\^{}229 - x\^{}224 + x\^{}217 + x\^{}213 - x\^{}206 + x\^{}203 + x\^{}198 - x\^{}196 - x\^{}195 - x\^{}194 + x\^{}189 + x\^{}186 + x\^{}181 - x\^{}180 + x\^{}175 + x\^{}170 - x\^{}166 - x\^{}163 - x\^{}159 + x\^{}156 - x\^{}151 + x\^{}148 + x\^{}143 + x\^{}140 + x\^{}137 + x\^{}133 - x\^{}129 + x\^{}123 - x\^{}117 - x\^{}116 - x\^{}109 + x\^{}108 + x\^{}105 - x\^{}104 + x\^{}97 + x\^{}90 + x\^{}84 + x\^{}83 + x\^{}78 - x\^{}76 - x\^{}75 - x\^{}73 + x\^{}66 - x\^{}60 + x\^{}54 - x\^{}52 - x\^{}46 + x\^{}39 + x\^{}38 - x\^{}31 + x\^{}30 + x\^{}25 - x\^{}21 - x\^{}19 + x\^{}18 - x\^{}17 + x\^{}14 + x\^{}8 - x\^{}6 + x\^{}5 + x\^{}2 + x
+
+    \end{Verbatim}
+\newpage
+    \textbf{Teste e Verficação da versão KEM-IND-CPA}
+\vspace{2mm}
+
+KEM é a randomização duma chave do tamanho correto do algoritmo
+utilizado (neste caso o NTRU-Prime) e depois a chave simétrica a
+utilizar futuramente, na verdade está encapsulada utilizando um KDF (ex:
+SHA-256). Assim esse KDF irá derivar a chave "grande" do PKE para uma
+chave simétrica com o tamanho correto (SHA-256 dá valores de 256-bits,
+que podem ser utilizados num algoritmo simétrico como AES-256)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{c+c1}{\PYZsh{} Criação da Instância}
+         \PY{n}{ntruPrime} \PY{o}{=} \PY{n}{NTRU\PYZus{}Prime}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Geração das Chaves (Segredo e Chave Pública)}
+         \PY{p}{(}\PY{n}{secret}\PY{p}{,} \PY{n}{publicKey}\PY{p}{)} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{keyGeneration}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} 1. Bob}
+         
+         \PY{c+c1}{\PYZsh{} Cifrar}
+         \PY{p}{(}\PY{n}{keyBob}\PY{p}{,} \PY{n}{C}\PY{p}{)} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{encapsulate}\PY{p}{(}\PY{n}{publicKey}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Passar a Chave de tamanho grande do PKE NTRU\PYZhy{}Prime para 256 bits usando SHA\PYZhy{}256}
+         \PY{n}{chaveSimetricaBob} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{Hash}\PY{p}{(}\PY{n}{keyBob}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} 2. Alice}
+         
+         \PY{c+c1}{\PYZsh{} Cifrar}
+         \PY{n}{keyAlice} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{decapsulate}\PY{p}{(}\PY{n}{secret}\PY{p}{,} \PY{n}{C}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Se as chaves PKE coincidirem (Algoritmo funciona corretamente)}
+         \PY{k}{if} \PY{n}{keyBob} \PY{o}{==} \PY{n}{keyAlice}\PY{p}{:}
+             \PY{n}{chaveSimetricaAlice} \PY{o}{=} \PY{n}{ntruPrime}\PY{o}{.}\PY{n}{Hash}\PY{p}{(}\PY{n}{keyAlice}\PY{p}{)}
+         \PY{k}{else}\PY{p}{:}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{O Algoritmo NTRU não decifrou corretamente.}\PY{l+s+s2}{\PYZdq{}}
+         
+         \PY{c+c1}{\PYZsh{} Verificar a validade de ambas as Chaves Simétricas}
+         \PY{k}{if} \PY{n}{chaveSimetricaBob} \PY{o}{==} \PY{n}{chaveSimetricaAlice}\PY{p}{:}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{As chaves correspondem.}\PY{l+s+s2}{\PYZdq{}}
+             \PY{k}{print}\PY{p}{(}\PY{n}{chaveSimetricaBob}\PY{p}{)}
+         \PY{k}{else}\PY{p}{:}
+             \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Erro na correspondência das chaves.}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+As chaves correspondem.
+74c63fbed90859b8d5198d8ec717686a655ed1e75ad84bce791f56d76ff03497
+
+    \end{Verbatim}
+
+    \subsection{Observações Finais}\label{observauxe7uxf5es-finais}
+\vspace{2mm}
+
+\begin{itemize}
+\tightlist
+\item
+  O algoritmo \textbf{NTRU} ajudou a ter uma noção muito basilar acerca
+  do funcionamento do \textbf{NTRU-Prime};
+\item
+  Através do documento de envio principal do \textbf{NTRU-Prime}
+  consegui-se compreender bem todos os passos e com isso criar as várias
+  etapas que formam o algoritmo, permitindo testar toda a validade do
+  programa Python/Sagemath;
+\item
+  A grande dificuldade continua a ser, tal como nos outros Trabalhos
+  Práticos, toda a ideia de trabalhar com o Sagemath e compreender todas
+  as suas funcionalidades necessárias para os vários algoritmos
+  criptográficos.
+\end{itemize}
+\vspace{2mm}
+
+    \subsection{Referências}\label{referuxeancias}
+\vspace{2mm}
+
+\begin{itemize}
+\tightlist
+\item
+  ENS DE LYON, NTRU Prime: Intro \url{https://ntruprime.cr.yp.to} (Acedido a
+  10 maio 2020)
+\item
+  Wikipedia, NTRU \url{https://en.wikipedia.org/wiki/NTRU} (Acedido a 11 maio
+  2020)
+\end{itemize}
+\vspace{5mm}
+
+\newpage
+    \section{\texorpdfstring{Implementação do NewHope com o
+\emph{SageMath}}{Implementação do NewHope com o SageMath}}\label{implementauxe7uxe3o-do-newhope-com-o-sagemath}
+\vspace{3mm}
+
+\subsection{Descrição do
+Exercício}\label{descriuxe7uxe3o-do-exercuxedcio}
+\vspace{2mm}
+Construir uma classe Python/SageMath que implemente o esquema KEM
+\textbf{NewHope} a concurso do NIST-PQC.
+\vspace{2mm}
+\subsection{Descrição da
+Implementação}\label{descriuxe7uxe3o-da-implementauxe7uxe3o}
+\vspace{2mm}
+Para a implementação houve a criação de um campo ciclotómico, através
+dum anel polinomial dum grupo finito de \(1024\), logo ficando
+\(R/[X^1024+1]\).
+\vspace{2mm}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Para a inicialização do algoritmo NewHope fez-se:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Uma matriz identidade de sub-dimensão 4
+  \item
+    Uma rede diagonal de inteiros a partir dessa matriz
+  \item
+    Criar um meio vetor e modificar a última linha da matriz com ele
+  \item
+    Criação do poliedro principal com as estruturas matemáticas
+    anteriores
+  \end{itemize}
+\vspace{2mm}
+
+\item
+  \textbf{Para a geração de noise/erro:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Buscamos um \emph{sample} polinomial da Distribuição Gaussiana
+  \end{itemize}
+\vspace{2mm}
+
+\item
+  \textbf{Para a geração do sinal:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Vamos fazer a divisão dos elementos pelo módulo tendo os
+    coeficientes
+  \item
+    Caso o vetor \(V\) esteja no poliedro principal, utiliza-se. Senão
+    vai-se à rede diagonal e usa-se o vetor mais próximo de \(V\).
+  \item
+    Sendo assim a distância, o sinal.
+  \end{itemize}
+\vspace{2mm}
+
+\item
+  \textbf{Para a reconciliação é um processo análogo:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Vamos fazer a divisão dos elementos pelo módulo tendo os
+    coeficientes
+  \item
+    Adicionamos \(1\) caso a coordenada esteja no centro do poliedro,
+    senão \(0\)
+  \item
+    Temos assim uma chave.
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Resolução do
+Exercício}\label{resoluuxe7uxe3o-do-exercuxedcio}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{itertools}\PY{o}{,} \PY{n+nn}{numpy}
+        
+        \PY{k+kn}{from} \PY{n+nn}{sage.stats.distributions.discrete\PYZus{}gaussian\PYZus{}polynomial} \PY{k+kn}{import} \PY{n}{DiscreteGaussianDistributionPolynomialSampler}
+        \PY{k+kn}{from} \PY{n+nn}{sage.modules.free\PYZus{}module\PYZus{}integer} \PY{k+kn}{import} \PY{n}{IntegerLattice}
+        \PY{k+kn}{from} \PY{n+nn}{sage.modules.diamond\PYZus{}cutting} \PY{k+kn}{import} \PY{n}{calculate\PYZus{}voronoi\PYZus{}cell}
+        
+        \PY{n}{dimension} \PY{o}{=} \PY{l+m+mi}{1024}     \PY{c+c1}{\PYZsh{} Grau dos Polinómios (Dimensão suportada pelo NewHope)}
+        \PY{n}{modulus} \PY{o}{=} \PY{l+m+mi}{12289}      \PY{c+c1}{\PYZsh{} Módulo (Valor de q)}
+        \PY{n}{sigma} \PY{o}{=} \PY{l+m+mi}{8}\PY{o}{/}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{pi}\PY{p}{)} \PY{c+c1}{\PYZsh{} Sigma (Com o Parâmetro de Distribuição de Ruído = 8)}
+        
+        \PY{c+c1}{\PYZsh{} Anel Polinomial Quociente}
+        \PY{n}{R}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{X}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{PolynomialRing}\PY{p}{(}\PY{n}{GF}\PY{p}{(}\PY{n}{modulus}\PY{p}{)}\PY{p}{)}     \PY{c+c1}{\PYZsh{} Anel polinomial}
+        \PY{n}{Y}\PY{o}{.}\PY{o}{\PYZlt{}}\PY{n}{x}\PY{o}{\PYZgt{}} \PY{o}{=} \PY{n}{R}\PY{o}{.}\PY{n}{quotient}\PY{p}{(}\PY{n}{X}\PY{o}{\PYZca{}}\PY{p}{(}\PY{n}{dimension}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)}   \PY{c+c1}{\PYZsh{} Campo Ciclotómico}
+        
+        \PY{n}{subDimension} \PY{o}{=} \PY{l+m+mi}{4}
+        
+        \PY{c+c1}{\PYZsh{} Função Auxiliar que converte do Intervalo [c0, c1, ..., c1023] para [(c0, c1, c2, c3), ..., (..., c1023)]}
+        \PY{k}{def} \PY{n+nf}{grouped}\PY{p}{(}\PY{n}{iterable}\PY{p}{,} \PY{n}{n}\PY{p}{)}\PY{p}{:}
+            \PY{k}{return} \PY{n+nb}{zip}\PY{p}{(}\PY{o}{*}\PY{p}{[}\PY{n+nb}{iter}\PY{p}{(}\PY{n}{iterable}\PY{p}{)}\PY{p}{]}\PY{o}{*}\PY{n}{n}\PY{p}{)}
+            
+        \PY{k}{class} \PY{n+nc}{NewHope}\PY{p}{:}
+            
+            \PY{c+c1}{\PYZsh{} Inicialização Algortimo}
+            \PY{k}{def} \PY{n+nf}{initialize}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+        
+                \PY{c+c1}{\PYZsh{} Criação da Matriz Identidade}
+                \PY{c+c1}{\PYZsh{} Construir uma Rede diagonal de Inteiros a partir da Matriz Identidade}
+                \PY{n}{identityMatrix} \PY{o}{=} \PY{n}{Matrix}\PY{o}{.}\PY{n}{identity}\PY{p}{(}\PY{n}{RR}\PY{p}{,} \PY{n}{subDimension}\PY{p}{)}
+                \PY{n}{integerLattice} \PY{o}{=} \PY{n}{IntegerLattice}\PY{p}{(}\PY{n}{identityMatrix}\PY{p}{)}
+        
+                \PY{c+c1}{\PYZsh{} Construir um Half Vector (1/2)}
+                \PY{c+c1}{\PYZsh{} Modificar última linha da Matriz Identidade}
+                \PY{n}{halfVector} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{subDimension}\PY{p}{)}\PY{p}{]}       
+                \PY{n}{identityMatrix}\PY{p}{[}\PY{n}{subDimension} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{]} \PY{o}{=} \PY{n}{halfVector}
+                
+                \PY{c+c1}{\PYZsh{} Criar Célula Voronoi a partir Matriz Modificada}
+                \PY{n}{mainPolyhedron} \PY{o}{=} \PY{n}{calculate\PYZus{}voronoi\PYZus{}cell}\PY{p}{(}\PY{n}{identityMatrix}\PY{p}{)}\PY{o}{.}\PY{n}{translation}\PY{p}{(}\PY{n}{halfVector}\PY{p}{)} 
+                
+                \PY{c+c1}{\PYZsh{} Retorna uma Lattice de Inteiros e um Poliedro de centro em (1/2, ..., 1/2)}
+                \PY{k}{return} \PY{p}{(}\PY{n}{integerLattice}\PY{p}{,} \PY{n}{mainPolyhedron}\PY{p}{)}
+            
+            \PY{k}{def} \PY{n+nf}{dbl}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{coefficient\PYZus{}vector}\PY{p}{)}\PY{p}{:}
+                \PY{k}{return}  \PY{n}{coefficient\PYZus{}vector} \PY{o}{+} \PYZbs{}
+                        \PY{n}{vector}\PY{p}{(} \PY{n}{numpy}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{p}\PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mf}{0.5}\PY{p}{]}\PY{p}{)} \PY{o}{*} \PY{n}{vector}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{/}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{modulus}\PY{p}{)} \PY{k}{for} \PY{n}{\PYZus{}} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{subDimension}\PY{p}{)}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Geração do Erro}
+            \PY{k}{def} \PY{n+nf}{generateError}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                \PY{n}{f} \PY{o}{=} \PY{n}{DiscreteGaussianDistributionPolynomialSampler}\PY{p}{(}\PY{n}{ZZ}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{n}{sigma}\PY{p}{)}\PY{p}{(}\PY{p}{)}
+                \PY{k}{return} \PY{n}{Y}\PY{p}{(}\PY{n}{f}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Geração do Polinómio a partir de Elementos Random}
+            \PY{k}{def} \PY{n+nf}{generatePolynomial}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                \PY{k}{return} \PY{n}{Y}\PY{o}{.}\PY{n}{random\PYZus{}element}\PY{p}{(}\PY{p}{)}
+        
+            \PY{c+c1}{\PYZsh{} Geração do Signal}
+            \PY{k}{def} \PY{n+nf}{generateSignal}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{poly}\PY{p}{)}\PY{p}{:} 
+                
+                \PY{c+c1}{\PYZsh{} Divide coeficientes pelo módulo}
+                \PY{n}{coefficients} \PY{o}{=} \PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{RR}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{o}{/} \PY{n}{modulus}\PY{p}{,} \PY{n}{poly}\PY{o}{.}\PY{n}{list}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                \PY{n}{distances} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+                
+                \PY{k}{for} \PY{n}{v} \PY{o+ow}{in} \PY{n}{grouped}\PY{p}{(}\PY{n}{coefficients}\PY{p}{,} \PY{n}{subDimension}\PY{p}{)}\PY{p}{:}
+                    
+                    \PY{n}{v} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{dbl}\PY{p}{(}\PY{n}{vector}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{)}
+                    
+                    \PY{c+c1}{\PYZsh{} Caso o ponto/vetor esteja no  Main Polyhedron, usa\PYZhy{}se o centro do Main Polyhedron}
+                    \PY{k}{if} \PY{n}{mainPolyhedron}\PY{o}{.}\PY{n}{contains}\PY{p}{(}\PY{n}{vector}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                        \PY{n}{distance} \PY{o}{=} \PY{n}{mainPolyhedron}\PY{o}{.}\PY{n}{center}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{v}
+                    \PY{c+c1}{\PYZsh{} Caso contrário}
+                    \PY{k}{else}\PY{p}{:}
+                        \PY{n}{distance} \PY{o}{=} \PY{n}{integerLattice}\PY{o}{.}\PY{n}{closest\PYZus{}vector}\PY{p}{(}\PY{n}{v}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{v}
+                    \PY{n}{distances}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{distance}\PY{p}{)}
+        
+                \PY{k}{return} \PY{n}{distances}
+            
+            \PY{c+c1}{\PYZsh{} Reconciliação}
+            \PY{k}{def} \PY{n+nf}{reconcile}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{poly}\PY{p}{,} \PY{n}{w}\PY{p}{)}\PY{p}{:}
+                
+                \PY{n}{coefficients} \PY{o}{=} \PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{RR}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{o}{/} \PY{n}{modulus}\PY{p}{,} \PY{n}{poly}\PY{o}{.}\PY{n}{list}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+                \PY{n}{key} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+                
+                \PY{k}{for} \PY{n}{difference}\PY{p}{,} \PY{n}{v} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{w}\PY{p}{,} \PY{n}{grouped}\PY{p}{(}\PY{n}{coefficients}\PY{p}{,} \PY{n}{subDimension}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                    
+                    \PY{n}{v} \PY{o}{=} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{dbl}\PY{p}{(}\PY{n}{vector}\PY{p}{(}\PY{n}{v}\PY{p}{)}\PY{p}{)}
+                    \PY{n}{coordinate} \PY{o}{=} \PY{n}{vector}\PY{p}{(}\PY{p}{[}\PY{n+nb}{round}\PY{p}{(}\PY{n}{point}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)} \PY{k}{for} \PY{n}{point} \PY{o+ow}{in} \PY{p}{(}\PY{n}{v} \PY{o}{+} \PY{n}{difference}\PY{p}{)} \PY{p}{]}\PY{p}{)}
+                    \PY{n}{key}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+m+mi}{1} \PY{k}{if} \PY{n}{coordinate} \PY{o}{==} \PY{n}{mainPolyhedron}\PY{o}{.}\PY{n}{center}\PY{p}{(}\PY{p}{)} \PY{k}{else} \PY{l+m+mi}{0}\PY{p}{)}
+        
+                \PY{k}{return} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n+nb}{map}\PY{p}{(}\PY{n+nb}{str}\PY{p}{,} \PY{n}{key}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+\vspace{2mm}
+
+    \subsection{Teste da Classe}\label{teste-da-classe}
+\vspace{2mm}
+
+\textbf{Para teste da classe e algoritmo total fez-se:}
+\vspace{2mm}
+
+\begin{itemize}
+\tightlist
+\item
+  Inicialização do anel diagonal e o poliedro
+\item
+  Cria-se uma matriz partilhada para os dois
+\item
+  Instanciação dos valores do Bob (segredo, erro e o valor)
+\item
+  Instanciação dos valores da Alice (segredo, erro e o valor)
+\item
+  A chave da Alice sendo: \$ valueBob * secretAlice + temp\_error\$
+\item
+  A chave do Bob sendo: \$ valueAlice * secretBob \$
+\item
+  Fazer a reconciliação destes polinómios e ver se são iguais.
+\end{itemize}
+\vspace{3mm}
+
+    \textbf{Teste e Verificação para o modo PKE-IND-CCA}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{c+c1}{\PYZsh{} Criação da Instância}
+        \PY{n}{newHope} \PY{o}{=} \PY{n}{NewHope}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Lattice de Inteiros e Poliedro Principal}
+        \PY{p}{(}\PY{n}{integerLattice}\PY{p}{,} \PY{n}{mainPolyhedron}\PY{p}{)} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{initialize}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Matriz Partilhada}
+        \PY{n}{shared} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generatePolynomial}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 1. Valores Bob}
+        \PY{n}{secretBob} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateError}\PY{p}{(}\PY{p}{)}
+        \PY{n}{errorBob} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateError}\PY{p}{(}\PY{p}{)}
+        \PY{n}{valueBob} \PY{o}{=} \PY{n}{shared} \PY{o}{*} \PY{n}{secretBob} \PY{o}{+} \PY{n}{errorBob}
+        
+        \PY{c+c1}{\PYZsh{} 2. Valores Alice}
+        \PY{n}{secretAlice} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateError}\PY{p}{(}\PY{p}{)}
+        \PY{n}{errorAlice} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateError}\PY{p}{(}\PY{p}{)}
+        \PY{n}{valueAlice} \PY{o}{=} \PY{n}{shared} \PY{o}{*} \PY{n}{secretAlice} \PY{o}{+} \PY{n}{errorAlice}
+        
+        \PY{c+c1}{\PYZsh{} Key Alice}
+        \PY{n}{temp\PYZus{}error} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateError}\PY{p}{(}\PY{p}{)}
+        \PY{n}{keyAlice} \PY{o}{=} \PY{n}{valueBob} \PY{o}{*} \PY{n}{secretAlice} \PY{o}{+} \PY{n}{temp\PYZus{}error}
+        \PY{n}{w} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{generateSignal}\PY{p}{(}\PY{n}{keyAlice}\PY{p}{)}
+        \PY{n}{keyBinaryAlice} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{reconcile}\PY{p}{(}\PY{n}{keyAlice}\PY{p}{,} \PY{n}{w}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} Key Bob}
+        \PY{n}{keyBob} \PY{o}{=} \PY{n}{valueAlice} \PY{o}{*} \PY{n}{secretBob}
+        \PY{n}{keyBinaryBob} \PY{o}{=} \PY{n}{newHope}\PY{o}{.}\PY{n}{reconcile}\PY{p}{(}\PY{n}{keyBob}\PY{p}{,} \PY{n}{w}\PY{p}{)}
+        
+        \PY{k}{if} \PY{p}{(}\PY{n}{keyBinaryBob} \PY{o}{==} \PY{n}{keyBinaryAlice}\PY{p}{)}\PY{p}{:}
+            \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{As chaves correspondem.}\PY{l+s+s2}{\PYZdq{}}
+            \PY{k}{print} \PY{n+nb}{hex}\PY{p}{(}\PY{n+nb}{int}\PY{p}{(}\PY{n}{keyBinaryBob}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+            \PY{k}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Erro na correspondência das chaves.}\PY{l+s+s2}{\PYZdq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+As chaves correspondem.
+0x6407f9782c69ab7ee51a61a4235109af87ee0d0f40cc1d9e8899e1c0050e2d0L
+
+    \end{Verbatim}
+
+    \subsection{Observações Finais}\label{observauxe7uxf5es-finais}
+\vspace{2mm}
+
+\begin{itemize}
+\tightlist
+\item
+  O algoritmo \textbf{NewHope} foi muito complicado de entender, dado que o próprio documento principal de envio não continha o algoritmo propriamente descrito, tal como acontecia para o \textbf{NTRU-Prime};
+\item
+Recorreu-se à implementação deste algoritmo realizado através de outras linguagens de programação (incluindo o próprio Python), de forma a tentar compreender todo o processo algorítmico por detrás.
+\end{itemize}
+
+    \subsection{Referências}\label{referuxeancias}
+\vspace{2mm}
+
+\begin{itemize}
+\tightlist
+\item
+  GitHub, New Hope Key Exchange and Key Encapsulation \url{https://github.com/Art3misOne/newhope} (Acedido a 10 maio
+  2020)
+\item
+ GitHub, PyNewHope \url{https://github.com/scottwn/PyNewHope} (Acedido a 10 maio 2020)
+\end{itemize}
+
+    
+\end{document}
