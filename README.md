@@ -215,12 +215,12 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 #### :four: **Fourth Year** 
 
 - **First Specialization Profile** Cryptography and Information Security
-  
-  - [**Security Technology**]() Introduction to security concepts and everything that can involve a Network, Application, Web and even an Operating System.
-    <br>
-    **Set of all Practical Assignments.**
 
   - [**Cryptographic Technology**]() Knowledge of the Symmetric and Asymmetric Cryptography using cryptographic libraries for encrypting secure systems.
+    <br>
+    **Set of all Practical Assignments.**
+    
+  - [**Security Technology**]() Introduction to security concepts and everything that can involve a Network, Application, Web and even an Operating System.
     <br>
     **Set of all Practical Assignments.**
 
@@ -243,3 +243,22 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
     **Set of all solved Practical Exercises.**
     <br>
     **Analysis, planning and implementation of a Relational DBS(Oracle) and two Non-Relational (MongoDB and Neo4J), based on the famous SAKILA model.**
+
+---
+
+- **First Specialization Profile** Cryptography and Information Security
+
+  - [**Cryptographic Structures**]() Descrição.
+    <br>
+    **Set of all Practical Assignments.**
+    
+  - [**Security Engineering**]() Descrição.
+    <br>
+    **Set of all Practical Assignments.**
+
+- **Second Specialization Profile** Computer Graphics
+
+  - [**Lighting and Visualisation II**]() Descrição.
+  
+  - [**Technologies and Applications**]() Descrição.
+  
