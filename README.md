@@ -49,7 +49,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   <br>
   **Set of all Slides and Practical Exercises.**
 
-- [**Functional Programming**]() Introduction of the basic concepts and results of single-variable Calculus. 
+- [**Functional Programming**]() Learning how to program in an Functional Setting using Haskell Language.
   <br>
   **Set of all Slides and Practical Exercises.**
 
@@ -248,17 +248,20 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **First Specialization Profile** Cryptography and Information Security
 
-  - [**Cryptographic Structures**]() Descrição.
+  - [**Cryptographic Structures**]() Learning to use Rings, Finite Bodies, Elliptical Curves, etc in the environment of Cryptographic Structures.
     <br>
     **Set of all Practical Assignments.**
     
-  - [**Security Engineering**]() Descrição.
+  - [**Security Engineering**]() Learning about the most common types of vulnerabilities in applications, software testing methodologies and secure software development, in the software development lifecycle.
     <br>
     **Set of all Practical Assignments.**
 
 - **Second Specialization Profile** Computer Graphics
 
-  - [**Lighting and Visualisation II**]() Descrição.
-  
-  - [**Technologies and Applications**]() Descrição.
-  
+  - [**Lighting and Visualisation II**]() Knowledge and application of Ray Tracing, Path Tracing, Ambient Occlusion and Depth of Field techniques for rendering 3D images.
+    <br>
+    **Set of all Practical Assignments.**
+    
+  - [**Technologies and Applications**]() Knowledge of one of the branches of Machine Learning - Deep Learning for the analysis, learning and representation of data. Creation and Test of Convolutional Neural Networks using the Data Augmentation and Transfer Learning technique. Study of Generative Models.
+    <br>
+    **Set of all Practical Assignments.**
