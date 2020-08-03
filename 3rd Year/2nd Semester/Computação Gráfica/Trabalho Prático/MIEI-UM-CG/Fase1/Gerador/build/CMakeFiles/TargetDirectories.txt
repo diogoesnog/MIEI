@@ -1,3 +1,0 @@
-C:/Users/diogo/Google Drive/Universidade/Engenharia Informática/3º Ano/2º Semestre/Computação Gráfica/Trabalhos Práticos/MIEI-UM-CG/Fase1/Gerador/build/CMakeFiles/gerador.dir
-C:/Users/diogo/Google Drive/Universidade/Engenharia Informática/3º Ano/2º Semestre/Computação Gráfica/Trabalhos Práticos/MIEI-UM-CG/Fase1/Gerador/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/diogo/Google Drive/Universidade/Engenharia Informática/3º Ano/2º Semestre/Computação Gráfica/Trabalhos Práticos/MIEI-UM-CG/Fase1/Gerador/build/CMakeFiles/ZERO_CHECK.dir
