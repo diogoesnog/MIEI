@@ -1,0 +1,49 @@
+# Definição da GIC que permitirá criar a linguagem em si
+# Regras de Derivação que dizem como combinar os símbolos terminais
+
+
+PugFile             --> ContentPugFile
+
+ContentPugFile      --> Tags
+
+Tags                --> Tag '\n' Tags
+                     |  Tag
+
+Tag                 --> TagDefault
+                     |  TagAttribute
+                     |  TagSelfClosing
+                     |  TagPiped
+                     |  TagDiv
+
+TagDefault          --> beginTag
+                     |  beginTag contentTag
+                     |  beginTag '=' contentTag
+
+TagAttribute        --> beginTag AttributeHandler
+                     |  beginTag AttributeHandler contentTag
+                     |  beginTag AttributeHandler '=' contentTag
+
+TagSelfClosing      --> beginTag '/'
+                     |  beginTag AttributeHandler '/'
+
+TagPiped            --> beginTag contentPipedTag
+
+TagDiv              --> beginDiv idDiv classDiv
+                     |  beginDiv idDiv
+                     |  beginDiv classDiv
+
+AttributeHandler    --> '(' Attributes ')'
+
+Attributes          --> Attribute Attributes
+                     |  Attribute
+
+Attribute           --> nameAttribute valueAttribute
+
+
+# De acordo com esta gramática, podemos concluir:
+
+1. Existem 25 produções diferentes
+2. Existem 12 símbolos não-terminais    ->  PugFile, ContentPugFile, Tags, Tag, TagDefault, TagAttribute, TagSelfClosing, TagPiped, TagDiv 
+                                        ->  AttributeHandler, Attributes, Attribute
+3. Existem 12 símbolos terminais        ->  beginTag, contentTag, beginDiv, idDiv, classDiv, nameAttribute, valueAttribute 
+                                        ->  '\n', '=', '/', '(', ')'

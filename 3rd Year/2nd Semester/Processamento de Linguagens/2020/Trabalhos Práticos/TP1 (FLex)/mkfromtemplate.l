@@ -97,8 +97,6 @@
 
     [a-zA-Z\.]+ {
         currentNameFile = strdup(yytext);
-        printf("%s", currentNameFile);
-
     }
 
     \n {
@@ -135,6 +133,7 @@
 }
 
 \n  {;}
+
 %%
 
 /* Função Main */
