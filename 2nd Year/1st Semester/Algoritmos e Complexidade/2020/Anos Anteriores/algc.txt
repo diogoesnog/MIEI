@@ -1,0 +1,73 @@
+Ficha 1
+
+1.
+a) Calculo o resto e o quociente da divsão de x0 por y0
+b) Calcula o resto da divisão de x0 por y0
+c) X toma o valor da maior variável entre x e y.
+d) r toma o valor da raiz quadrada de x0 com uma margem de erro e0.
+e) p toma o valor do índice do menor valor do array e não ocorre alteração do mesmo.
+
+
+2.
+a)  {x == x0 /\ y == y0}
+
+	{r = x0 + y0}
+	
+	
+b)  {x == x0 /\ y == y0 >= 0}
+	{r = x0 + y0}
+	
+	
+c)  {x == x0 /\ y == y0 >= 0}
+
+	{x == x0 /\ y == y0 /\ r = x0 * y0}
+	
+	
+d)  {x == x0 /\ y == y0}
+
+	{r % x0 == 0 /\ r % y0 == 0 /\
+	~ para todo 0<i<r i % x0 == i % y0 == 0}
+	
+	
+e)  {para todo 0<=i<N A[i] == ai B[i] == bi}
+
+    {0<=r<=N /\ para todo 0<=i<r ai == bi /\ (r == N V a[r] != b[r])
+	
+	
+f)  {para todo 0<=i<N A[i] == ai B[i] == bi}
+
+	{~r V existe 0<=i<N existe 0<=j<N ai == aj}
+
+
+
+3.
+a)  {len(a) == len_a /\ para todo 0<=i<len_a s1[i] == ai}
+
+	{para todo 0<=i<len_a (s1[i] == s2[i] == ai) /\
+	len(s1) == len_a /\ len(s2) == len_a}
+	
+	
+b)  {len(s1) == len_a /\ len(s2) == len_b /\ 
+	para todo 0<=i<len_a s1[i] == ai /\ para todo 0<=i<len_b s2[i] == bi}
+	
+	{len(s2) == len_b /\ len(s1) == len_b + len_a /\
+	para todo 0<=i<len_b (s2[i] == bi == s1[len_a+i]) /\
+	para todo 0<=i<len_a s1[i] == ai}
+	
+	
+c)  {len(s1) == len_a /\ len(s2) == len_b /\
+	para todo 0<=i<len_a s1[i] == ai /\ para todo 0<=i<len_b s2[i] == bi}
+	
+	{len(s1) == len_a /\ len(s2) == len_b /\
+	para todo 0<=i<len_a s1[i] == ai /\ para todo 0<=i<len_b s2[i] == bi /\
+	r == 0 => (len_a == len_b /\ para todo 0<=i<len_a s1[i] == s2[i]) /\
+	r == -1 => (existe 0<=i<len_a (len_b >= i + 1 /\ s1[i] < s2[i]))
+	r ==  1 => (existe 0<=i<len_b (len_a >= i + 1 /\ s2[i] < s1[i]))}
+	
+
+d)  {len(s1) == len_a /\ len(s2) == len_b /\
+	para todo 0<=i<len_a s1[i] == ai /\ para todo 0<=i<len_b s2[i] == bi}
+	
+	{len(s1) == len_a /\ len(s2) == len_b /\
+	para todo 0<=i<len_a s1[i] == ai /\ para todo 0<=i<len_b s2[i] == bi /\
+	para todo r<=i<(r+len_b) s1[i] == s2[i-r]}
