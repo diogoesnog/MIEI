@@ -1,0 +1,5 @@
+Linux é o núcleo do sistema operacional, programa responsável pelo funcionamento do computador, que faz a comunicação entre hardware (impressora, monitor, mouse, teclado) e software (aplicativos em geral). O conjunto do kernel e demais programas responsáveis por interagir com este é o que denominamos sistema operacional. O kernel é o coração do sistema.
+
+Os principais programas responsáveis por interagir com o kernel foram criados pela fundação GNU. Por este motivo é mais correto nos referenciarmos ao sistema operacional como GNU/Linux ao invés de apenas Linux.
+
+Uma distribuição nada mais é que o conjunto de kernel, programas de sistema e aplicativos reunidos num único CD-ROM (ou qualquer outro tipo de mídia). Hoje em dia temos milhares de aplicativos para a plataforma GNU/Linux, onde cada empresa responsável por uma distro escolhe os aplicativos que nela deverão ser inclusos.

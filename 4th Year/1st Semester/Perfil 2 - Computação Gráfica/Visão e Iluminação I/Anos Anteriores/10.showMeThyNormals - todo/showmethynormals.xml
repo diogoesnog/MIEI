@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<project name="Show Me Thy Normals" width=512 height=512 >
+	<assets>
+		<scenes>
+			<scene name="MainScene" param="SWAP_YZ">
+				<file name="Teapot.3ds"/>
+			</scene>
+		</scenes>
+		
+		<viewports>
+			<viewport name="MainViewport" >
+				<CLEAR_COLOR r="0.0" g="0.0" b="0.0" />
+			</viewport>
+		</viewports>
+		
+		<cameras>
+			<camera name="MainCamera">
+				<viewport name="MainViewport" />
+				<projection TYPE="PERSPECTIVE" FOV="60.0" NEAR="1.0" FAR="1000.0" />
+				<POSITION x="-240.0" y="180.0" z="-330" />
+				<VIEW x="0.54" y="-0.37" z="0.75" />
+				<UP x="0.0" y="1.0" z="0.0" />
+			</camera>
+		</cameras>
+			
+		<lights>
+			<light name="Sun" >
+				<DIRECTION x="0.597" y="-0.390" z="0.700" />
+			</light>
+		</lights>
+		
+		<materialLibs>
+			<materialLib filename="showmethynormals.mlib"/>
+		</materialLibs>
+	</assets>
+	
+	<pipelines>
+		<pipeline name="show normals" default="true" defaultCamera="MainCamera">
+			<pass class="default" name="draw model">
+				<scenes>
+					<scene name="MainScene" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+			</pass>
+			<pass class="default" name="draw normals">
+				<COLOR_CLEAR value=false />
+				<DEPTH_CLEAR value=false />
+				<scenes>
+					<scene name="MainScene" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<injectionMaps>
+					<map toMaterial="*">
+						<shader fromMaterial="smtn" fromLibrary="SMTN" />
+					</map>
+				</injectionMaps>
+			</pass>
+		</pipeline>
+	</pipelines>	
+</project>	

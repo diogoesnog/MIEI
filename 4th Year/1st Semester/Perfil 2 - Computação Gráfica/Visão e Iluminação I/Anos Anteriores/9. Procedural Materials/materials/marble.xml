@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<project name="Marble" >
+	<assets>
+		<attributes>
+			<attribute type="RENDERER" name="color" data="VEC4" x="0.2" y = "0.4" z="0.2" w = "1.0"  />
+    		<attribute type="RENDERER" name="stripeScale" data="INT" value="160" />
+    		<attribute type="RENDERER" name="step" data="INT" value="0" />
+    		<attribute type="RENDERER" name="powerStrip" data="FLOAT" value="2" />
+    		<attribute type="RENDERER" name="noiseScale" data="FLOAT" value="1" />
+    		<attribute type="RENDERER" name="noisePosScale" data="FLOAT" value="1" />
+		</attributes>
+		<scenes>
+			<scene name="Model" param="UNITIZE SWAP_YZ">
+				<file name="models/Teapot.3ds"/>
+			</scene>
+		</scenes>
+		
+		<viewports>
+			<viewport name="MainViewport">
+				<CLEAR_COLOR r="1.0" g="1.0" b="1.0" />
+			</viewport>
+		</viewports>
+		
+		<cameras>
+			<camera name="MainCamera" >
+				<viewport name="MainViewport" />
+				<TYPE value="PERSPECTIVE"/>
+				<FOV value=60/>
+				<NEAR value= 0.1/>
+				<FAR value= 100/>
+				<POSITION x=-1.914014 y=0.492289 z=1.460414 />
+				<VIEW x=0.810088 y=-0.208939 z=-0.547815 />
+			</camera>
+		</cameras>
+		
+		<lights>
+			<light name="Sun">
+				<DIRECTION x=2 y=-1 z=-2 />
+			</light>
+		</lights>
+		
+		<materialLibs>
+			<materialLib filename="marble.mlib" />
+		</materialLibs>
+	</assets>
+	
+	<pipelines default="Marble">
+		<pipeline name="Marble">
+			<pass class="default" name="marble">
+				<scenes>
+					<scene name="Model" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<injectionMaps>
+					<map toMaterial="*">
+						<shader fromMaterial="marble" fromLibrary="Materials" />
+					</map> 
+				</injectionMaps>
+			</pass>
+		</pipeline>
+	</pipelines>
+	<interface> 
+		<window label="Marble params"> 
+			<var label="step" type="RENDERER" context="CURRENT"
+				component="step" def="min=0 max=10 step=1"  /> 
+
+			<var label="color" type="RENDERER" context="CURRENT"
+				component="color" mode = "COLOR" /> 
+
+			<var label="stripe scale" type="RENDERER" context="CURRENT"
+				component="stripeScale" def="min=0 max=256 step=1"  /> 
+
+			<var label="power strips" type="RENDERER" context="CURRENT"
+				component="powerStrip" def="min=0 max=128 step=0.01"  /> 
+
+			<var label="noise scale" type="RENDERER" context="CURRENT"
+				component="noiseScale" def="min=0 max=128 step=0.01"  /> 
+
+			<var label="noise pos scale" type="RENDERER" context="CURRENT"
+				component="noisePosScale" def="min=0 max=128 step=0.01"  /> 
+		</window>
+	</interface>  
+</project>

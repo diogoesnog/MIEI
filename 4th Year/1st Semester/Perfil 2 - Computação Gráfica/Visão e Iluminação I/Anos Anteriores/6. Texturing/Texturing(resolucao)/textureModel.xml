@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<project name="Texture Model" >
+	<assets>
+	
+		<scenes>
+			<scene name="Sphere" param="UNITIZE">
+				<file name="models/Sphere.obj"/>
+			</scene>
+		</scenes>
+		
+		<viewports>
+			<viewport name="MainViewport">
+				<CLEAR_COLOR r="0.0" g="0.0" b="0.0" />
+			</viewport>
+		</viewports>
+		
+		<cameras>
+			<camera name="MainCamera" >
+				<viewport name="MainViewport" />
+				<POSITION x=0 y=0 z=3 />
+				<VIEW x=0 y=0 z=-1.0 />
+			</camera>
+		</cameras>
+		
+		<lights>
+			<light name="Sun">
+				<DIRECTION x=-2 y=-2 z=-2 />
+			</light>
+		</lights>
+		
+		<materialLibs>
+			<materialLib filename="textureModel.mlib" />
+		</materialLibs>
+		
+	</assets>
+	
+	<pipelines>
+	
+		<pipeline name="textures" >
+		
+			<pass class="default" name="texture" >
+				<scenes>
+					<scene name="Sphere" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<materialMaps>
+					<map fromMaterial="*" toMaterial="textured" toLibrary="Texture" />
+				</materialMaps>
+				
+			</pass>
+		</pipeline>
+		
+	</pipelines>
+</project>

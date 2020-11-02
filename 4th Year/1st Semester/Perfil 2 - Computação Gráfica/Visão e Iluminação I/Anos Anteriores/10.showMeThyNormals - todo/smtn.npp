@@ -1,0 +1,11 @@
+<NotepadPlus>
+    <Project name="SMTN">
+        <File name="showmethynormals.xml" />
+        <File name="showmethynormals.mlib" />
+        <Folder name="shaders">
+            <File name="shaders\showNormal.frag" />
+            <File name="shaders\showNormal.geom" />
+            <File name="shaders\showNormal.vert" />
+        </Folder>
+    </Project>
+</NotepadPlus>

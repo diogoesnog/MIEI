@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<materialLib name="Materials">
+	<shaders>
+		<shader name="marble"		 		vs = "shaders/marble.vert" 
+											ps = "shaders/marble.frag" />
+
+	</shaders>
+	
+	<materials>
+		<material name="marble">
+			<shader name="marble">
+				<values>
+					<valueof uniform="mPVM" 
+							 type="RENDERER" context="CURRENT" 
+							 component="PROJECTION_VIEW_MODEL" />
+							 
+					<valueof uniform="mNormal" 
+							 type="RENDERER" context="CURRENT" 
+							 component="NORMAL" />
+							 
+					<valueof uniform="mView" 
+							 type="RENDERER" context="CURRENT" 
+							 component="VIEW" />
+							 
+					<valueof uniform="mViewModel" 
+							 type="RENDERER" context="CURRENT" 
+							 component="VIEW_MODEL" />
+						 
+					<valueof uniform="lDir" 
+							 type="LIGHT" context="Sun"
+							 component="DIRECTION" />
+
+					<valueof uniform="marbleColor" 
+							 type="RENDERER" context="CURRENT" 
+							 component="color" />
+						 
+					<valueof uniform="stripeScale" 
+							 type="RENDERER" context="CURRENT" 
+							 component="stripeScale" />
+						 
+					<valueof uniform="stepT" 
+							 type="RENDERER" context="CURRENT" 
+							 component="step" />
+						 
+					<valueof uniform="powerStrip" 
+							 type="RENDERER" context="CURRENT" 
+							 component="powerStrip" />
+						 
+					<valueof uniform="noiseScale" 
+							 type="RENDERER" context="CURRENT" 
+							 component="noiseScale" />
+						 
+					<valueof uniform="noisePosScale" 
+							 type="RENDERER" context="CURRENT" 
+							 component="noisePosScale" />
+						 
+				</values>
+			</shader>
+		</material>
+	</materials>
+</materialLib>	

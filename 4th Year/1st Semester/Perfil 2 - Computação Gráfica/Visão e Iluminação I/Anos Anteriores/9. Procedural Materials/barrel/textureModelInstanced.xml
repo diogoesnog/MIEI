@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<project name="Normal Mapping - Instanced" width=512 height=512>
+	<assets>
+		<scenes>
+			<scene name="Barrel" param="UNITIZE">
+				<TRANSLATE x=0 y=1 z= 0 />
+				<file name="metal_barrel/metal_barrel.obj"/>
+			</scene>
+			<scene name="Plane" >
+				<SCALE x=200 y=200 z=200 />
+				<file name="models/plane.obj"/>
+			</scene>
+		</scenes>
+		
+		<viewports>
+			<viewport name="MainViewport">
+				<CLEAR_COLOR r="1.0" g="1.0" b="1.0" />
+			</viewport>
+		</viewports>
+		
+		<cameras>
+			<camera name="MainCamera" >
+				<viewport name="MainViewport" />
+				<TYPE value="PERSPECTIVE"/>
+                <POSITION x="150" y="12.6437" z="67.9942" w="1" />
+                <VIEW x="-0.977805" y="-0.209222" z="0.0111561" w="0" />
+			</camera>
+            <camera name="cam1">
+                <ELEVATION_ANGLE value="-0.310779" />
+                <LOOK_AT_POINT x="67.954" y="12.3379" z="149.049" w="1" />
+                <POSITION x="67.9942" y="12.6437" z="150" w="1" />
+                <VIEW x="-0.0401714" y="-0.3058" z="-0.951248" w="0" />
+                <ZX_ANGLE value="3.1838" />
+                <viewport name="MainViewport" />
+            </camera>
+            <camera name="cam2">
+                <ELEVATION_ANGLE value="-0.390779" />
+                <LOOK_AT_POINT x="67.9977" y="12.2628" z="-14.0754" w="1" />
+                <POSITION x="67.9942" y="12.6437" z="-15" w="1" />
+                <VIEW x="0.00351166" y="-0.380909" z="0.924606" w="0" />
+                <ZX_ANGLE value="0.00379799" />
+                <viewport name="MainViewport" />
+            </camera>
+            <camera name="cam3">
+                <ELEVATION_ANGLE value="-0.150779" />
+                <LOOK_AT_POINT x="-19.0114" y="12.4935" z="67.9845" w="1" />
+                <POSITION x="-20" y="12.6437" z="67.9942" w="1" />
+                <VIEW x="0.988607" y="-0.150208" z="-0.00970528" w="0" />
+                <ZX_ANGLE value="1.58061" />
+                <viewport name="MainViewport" />
+            </camera>
+            <camera name="cam4">
+                <ELEVATION_ANGLE value="-0.210779" />
+                <LOOK_AT_POINT x="149.022" y="12.4345" z="68.0054" w="1" />
+                <POSITION x="150" y="12.6437" z="67.9942" w="1" />
+                <VIEW x="-0.977805" y="-0.209222" z="0.0111561" w="0" />
+                <ZX_ANGLE value="-1.55939" />
+                <viewport name="MainViewport" />
+            </camera>
+		</cameras>
+		
+		<lights>
+			<light name="Sun">
+				<DIRECTION x=-2 y=-2 z=-2 />
+			</light>
+		</lights>
+		
+		<materialLibs>
+			<materialLib filename="textureModelInstanced.mlib" />
+		</materialLibs>
+	</assets>
+	
+	<pipelines default="textureCS">
+	
+		<pipeline name="textureTS">
+			<pass class="default" name="plane" >
+				<scenes>
+					<scene name="Plane" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+			</pass>
+			
+			<pass class="default" name="textureTS" >
+				<COLOR_CLEAR value = false />
+				<scenes instances = 30000>
+					<scene name="Barrel" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<materialMaps>
+					<map fromMaterial="DefaultOBJMaterial" toMaterial="texturedInstanceTS" toLibrary="Texture" />
+				</materialMaps>
+			</pass>
+		</pipeline>
+		
+		<pipeline name="textureCS" >
+			<pass class="default" name="plane" >
+				<scenes>
+					<scene name="Plane" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+			</pass>
+			<pass class="default" name="texture" >
+				<COLOR_CLEAR value = false />
+				<scenes instances = 30000>
+					<scene name="Barrel" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<materialMaps>
+					<map fromMaterial="DefaultOBJMaterial" toMaterial="texturedInstanceCS" toLibrary="Texture" />
+				</materialMaps>
+			</pass>
+		</pipeline>
+		
+	</pipelines>
+	<interface>
+		<window label="settings" >
+			<pipelineList label="effect" />
+		</window>
+	</interface>
+</project>
