@@ -1,5 +1,0 @@
-Caro/a ${PERSON_NAME},
-
-Este é o seu código de confirmação: ${CODE}
-
-Tem 30 segundos para o introduzir, caso contrário a sessão será expirada.
