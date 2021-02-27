@@ -227,8 +227,12 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - **Second Specialization Profile** Computer Graphics
 
   - [**Computer Vision**](4th%20Year/1st%20Semester/Perfil%202%20-%20Computa%C3%A7%C3%A3o%20Gr%C3%A1fica/Vis%C3%A3o%20por%20Computador) Development of Image Systems and Computer Vision and promote the analysis of practical case studies and simulation of real life situations.
-  
+      <br>
+    **Set of all Practical Assignments.**
+    
   - [**Lighting and Visualisation I**](4th%20Year/1st%20Semester/Perfil%202%20-%20Computação%20Gráfica/Visão%20e%20Iluminação%20I) Knowledge and application of topic relevant to real-time CG.
+    <br>
+    **Set of all Practical Assignments.**
 
 - **Complementary Course Units**
   
