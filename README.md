@@ -226,9 +226,9 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **Second Specialization Profile** Computer Graphics
 
-  - [**Computer Vision**]() Descrição.
+  - [**Computer Vision**](4th%20Year/1st%20Semester/Perfil%202%20-%20Computa%C3%A7%C3%A3o%20Gr%C3%A1fica/Vis%C3%A3o%20por%20Computador) Descrição.
   
-  - [**Lighting and Visualisation I**]() Descrição.
+  - [**Lighting and Visualisation I**](4th%20Year/1st%20Semester/Perfil%202%20-%20Computação%20Gráfica/Visão%20e%20Iluminação%20I) Descrição.
 
 - **Complementary Course Units**
   
