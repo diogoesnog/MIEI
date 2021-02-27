@@ -1,0 +1,9 @@
+# MTL written from /Volumes/Store/Private/Personal_Training/Human_Factory/Anatomy/DNA/DNA.obj
+newmtl DNA
+Kd 0.364304 0.534819 0.863924
+Ns 32
+d 0.99
+illum 2
+Ka 0 0 0
+Ks 0 0 0
+map_Bump /Volumes/Store/Private/Personal_Training/Human_Factory/Anatomy/DNA/Bump.jpg

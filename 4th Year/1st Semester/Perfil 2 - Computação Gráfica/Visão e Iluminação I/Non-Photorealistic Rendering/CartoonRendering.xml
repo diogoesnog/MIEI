@@ -1,0 +1,103 @@
+<?xml version="3.0"?>
+<!-- Definição de Todo o Projeto. -->
+<project name="CartoonRendering">
+  <!-- Tudo o que está definido no XML. Tudo tem um valor por omissão. -->
+  <assets>
+    <!-- Scenes = Modelos a Usar -->
+    <scenes>
+      <scene name="Toon Shader" param="UNITIZE SWAP_YZ">
+        <file name="models/skateRamp.3ds"/>
+      </scene>
+      <scene name="Dot Shader" param="UNITIZE SWAP_YZ">
+        <file name="Models/Teapot.3ds"/>
+      </scene>
+    </scenes>
+    <!-- Atributos (Deixar como está) -->
+    <attributes>
+        <attribute type="RENDERER" name="colorDot" data="VEC4" r=1 g=1 b=1 a=1/>
+        <attribute type="RENDERER" name="edge_thres" data="FLOAT" value=0.2/>
+        <attribute type="RENDERER" name="edge_thres2" data="FLOAT" value=5.0/>
+        <attribute type="RENDERER" name="glossiness" data="FLOAT" value=32 />
+        <attribute type="RENDERER" name="rimColor" data="VEC4" r=1 g=1 b=1 a=1 />
+        <attribute type="RENDERER" name="rimAmount" data="FLOAT" value=0.716 />
+        <attribute type="RENDERER" name="rimThreshold" data="FLOAT" value=0.1/>
+        <attribute type="RENDERER" name="gridStep" data="FLOAT" value=10.0/>
+        <attribute type="RENDERER" name="angle" data="FLOAT" value=40.0/>
+        <attribute type="RENDERER" name="frequency" data="FLOAT" value=40/>
+        <attribute type="RENDERER" name="levelsToon" data="INT" value=1/>
+    </attributes>
+    <!-- ViewPort por Omissão é um Ecrã Inteiro -->
+    <!-- Neste caso define-se Cor Fundo -->
+    <viewports>
+      <viewport name="MainViewport">
+        <CLEAR_COLOR r="0.5" g="0.5" b="0.5" />
+      </viewport>
+    </viewports>
+    <!-- Câmaras -->
+    <!-- Uma Câmara usa SEMPRE um ViewPort -->
+    <cameras>
+      <camera name="MainCamera">
+        <viewport name="MainViewport"/>
+        <TYPE value="PERSPECTIVE"/>
+        <FOV value=60/>
+        <NEAR value= 0.1/>
+        <FAR value= 100/>
+        <POSITION x=-1.914014 y=0.492289 z=1.460414 />
+        <VIEW x=0.810088 y=-0.208939 z=-0.547815 />
+      </camera>
+    </cameras>
+    <!-- Lights -->
+    <!-- Maioria dos Projetos inclui já esta componente (Deixar como está) -->
+    <!-- Existem por questão de comodidade -->
+    <lights>
+      <light name="Sun">
+        <DIRECTION x=2 y=-1 z=-2 />
+      </light>
+    </lights>
+    <!-- Definição do Ficheiro mlib -->
+    <materialLibs>
+      <materialLib filename="CartoonRendering.mlib"/>
+    </materialLibs>
+  </assets>
+  <!-- Sequência de Pipelines a Usar. Representam os Shaders. -->
+  <!-- Dot Shader Usado por Omissão -->
+  <pipelines default="Dot Shader">
+    <!-- Pipeline 1 = Dot Shader -->
+    <pipeline name="Dot Shader" default="true">
+      <pass class="default" name="Dot Shader">
+        <scenes>
+          <scene name="Dot Shader" />
+        </scenes>
+        <camera name="MainCamera" />
+        <lights>
+          <light name="Sun" />
+        </lights>
+        <materialMaps>
+          <map fromMaterial="*" toMaterial="Dot Shader" toLibrary="CartoonRendering" />
+        </materialMaps>
+      </pass>
+    </pipeline>
+    <!-- Pipeline 2 = Toon Shader -->
+    <pipeline name="Toon Shader">
+      <pass class="default" name="pass1">
+        <scenes>
+          <scene name="Toon Shader" />
+        </scenes>
+        <camera name="MainCamera" />
+        <lights>
+          <light name="Sun" />
+        </lights>
+        <materialMaps>
+          <map fromMaterial="*" toMaterial="Toon Shader" toLibrary="CartoonRendering" />
+        </materialMaps>
+      </pass>
+    </pipeline>
+  </pipelines>
+  <!-- Adição de determinadas componentes que podem ser mudadas na GUI. -->
+  <interface> 
+      <window label="Settings">
+          <pipelineList label="effect" />
+          <var label="Toon levels" type="RENDERER" context="CartoonRendering::toonShader" component="levelsToon" def="min=1 max=4"/>	
+      </window>
+  </interface>
+</project>

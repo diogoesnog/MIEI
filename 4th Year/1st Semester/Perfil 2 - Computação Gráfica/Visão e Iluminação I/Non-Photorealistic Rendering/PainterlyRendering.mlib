@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<materialLib name="PainterlyRendering">
+    <textures>
+<!--
+        <texture name="moon" filename="textures/moon.jpg" mipmap=true/>
+        <texture name="teapot1" filename="textures/teapottex1.jpg" mipmap=true/>   
+ -->      
+       <texture name="garden" filename="Textures/garden.jpg" mipmap=true/>
+       <texture name="mountain" filename="Textures/mountain.jpg" mipmap=true/>
+       <texture name="teapot2" filename="Textures/teapottex2.jpg" mipmap=true/>
+       <texture name="earth" filename="Textures/earth.jpg" mipmap=true/>
+    </textures>
+
+    <shaders>
+        <shader name="oilPaint"	    vs = "Shaders/Painting Rendering/oilPaint.vert" 
+                                    ps = "Shaders/Painting Rendering/oilPaint.frag" />
+
+    </shaders>
+
+    <materials>
+        <material name="oilPaint">
+            <shader name="oilPaint">
+                <values>
+                    <valueof uniform="m_pvm" 
+                        type="RENDERER" context="CURRENT" 
+                        component="PROJECTION_VIEW_MODEL" />
+
+                    <valueof uniform="m_viewModel" 
+                        type="RENDERER" context="CURRENT" 
+                        component="VIEW_MODEL" />
+
+                    <valueof uniform="m_view" 
+                        type="RENDERER" context="CURRENT" 
+                        component="VIEW" />
+
+                    <valueof uniform="m_normal" 
+                        type="RENDERER" context="CURRENT" 
+                        component="NORMAL" />
+
+                    <valueof uniform="l_dir" 
+                        type="LIGHT" context="Sun"
+                        component="DIRECTION" />
+
+                    <valueof uniform="texture1"
+                        type="TEXTURE_BINDING" context="CURRENT"
+                        component="UNIT" id=0 />
+
+                    <valueof uniform="texture2"
+                        type="TEXTURE_BINDING" context="CURRENT"
+                        component="UNIT" id=1 />
+
+                    <valueof uniform="texture3"
+                        type="TEXTURE_BINDING" context="CURRENT"
+                        component="UNIT" id=2 />
+
+                    <valueof uniform="texture4"
+                        type="TEXTURE_BINDING" context="CURRENT"
+                        component="UNIT" id=3 />
+
+                    <valueof uniform="option" 
+                        type="RENDERER" context="CURRENT"
+                        component="option" />
+
+                    <valueof uniform="screenSize"
+                        type="VIEWPORT" context="CURRENT"
+                        component="ABSOLUTE_SIZE" id=0 />
+                    
+                    <valueof uniform="level" 
+                        type="RENDERER" context="CURRENT" 
+                        component="level" />
+
+                </values>
+            </shader>
+            <textures>
+                <texture name="mountain" UNIT = 0 />
+                <texture name="garden" UNIT = 1 />
+                <texture name="teapot2" UNIT = 2 />
+                <texture name="earth" UNIT = 3 />
+            </textures>
+        </material>
+    </materials>
+</materialLib>	

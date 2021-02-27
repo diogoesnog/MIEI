@@ -1,0 +1,33 @@
+<?xml version="3.0"?>
+<materialLib name="CartoonRendering">
+  <shaders>
+    <shader name="Toon Shader" vs="Shaders/Cartoon Rendering/toonShader.vert" ps="Shaders/Cartoon Rendering/toonShader.frag"/>
+    <shader name="Dot Shader" vs="Shaders/Cartoon Rendering/dotShader.vert" ps="Shaders/Cartoon Rendering/dotShader.frag"/>
+  </shaders>
+  <materials>
+    <material name="Toon Shader">
+      <shader name="Toon Shader">
+        <values>
+          <valueof uniform="matrixPVM" type="RENDERER" context="CURRENT" component="PROJECTION_VIEW_MODEL"/>
+          <valueof uniform="matrixNORMAL" type="RENDERER" context="CURRENT" component="NORMAL"/>
+          <valueof uniform="matrixVIEW" type="RENDERER" context="CURRENT" component="VIEW"/>
+          <valueof uniform="lightDirection" type="LIGHT" context="Sun" component="DIRECTION"/>
+          <valueof uniform="levelsToon" type="RENDERER" context="CURRENT" component="levelsToon"/>
+        </values>
+      </shader>
+    </material>
+    <material name="Dot Shader">
+      <shader name="Dot Shader">
+        <values>
+          <valueof uniform="matrixPVM" type="RENDERER" context="CURRENT" component="PROJECTION_VIEW_MODEL"/>
+          <valueof uniform="matrixVIEW" type="RENDERER" context="CURRENT" component="NORMAL"/>
+          <valueof uniform="matrixNORMAL" type="RENDERER" context="CURRENT" component="VIEW"/>
+          <valueof uniform="lightDirection" type="LIGHT" context="Sun" component="DIRECTION"/>
+          <valueof uniform="color" type="RENDERER" context="CURRENT" component="colorDot"/>
+          <valueof uniform="gridStep" type="RENDERER" context="CURRENT" component="gridStep"/>
+          <valueof uniform="angle" type="RENDERER" context="CURRENT" component="angle"/>
+        </values>
+      </shader>
+    </material>
+  </materials>
+</materialLib>	

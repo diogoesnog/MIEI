@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<project name="TechnicalRendering illustration" >
+	<assets>
+		<scenes>
+			<scene name="Al" param="UNITIZE SWAP_YZ">
+				<file name="Models/DNA.obj"/>
+				<!-- <file name="Models/Teapot.3ds"/> -->
+			</scene>
+		</scenes>
+		
+		<viewports>
+			<viewport name="MainViewport">
+				<CLEAR_COLOR r="1.0" g="1.0" b="1.0" />
+			</viewport>
+		</viewports>
+		
+		<cameras>
+			<camera name="MainCamera" >
+				<viewport name="MainViewport" />
+				<TYPE value="PERSPECTIVE"/>
+				<POSITION x=1.5 y=0.5 z=-0.3 />
+				<VIEW x=-0.75 y=-0.25 z=0.1 />
+				<NEAR value=0.01/>
+				<FAR value=10/>
+			</camera>
+		</cameras>
+		
+		<lights>
+			<light name="Sun">
+				<DIRECTION x=-2 y=-1 z=-2 />
+			</light>
+		</lights>
+		
+		<materialLibs>
+			<materialLib filename="TechnicalRendering.mlib" />
+		</materialLibs>
+	</assets>
+	
+	<pipelines>
+		<pipeline name="lighting" default="true">
+			<pass class="default" name="pass1">
+				<scenes>
+					<scene name="Al" />
+				</scenes>
+				<camera name="MainCamera" />
+				<lights>
+					<light name="Sun" />
+				</lights>
+				<injectionMaps>
+					<map toMaterial="*">
+						<shader fromMaterial ="TechnicalRendering" fromLibrary="TechnicalRendering" />
+					</map>
+				</injectionMaps>
+			</pass>
+		</pipeline>
+	</pipelines>
+</project>

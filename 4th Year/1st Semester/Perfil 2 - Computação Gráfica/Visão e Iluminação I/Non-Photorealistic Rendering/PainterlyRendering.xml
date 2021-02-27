@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<project name="Non-Photorealistic Rendering: PainterlyRendering" >
+    <assets>
+        <scenes>
+            <scene name="oilPaint" param="UNITIZE SWAP_YZ">
+                <file name="Models/canvas.obj"/>
+            </scene>
+            <scene name="oilPaint2" param="UNITIZE SWAP_YZ">        
+                <file name="Models/Teapot.3ds"/>
+            </scene>
+            <scene name="oilPaint3" param="UNITIZE SWAP_YZ">
+                <file name="Models/sphere.obj"/>
+            </scene>
+        </scenes>
+
+        <attributes>
+            <attribute type="RENDERER" name="option" data="INT" value=0 />
+            <attribute type="RENDERER" name="level" data="INT" value=1 />
+        </attributes>
+
+        <viewports>
+            <viewport name="MainViewport">
+                <CLEAR_COLOR r="1.0" g="1.0" b="1.0" />
+            </viewport>
+        </viewports>
+
+        <cameras>
+            <camera name="MainCamera" >
+                <viewport name="MainViewport" />
+                <TYPE value="PERSPECTIVE"/>
+                <FOV value=60/>
+                <NEAR value= 0.1/>
+                <FAR value= 100/>
+                <POSITION x=-1.9 y=0.5 z=1.5 />
+                <VIEW x=0.8 y=-0.2 z=-0.6 />
+            </camera>
+        </cameras>
+
+        <lights>
+            <light name="Sun">
+                <DIRECTION x=2 y=-1 z=-2 />
+            </light>
+        </lights>
+
+        <materialLibs>
+            <materialLib filename="PainterlyRendering.mlib" />
+        </materialLibs>
+    </assets>
+
+    <pipelines default="Canvas">
+        <pipeline name="Canvas" default="true">
+            <pass class="default" name="pass1">
+                <scenes>
+                    <scene name="oilPaint" />
+                </scenes>
+                <camera name="MainCamera" />
+                <lights>
+                    <light name="Sun" />
+                </lights>
+                <materialMaps>
+                    <map fromMaterial="*" toMaterial="oilPaint" toLibrary="PainterlyRendering" />
+                </materialMaps>
+            </pass>
+        </pipeline>
+
+
+        <pipeline name="Teapot" default="true">
+            <pass class="default" name="pass1">
+                <scenes>
+                    <scene name="oilPaint2" />
+                </scenes>
+                <camera name="MainCamera" />
+                <lights>
+                    <light name="Sun" />
+                </lights>
+                <materialMaps>
+                    <map fromMaterial="*" toMaterial="oilPaint" toLibrary="PainterlyRendering" />
+                </materialMaps>
+            </pass>
+        </pipeline>
+
+        <pipeline name="Sphere" default="true">
+            <pass class="default" name="pass1">
+                <scenes>
+                    <scene name="oilPaint3" />
+                </scenes>
+                <camera name="MainCamera" />
+                <lights>
+                    <light name="Sun" />
+                </lights>
+                <materialMaps>
+                    <map fromMaterial="*" toMaterial="oilPaint" toLibrary="PainterlyRendering" />
+                </materialMaps>
+            </pass>
+        </pipeline>
+    </pipelines>
+
+    <interface>
+        <window label="settings" >
+        <pipelineList label="Modelos"/>
+            <var label="Textura" type="RENDERER" context="PainterlyRendering"
+                component="option" def="min=0 max=3 step=1" />
+            <var label="Nivel da Pintura" type="RENDERER" context="PainterlyRendering"
+                component="level" def="min=0 step=1" />
+        </window>
+    </interface>
+
+</project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<project name="Non-Photorealistic Rendering: StipplingRendering" >
+    <assets>
+        <scenes>
+            <scene name="dotPattern" param="UNITIZE SWAP_YZ">        
+                <file name="Models/Teapot.3ds"/>
+            </scene>
+        </scenes>
+
+        <viewports>
+            <viewport name="MainViewport">
+                <CLEAR_COLOR r="1.0" g="1.0" b="1.0" />
+            </viewport>
+        </viewports>
+
+        <cameras>
+            <camera name="MainCamera" >
+                <viewport name="MainViewport" />
+                <TYPE value="PERSPECTIVE"/>
+                <FOV value=60/>
+                <NEAR value= 0.1/>
+                <FAR value= 100/>
+                <POSITION x=-1.9 y=0.5 z=1.5 />
+                <VIEW x=0.8 y=-0.2 z=-0.6 />
+            </camera>
+        </cameras>
+
+        <lights>
+            <light name="Sun">
+                <DIRECTION x=2 y=-1 z=-2 />
+            </light>
+        </lights>
+
+        <materialLibs>
+            <materialLib filename="StipplingRendering.mlib" />
+        </materialLibs>
+    </assets>
+
+    <pipelines default="Teapot">
+        <pipeline name="Teapot" default="true">
+            <pass class="default" name="pass1">
+                <scenes>
+                    <scene name="dotPattern" />
+                </scenes>
+                <camera name="MainCamera" />
+                <lights>
+                    <light name="Sun" />
+                </lights>
+                <materialMaps>
+                    <map fromMaterial="*" toMaterial="dotPattern" toLibrary="StipplingRendering" />
+                </materialMaps>
+            </pass>
+        </pipeline>
+    </pipelines>
+
+    <interface>
+        <window label="settings" >
+        <pipelineList label="Modelos"/>
+        </window>
+    </interface>
+
+</project>
