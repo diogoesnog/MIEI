@@ -11,7 +11,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
 **Main Scientific Area:** Computer Engineering
 <br>
-**Partial Average (At the Moment):** 14,205
+**Partial Average (At the Moment):** 14,5
 
 ---
 
