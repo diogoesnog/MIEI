@@ -275,8 +275,8 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 - **Complementary Course Units**
 
   - :star: **Laboraty in Informatics Engineering** Team development (Analysis, Design, Implementation, Testing and Management) of a software product.
-  <br>
-  **[Development of Mantis, a software built for a curricular unit called Laboratory of Software Engineering, inserted on the plan of studies of the MSc Degree of Computer Engineer at the University of Minho. ](https://github.com/diogoesnog/Mantis)**
+    <br>
+    **[Development of Mantis, a software built for a curricular unit called Laboratory of Software Engineering, inserted on the plan of studies of the MSc Degree of Computer Engineer at the University of Minho. ](https://github.com/diogoesnog/Mantis)**
 
 #### :five: **Fifth Year** 
 
