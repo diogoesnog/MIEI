@@ -25,7 +25,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
    
    1.3. [Third Year](#three-third-year)
    
-2. [**2nd Cycle Degree - Master's**](#2nd-cycle-degree---masters)
+2. [**2nd Cycle Degree - Master's**](#2st-cycle-degree---masters)
 
    2.1. [Fourth Year](#four-fourth-year)
    
@@ -274,9 +274,9 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **Complementary Course Units**
 
-  - :star: [**Laboraty in Informatics Engineering**](https://github.com/diogoesnog/Mantis) Team development (Analysis, Design, Implementation, Testing and Management) of a software product.
+  - :star: [**Laboraty in Informatics Engineering**](https://github.com/diogoesnog/Mantis) Team development (Analysis, Design, Implementation, Testing and Management) of a software product - **Mantis**.
 
 #### :five: **Fifth Year** 
 
-- [**Project in Informatics Engineering**](https://github.com/diogoesnog/BookyMe) Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
+- [**Project in Informatics Engineering**](https://github.com/diogoesnog/BookyMe) Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential - **BookyMe**.
 
