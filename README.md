@@ -25,7 +25,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
    
    1.3. [Third Year](#three-third-year)
    
-2. [**2nd Cycle Degree - Master's**](#2st-cycle-degree---masters)
+2. [**2nd Cycle Degree - Master's**](#2nd-cycle-degree---masters)
 
    2.1. [Fourth Year](#four-fourth-year)
    
