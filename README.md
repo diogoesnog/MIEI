@@ -29,6 +29,8 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
    2.1. [Fourth Year](#four-fourth-year)
    
+   2.2 [Fifth Year](#four-fifth-year)
+   
 ---
 
 ## Study Plan
@@ -269,3 +271,5 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
   - [**Technologies and Applications**](4th%20Year/2nd%20Semester/Perfil%202%20-%20Computação%20Gráfica/Tecnologias%20e%20Aplicações) Knowledge of one of the branches of Machine Learning - Deep Learning for the analysis, learning and representation of data. Creation and Test of Convolutional Neural Networks using the Data Augmentation and Transfer Learning technique. Study of Generative Models.
     <br>
     **Set of all Practical Assignments.**
+
+#### :five: **Fifth Year** 
