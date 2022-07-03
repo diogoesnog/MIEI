@@ -29,7 +29,7 @@ Repository reserved for the contents of Informatics Engineering (Integrated Mast
 
    2.1. [Fourth Year](#four-fourth-year)
    
-   2.2 [Fifth Year](#four-fifth-year)
+   2.2 [Fifth Year](#five-fifth-year)
    
 ---
 
@@ -273,3 +273,6 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
     **Set of all Practical Assignments.**
 
 #### :five: **Fifth Year** 
+
+- [**Project in Informatics Engineering**]() Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
+
