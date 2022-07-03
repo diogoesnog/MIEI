@@ -280,7 +280,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 #### :five: **Fifth Year** 
 
-- **Project in Informatics Engineering** Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
+- :star: **Project in Informatics Engineering** Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
   <br>
   **[Development of BookyMe, a unique Online Booking Application, centralized and adapted for different sectors and services (Hairdressers, Centers Aesthetics, SPA, Restaurants, Bars, Takeaway Services with Pick-up in Store, Clinical Offices, etc.). ](https://github.com/diogoesnog/BookyMe)**
 
