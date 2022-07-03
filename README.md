@@ -242,7 +242,7 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
     <br>
     **Set of all Practical Exercises.**
     <br>
-    **Development of simplified version of Web App Facebook (ISN) developed in JavaScript using Node.js technology.**
+    **[Development of simplified version of Web App Facebook (ISN) developed in JavaScript using Node.js technology.](https://github.com/diogoesnog/ISN)**
 
   - [**NoSQL Databases**](4th%20Year/1st%20Semester/UC%202%20-%20Bases%20de%20Dados%20NoSQL) In-depth knowledge of different types of Non-Relational Databases. Small study about the Oracle Database.
     <br>
@@ -272,7 +272,11 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
     <br>
     **Set of all Practical Assignments.**
 
+- **Complementary Course Units**
+
+  - :star: [**Laboraty in Informatics Engineering**](https://github.com/diogoesnog/Mantis) Team development (Analysis, Design, Implementation, Testing and Management) of a software product.
+
 #### :five: **Fifth Year** 
 
-- [**Project in Informatics Engineering**]() Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
+- [**Project in Informatics Engineering**](https://github.com/diogoesnog/BookyMe) Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
 
