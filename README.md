@@ -274,9 +274,13 @@ All UCs are organized in alphabetical. Each Semester corresponding to the **1st 
 
 - **Complementary Course Units**
 
-  - :star: [**Laboraty in Informatics Engineering**](https://github.com/diogoesnog/Mantis) Team development (Analysis, Design, Implementation, Testing and Management) of a software product - **Mantis**.
+  - :star: **Laboraty in Informatics Engineering** Team development (Analysis, Design, Implementation, Testing and Management) of a software product.
+  <br>
+  **[Development of Mantis, a software built for a curricular unit called Laboratory of Software Engineering, inserted on the plan of studies of the MSc Degree of Computer Engineer at the University of Minho. ](https://github.com/diogoesnog/Mantis)**
 
 #### :five: **Fifth Year** 
 
-- [**Project in Informatics Engineering**](https://github.com/diogoesnog/BookyMe) Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential - **BookyMe**.
+- **Project in Informatics Engineering** Team development (Analysis, Design, Implementation, Testing and Management) of a software product and analysis of the product's business potential.
+  <br>
+  **[Development of BookyMe, a unique Online Booking Application, centralized and adapted for different sectors and services (Hairdressers, Centers Aesthetics, SPA, Restaurants, Bars, Takeaway Services with Pick-up in Store, Clinical Offices, etc.). ](https://github.com/diogoesnog/BookyMe)**
 
